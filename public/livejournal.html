@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVEJOURNAL! </title>
+   <script type="text/javascript">
+      title = "LIVEJOURNAL! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  
+  <style>
+ /* we'll be using roots so i dont have to repeat the same color 200 times and can change the theme on a whim */
+:root {
+    --border: #680811;
+    --background:  #ffdec6;
+    --header: #680811;
+}
+body {
+    margin: 0;
+    padding-top: 60px; /* height of header */
+    background-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_b9262fdd11e93e8ebb29cd63a33bcf58_c45d9ae1_400.png); /*change bg if needed */
+    background-color:  #680811;
+    background-blend-mode: multiply;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0; /* ensure it starts at the very left */
+    width: 100%;
+    margin: 0; /* remove default margin */
+    padding: 10px 20px;
+    background-color: var(--header);
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
+    box-sizing: border-box; /* ensure padding doesn't cause overflow */
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.profile-info .name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* posts container */
+.posts {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* post header (user and date) */
+.post-header {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.post-content {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.name {
+    font-weight: 600;
+    text-align: center;
+}
+.bracketed {
+    display: inline-block;
+    width: 200px; /* fixed width */
+    text-align: center;
+    font-family: monospace;
+    font-size: 13px;
+    position: relative;
+    padding: 2px 10px;
+}
+
+/* add the brackets with pseudo-elements */
+.bracketed::before,
+.bracketed::after {
+    content: "[";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: monospace;
+    font-size: 13px;
+}
+.bracketed::after {
+    content: "]";
+    right: 5px;
+}
+.bracketed::before {
+    left: 5px;
+}
+
+/* make the main container a vertical stack */
+.flexy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-box {
+    position: relative;
+    width: 600px;
+    margin: 20px auto;
+    border: 2px solid var(--border);
+    background-color: var(--background);
+    overflow: hidden;
+    padding-top: 0;
+}
+
+.top-bar {
+    width: 100%;
+    background-color: var(--border);
+    color: #fff;
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between; /* changed from flex-start to space-between */
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.pfp {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--border);
+    margin: 10px;
+    background-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/bafkreic35tytsgqcudwdg7qt4le6zxrn4vi3j6cyotnnx5smbwaadzxdym.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-info-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.profile-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    border: 2px solid var(--border);
+    background-color: var(--background);
+    padding: 0;
+    margin-bottom: 20px;
+    overflow: hidden; /* to contain the header bar */
+}
+
+/* the colored top bar inside each post */
+.post-topbar {
+    display: flex;
+    justify-content: space-between; /* push items to opposite ends */
+    align-items: left; /* vertically align items */
+    background-color: var(--border);
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* style for the header (user and date) */
+.post-header {
+    font-size: 12px;
+    margin-bottom: 8px;
+    padding: 0 10px;
+    color: white;
+}
+
+/* style for the post title */
+.post-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    margin-top: 7px;
+    text-align: left; /* explicitly align to the left */
+}
+
+/* style for the post content */
+.post-content {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 6px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between; /* push children to opposite ends */
+    align-items: center; /* vertically align */
+    padding: 6px 10px;
+    background-color: var(--border); /* optional, for visual clarity */
+    color: white;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top-right a {
+    color: white;
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--header); /* same as background for seamless look */
+}
+
+/* Scrollbar thumb - the draggable part */
+::-webkit-scrollbar-thumb {
+    background-color: var(--background); /* bluish-purple, between blue and purple */
+    border-radius: 6px;
+    border: 3px solid transparent; /* optional for spacing */
+    background-clip: padding-box;
+}
+
+/* Hover state for thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--background); /* lighter bluish-purple on hover */
+}
+
+@media only screen and (max-width: 800px) {
+              
+
+.profile-box {
+    width: 100%;
+}
+
+
+                }
+                
+</style>
+      
+    </head>
+    
+    
+    <body>
+      
+        <header>
+            <h1>My LiveJournal</h1>
+        </header>
+        <div class="profile-box">
+            <!-- top colored bar with text -->
+            <div class="top-bar">
+                <span class="top-left"
+                    ><strong>Gabriel's LiveJournal Entries</strong></span
+                >
+                <span class="top-right"
+                    >[<b>entries</b>|<a href="/home">back to index</a
+                    >|block]</span
+                >
+            </div>
+            <div class="profile-flex">
+                <!-- profile picture -->
+                <div class="pfp"></div>
+                <!-- main profile info -->
+                <div class="profile-info-main">
+                    <div class="name">chimerathing</div>
+                    <div class="flexy">
+                        <div class="bracketed">feeling: <a href="https://www.imood.com/users/chimerathing"><img src="https://moods.imood.com/display/uname-chimerathing/fg-fff/trans-1/imood.gif" alt="The current mood of chimerathing at www.imood.com" border="0"></a></div>
+                        <div class="bracketed">status: online</div>
+                        <div class="bracketed">watching: ii</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- posts -->
+        <div class="posts">
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [12/13/2025|<b>5:39pm</b>]
+    </div>
+  </div>
+  <div class="post-title">INFO!!!!!</div>
+  <div class="post-content">this is for me to just ramble about some of the less heavy shit on my mind, dump random thoughts, talk about my interests, etc. the more serious and personal stuff is on my diary page. the template used on this page was made by my good friend <a href="https://marcheesed.xyz/projects/livejournal.html">marcy</a>!!!!!</div>
+  <div class="post-footer">
+    <div class="pinned">Pinned post</div>
+    <div class="things">
+      <strong>feeling</strong>: <em>content</em>
+      <strong>watching</strong>: <em>nothing</em>
+    </div>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [8/12/2026|<b>6:53pm</b>]
+    </div>
+  </div>
+  <div class="post-title">list of games i wanna put on my modded 3DS!!!</div>
+  <div class="post-content">
+  We managed to convince our dad to help us with modding our 3DS so we're compiling a list of games that we wanna put on it in advance so that we don't forget later, those being the following!!
+  <ul>
+  <li>Project Mirai DX</li>
+  <li>Taiko no Tatsujin</li>
+  <li>Warioware Gold</li>
+  <li>Rhythm Heaven 3DS</li>
+  <li>Miitopia</li>
+  <li>Animal Crossing New Leaf</li>
+  <li>Ever Oasis</li>
+  <li>Nintendogs</li>
+  <li>Luigi's Mansion</li>
+  <li>Mario Kart</li>
+  <li>Pokemon X & Y</li>
+  <li>Mario & Luigi Dream Team</li>
+  <li>Sonic Rush/Rush Adventure</li>
+  <li>Super Mario 64 DS</li>
+  <li>New Super Mario Bros</li>
+  <li>Mario & Luigi Bowser's Inside Story</li>
+  <li>Mario 3D Land</li>
+  <li>Sonic Colors DS</li>
+  </ul>
+ Most of these are games we've been wanting to play for a long time while others were recommemdations from our girlfriends (and one is just a game we heard about through watching videos about other people's modded 3DS and thought looked interesting), if anyone reading this has recommedations we would love to hear them! We're always looking to expand our game collection lol
+ <br><br>
+ Small life update: we're done with summer school and we have the entire month of August to ourself before we officially go back to school in September. We're also turning 18 next month which is pretty cool I guess. We're not exactly prepared or excited to be a legal adult, we're gonna have to make a lot of changes to our life so that we can actually be a functioning responsible adult and also so that our big life goals can actually begin to feel attainable and it's definitely gonna be really fucking difficult, but we'll get there somehow right? i hope idk. our family definitely does not have much faith in us they insist that we're gonna end up homeless and that we're gonna have to come crawling back to them for support if we try to go out into the world on our own but like they hardly do anything to actually help us as is and prevent that from being a possibility, they just act condescending  make us feel like shit all the time and talk down to us for not knowing how to do things that they never taught us how to do!! sooo we're gonna have to just help ourself at this point LMFAO. no mom just because you made me watch you cook lasagna 7 years ago doesn't mean i know how to cook myself a 5 course meal. 
+  </div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>happy and impatient</em>
+      <strong>watching</strong>: <em>Fullmetal Alchemist: Brotherhood</em>
+    </div>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [6/22/2026|<b>8:38am</b>]
+    </div>
+  </div>
+  <div class="post-title">what i've been up to</div>
+  <div class="post-content">
+  
+  it's been a minute since i posted anything here so im gonna ramble for a bit hold on. the school year is ending for me in a few days which i'm very happy about so i'm hopefully gonna have a lot more free time to work on the site as well as other stuff i've been cooking up, although i still have to suffer through summer school but thankfully it's only for a few weeks in july i think so it's whatever. i should've been graduating highschool entirely already but due to Mental Health Complications i ended up getting held back and had to repeat junior year so ya boy still has a year left until freedom LOOOL. we WILL get through senior year no problem guys trust. idk it depends. i wanna try looking for a job soon but i need something that wont make me want to kill myself or others. i desperately need to start saving up money so i can eventually get outta my parents house but the job market sucks and im still heavily debating whether or not i really wanna go to college. art school does not feel very enticing in this day and age considering AI has infiltrated almost everything and the industry has consistently been exploiting and fucking over artists. i'll figure something out though
+  <br><br>
+  i've been working on a project with my gf and my friend Ember that's related to the osc fangame we wanted to make (The Amazing Object Race)!! the fangame has kinda been on the backburner for a little bit because we have yet to find someone who can code the damn thing (the one person we found hasn't spoken to us in months) so what we've been doing as of recently is coming up with a lot of lore surrounding the ocs we made for the game and just doing a lot of worldbuilding stuff in general. i've been having a lot of fun and  this is like the first time in genuinely forever that i've felt creative and motivated enough to write and make ocs/come up with ideas for those ocs LOL. Ember is also making a comic that is basically a side story to the game that explores the lives of the two host/announcer characters (Megaphone and Jigsaw Puzzle) and there's a lot of tragic shit that happens to the both of them. I've made a ton of art of the both of them and I love them so much RRRAAAAGGHHH me when I actually like an oc of mine that isn't just a sona for the first time in my life. We're also shipping them together they are canonically dating. Their ship name is megasaw i love megasaw. The comic will eventually be available to read on the fangame's website when it's done!!
+  <br><br>
+  the BFDI x II meetup/tour is happening soon and I am genuinely SO FUCKING EXCITED FOR IT. I am actually able to go this year cuz I made absolutely sure that my mom was able to secure tickets for us the very day that they were announced. I really loved going to the II anniversary screening this past April, there were so many cool people there and it was genuinely so whimsical getting to experience seeing a really good episode of II live in person surrounded by so many other fans, so I'm really looking forward to the meetup this year for the same reason as well as getting to see some of the show's crew members in person too! I'll be at the NYC meetup on July 11th at 11:00 AM!!! I wanted to go to the 7:00 PM one on the same day so that I'd have more time to get ready and maybe do other fun stuff before we actually went to the meetup but my mom just got tickets for the 11 AM one cuz NYC tends to get hectic at night which is understandable. We didn't get VIP tickets cuz those mfs were way too expensive so we won't get to go to the meet & greet or whatever it is that VIP people get to do at the meetup but thats fine because I only really care about getting to watch the episodes live and also just experience interacting with other fans again. I'll also hopefully be giving out my own original stickers of the main 4 Bright Lights (Paintbrush, Lightbulb, Test Tube and Fan)!! My mom just ordered the stickers this morning so I'm really hoping that they'll arrive in time for the meetup otherwise I will genuinely cry my eyes out. I'm also planning to go in a cosplay of my Paintbrush gijinka, it won't be anything extravagant I'm just throwing something together with shit I got in my closet and like we'll maybe have to buy like 2 parts of the outfit and thats it. I don't plan on wearing a wig I hate those things. I'm really really happy that I get to go especially since I missed out on last year's meetup so I sure hope nothing goes wrong LOL. When the episodes officially release on YouTube I want to maybe write about my thoughts on them on my site as well as my general thoughts on II season 4 so far since I haven't really done that before. We'll see!
+  </div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>excited</em>
+      <strong>watching</strong>: <em>Witch Hat Atelier</em>
+    </div>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [5/13/2026|<b>10:08am</b>]
+    </div>
+  </div>
+  <div class="post-title">game console things</div>
+  <div class="post-content">
+  
+  i really wanna mod our 3DS and our Wii but the process looks really complicated and while our dad is like much more advanced when it comes to fucking around heavy with technology and hypothetically could help us with it i don't think he'd be willing to since he's like really fucking annoying about us doing anything with the devices that literally belong to us so i think that's a lost cause. i'm pretty sure you need to physically remove the SD card from your 3DS in order to mod it and ours doesn't even fucking have a slot where the SD card goes in. either it's like trapped inside the console and we gotta bust out the screwdriver or there's just nothing at all. i'm not sure how modding a Wii works though so we'd have to look into that and see if it's more achieveable for us personally. i want to be able to play more Wii games since our collection is very few and far between (especially after our dad got rid of a majority of them since they were pirated copies, he's lame like that), and literally the only game we have on our 3DS is Tomodachi Life and we don't have the money to buy more games especially not now since our family is going through financial issues. We have a handful of DS games from when our sister was little and used to play on it and those are backwards compatible with the 3DS but like none of them are that interesting or fun to us lol. we'll figure something out i guess,, i wanna have more fun and play more games but it feels like we have so little time for like anything which is ironic because most of our time outside of school is spent basically doing nothing. we have a problem loolollololo
+  
+  </div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>bored</em>
+      <strong>watching</strong>: <em>nothing</em>
+    </div>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [4/2/2026|<b>8:22am</b>]
+    </div>
+  </div>
+  <div class="post-title">INANIMATE INSANITY THEATER SCREENING!!!</div>
+  <div class="post-content">
+  
+  mere words cannot describe how genuinely SO FUCKING HAPPY AND AMAZED I AM RIGHT NOW?? I went to the II theater screening in Secaucus, NJ with my dad yesterday and DUUUUUDE THE EPISODES WERE SO FUCKING GOOD. SERIOUSLY IV5 IS GENUINELY THE BEST EPISODE OF SEASON 4 YET. That and the season 1 remastered episodes were all so fucking funny. My dad came with me to the screening and even he found it entertaining and I was honestly expecting him to not really care LOL although he was offended by the shit with Cammy praising MePhone4 like he's a god cuz he's christian which I found kinda funny but also like it's really not that serious dawg. A show jokingly referencing the bible isn't gonna kill you relax. but anyways!! I had a really good time I wish I could've recorded my reaction to the episodes but I didn't wanna get in trouble nor did I wanna disrespect the crew by leaking the episodes early,, I was screaming and laughing my ass off the whole time I would've like to show my friends at least but whatevs,, I DID get to record the sing-along/preshow segment before they played the actual episodes which I uploaded that to my youtube channel last night after I got home from the screening. It sucks though I wish I got to record Taco's Tirade and the OSC song as well but those didn't play until AFTER the preshow was over. I sang my fucking heart out to those two bruh it was actually insane. I could feel my blood pressure rising during Taco's Tirade LMFAOOOOOOOO that's how passionate I was getting. ALSO all of the people that were at the screening were so fucking cool dawg there were SO MANY COSPLAYERS it was genuinely so awesome.. I was nervous but I went up to a few of them and complimented their cosplays and also like 2 of them came up to me and while I was sitting down w/ my dad and said they liked my Lightbulb plushie and my hair yayyyy also one of them thought I was cosplaying fan because I was wearing a red blazer LFMAOOAO i wasn't cosplaying anyone tho. it was a blazer that my sister gave to me and I looked really sexy and masculine in it. very gender affirming! i will be wearing it again sometime for something. I REALLY wish i could've cosplayed as Paintbrush but that's definitely something I would've had to make from scratch and I unfortunately did not have the time or resources. maybe if they do something like this again I can cosplay!! we'll see though. My thoughts on the new season 4 episode? I fucking hate Jack and Tapey i hope they both DIE and also I miss MePad and Paintbrush. That's all I can say without completely spoiling it before the official release on youtube. Also Luigi's Mansion
+  
+  <br><br>
+ secaucus has a handful of good places to eat at so before we went inside the theater I got to eat some good ass ramen and dumplings and also some frozen yogurt which was fucking peak. we also checked out an electronics store for a bit! i've never been to this part of new jersey before so it's cool to actually be able to get of the house every once in a while and explore the world beyond the nothingburger ass town that i live in. we caught a view of a huge ass rich people mall on drive back home. this was overall a really awesome experience and i'd love to maybe interact with other people a bit more next time LOOOOL
+  
+  </div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>ecstatic</em>
+      <strong>(re)watching</strong>: <em>Inanimate Insanity Season 4</em>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [3/22/2026|<b>7:34pm</b>]
+    </div>
+  </div>
+  <div class="post-title">project voltage concert thoughts & more</div>
+  <div class="post-content">i haven't put anythingh here in a while LOOOOOOL i need to be more on top of this. i'm watching the vod of the Project Voltage concert that was just uploaded to youtube and it's actually???? fucking amazing??? like this is genuinely probably the best vocaloid concert of the decade. they really went all out for this show and it really payed off. i don't really care much for any of the songs on the setlist (im not a pokemon superfan like i was as a wee little lad unfortunately) but holy fuck THE VISUALS. THE SCENERY. THE WAY THEY LOOK LIKE THEY'RE ACTUALLY ON A FUCKING STAGE. this is genuinely incredible. it seems like they took notes from the MIKU WITH YOU 2025 concert that happened in China, which also had incredible stage visuals that unironically made Magical Mirai look like the dashcon ballpit. they're getting comfortable being more experimental with how they do concerts and that makes me really happy. miku and the other cryptonloids are no longer trapped in a pathetic little square void. I didn't go to Miku Expo 2024 but it was highkey a let down due to replacement of the hologram setup with a LED screen which they made zero effort to blend in with the background, Miku Expo 2025 was a small improvement from that with the bigger LED screen but now seeing what they've done with Project Voltage and MIKU WITH YOU I'm really hoping they give future concerts the same treatment instead of just sticking to a screen with some lights in the back and nothing else. I'm going to Miku Expo 2026 in Newark  on May 7th and I'm really fucking excited this is my first time going to see literally any concert ever. it might just be the best experience of my life i hope!! I also wanted to go to Digital Stars the day after but I didn't feel like continuing pestering my mom to buy tickets for more shit LOL. also IM REALLY HAPPY TO SEE TETO PEFORM WITH MIKU AGAIN i really hope this opens the door for her to appear at more official concerts,,,, i'd love to see her at miku expo... its probably unlikely but a man can dream
+  
+  <br><br>
+  
+  Speaking of tickets for cool ass events I also got tickets for Inanimate Insanity 15th Anniversary theater screening in Secaucus!!! I didn't get to go to the BFDI x II meetup  last year cuz my mom waited too long to try and get tickets which I'm still honestly kinda upset about, but its okay cuz going to these two events will definitely make up for it!!! I get to see Miku live on stage and I get to see my biggest comfort show on a theater screen,,,, I genuinely could not be happier. I'm really excited for IV episode 5 AAAAGHHHHH I hope Paintbrush gets to have a bigger role in the season. My They is genuinely fucking traumatized after the II2 finale someone needs to check up on them. Let Lightbulb caress them like they're a fucking cat or somehting idk dawg and let them kiss. Lightbrush will be canon in season 4 guys trust. The episode will be 1 hour long and 40 minutes will be Lightbrush makeout session
+  <br><br>
+  I've made a decent amount of updates to the site since my last post here so here's some of them:
+  <ul>
+  <li>vocalsynth shrine is almost finished!!!</li>
+   <li>completely revamped the love shrine to feature my wonderful qpgf <3</li>
+    <li>revamped the collections page</li>
+     <li>revamped the f/o shrine</li>
+     <li>added 2 new entries to the articles page</li>
+      <li>added some more decorative images to the home and about pages</li>
+       <li>added a vocalsynth song of the week thingy to the homepage (honestly debating on whether or not i'll actually keep it but we'll see. its also not visible on mobile rn)</li>
+       <li>added the 2026 art page with all the art ive done so far this year</li>
+        <li>wrote 3 new diary entries</li>
+        <li>revamped luka's personal page</li>
+     </ul>
+    
+     I've gotten into a few new interests this year, those being Starters Movieunleashers, Cosmic Princess Kaguya!, and now recently Madoka Magica which I have yet to finish watching but I'll get to it at some point I promise!!!!! All three of these are really fucking good everyone reading this should watch them right fucking now. I made designs for an II x CPK! crossover AU although i'm not sure if i'll actually make it a fully fleshed out AU it honestly might just be something i draw shit about for fun. I really love combining all of my interests okay goodbye
+
+
+</div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>excited but also disappointed for unrelated reasons</em>
+      <strong>watching</strong>: <em>Puella Magi Madoka Magica</em>
+    </div>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [1/9/2026|<b>9:17pm</b>]
+    </div>
+  </div>
+  <div class="post-title">HAPPY NEW FUCKING YEAR</div>
+  <div class="post-content">this is really late but whatever year im going all in on trying to better my creative abilities and my mental health and also being queer as fuck. as per usual. although i think im going through another dysphoric episode right now help. whatever bruuuhhhh auughghg ANYWAYS i've posted 3 new covers on youtube recently you should go listen to them. im also finishing up my vocal synth shrine and workin on pages in the OC directory for another object character of mine as well as writing lore for said character in general. RRAAGHHHH
+
+</div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>dysphoric</em>
+      <strong>(re)watching</strong>: <em>Inanimate Insanity Season 3</em>
+    </div>
+  </div>
+</div>
+
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [12/25/2025|<b>1:44pm</b>]
+    </div>
+  </div>
+  <div class="post-title">MERRY CHRISTMAS!!!</div>
+  <div class="post-content">merry christmas my little labubus..,. christmas has lost its magic for me over the years tbh especially after the pandemic it just hasn't felt the same. our parents also just don't got money like they used to so it's just been extremely underwhelming and depressing for the past like entire half of the current decade. i don't really find joy in "spending the holidays with family!!!!1!!!" anymore because our family fucking sucks and they ruin everything. they got us a wii this year though so maybe the magic is back. im gonna jailbreak and mod the shit outta that thing (if i can figure out how)
+<br><br>
+anywyas um some major updates as of recently
+<ul>
+<li>ozzy's personal page got an overhaul!! check it out on the system page :]</li>
+<li>oc directory has been added and Power Drill's page is (almost) complete. just gotta finish writing out all the info for him</li>
+<li>selfship shrine is complete and our yumeship between Lightbulb from II and our II OC Power Drill has it's own dedicated page that can be found there!!</li>
+<li>a general shrine for vocal synths is in the works</li>
+</ul>
+
+we finished Uma Musume season 1 and started binging The Summer Hikaru died,,, yaoi so fucking good that it's lowkey yuri to me
+</div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>happy</em>
+      <strong>watching</strong>: <em>The Summer Hikaru Died</em>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [12/18/2025|<b>12:23pm</b>]
+    </div>
+  </div>
+  <div class="post-title">vocadb</div>
+  <div class="post-content">yesterday i found out im listed on vocadb as a cover artist LMFAOOOOO even my girlfriend is on there because she illustrated for a few of my covers (All or Nothing and Common World Domination.) i just randomly searched my name on there out curiosity i cantbelieve im actually fucking on there i didnt think i was well known enough,,,, its pretty cool though. one of the main people responsible for getting all my shit listed on there is also an object show fan. god bless.
+<br><br>
+I tried applying to be a verified artist on there and it said that they allowed social media posts as proof that youre the artist you say you are. so i submitted tumblr links and got rejected because it “wasn’t sufficient proof”. what the fuck would be sufficent
+proof then do u want access to the files on my computer. shit man! whatever
+<br><br>
+im gonna binge uma musume when i get home
+</div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>tired</em>
+      <strong>watching</strong>: <em>Uma Musume: Pretty Derby</em>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [12/14/2025|<b>3:24pm</b>]
+    </div>
+  </div>
+  <div class="post-title">migu migu oooeeeoo</div>
+  <div class="post-content">i'm watching the pjsekai movie with dev oomfs and its peak so far oughh. broken sekai miku is so precious i love her i think her and all the other mikus should kiss <br><br> i've played pjsekai on and off before but i've never really been that invested in the story or engaged with it at all. this movie definitely is making me actually care for some of its characters though LOL the only one i've ever actually liked was mizuki. beautiful trans woman who deserves the entire world and more. i think everyone that denies her transness and calls her a femboy or insists that she's just nonbinary and not transfem should explode</div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: <em>hungry</em>
+      <strong>watching</strong>: <em>Colorful Stage! The Movie: A Miku Who Can't Sing</em>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="post">
+  <div class="post-topbar">
+    <div class="post-user">
+      Post by <strong>chimerathing</strong>
+    </div>
+    <div class="post-date">
+      [12/13/2025|<b>6:03pm</b>]
+    </div>
+  </div>
+  <div class="post-title">shameless plug</div>
+  <div class="post-content">hey are u an object show fan and want to help make a cool object show fangame??? well ur in luck!!! me and my oomfs are making an osc kart racer game thingy and we need ppl to help out so if you're an artist, 3d modeler, programmer, voice actor or like do literally anything that could be helpful in the Creation Of A Video Game you should fill out <a href="https://forms.gle/DpDJL9UmUPNUzDvCA">this awesome google form</a>. none of this will be paid work btw we're just a group of dummies making a game about something we like for fun. also you can check out the site for the project <a href="https://amazingobjectrace.neocities.org/">here</a></div>
+  <div class="post-footer">
+    <div class="pinned"></div>
+    <div class="things">
+      <strong>feeling</strong>: content<em></em>
+      <strong>watching</strong>: nothing<em></em>
+    </div>
+  </div>
+</div>
+
+
+
+            </div>
+       
+    </body>
+</html>

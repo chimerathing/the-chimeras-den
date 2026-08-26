@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HER CANINE TEETH IN THE SIDE OF MY NECK!</title>
+    <script type="text/javascript">
+      title = "HER CANINE TEETH IN THE SIDE OF MY NECK " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ 
+ 
+ 
+ <style>
+div.gallery {
+  margin: 3px;
+  float: left;
+  width: 195px;
+  padding: 10px;
+}
+
+div.gallery img:hover {
+  
+}
+
+div.gallery img {
+  
+  vertical-align: middle;
+  height: calc(100% - 1px);
+				width: calc(100% - 1px);
+				 border: 10px solid black !important;
+				 box-shadow: 1px 1px 5px black;
+    border-radius: 4px !important;
+    border-image: url("https://64.media.tumblr.com/2f2e9cd4ffe0ebf10bf4ededc4f54f1e/1dd0d242a395e1ed-01/s75x75_c1/fbea4638965e2a533ed88090524c9af25c65b1bb.pnj") 25 fill round !important; 
+    border-image-slice: 35% !important;
+        border-image-repeat: round !important;
+        background: linear-gradient(black , #680811);
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-family: rosela;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+var sparkles=50;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+*(c)2005-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y+1)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    starx[i]+=(i%5-2)/5;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    tinyx[i]+=(i%5-2)/5;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  return (div);
+}
+
+function newColour() {
+  var c=new Array();
+  c[0]=255;
+  c[1]=Math.floor(Math.random()*256);
+  c[2]=Math.floor(Math.random()*(256-c[1]/2));
+  c.sort(function(){return (0.5 - Math.random());});
+  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+}
+// ]]>
+</script>
+  </head>
+  <body>
+  
+<style type="text/css">* {cursor: url(https://i.postimg.cc/9fC1g1Dv/ani879-ezgif-com-crop.gif), auto !important;}</style>  
+  
+<h1><strong>2021</strong></h1>
+  
+  <center>
+  
+   <p><div class="bbbutton"><a href="https://chimerathing.neocities.org/artgallery" style="">Go Back</a></div></p></center>
+   
+   </br>
+   
+   <p>Click on the images to see them at their full size!</p>
+   
+   <p>All art is ordered from oldest to newest.</p>
+  
+  </br>
+  
+  <div class="row">
+  
+  <div class="gallery">
+  <a target="_blank" href="">
+    <img src="" alt="" width="600" height="400" >
+  </a>
+  <div class="desc"></div>
+</div>
+
+
+
+</div>
+
+   
+   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('chimerathing', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#00b9fe',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+   
+<style>
+    body {
+    background-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/gdfghfdjukihgiduofg.png);
+    background-size: 10em;
+}
+
+.text {
+				width: 35%;
+			}
+
+h1 {text-align: center; font-family: marioluigi;}
+p {text-align: center;}
+div {text-align: center;}
+
+
+     @font-face {
+                font-family: rosela;
+                src: url('https://dl.dropbox.com/scl/fi/pwd7ysnhki4vftc9f9rbz/MS-Gothic.ttf?rlkey=12bg8zkwmonggdxqfdh90c8bk&st=o96zgisg&');
+            }
+            
+             @font-face {
+                font-family: marioluigi;
+                src: url('https://file.garden/Z5ztm_B6wj_8HQnK/MarioLuigi2.ttf');
+                font-weight: bold;
+            }
+
+p, r {
+font-family: rosela;
+font-size: 17px;
+font-style: normal;
+color: white;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+}
+strong {color:white !important;
+    padding: 1px !important;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    font-family:'marioluigi' !important;
+    }
+code {color:white;
+    padding: 1px;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    background: none !important; 
+    font-family:'rosela';
+    font-size:15px;
+    }
+
+a {
+font-weight: bold;
+color: white;
+text-shadow: 1px 1px 5px black;
+display: inline-block; 
+transition: .2s ease; 
+      
+   text-decoration: none;
+   font-family: rosela;
+}
+
+a:hover{
+  text-decoration: underline wavy;
+  text-shadow: 1px 1px 5px black;
+}
+
+.bbbutton{
+  
+
+color: white;
+text-shadow: 1px 1px 5px black;
+display: inline-block; 
+transition: .2s ease; 
+background: linear-gradient(black , #680811);
+      box-shadow: -1px -1.4px 1px inset #0f050c, 2px 3px 1.5px inset #8d2a31,
+    0px 0px 2px #0f050c;
+    0px 0px 2px #0f050c;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+ 
+}
+
+.bbbutton:hover{
+  text-decoration: underline wavy;
+  box-shadow: 1px 1px 10px #8d2a31;
+}
+</style>
+  </body>
+</html>

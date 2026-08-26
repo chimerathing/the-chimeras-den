@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draw stuff 4 me</title>
+   <script type="text/javascript">
+      title = "draw stuff 4 me " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+     <style>
+        * {box-sizing: border-box;}
+        canvas {
+            border: 3px ridge #1d2b4b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #4c79c7;
+            cursor: crosshair;
+        }
+        
+        
+        .controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.color-picker-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.stroke-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.stroke-color:hover {
+  transform: scale(1.2);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #4c79c7;
+  color: black;
+  font-size: 1.0em;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'MarioLuigi2';
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 0px 10px #1d2b4b;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#submit {
+  background-color: #4c79c7;
+  padding: 10px 20px;
+  font-size: 1.1em;
+}
+
+input[type="color"] {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  overflow: hidden;
+}
+
+input[type="range"] {
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  background: #d4e6f7;
+  outline: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #5b9bd5;
+  cursor: pointer;
+}
+
+        
+        
+        #gallery {
+           display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+  background: #45509f;
+  padding: 10px;
+  color: black;
+  width: 700px;
+  max-height: 500px;
+  border: 3px ridge #1d2b4b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #4c79c7;
+        }
+        .image-container {
+           border: 2px dashed #4c79c7;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 200px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0px 10px #1d2b4b;
+  transition: transform 0.2s;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+  margin-bottom: 8px;
+        }
+        
+        
+        
+        body {
+  background-image: url('https://i.postimg.cc/V6Q3z3Vc/15000109-3395351583.jpg');
+  background-size: cover !important;
+  color: #fff;
+  font-family: 'MarioLuigi2';
+  font-size:1em;
+
+}
+
+@font-face {
+  font-family: 'MarioLuigi2';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://files.catbox.moe/6qh6j8.ttf) format('truetype');
+}
+
+h1 {
+                text-shadow: 1px 1px 5px #fff;
+            }
+            
+            #pagedoll{
+position:fixed;
+bottom: 0px;
+right: 100px;
+animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+canvas {
+
+  width:100%
+}
+
+#gallery{
+  width:100%;
+}
+
+#pagedoll{
+  display:none;
+}
+}
+    </style>
+  </head>
+  <body>
+  <center>
+    <h1>DRAWBOX</h1>
+    <h1>NSFW drawings will be deleted from the gallery, be normal it isn't that hard</h1>
+    <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+    <br>
+    <br>
+    <div class="controls-container">
+        <div class="color-picker-container">
+    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+            <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+            <div onclick="change_color(this)" style="background:green" class="stroke-color"></div>
+            <div onclick="change_color(this)" style="background:yellow" class="stroke-color"></div>
+            <div onclick="change_color(this)" style="background:pink" class="stroke-color"></div>
+            <div onclick="change_color(this)" style="background:purple" class="stroke-color"></div>
+            <div onclick="change_color(this)" style="background:black" class="stroke-color"></div>
+            <input type="color" oninput="stroke_color = this.value">
+        </div>
+        
+        <div>
+            <label for="brush-size">Brush Size:</label>
+            <input id="brush-size" type="range" min="1" max="50" value="2" oninput="stroke_width = this.value">
+        </div>
+    
+    <div class="button-container">
+    <button onclick="Restore()">Undo</button>
+            <button onclick="Clear()">Clear</button>
+            <button id="submit">Submit</button>
+    </div>
+    
+    
+    <p id="status"></p>
+<br>
+	<br>
+    <h1>Submitted Drawings</h1>
+    <div id="gallery">Loading images...</div>
+    
+    
+    <script src="drawbox.js"></script>
+    </center>
+    
+    <div id="pagedoll"><img src="https://i.postimg.cc/tCzbgC3C/Paintbrushidle.png" width="100px"></div>
+    
+  </body>
+</html>

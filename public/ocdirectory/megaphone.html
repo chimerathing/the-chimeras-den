@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGAPHONE!</title>
+   <script type="text/javascript">
+      title = "MEGAPHONE! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+   
+    
+ 
+
+
+<style>
+
+ 
+/*wikitable by @limegreen on neocities. a link is appreciated!*/
+
+
+/*to change the fonts here, go to google fonts, find ones you'd like, and use the @import snippet*/
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700');
+
+/*example styles*/
+
+
+/*global colors. change here to see the effect*/
+:root {
+  --backgroundcolor: black;
+  --textcolor: #1c2990;
+  --header:black;
+  --main: black;
+  --footer:black;
+  --borders: #1c2990;
+
+  /*links*/
+  --link: #3b01f9;
+  --linkhover: #fcc94d;
+  
+  /*headings*/
+  --breadcrumb: #1c2990;
+  --h1: #1c2990;
+  --h2: #1c2990;
+  --h3: #1c2990;
+  --headerunderline: #1c2990;
+  
+  /*boxes*/
+  --quotebackground:#000020;
+  --quotetext: #3b01f9;
+  --boxbg: #3b01f9;
+  --showcontentborder:#3b01f9;
+  
+  --seriesofbg:#000020;
+  --seriesoftext:#3b01f9;
+  
+  /*infotable*/
+  --infoboxbg:black;
+  --centertext:#1c2990;
+  --boldtext:#1c2990;
+  --infotext:#1c2990;
+}
+
+
+
+body{
+  background-color: var(--backgroundcolor);
+  background-image:url('https://64.media.tumblr.com/aabaf00ad8c9e75f4b3b12b2d380181c/eed3670e5d89cc39-a4/s250x400/eeed325bd26c3f8a717e61bd1eeec63b1fc10ee1.gifv');
+  font-family:Atkinson Hyperlegible;
+  font-size: 15.5px;
+  margin: 0;
+  color: var(--textcolor);
+}
+/*container*/
+.wrapper{ 
+ min-height: 100vh;
+ margin: auto;
+ /*width of the content*/
+ width: 85%;
+ margin: auto;
+ border:4px ridge var(--borders);
+ border-radius: 5px;
+ margin-top: 15px;
+ margin-bottom: 15px;
+ box-shadow: black  1px 1px 15px;
+}
+/*main content*/
+main{
+ padding: 15px;
+ background: var(--main);
+ min-height: 100vh;
+   clear: left;
+}
+/*links*/
+a{
+ color: var(--link); 
+}
+/*link hover*/
+ a:hover{
+ text-shadow: 0 0 1px ;
+ color: var(--linkhover);
+ text-decoration: underline;
+}
+/*breadcrumbs*/
+.breadcrumb{
+color: var(--breadcrumb);  
+}
+header{
+  height: 100px;
+  border-bottom:2px solid var(--borders);
+  background:var(--header);
+}
+/*prevent image overflow*/
+main img{
+  max-width: 100%;
+}
+/*footer*/
+footer{
+  background:var(--footer);
+  padding: 35px;
+  border-top:2px solid var(--borders);
+  text-align: center;
+}
+
+/*headers*/
+h1,h2,h3{
+overflow: hidden;
+border-bottom: 2px solid var(--headerunderline); 
+}
+h2{
+font-size: 19pt; 
+}
+h3{
+font-size: 16pt; 
+}
+
+/*table of contents*/
+.showcontent{
+  padding: 3px;
+  font-weight: bold;
+}
+.contents{
+ background-color:var(--boxbg);
+  width: 14%;
+ padding: 7px;
+ border: 2px solid var(--showcontentborder);
+}
+/*this changes the dropdown to a hamburger menu for desktop screens*/
+.toc summary {
+    list-style-type: 'â˜° ';
+}
+.toc ul{
+ list-style: none;
+  margin-left: -30px;
+}
+
+
+/*quotes*/
+.quotebox{
+  width: 30%;
+  background-size: cover;
+  font-style: italic; 
+  padding: 10px; 
+ 
+ padding: 13px;
+  border-left: solid;
+  background-color:var(--quotebackground);
+  color: var(--quotetext);
+}
+
+/*series of*/
+.revealsummary{
+  text-align: center;
+ background-color:var(--seriesofbg);
+  padding: 10px;
+ font-weight: bold;
+  border: 2px solid var(--showcontentborder);
+ 
+}
+.reveal{
+  text-align: center;
+ background-color:var(--seriesofbg);
+  padding: 5px;
+  width: 50%;
+  border: 2px solid var(--showcontentborder);
+  color: var(--seriesoftext);
+
+}
+
+/*flair*/
+ #flair::before {
+  background-size: cover;
+  background-size: 25px 25px;
+  display: inline-block;
+  width: 30px; 
+  height: 20px;
+  margin-left: 4px;
+  content:"âš¶";
+}
+
+/*flair with image- delete above if using. you will need to play with the width and height to make it fit properly*/
+
+  #flair::before { background-image: url('https://64.media.tumblr.com/9f06c5fc86e26cbb8fb459881cb5eb8b/cf53b60cec017c02-d7/s75x75_c1/18fd43d14459e5ce59d0e90a603a94f35ef0ad48.gifv');
+  background-size: cover;
+  background-size: 20px 25px;
+  display: inline-block;
+  width: 20px; 
+  height: 20px;
+  margin-left: 4px;
+  content:" ";
+}
+
+/*infotable*/
+.infotable {
+  float:right;
+  margin-left:5px;
+  background:var(--infoboxbg);
+  border-left:2px solid var(--borders);
+  border:2px solid var(--borders);
+  width:21%;
+  font-size: 14px;
+  color: var(--infotext);
+  
+}
+.infotable img{
+  max-width: 100%;
+  margin: auto;
+}
+.infotable th {
+  text-align:left;
+ 
+}
+.infotable th{
+    padding: 5px;
+  color: white;
+}
+.infotable ul{
+  list-style: none;
+  padding: 0px;
+  margin: 4px;
+}
+#centertext{
+  text-align: center;
+  background: var(--centertext);
+}
+/*clear float after infobox*/
+#clear::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*responsiveness*/
+
+/*narrow*/
+@media(max-width: 900px) {
+  .infotable{
+    width: 30%;
+  }
+    .wrapper{
+    width: 100%;
+  }
+      .chapters{
+    width: 50%;
+  }
+  .reveal{
+    width: 60%;
+  }
+  }  
+/*medium*/
+@media(max-width: 1250px) {
+  .infotable{
+    width: 35%;
+  }
+   .contents{
+    width: 40%;
+  }
+  }  
+
+/*mobile */
+@media(orientation: portrait) {
+  .quotebox{
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    margin-top: 10px;
+  }
+  body{
+    margin-top: 0px;
+  }
+   .infotable{
+    width: 100%;
+     margin-bottom: 20px;
+  }
+ 
+  .wrapper{
+    width: 95%;
+  }
+    .chapters{
+    width: 50%;
+  }
+  .main{
+    padding-top: 20px;
+  }
+  .contents{
+    width: 95%;
+  }
+   .reveal{
+    width: 95%;
+  }
+}
+            
+
+</style>
+
+
+ <style>
+div.gallery {
+  margin: 3px;
+  float: left;
+  width: 195px;
+  padding: 10px;
+}
+
+div.gallery img:hover {
+  
+}
+
+div.gallery img {
+  
+ 
+
+		
+   
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: var(--textcolor);
+  
+  
+  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.blur-image {
+                                  filter: blur(30px);
+                                  transition: filter 0.5s ease;
+                                }
+                                
+                                .blur-image:hover {
+                                  filter: blur(0);
+                                }
+
+@media only screen and (max-width: 800px) {
+  div.gallery img {
+    width: 320px;
+  }
+  
+  div.desc {
+     width: 320px;
+     font-size: 1.3em;
+  }
+}
+
+</style>
+
+ </head>
+
+  <body>
+    
+    
+    <!--wrapper-->
+<div class="wrapper">
+ <!--header-->
+  <header></header>
+ <!--main-->
+<main id="clear">
+  <p class="breadcrumb">navigate: <a href="https://chimerathing.neocities.org/home">homepage</a>, <a href="https://chimerathing.neocities.org/ocdirectory">oc directory</a> <br>
+  tags: #fandom ocs #object ocs #original story ocs #the amazing object race #the amazing object quiz<br>
+  content warnings: #homophobia, transphobia, and intersexism #sexual abuse and harassment #emotional abuse #csa/child abuse in general #drug addiction/abuse</p>
+ <h1 id="flair"> Megaphone !</h1>
+  
+ <!--table-->
+ <table class="infotable">
+<tbody><tr>
+<th colspan="2" id="centertext" style="text-align:center">Maristella "Megaphone" Milagros
+</th></tr>
+<tr>
+  <th colspan="2" style="text-align: center;"><p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1409_20251022132016.png" alt="megaphone ref"></p>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><i></i>
+</td></tr>
+<tr>
+<th colspan="2" id="centertext">Basic Information
+</th></tr>
+<tr>
+<th>Name
+</th>
+<td>Maristella Milagros, Megaphone
+</td></tr>
+<tr>
+<th>Nicknames/Aliases
+</th>
+<td>Mega, Stella (first name shortened), bluestarrider (online alias)
+</td></tr>
+<tr>
+<th>Age
+</th>
+<td>27
+</td></tr>
+<tr>
+<th>Gender
+</th>
+<td>transfemmasc bigender
+</td></tr>
+<tr>
+<th>Pronouns
+</th>
+<td>he/she
+</td></tr>
+<tr>
+<th>Orientation
+</th>
+<td>bisexual gaybian
+</td></tr>
+<tr>
+<th>Species
+</th>
+<td>object (blue and gold handheld megaphone)
+</td></tr>
+<tr>
+<th>Hobbies
+</th>
+<td>producing self-indulgent music on the down-low
+</td></tr>
+<tr>
+<th>Occupation
+</th>
+<td>musician, TAOR host/announcer, drag queen and performer, & mascot for the car manufacturer "Mega Motors"
+</td><tr>
+<th>Status
+</th>
+<td>Alive
+</td></tr>
+
+</tbody></table>
+  <!--end table-->
+  
+ <!--main content-->
+<!--quotebox-->
+<div class="quotebox">" I thought we agreed that we WEREN'T family friendly?
+"</div>
+<!--end quotebox-->
+<p>introduction goes here blah blah blah i love megaphone</p>
+
+<h3>Personality</h3>
+
+<p>Megaphone is a relatively friendly and extroverted person overall, and tends to have an “i don’t give a fuck” type of attitude towards a majority of things. With his friends, or people she otherwise feels comfortable around, she can be pretty flirtatious, but also engages in a bit of pissing them off for fun. She’s pretty confident in herself and has a very strong sense of identity, being very open about the kind of person he is, especially in terms of his queerness. He doesn’t take kindly to people trying to control or change him in any regards, she just wants to be allowed to be herself and for others to fuck off if they take issue with it. He enjoys being able to just let loose and enjoy life, not letting himself dwell on or stress over negative things too much. When things do get under his skin though, the result isn’t very pretty. He can become rather snippy and hostile with people, and enters an irrational state of mind where he exhibits a lot of self-destructive behaviors. He also thinks lowly of people that she perceives as not being fully understanding of him or his issues. She doesn’t particularly enjoy this aspect of herself at all, but a lot of unresolved trauma throughout her life has brought her to a point where he isn’t entirely sure of how to regulate himself or his emotions, and he finds it better for him to just ignore it all as confronting it would bring him significant stress that he has yet to feel ready to deal with. That doesn't stop him from complaining about how shitty some parts of his life are, though, he just feels way too helpless to truly do anything about it.</p>
+
+<p>He's constantly paranoid of people using him for his fame, so she tries to be careful of who exactly she decides to be friends with. She has been faced with a lot of people throughout her life that wanted to take advantage of him to due the fact that he's famous, and as well as attractive, and as a result generally tends to be pretty skeptical of people despite his usual laid-back nature. He also has been frequently objectified and dehumanized for most of her life and career, especially for being trans and intersex. Overall, he hates the fact that he is famous because of this. He enjoys doing what he does and is happy with where he's at in life for the most part, but he actually doesn't really enjoy the fame that has come from it at all. He doesn't like having so many eyes on him. It feels violating. He just wants people in his life that will treat him like a normal person, not a celebrity or sexual object.</p>
+
+
+<h3>Background</h3>
+
+<p></p>
+
+
+<h3>Trivia</h3>
+<ol>
+
+<li>He hosts TAOR (and subsequently TAOQ) alongside Jigsaw, who is also his partner.</li>
+<li>She’s apart of a talent agency called Hueshift Talent, which has helped him reach the level of fame that he’s at now when it comes to making music and performing. He’s not very fond of her manager, though.</li>
+<li>He works with Mega Motors by helping with marketing their vehicles and modeling in promotional photos. Mega Motors is also the same company behind TAOR, and they hired Megaphone to be a host for the event.</li>
+<li>Outside of his professional career of making music, she makes music purely for herself in his spare and posts it online under the name “bluestarrider”. He owns a personal Fumblr blog of the same name where she logs random thoughts and talks about his life, but tries to keep it relatively vague as to not be potentially recognized by fans, or even stalkers.</li>
+<li>The music he makes as a professional musician that gets performed on stage are relatively generic but catchy pop/edm songs, sometimes with queer themeing in them. The music she makes for herself is a lot more experimental, harsh sounding, and portrays a lot of his more raw emotions in ways that wouldn’t exactly be the most suitable for the public eye.</li>
+<li>He’s a big Uma Musume: Pretty Derby fan and Daitaku Helios is his favorite uma.</li>
+<li>His favorite vocal synth is Yokune Ruko.</li>
+<li>He likes playing Sonic Racing games.</li>
+<li>She was a scene kid in her mid to late teens.</li>
+<li>Her intersex variation is ovotestes.</li>
+<li>He frequently abuses drugs as a way of coping with his stress. He has tried to quit multiple times, but to no avail.</li>
+<li>The star on her face wasn't always there. She painted it on after the idea was suggested to him by Jigsaw, to cover up an old wound from his abusive ex, Digicam. She decided to do it as first step towards truly being able to express himself after being denied autonomy for so long. To her, his star symbolizes independence, moving on, and rebellion. He may have yet to fully heal from his trauma, but he does feels as if he has much more freedom now.</li>
+
+
+
+  </ol>
+  
+ <h3>Relationships</h3>
+
+<uL>
+<li> Fire Alarm: dad </li>
+<li> Siren: mom </li>
+<li> Loudspeaker: younger brother </li>
+<li> Jigsaw: co-host/director for TAOR, partner </li>
+<li> File Folder: assistant manager for TAOR </li>
+<li> Flight Case: manager from hueshift </li>
+<li> Stage Light: assistant producer from hueshift </li>
+<li> Digicam/Reika Davalos: childhood friend, ex-girlfriend, abuser </li>
+<li> Vinyl Record/Valerie Jackson: friend, ex-girlfriend </li>
+<li> Drum: friend </li>
+<li> Keyboard: friend </li>
+</ul>
+
+
+
+<h3>Gallery</h3>
+
+<div class="row">
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1409_20251022132016.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1409_20251022132016.png" alt="" width="600"  >
+  </a>
+  <div class="desc">megaphone reference</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171354.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171354.png" alt="" width="600"  >
+  </a>
+  <div class="desc">megaphone icon</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/megaphone%20gijinka%20ref.PNG">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/megaphone%20gijinka%20ref.PNG" alt="" width="600" >
+  </a>
+  <div class="desc">gijinka/humanized megaphone reference/concept</div>
+</div>
+</div>
+<br>
+
+
+<!--series box-->
+
+<details class="reveal">
+<summary class="revealsummary">TAOR/TAOQ</summary>
+  <p><a href="">jigsaw</a> • megaphone (you are here!) • <a href="">file folder</a> •  <a href="">mug</a> •  <a href="">system</a> •  <a href="">digicam</a> </p>
+  
+</details>
+
+<!--end series box-->
+
+
+<h3>Related Pages</h3>
+<ol>
+<li><a href="https://toyhou.se/35923383.megaphone-stella-milagros">Toyhouse Profile</a></li>
+<li><a href="https://amazingobjectrace.neocities.org/">The Amazing Object Race: Official Website</a></li>
+<li><a href="https://chimerathing.neocities.org/ocdirectory/megaphone/fumblr">Megaphone's Fumblr Blog (not an actual Tumblr blog lol)</a></li>
+<li><a href="https://www.tumblr.com/bluestarrider">Actual real Tumblr blog (might be an ask blog in the future but it's just to hold the username for right now)</a></li>
+</ol>
+  </main>
+<footer>
+ <img src="https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/megaphone%20blinkie%201.gif" alt="" width="150">  <img src="https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/megaphone%20quote%20blinkie%201.gif" alt="" width="150"> 
+</footer>
+</div>
+
+    
+  </body>
+</html>

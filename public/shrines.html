@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRHINES! </title>
+   <script type="text/javascript">
+      title = "SRHINES! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script> 
+
+  <style>
+      
+    body {
+  margin: 0;
+  font-family: 'Rosela';
+  background: url("https://64.media.tumblr.com/552e6a74ad7555d4078f3d257f169132/cbd9b230f49bd54d-09/s75x75_c1/5ee83ec53b7a7f89dca67cb644a574c83f1848ec.pnj");
+  background-color: black;
+  background-size: 5em;
+  background-repeat: repeat;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+ h1 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
+
+   h2 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
+   h3 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
+
+@font-face {
+  font-family: 'Rosela';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://dl.dropbox.com/scl/fi/pwd7ysnhki4vftc9f9rbz/MS-Gothic.ttf?rlkey=12bg8zkwmonggdxqfdh90c8bk&st=o96zgisg&) format('truetype');
+}
+
+@font-face {
+  font-family: 'MarioLuigi';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://file.garden/Z5ztm_B6wj_8HQnK/MarioLuigi2.ttf) format('truetype');
+}
+
+
+    .main-container {
+      width: 500px;
+     
+      border: 5px double #680811;
+        background-image: linear-gradient(#000102 ,  #060109);
+     box-shadow: 1px 1px 10px #680811;
+      border-radius: 10px;
+      
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #f06489;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 1.1em;
+      color: white;
+      margin-bottom: 20px;
+      font-family: 'Rosela';
+    }
+
+    .home-link {
+      display: block;
+      text-align: center;
+      font-size: 1.0em;
+      ext-shadow: 3px 3px 3px #030000;
+                background: linear-gradient(#8d2a31 , #680811);
+     color: ffdec6;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+color: #ffdec6;
+font-weight: bold;
+text-decoration: underline wavy #727ccf; 
+transition: letter-spacing 1s;
+      margin-bottom: 20px;
+    }
+
+    .home-link:hover {
+      color:white;
+      letter-spacing: 1px;
+      text-decoration:none;
+    }
+
+    .content-container {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .shrine-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+ .shrine-item {
+  position: relative;
+  height: 190px;
+  border: 5px double #680811;
+  box-shadow: 1px 1px 10px #680811;
+  border-radius: 5px;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s, background-color 0.3s;
+  margin: 10px;
+}
+
+    .shrine-item:hover {
+      transform: scale(1.02);
+      background-color: rgba(97, 155, 255, 0.4);
+    }
+    
+.shrine-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3em;
+  font-weight: bold;
+ color:white !important;
+    padding: 0px !important;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    font-family:'marioluigi' !important;
+  text-align: center;
+  width:100%
+}
+
+    .shrine-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.8) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2;
+  transition: left 0.8s ease;
+}
+
+.shrine-item:hover::before {
+  left: 100%;
+}
+
+.shrine-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(194, 209, 207, 0.3);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shrine-item:hover::after {
+  opacity: 1;
+}
+    
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e4e4e4;
+    border: 1px solid #aaa;
+  }
+    
+    .image {
+        position: relative;
+        z-index: 1000;
+      }
+
+      .decorative-image {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    inset: auto;
+}
+
+.lol {
+    bottom: -1122px;
+    left: 700px;
+    background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/ezgif.com-animated-gif-maker(15).gif');
+    width: 306px;
+    height: 646px;
+}
+
+
+</style>
+
+<body>
+
+
+
+  
+  
+  <div class="main-container">
+    <h1>Shrines</h1>
+    <div class="description">
+     <p>Pages dedicated to various things that I love!</p>
+    </div>
+    
+    <a href="https://chimerathing.neocities.org/home" class="home-link" >← return</a>
+    
+    <div class="content-container">
+      <div class="shrine-grid">
+      
+         <a class="shrine-item" href="https://chimerathing.neocities.org/shrines/love" target="_blank" style="background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/seal-kiss-kiss-seal.gif');">
+  <div class="shrine-title">Love <br> (COMPLETE) </div>
+      </a>
+        <a class="shrine-item" href="https://chimerathing.neocities.org/shrines/selfship" target="_blank" style="background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/graphics/Untitled1386-20250901131950.png');">
+  <div class="shrine-title">My F/O's <br> (COMPLETE) </div>
+</a>
+
+ <a class="shrine-item" href="https://chimerathing.neocities.org/shrines/queerlabels" target="_blank" style="background-image: url('https://64.media.tumblr.com/d49b7d5f37bef8f7f9d5e2add3ef7812/510139639b4b55b0-b6/s1280x1920/1712784528dd7a70bbf7a959d90454fca260ce89.gifv');">
+  <div class="shrine-title">My Queer Labels <br> (COMPLETE) </div>
+      </a>
+      
+       <a class="shrine-item" href="https://chimerathing.neocities.org/shrines/alterhumanity" target="_blank" style="background-image: url('https://64.media.tumblr.com/734af566de3e3126f8624a6e1a2e6275/d6c604b4733f4bc2-2d/s250x400/57ce7d9ee455f519e34c9ae0869d5a0cb7756c6e.gifv');">
+  <div class="shrine-title">My Alterhumanity <br> (COMPLETE) </div>
+      </a>
+        
+        <a class="shrine-item" href="https://chimerathing.neocities.org/shrines/kasaneteto" target="_blank" style="background-image: url('https://media1.tenor.com/m/X1HPohKO11IAAAAC/teto-kasane.gif');">
+  <div class="shrine-title">Kasane Teto <br> (COMPLETE)</div>
+</a>
+
+<a class="shrine-item" href="https://chimerathing.neocities.org/shrines/vocalsynth" target="_blank" style="background-image: url('https://media1.tenor.com/m/Uk3HwkPklK0AAAAC/gangster-dance-with-miku-ganster-dance.gif');">
+  <div class="shrine-title">Vocalsynths <br> (SEMI-COMPLETE) </div>
+</a>
+
+<a class="shrine-item" href="https://chimerathing.neocities.org/shrines/cheesecraft" target="_blank" style="background-image: url('https://file.garden/afC_jkDycVrE2-8P/CheesyCommercial.png');">
+  <div class="shrine-title">Cheesecraft 2026 Revival<br> (COMPLETE) </div>
+</a>
+ 
+        <a class="shrine-item" href="/not_found" target="_blank" style="background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/orange-juice-falin-ezgif.com-optimize.gif');">
+  <div class="shrine-title">Farcille (WIP)</div>
+</a>
+
+        <a class="shrine-item" href="/not_found" target="_blank" style="background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/inanimate-insanity-lightbulb-lightbulb-inanimate-insanity.gif');">
+  <div class="shrine-title">Lightbrush (WIP)</div>
+</a>
+
+       <a class="shrine-item" href="/not_found" target="_blank" style="background-image: url('https://media1.tenor.com/m/ODX2HHFt7FIAAAAC/butcher-vanity-vane-lily.gif');">
+  <div class="shrine-title">Flavor Foley (WIP)</div>
+</a>
+
+<a class="shrine-item" href="/not_found" target="_blank" style="background-image: url('https://media1.tenor.com/m/b84-_9gpswIAAAAC/tptm-the-post-traumatic-manifesto.gif');">
+  <div class="shrine-title">The Post-Traumatic Manifesto (WIP)</div>
+</a>
+
+<a class="shrine-item" href="/not_found" target="_blank" style="background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/acme-iku-acmeiku.gif');">
+  <div class="shrine-title">Acme Iku (WIP) </div>
+</a>
+
+      </div>
+    </div>
+  </div>
+
+
+  </body>
+</html>

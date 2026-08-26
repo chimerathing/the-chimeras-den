@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLECTIONS!</title>
+   <script type="text/javascript">
+      title = "COLLECTIONS! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+
+<style>
+    :root {
+      --accent: #635bbb;
+    }
+    
+    body {
+      background-image:url('https://file.garden/Z5ztm_B6wj_8HQnK/336.gif');
+        background-size: repeat;
+
+      font-family: 'basiic', 'Courier', monospace;
+      color:#418622;
+      font-size:1.2em; /* roughly equivalent to 16 or 17px i think */
+    }
+
+    @font-face {font-family: 'basiic'; src:url('https://files.catbox.moe/6qh6j8.ttf');}
+    
+     @font-face {
+            font-family: 'new penji';
+            src: url('https://file.garden/ZZmO-hHupHknBKtU/mikiyu-newpenji.woff');
+        }
+    #contain {
+      display:grid;
+      grid-template-columns: .5fr .5fr 1fr;
+      grid-template-rows: .3fr 5fr 1fr 1fr .1fr;
+      grid-template-areas:
+        "h h h"
+        "l c c"
+        "l c c"
+        "l c c"
+        "f f f";
+      padding:5px;
+      margin-inline:auto;
+      position:absolute;
+      left:50%;top:50%;transform: translateX(-50%) translateY(-50%);
+      height:85vh;width:65vw;
+    }
+        
+    #left, #center {
+      padding:7px;
+     overflow-y:auto;
+        background: linear-gradient( rgba(231, 255, 197, 0.63),rgba(172, 241, 75, 0.63));
+     overflow-x:hidden;
+      border: 45px solid #418622 !important;
+      backdrop-filter: blur(10px);
+   color:#418622;
+    border-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_0ce6680419a72550c5e565fbbe47606e_13af327e_1280(2).png") 25 fill round !important;
+       border-image-slice: 35% !important;
+        border-image-repeat: round !important;
+      
+    }
+    
+    #head {grid-area:h;}
+        
+    #left {
+      grid-area:l;
+      border-top-left-radius:15px;
+      border-bottom-left-radius: 15px;
+      
+
+    }
+    #left > .month {font-size:1.3em;font-weight:bold;}
+    #left button {
+      background: linear-gradient(#418622, #065000);
+      border:none;
+      color:white;
+      margin:5px;
+      padding:3px;
+      display:block;
+      font-family:'basiic', 'Courier', monospace;
+      font-size:inherit;
+      border-radius: 5px !important;
+    }
+    #left button:hover {
+      background:white;
+      border:1px solid #418622;
+      color:#418622;
+      font-weight:bold;
+    }
+    
+    #center {
+      grid-area:c;
+      border-bottom-right-radius:15px;
+      border-top-right-radius:15px;
+    }
+    
+    #foot {
+      grid-area:f;
+      text-align:center;
+    }
+    
+    h1 {
+     
+    color: transparent;
+    line-height: 1.1em;
+    background-color: var(--base);
+    background-image: linear-gradient(white 10%, #fe751a 50%, #fe8e20);
+    image-rendering: pixelated;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    font-weight: bold;
+    font-family: 'new penji';
+   
+margin: 0;
+    filter: drop-shadow(-3px -3px #98f87e) drop-shadow(-3px 3px #98f87e) drop-shadow(3px -3px #98f87e) drop-shadow(3px 3px 1px #98f87e)  drop-shadow(2px 2px 1px black) drop-shadow(0 0 10px #21c60b) drop-shadow(0 0 4px #21c60b);
+}
+   h2, h3, h4 {
+     margin:0;
+   }
+    
+    
+    a {
+      color:#065000;
+      text-decoration:none;
+    }
+    a:hover {
+      color:#21c60b;
+    }
+    
+    img {width:100%;} /* prevents overflow */
+    
+    hr {
+      border: 1px solid #6d302d;
+      overflow: visible;
+      text-align: center;
+      margin:none;
+    }
+    
+    th, td {
+      border:1px solid #6d302d;
+      padding:5px;
+    }
+    
+    .txtborder {color:white;text-shadow: -1px -1px 0 #6d302d, 2px -1px 0 #6d302d, -1px 2px 0 #6d302d, 1px 1px 0 #6d302d;}
+    
+    .scroll {
+      overflow: auto;
+      border:1px solid #6d302d;
+      padding:5px;
+    }
+    
+    ::selection {
+      background:#995d56;
+      color:white;
+    }
+    
+    text {
+				width: 35%;
+			}
+
+div.gallery {
+  margin: 5px;
+  float: left;
+  width: 260px;
+  padding-top:15px;
+}
+
+div.gallery:hover {
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  float: center;
+ 
+}
+
+div.desc {
+ padding:15px;
+  text-align: center;
+  color:#418622;
+  font-family: basiic;
+ 
+}
+   
+   #pagedoll{
+position:fixed;
+bottom: 30px;
+left: 156px;
+}
+
+.row {
+  display: flex;
+ flex-wrap: wrap;
+  padding: 0 4px;
+  width:100%;
+  
+}
+
+
+html {
+    scrollbar-color: #418622 #fff;
+    scrollbar-width: auto;
+        }
+  </style>
+  
+  <script>
+    function openCity(cityName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      document.getElementById(cityName).style.display = "block";  
+    }
+  </script>
+</head>
+<body>
+
+<div id="contain">
+   
+    
+    <header id="head">
+      <h1> ★ GABRIEL'S COLLECTIONS ★    </h1>
+    </header>
+    
+    <aside id="left">
+      <a href="https://chimerathing.neocities.org/home">go back</a>
+       <br>
+       <br>
+            <button onclick="openCity('albums')">albums</button>
+        	  <button onclick="openCity('figures')">figures</button>
+        	  <button onclick="openCity('plushies')">plushies</button>
+        	  <button onclick="openCity('voicebanks')">voicebanks</button>
+        	   <br>
+      <br>
+       
+        	   <button onclick="openCity('wishlist')">wishlist</button>
+       
+       
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/523d5d422c84febca91bb6ab921cf3ae-418587797.png">
+    </aside>
+    
+    <main id="center">
+    
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_06b3babcad5883a6d9bd65c8df388f0c_2bf6f4fb_2048.gif">
+    
+    <div id="albums" class="city" style="display:none;">
+      	<h3>ALBUMS</h3>
+      	
+      	
+      	<div class="row">
+      		 <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/cc_art_webp(1).png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/cc_art_webp(1).png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">CARDIAC CONTREPOINT by FLAVOR FOLEY <br>(physical CD)</div>
+</div>
+      	
+      <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/a3874095282_16.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/a3874095282_16.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">The Post-Traumatic Manifesto by Weevildoing <br>(digital)</div>
+</div>
+      	</div>
+      	
+      	
+      </div>
+     
+    
+      <div id="figures" class="city" style="display:none;">
+      	<h3>FIGURES</h3>
+      	<div class="row">
+      		 <div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/FFZfGCdv/IMG-3142.jpg">
+    <img src="https://i.postimg.cc/FFZfGCdv/IMG-3142.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku "Project Diva 2nd" by Sega</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/YqDvB4zy/IMG-3146.jpg">
+    <img src="https://i.postimg.cc/YqDvB4zy/IMG-3146.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku "Infinity" by Sega</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/3Jxkqjmv/IMG-3145.jpg">
+    <img src="https://i.postimg.cc/3Jxkqjmv/IMG-3145.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku "Winter Live" by Taito</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/3xyd8KLr/IMG-3147.jpg">
+    <img src="https://i.postimg.cc/3xyd8KLr/IMG-3147.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku "Alice in Wonderland" by Taito</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/QCXFh1zv/IMG-3141.jpg">
+    <img src="https://i.postimg.cc/QCXFh1zv/IMG-3141.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku "Jirai Kei" by Taito</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/6qYy3TJq/IMG-3144.jpg">
+    <img src="https://i.postimg.cc/6qYy3TJq/IMG-3144.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku "Breath With You" by Sega</div>
+      </div>
+      </div>
+      </div>
+      <div id="plushies" class="city" style="display:none;">
+      	<h3>PLUSHIES</h3>
+      	
+      		<p></p>
+      </div>
+     
+      <div id="voicebanks" class="city" style="display:none;">
+      	<h3>VOICEBANKS</h3>
+      	<p>I actually don't have most of these anymore since I lost my SynthV activation codes and can't use them anymore after getting a hardware upgrade LMFAOOOOO</p>
+      		<div class="row">
+      		<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/ZnVnxn3d/Synthesizer-V-AI-KASANE-TETO-Box.png">
+    <img src="https://i.postimg.cc/ZnVnxn3d/Synthesizer-V-AI-KASANE-TETO-Box.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Kasane Teto AI</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/430xdjGz/Synthesizer-V-AI-KASANE-TETO-Box-4.png">
+    <img src="https://i.postimg.cc/430xdjGz/Synthesizer-V-AI-KASANE-TETO-Box-4.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Yi Xi</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/dQyL7QLD/Synthesizer-V-AI-KASANE-TETO-Box-2.png">
+    <img src="https://i.postimg.cc/dQyL7QLD/Synthesizer-V-AI-KASANE-TETO-Box-2.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">GUMI AI</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/RVxqwrHd/Synthesizer-V-AI-KASANE-TETO-Box-1.png">
+    <img src="https://i.postimg.cc/RVxqwrHd/Synthesizer-V-AI-KASANE-TETO-Box-1.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Otomachi Una AI</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/Y9mqm82T/Synthesizer-V-AI-KASANE-TETO-Box-3.png">
+    <img src="https://i.postimg.cc/Y9mqm82T/Synthesizer-V-AI-KASANE-TETO-Box-3.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Koharu Rikka AI </div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Synthesizer-V-AI-KASANE-TETO-Box(4)(1).png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Synthesizer-V-AI-KASANE-TETO-Box(4)(1).png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Mai & Mai 2</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/4xCq1gv8/Synthesizer-V-AI-KASANE-TETO-Box-5.png">
+    <img src="https://i.postimg.cc/4xCq1gv8/Synthesizer-V-AI-KASANE-TETO-Box-5.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku V4X</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Synthesizer-V-AI-KASANE-TETO-Box(5)(1).png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Synthesizer-V-AI-KASANE-TETO-Box(5)(1).png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">MAIKA</div>
+</div>
+</div>
+      </div>
+     
+          <div id="wishlist" class="city" style="display:none;">
+      	<h2>WISHLIST</h2>
+      	<br>
+      		<h3>ALBUMS</h3>
+      	<div class="row">
+      
+      			 <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/a2695750060_16.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/a2695750060_16.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Constant Companions (Deluxe Edition) by Jamie Paige</div>
+</div>
+      		
+      	
+      			 <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/artworks-XMBsI2Sf6L8kG8MD-1jb1KA-t500x500-752366610.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/artworks-XMBsI2Sf6L8kG8MD-1jb1KA-t500x500-752366610.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">DAEMON/DOLL by Various Artists</div>
+</div>	
+      		
+      	
+      		
+      			 <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/o_1iuptvn0l1hanhig1mva1uggvp4t.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/o_1iuptvn0l1hanhig1mva1uggvp4t.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Machina Mori by Various Artists</div>
+</div>
+
+
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/a1089414688_16.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/a1089414688_16.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Neko Neighborhood by Various Artists</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/G3uLUF-XAAARnMc.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/G3uLUF-XAAARnMc.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">EXIT TUNES PRESENTS: UTAUSEKAi by Various Artists</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/1200x1200bf-60-2408295445.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/1200x1200bf-60-2408295445.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">EXIT TUNES PRESENTS: UTAUMiRAi by Various Artists</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/L_p0022288450-2796308797.JPG">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/L_p0022288450-2796308797.JPG" alt="" width="600" height="400">
+  </a>
+  <div class="desc">The Best Days of Kasane Teto (2012) by Various Artists</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/albums/G3uLMuXWwAAh_T9.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/albums/G3uLMuXWwAAh_T9.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">SUPER KASANE TETO COLLECTION by Death Ohagi</div>
+</div>
+   	
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/51194.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/51194.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">The Best Days of Kasane Teto (2026) by Various Arists</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/39256.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/39256.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">CATEGORY【L】by LIQ</div>
+</div>
+<br>
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/24878.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/24878.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">GREATEST SHITS by Utsu-P</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/22930.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/22930.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">EXIT TUNES PRESENTS: Meikonic by Various Artists</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/24096.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/24096.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">MAIKAVERSE by Various Artists</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/48226.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/48226.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">PERFECT PERSONA by Utsu-P</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/2269.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/album%20covers/2269.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">DEAD or ALIVE by Death Ohagi</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/D07k02p0/31408.jpg">
+    <img src="https://i.postimg.cc/D07k02p0/31408.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Dramatic Days by Death Ohagi</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/13hT3R8k/36848.png">
+    <img src="https://i.postimg.cc/13hT3R8k/36848.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">HAPPYPILLS by Utsu-P</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/6prP2sRz/1274.jpg">
+    <img src="https://i.postimg.cc/6prP2sRz/1274.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">MOKSHA by Utsu-P</div>
+</div>
+
+</div>
+
+<h3>FIGURES</h3>
+      	
+      	
+      	<div class="row">
+      		 <div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/2S4XDDF2/21599c2e67e5500fe2c7fffeaad758da.jpg">
+    <img src="https://i.postimg.cc/2S4XDDF2/21599c2e67e5500fe2c7fffeaad758da.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Kasane Teto "Yoshiwara Lament" by Good Smile Company</div>
+</div>
+      	
+      <div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/PrKQz5yN/imgonline-com-ua-convert-IJz-IERKqtxyp-959-bb10928c.jpg">
+    <img src="https://i.postimg.cc/PrKQz5yN/imgonline-com-ua-convert-IJz-IERKqtxyp-959-bb10928c.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Kasane Teto "Nendoroid Synthesizer V AI" by Good Smile Company</div>
+</div>
+      	</div>
+      	
+      </div>
+     <img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_06b3babcad5883a6d9bd65c8df388f0c_2bf6f4fb_2048.gif">
+    </main>
+    
+    
+    
+  </div>
+
+</body>
+</html>

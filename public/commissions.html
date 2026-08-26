@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMISSIONS !</title>
+   <script type="text/javascript">
+      title = "COMMISSIONS ! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script> 
+
+<style>
+
+/* ---------- body ---------- */
+
+body {
+margin: auto;
+background-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/gdfghfdjukihgiduofg.png");
+background-blend-mode: darken;
+background-color: rgba(0,0,0,0.6);
+}
+
+
+     @font-face {
+                font-family: rosela;
+                src: url('https://dl.dropbox.com/scl/fi/pwd7ysnhki4vftc9f9rbz/MS-Gothic.ttf?rlkey=12bg8zkwmonggdxqfdh90c8bk&st=o96zgisg&');
+            }
+            
+             @font-face {
+                font-family: marioluigi;
+                src: url('https://file.garden/Z5ztm_B6wj_8HQnK/MarioLuigi2.ttf');
+                font-weight: bold;
+            }
+
+
+  strong {color:white !important;
+    padding: 1px !important;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    font-family:'marioluigi' !important;}
+
+@media (max-width: 700px) {
+  #wrapper {
+   margin-left: 350px;
+  }
+
+body {
+background-size: 105%;
+color: white;
+}
+
+	}
+
+
+/* ---------- header ---------- */
+  
+#header {
+width: 1080px;
+height: 80px;
+margin: 0 auto;
+font-family: marioluigi;
+color: #940408;
+font-size: 45px;
+margin-top: 20px;
+padding-top: 5px;
+border: 2px dotted #940408;
+border-top-right-radius:100px;
+border-top-left-radius:5px;
+border-bottom-left-radius: 0px;
+background: linear-gradient(black , #680811);
+background-size: 380px;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+background-blend-mode: darken;
+background-color: rgba(0,0,0,0.6);
+background-size: 300px;
+padding-left: 20px;
+}
+
+/* ---------- containers ---------- */
+
+#container {
+height: auto;
+margin: 0 auto;
+font-family: rosela;
+border: 1px solid #A6D3D4;
+width: 1100px;
+color: white;
+}
+
+#insidecontainer {
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+margin-left: 30px;
+color: white;
+}
+
+#insidecontainer img {
+align-self: flex-start;
+border: 1px solid #940408;
+}
+
+#insidecontainer img:hover {
+border: 1px solid #A6D3D4;
+}
+
+#services {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+padding-top: 10px;
+align-content: center;
+justify-content: center;
+padding-bottom: 10px;
+color: white;
+}
+
+#services img {
+align-self: flex-start;
+border: 1px solid #940408;
+}
+
+
+/* ---------- PHOTO BOXES ---------- */
+
+#box {
+height: auto;
+width: auto;
+text-align: center;
+}
+
+#box img {
+border: 1px solid #940408;
+}
+
+#textbox {
+border: 1px solid #940408;
+height: 50px;
+margin-top: 5px;
+text-align: center;
+}
+
+/* ---------- COMMISSION BOXES ---------- */
+
+#bigbox {
+border: 3px ridge #680811;
+width: 890px;
+margin: 0 auto;
+font-family: rosela;
+text-align: center;
+font-size: 18px;
+border-radius: 5px;
+color: white;
+  
+  text-shadow: 1px 1px 5px black;
+
+background-image: linear-gradient(#000102 ,  #060109);
+      
+    color: white;
+}
+
+#smallbox {
+border: 3px ridge #680811;
+width: 530px;
+margin: 0 auto;
+font-family: rosela;
+text-align: center;
+font-size: 18px;
+border-radius: 5px;
+color: white;
+  
+  text-shadow: 1px 1px 5px black;
+background-image: linear-gradient(#000102 ,  #060109);
+      
+    color: white;
+}
+
+#smallcontainer {
+display: flex;
+width: 860px;
+margin: 0 auto;
+gap: 15px;
+
+}
+
+#midcontainer {
+
+margin: 0 auto;
+display:none;
+}
+
+#commissiontitle {
+height: 40px;
+margin: 0 auto;
+font-family: marioluigi;
+color: white;
+font-size: 40px;
+border-bottom: 2px dotted #940408;
+background: linear-gradient(black , #680811);
+ box-shadow: -1px -1.4px 1px inset #0f050c, 2px 3px 1.5px inset #8d2a31,
+    0px 0px 2px #0f050c;
+    0px 0px 2px #0f050c;
+background-size: 380px;
+ text-shadow: 1px 1px 5px #ffff, 1px 7px 10px #746fd2;
+
+
+background-size: 2em;
+padding-left: 20px;
+padding-top: 5px;
+text-align: center;
+}
+
+  #bigbox a:hover {
+
+color: #A6D3D4;
+}
+
+#commissions {
+
+font-family: rosela;
+font-size: 14px;
+padding: 5px;
+
+
+}
+
+/* ---------- others ---------- */
+
+a {
+color: #940408;
+}
+
+#titles {
+font-size: 20px;
+margin-top: -5px;
+}
+
+
+/* ---------- tooltip ---------- */  
+
+.tooltip {
+position: relative;
+display: inline-block;
+border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: #940408;
+color: black;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+border: 1px solid black;
+position: absolute;
+z-index: 1;
+margin-left: -230px;
+margin-top: 10px;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+
+ @media only screen and (max-width: 800px) {
+   
+   #smallcontainer {
+   flex-wrap: wrap;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+ }
+ 
+ #bigbox {
+   width: 100%;
+   font-size: 16px;
+ }
+ 
+ img {
+   width: 100%;
+ }
+ 
+ #commissiontitle {
+   font-size: 22px;
+ }
+ 
+ 
+</style>
+
+
+<body>
+
+<article role="tabpanel" id="commissions" class="has-scrollbar">
+
+<br>
+
+
+<div id="bigbox">
+
+<div id="commissiontitle">GABRIEL'S COMMISSION INFO</div>
+<br>
+<span style="font-family: marioluigi; font-size: 25px;"><font style="color: white;"> STATUS:</font> OPEN</span>
+
+<p>
+
+ <b>place an order through my <a href="https://ko-fi.com/chimerathing/commissions">ko-fi</a> if you're interested! <br><br></b>
+payment through ko-fi as a standalone donation is also okay. ko-fi is currently the only way i'm able to accept payment, but it's connected to my stripe account so that should allow you to pay using any payment processor of your choice!<br><br>
+
+you may DM <font style="color: #940408;">earedrobot</font> on discord as a means of communication, email me at <font style="color: #940408;">chimerathing@proton.me</font> or contact me at any of my other socials listed <a href="/contacts">here</a>, although discord is my most preferred method of contact since i'm most likely to immediately see it.
+<p>
+
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/79681ceb_original.png" style="filter:brightness(75%); ">
+<p>
+
+<span style="font-family: marioluigi; font-size: 25px; color: #940408;">HOW TO COMMISSION ON DISCORD <font size="small">(OR OTHER PLATFORMS THAT AREN'T KO-FI)</font></span> <br>
+<br>
+♥ tell me what kind of service you'd like<br><br>
+♥ provide reference images or descriptions of characters, poses, or anything else you want <br><br>
+♥ specify add-ons such as extra characters or backgrounds <br><br>
+♥ i'll start working on your commission once i recieve the payment (i only accept it upfront) <br><br>
+
+<p>
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/79681ceb_original.png" style="filter:brightness(75%);">
+<br>
+<br>
+<span style="font-family: marioluigi; font-size: 25px; color: #940408;">TERMS OF SERVICE</span> <br>
+<br>
+♥ Additional characters and detailed backgrounds cost extra since they are difficult for me, however I can do simple backgrounds (flat color, gradient or pattern) for free. I may also charge you extra depending on the complexity of your character's design.<br><br>
+
+♥ Props by default are free but I can charge extra for those as well depending on complexity. <br><br>
+
+♥ Some commissions may take longer than others depending on my mental state and motivation. I typically will try to get it done within the month that you commissioned me, but PLEASE let me know if you have a hard deadline. <br><br>
+
+♥  Progress shots will be provided in case any changes need to be made.  I can revise major things during the sketch stage and smaller things (like colour) afterwards if needed. Any MAJOR last minute revisions will cost extra, and if you wan't me to redo the piece from scratch you are expected to pay full price.<br><br>
+
+♥ Refunds are only offered if I don't complete your commission and do not plan to, or I find that I am incapable of doing so on my own terms. This will be either a full or partial refund depending on whether or not I made progress on your commission.<br><br>
+
+♥ You're free to use my art for any purpose or even edit it in any way you wish so long as you are the person who payed for it. HOWEVER, I <u>DO NOT</u> consent to my work being used to train AI of any sort, or in relation to anything NFTs/cryptocurrency adjacent under <u>ANY</u> circumstances.
+<br><br>
+
+♥ I have the right to deny any commission or blacklist anyone from commissioning me for any reason.<br><br>
+
+♥ I typically will post any and all commissioned work that I've completed publically on my social media and in my website's art gallery. If you do not wish for me to do this with your commission, please let me know.<br><br>
+
+♥ My personal and public spaces will always be a safe and encouraging for people of color, LGBTQIA+/queer people, disabled people, and people of all other marginalized groups. If this is something you take issue with, <u>then my creative work is not for you.</u>
+
+</div>
+
+<p>
+
+<div id="midcontainer"><p> <img src="" style="height: 966px; position: absolute; margin-left: 200px; margin-top: -27px;"> <p>
+
+<div id="bigbox" >
+
+
+
+
+
+
+</div>
+
+<p> <img src="" style="height: 966px; position: absolute; margin-left: -229px; margin-top: -27px;"> <p>
+
+</div>
+
+
+
+<div id="smallcontainer">
+
+<div id="smallbox">
+<div id="commissiontitle">WILL DRAW</div>
+<br>
+
+✓ humans, humanoids, monsters<br> 
+✓ furries, kemonomimi, ferals<br>
+✓ robots (preferably more simple designs)<br>
+✓ object characters<br>
+✓ any sort of anthro or gijinka design<br>
+✓ fanart (any fandom)<br>
+✓ ship art, oc x canon/selfship<br>
+✓ mild gore, body horror, or violence<br>
+✓ non-sexual nudity<br>
+<br>
+
+</div>
+
+<div id="smallbox">
+<div id="commissiontitle">WON'T DRAW</div>
+<br>
+✕ nsfw/porn/fetish content<br>
+✕ incest, pedophilia, zoophilia, lolishota, or anything immoral/"taboo"<br> 
+✕ real person ship art (unless it's like you and your partner or something but no celebrities lmfao)<br> 
+✕ cultural appropriation or whitewashing<br>
+✕ anything bigoted/overtly hateful<br> 
+✕ anything supportive of right-wing political ideology<br> 
+✕ anything i don't want to/don't feel comfortable with<br> 
+
+<br>
+</div>
+
+</div>
+<br>
+
+<div id="bigbox">
+<div id="commissiontitle">SERVICES + PRICES</div>
+
+<div id="services">
+<p>
+
+<div id="examples" style="display: inline;">
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1364-20250527205710.jpg" width=250><br>
+<strong>TRADITIONAL SKETCH</strong><br>
+BUST/HEADSHOT: $7 USD<br>
+HALF-BODY: $14 USD<br>
+FULL-BODY: $18 USD<br>
+WITH COLOR: SEE KO-FI PAGE!!!!<br>
+EXTRA CHARACTER(S): +$5 USD<br>
+</div>
+
+<p>
+
+<div id="examples" style="display: inline;">
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1337_20250320131752.png" width=230><br>
+<strong>FLAT-COLOR ILLUSTRATION</strong><br>
+BUST/HEADSHOT: $10 USD<br>
+HALF-BODY: $19 USD<br>
+FULL-BODY: $25 USD<br>
+SCENE: $35 USD<br>
+EXTRA CHARACTER(S): +$5 USD<br>
+DETAILED BACKGROUND: +$10 USD
+</div>
+
+<p>
+
+<div id="examples" style="display: inline;">
+<img src="https://i.postimg.cc/yNqfHGQ6/Untitled1284-20241226013141.png" width=230><br>
+<strong>SHADED ILLUSTRATION</strong><br>
+BUST/HEADSHOT: $17 USD<br>
+HALF-BODY: $27 USD<br>
+FULL-BODY: $37 USD<br>
+SCENE: $45 USD<br>
+EXTRA CHARACTER(S): +$10 USD<br>
+DETAILED BACKGROUND: +$15 USD
+</div>
+
+<p>
+  
+
+<div id="examples" style="display: inline; ">
+<img src="https://i.postimg.cc/HLcfGRTn/Untitled1079-20240411172720.png" width=300><br>
+<strong>CHARACTER REFERENCE SHEET</strong><br>
+FLAT-COLOR/MINIMAL SHADING: $30 USD<br>
+FULLY-SHADED/RENDERED: $46 USD<br>
+ADDITIONAL OUTFITS, POSES & EXPRESSIONS: +$10 USD<br>
+PROPS: +$5 USD<br>
+</div>
+
+</div>
+
+</div>
+
+</article>
+
+
+</body>
+
+
+</html>

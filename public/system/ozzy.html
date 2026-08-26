@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT OZZY!</title>
+   <script type="text/javascript">
+      title = "ANOTHER COG IN THE MURDER MACHINE! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+<style>
+            /** 
+            YOURSPACE PAGE - made by Nyar @ https://fear.garden
+
+            I originally made this for personal use in 2019, and I've been messing around with it ever since. Quality is a bit meh, but hey, it works!
+
+            Feel free to customise to your heart's content -- however, you will need basic HTML and CSS knowledge for this. Since this is just a code I was gonna waste I am not really offering support of any kind, but if you're super stuck feel free to email me at nyar@fear.garden and I can see what I can do.
+            **/
+
+            /** general **/
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: #361f43;
+                background-image:url('https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_41247e8a9fce8091f9cd46dbf7df6d60_3872a1e8_540.png');
+                color: #d2a9f3;
+            }
+            body, table {font: 14px sans-serif;}
+           
+            h1, h2, h3 {background: url('https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_04977656dfad0b61fcf082fb6516ef4b_180c978e_1280(1).gif');
+            }
+            h1, h2, h3, th {
+                box-sizing: border-box;
+                color: white;
+                margin: 0;
+                padding: 2px 4px;
+            }
+            h1, h2 {
+                font-size: 16px;
+                width: 100%;
+            }
+            h3 {
+                display: inline-block;
+                font-size: 15px;
+                margin: 2px 3px; 
+                padding: 2px 4px;
+            }
+            a {
+              color: #a746ac;
+              text-decoration: underline wavy;
+            }
+            img, iframe {max-width: 100%;}
+            table {width: 100%;}
+            th {
+                background: #d2a9f3;
+                color: black;
+                text-align: left;
+                width: auto;
+            }
+
+            /** class **/
+            .box {
+                background: black;
+                border: #361f43 2px solid;
+                margin: 10px 0;
+                padding: 3px;
+            }
+            .center {text-align: center;}
+            .container, .footer, .header {
+                background: black;
+               box-sizing: border-box;
+                border-left: #d2a9f3 15px solid;
+                border-right:#d2a9f3 15px solid;
+                box-sizing: border-box;
+                 border-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/pussy%20isbetter(1)(1)(1)(1).png") 25 fill round !important;
+       border-image-slice: 35% !important;
+        border-image-repeat: round !important;
+                margin: 0 auto;
+                width: 986px;
+            }
+            .container {
+                height: 100%;
+                padding: 0 1em 1em;
+                box-shadow: 0px 0px 10px black;
+            }
+            .columns {
+                display: grid;
+                grid-column-gap: 1em;
+                grid-template-columns: 292px auto;
+                width: 100%;
+            }
+            .curve {border-radius: 7px;}
+            .footer, .header {
+                background: black;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+            .footer {
+                border-top: #361f43 2px solid;
+                background-image:url('https://file.garden/Z5ztm_B6wj_8HQnK/bg_58651498099527.gif');
+                padding: 10px 30px 10px;
+            }
+            .header {
+                border-bottom:#361f43 2px solid;
+                background-image:url('https://file.garden/Z5ztm_B6wj_8HQnK/bg_58651498099527.gif');
+                padding: 0 30px 10px;
+            }
+            .header span {
+                padding: 0 15px;
+                color: #a746ac;
+            }
+            .header {
+                color: #a746ac;
+                font-size: 200% ;
+                text-align: left;
+                text-decoration: none;
+            }
+            
+            .title {
+                font-size:100px;
+                text-align: left;
+                text-decoration: none;
+            }
+            .profimg {
+                float: left;
+                padding: 5px 5px 0 0;
+            }
+
+            /** id **/
+            #contact a {
+                font-weight: bold;
+                text-decoration: none;
+            }
+            #contact a::before {
+                content: url('https://supplies.ju.mp/assets/images/gallery05/9662d743.gif?v=2e2c9a9d');
+                padding: 0 1em 0 0;
+            }
+            #interests td, #details td {width: 70%;}
+            #url span {font: 12px monospace;}
+            
+            #xenicRing #xenicFlag {
+	background: url('https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_51b401d388c4b26a7475c4b1a87cded1_e5dd43e3_1280.jpg')!important;
+}
+
+            /** Small screens **/
+            @media (max-width: 865px) {
+                .container, .navbar, .footer, .header {width: 100%;}
+                .columns {grid-template-columns: 100%;}
+                .box {margin: 1em 0;}
+                .box:last-child {margin: 0;};
+            }
+        </style>
+
+<style>
+.music-player {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: rgba(196, 219, 255, 0.67);
+  background: url('https://file.garden/Z5ztm_B6wj_8HQnK/OIP-4192034026.png') no-repeat center;
+  background-size: cover;
+  background-blend-mode: ;
+background-color: rgba(0,0,0,0.6);
+  border-radius: 6px;
+ padding:6px;
+  max-width: 100%;
+  font-family: sans-serif;
+   border: 4px solid #000102;
+  
+  
+ 
+}
+
+.current-track {
+  background-color: #8d2a31;
+  border: 1px solid #000102;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #000102;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+ 
+}
+
+.track-marquee {
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  animation: marquee 15s linear infinite;
+  padding-left: 100%;
+  top: 0;
+  height: 100%;
+  line-height: 30px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+  padding: 10px 0;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.player-controls button {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+  border: 1px solid #000102;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 28px;
+  height: 28px;
+  color: #000102;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-controls button:hover {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+}
+
+.progress-container {
+  flex: 1;
+  height: 10px;
+  background: #8d2a31;
+  border: 1px solid #000102;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.player-progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #8d2a31 , #680811);
+  width: 0%;
+  transition: width 0.1s ease;
+  border-radius: 7px;
+}
+
+.time-display {
+  font-size: 1.1em;
+  color: white;
+  min-width: 45px;
+  text-align: center;
+}
+
+.playlist-dropdown {
+  position: relative;
+}
+
+.playlist-toggle {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+  border: 1px solid #000102;
+  border-radius: 3px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #000102;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-toggle:hover {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+}
+
+.playlist-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #f8fbff;
+  border: 1px solid #000102;
+  border-radius: 3px;
+  max-height: 120px;
+  overflow-y: auto;
+  z-index: 10;
+  display: none;
+}
+
+.playlist-menu.show {
+  display: block;
+}
+
+.playlist-item {
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 0.85em;
+  border-bottom: 1px solid #000102;
+}
+
+.playlist-item:last-child {
+  border-bottom: none;
+}
+
+.playlist-item:hover {
+  background-color: #e6f3ff;
+}
+
+.playlist-item.active {
+  background-color: #cce6ff;
+  color: #000102;
+  font-weight: bold;
+}
+</style>
+
+
+  
+  </head>
+  <body>
+  
+ <div class="header">
+			<center><img src="https://file.garden/Z5ztm_B6wj_8HQnK/latest(3)(1).png" width="280px"  style="margin-bottom:-15px;"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_7a4f5c56a6e2521bd69a45db06ec7e97_25605990_400(2).gif">
+		</center>
+		</div>
+		<div class="container">
+			<div class="columns">
+				<!-- Left column, will show first on mobile layouts -->
+				<div class="left">
+					<!-- Basic information box -->
+					<div class="box" id="intro">
+						<h1>DARKxWOLF17 (aka OZZY)</h1>
+						<img src="https://file.garden/Z5ztm_B6wj_8HQnK/G4m7Sk3W8AA_JY4(1)(1).png" class="profimg" alt="Profile image" width="125px">
+						<p>" god hates me and that's ok cuz i hate him too "</p>
+						<p>
+							transenby boydyke
+							<br>they/xe/it/he/vamp/bite
+							<br>19 years old
+		
+							<br><br><img src="https://file.garden/Z5ztm_B6wj_8HQnK/image21.gif" alt="Online Now!">
+						</p>
+						<p>Last login: 6/17/2026, 9:31 AM EST</p>
+					</div>
+					<!-- Contact box-->
+					<!-- If you want to change the icon before links in the custom link box, in the CSS stylesheet change the image URL under the "#contact a::before" section! -->
+					<div class="box" id="contact">
+						<h2>OZZY'S OTHER LINKS!!</h2>
+						
+								<a href="https://pronouns.cc/@FEARGARDEN">pronouns.cc</a><br>
+								<a href="https://spectrum.avris.it/mAAL">gender & sexuality spec</a><br>
+							
+								<a href="https://cake.avris.it/oC5">attraction layer cake</a><br>
+								<a href="https://www.tumblr.com/musicalchairzzz" >me n luka's shared blog</a><br>
+							
+					</div>
+					<!-- Alternate contact box-->
+					<!-- If you plan to use this one, please make sure to upload the images to your site! The image links are relative to the directory!! -->
+					<div class="box" id="contact-alt">
+						<h2>OZZY'S RADIO!!</h2>
+					a music player will go here eventually idk i couldn't get it to work ;p
+					</div>
+					<!-- Interests box, feel free to change the headers and whatnot! -->
+					<div class="box" id="interests">
+						<h2>OZZY'S INTERESTS!!!</h2>
+						<table>
+							<tr>
+								<th>General</th>
+								<td>scenemo, punk, metal, horror, furries, queer history, web decor, lost media, internet history, old web revival, vocaloid, psychology, alterhumanity, anarchism</td>
+							</tr>
+							<tr>
+								<th>Musicians/Bands</th>
+								<td>my chemical romance, millionaires, femtanyl, creep-p, weevildoing, maretu, utsu-p, against me!, stomach book, aurelio voltaire, lesbian bed death, baby bugs, bis, ghost town, ludo, destroy boys, will wood, slipknot, tommy heavenly6, ezfg, shu-t, chaa, hazyP, tanaka kazuo, porter robinson, sheba, death ohagi, okameP, bullet for my valentine</td>
+							</tr>
+							<tr>
+								<th>Movies</th>
+								<td>electric dreams 1984, hannibal, obession, backrooms</td>
+							</tr>
+							<tr>
+								<th>Television</th>
+								<td>paswg, ave mujica, murder drones, scott pilgrim takes off, the summer hikaru died, soul eater, the gaslight district, inanimate insanity, love of the s*n, paper puppets take 2, twin peaks, battle for dream island, knights of guinevere, among us show</td>
+							</tr>
+						<tr>
+								<th>Comics</th>
+								<td>objectified</td>
+							</tr>
+							<tr>
+								<th>Games</th>
+								<td>die of death, break in and steal thingz, regretevator, splatoon, ultrakill, faith: the unholy trinity, signalis, mouthwashing, petscop, class of 09, yume nikki, portal, lacey's flash games, limbus company, little goody two shoes, minecraft</td>
+							</tr>
+							<tr>
+								<th>Musicals</th>
+								<td>ride the cyclone, heathers </td>
+							</tr>
+						</table>
+					</div>
+					<!-- Details box, feel free to change the headers and whatnot!-->
+					<div class="box" id="details">
+						<h2>OZZY'S DETAILS!!!</h2>
+						<table>
+							<tr>
+								<th>Here for...</th>
+								<td>being cringe</td>
+							</tr>
+						
+							<tr>
+								<th>Gender</th>
+								<td>transmasc nonbinary xenic boygirlthing</td>
+							</tr>
+							<tr>
+								<th>Orientation</th>
+								<td>bi apothiflux lesbian (CRY ABOUT IT!!!)</td>
+							</tr>
+							<tr>
+								<th>Hometown</th>
+								<td>copper9</td>
+							</tr>
+							<tr>
+								<th>Ethinicity</th>
+								<td>robot</td>
+							</tr>
+							<tr>
+								<th>Education</th>
+								<td>internet</td>
+							</tr>
+							<tr>
+								<th>Occupation</th>
+								<td>loser</td>
+							</tr>
+							<tr>
+								<th>Status</th>
+								<td>jorkin my shiiiii</td>
+							</tr>
+							<tr>
+								<th>Alter since</th>
+								<td>Early 2023</td>
+							</tr>
+						</table>
+					</div>
+					<center><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_058fa434f7db01d5c40951ef79bccadb_4e082bd3_400.gif"></center><br>
+          	
+					
+	<p><div id="selfinsertwebring">
+	        <script>
+	        var nameSelfWebring = "Ozzy 'Microphone' Doorman";
+var relationshipSelfWebring = "is gay partners in crime with";
+var charnameSelfWebring = "Taco";
+var seriesSelfWebring = "Inanimate Insanity";
+var imgurlSelfWebring = "https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/inanimate-insanity-ii-3735132521.gif";
+
+var templateWebring = document.createElement("selfinsertwebring");
+ templateWebring.innerHTML = "<style> #templateWebring a {color: #442a41; font-weight:bold} #templateWebring a:hover{font-weight:bold; color:#442a41}  #templateWebring {width:300px !important; text-align:center !important; height:164px !important; border:2px solid #442a41 !important; margin: auto !important; background: transparent; background-size:cover} #webringiconbox {border:2px solid #442a41 !important; position:relative !important; overflow:hidden !important;   height:100px !important; width:100px !important; left:8px !important; padding:0px !important; margin:0px !important; margin-top:8px !important; box-sizing:content-box !important; max-width:100% !important; justify-content:start !important; display:block !important; clear:none !important } #iconWebring {width:100px !important; overflow:hidden !important; height:100px !important; margin:0px !important; padding:0px !important; box-sizing:content-box !important} #webringdescbox {width:166px !important; height:100px !important; margin-left:122px !important; margin-top:-102px !important; border:1px dashed #442a41 !important} #webringdesc{line-height: normal !important; font-weight:normal !important; padding:2px !important; width:160px !important; color:#fceaff !important; font-family:'pixel'; !important; font-size:small !important; margin:auto !important; text-align:center !important; position:relative !important; top:50% !important;  -ms-transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; transform: translateY(-50%) !important;} #webringlinks {line-height:normal !important; font-weight:normal !important; width:278px !important; margin:auto !important; height:38px !important; margin-top:6px !important; border:1px dashed #442a41 !important} #linkparaWebring {font-family:'pixel' !important; color:#442a41 !important; font-size:small !important; 	margin:auto !important; line-height: normal !important; text-align:center !important;	margin-top:3px !important; padding:0px !important} </style> <div id='templateWebring'> <div id='webringiconbox'> <img id='iconWebring' src='" + imgurlSelfWebring + "'/> </div> <div id='webringdescbox'> <p id='webringdesc'> <strong>" + nameSelfWebring + "</strong> " + relationshipSelfWebring + "<br /> <strong>" + charnameSelfWebring + "</strong> from <strong>" + seriesSelfWebring + "</strong>! </p> </div> <div id='webringlinks'>	<p id='linkparaWebring'> | <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Members List</a> | <br/>	Part of the <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Self-Insert Webring</a></p> </div> </div>"; 
+  document.getElementById("selfinsertwebring").appendChild(templateWebring);  
+	        </script>
+	      </div> </p>
+<center><div id='xenicRing'>
+	<script type="text/javascript" src="https://xenics.neocities.org/onionring-variables.js"></script>
+	<script type="text/javascript" src="https://xenics.neocities.org/onionring-widget.js"></script>
+	<link rel="stylesheet" href="https://xenics.neocities.org/onionring.css">
+</div> </center>
+<center><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_036493304d561a39029b08d74d7d3bc5_d61ab843_250.gif"></center><br>
+
+<center><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_75dfb4f441ab4ff95c42ca287c334234_548bbe52_500.png" height="500px"></center><br>
+
+<center><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/latest-1490675927.png" height="400px"></center><br>
+				</div>
+				<!-- Righj column, will show second on mobile layouts -->
+				<div class="right">			
+				<div class="box" id="network" style="padding:5px;margin:5px;text-align:center;">
+				<br>
+				<font size="5px">DARKxWOLF17 is in your extended network</font>
+				<br><br>
+				</div>
+					<!-- 1st blurb box -->
+					<div class="box" id="blurbs">
+						<h2>OZZY'S BLURBS!!</h2>
+            
+						<h3>ABOUT THE PURPLE FREAK!!</h3>
+						<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/gjgu(2).png" style="
+  width:170px;
+  float:left;
+  padding:1px;
+  margin:5px;">my name's Ozzy! i also go by Mortis, Microphone, Corvid, and a shit ton of other names, but mainly those four i just listed. my pronouns are they/xe/it/vamp/scythe/crow/zomb/bite/rawr and my gender can best be described as the most horrific creature you've ever seen masquerading as a boy in a sexy genderless futch dyke way. does that make sense? well i don't really care if it does or not. my gender is masculine and feminine but not necessarily male or female, i'm just a thing. and i'm extremely gay. i love you women you should rule the world and also kiss me. my in sys girlboyfriend is Luka and i love xem very much!! also i am an adult in sys but that doesn't mean I'm okay with bodily adults being weird towards me. we're still bodily a minor so watch yourself :]</p>
+            <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/gjgu33(1).png" style="
+  width:170px;
+  float:right;
+  padding:1px;
+  margin:5px;">i'm a lame ass loser scenemo guy who's obsessed with horror media (mostly psychological horror :pp) and yearns for the 2000's web. i like to spend most of my time decorating profiles/sites and making/hoarding web graphics. either that or listening to music. music is my lifeline and it's my entire world and i wouldn't be here without it i love music i love funky sounds in my ears (i'm a huge metal and punk rock fan and i love edm too). i like to draw sometimes but i don't do it as much as the main host does. when i do i usually go for something more stylized although my style has also just been adapted as an alternative style for us when we're feeling lazy lmfao. i am a huge advocate for media preservation/archival and i think piracy is always morally correct and censorship fucking sucks ass.</p>
+  
+            <p>i'm one of the co-hosts of the system meaning im one of a handful of alters that front the most often aside from our main host, gabriel. i don't really have a special role anything i kinda just exist LOLOLOL. although i do think i'm a depression holder?? which means i like feel our symptoms of depression far more intensely than other alters most of the time so they don't have to deal with that shit constantly. every time i front i always feel really tired and moody lol. i'm a fictive with a bunch of different sources and i also kin some characters as well. i'm also a selfshipper and multishipper and i fw rarepairs heavy (me and Luka are the starving micbowlings PLEASE FEED US). i'm also very much nonhuman and don't like being referred to/seen as human in any sort of way so don't do that tyty. my main kintypes are cats, robots, vampires, zombies, bats, and crows blehhh</p>
+            
+            <p>this is an issue with us in general but i can often times come off as cold or aggressive without meaning to be and it's especially an issue with me in particular so like just let me know if it becomes a major thing and i'll try to pipe down. don't fucking antagonize us over it though or treat us as some "scary unreasonably aggressive monster!!!!1!!1" i will genuinely eat you alive. we have issues and we're working on them so like either just talk to us maturely about it or leave us alone. I'm also very fucking cringe I aim to be as cringe as I possibly can be throughout my time in this freak show get used to it</p>
+            
+            <p>since our site is very Vocalsynth Centric i feel obligated to mention that my fave vsynths are Kagamine Rin, Vflower, Ci Flower, Hakaine Maiko, Otomachi Una and Defoko :3</p>
+            
+						<h3>MY STUPID SOURCES!!!</h3>
+
+						<br>
+				- Uzi Doorman (Murder Drones)
+
+<br>- Infected/Kasper (Regretevator)
+
+<br>- Maka Albarn (Soul Eater)
+
+<br>- Microphone (Inanimate Insanity)
+
+<br>- Mortis (Ave Mujica)
+
+<br>- Pomni (The Amazing Digital Circus)
+
+<br>- Gum & Razor (Objectified)
+
+<br>- Pursuer (Die of Death)
+
+<br>- Plasma Ball (Paper Puppets Take 2)
+
+<br>- VFlower (VOCALOID)
+
+<br> - Cordie (Cliffside)
+
+<br> - Emily (Class of 09)
+
+<br> - Tahira Rashid/Splitter Girl (The Post-Traumatic Manifesto)
+
+						<p>I feel pretty heavily connected to all of these except for like 2 of them (cordie which i've never felt very connected to at all & pomni which i just recently deattached from since we dont fw tadc anymore). i have no reason to disconnect from all my sources completely cuz it has never been harmful for me personally to be attached to them so don't force ur own methods of recovery onto me, thank u meowmeow </p>
+
+<h3>MY STUPID KINS!!!</h3>
+
+		<br> - Pin & Leafy (Battle For Dream Island)
+		<br> - Purple (Among Us Show)
+		<br> - Tsujinaka Yoshiki (The Summer Hikaru Died)
+		<br> - Izutsumi (Dungeon Meshi)
+		<br> - Evil Paper/Looseleaf (Inanimate Insanity)
+		
+		
+	<center>	<img src="https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/tumblr_1cd6b775a0c92343d48d2768789391bf_b108c27e_400.gif"></center>
+
+
+<br><br>
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/latest-783155345.gif" width="100px"> <img src="https://64.media.tumblr.com/ed15164abcf4482b48821c90babc96e9/20c82e8e61a892d9-e7/s400x600/33b702694a2b131d276b999cbc3af00da5239af7.gifv" width="100px">
+					</div>
+					<!-- 2nd blurb box -->
+					<div class="box" id="blurbs2">
+						<h2>OZZY'S BLINKIE BOX!!</h2>
+						<img src="https://i.postimg.cc/RVc81428/cXjRvqb.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/sDFqZvH7/UlY8FPY.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/hjvWM6Vm/tumblr_b422ffabeebbbd52851d33a92c244276_ea860c5e_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/mDnxnjS5/tumblr_bc493071fb521fe1eca5fd2355f2d75d_1468648f_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/vHfBWxYs/tumblr_d51e044ade0494de3fa5fc66d3a0c339_b2c44dbd_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/VNLkQ7jf/tumblr_e4b85a843d0ff169a3e475b2afbf9bae_a3939e19_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/qB9qhxdw/tumblr_d5e302ebfedafef843dd3ff599c64025_3caab2db_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/SsnQjJTH/tumblr_e4fe8a881a32a054984f59075f155162_ee8d773d_1280.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/DyrvWV6f/tumblr_dc4b376d16c732268a2acb24c306f72d_d6b5393d_1280.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/8zdSCh17/tumblr_b9c54de4b8e9be56160275b3ba630053_4ec1eb74_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/G2mrVHnH/tumblr_579a9a911eafcc7a04e15ac1d975ec66_56fd6d8d_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/SKrkgc5B/tumblr_92bb16ec712d28257be94ee4ddfae141_919e3ac1_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/NMCYcBQb/tumblr_588c485a783611e27fc1874f90f43715_fb4959e6_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/fTpLdjn5/tumblr_5c79028710f796018dc947aada20e5c1_83a19c56_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/TYL2TLLb/tumblr_50edf17822fec9d53d2cb5bc624c38ba_df02bf99_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/htcYpNBG/image34.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/NFVg1YVL/tumblr_19d9efca9bf3dd170b63b59f0ddb86a6_ebdd7d81_250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/fbjT1G3g/tumblr_9bcf1bc515b0b2854dfd8bc47311a799_a6a2ca59_250.gif" style='width: 150px;'>
+         <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/image33.gif" style='width: 150px;'>
+          <img src="https://64.media.tumblr.com/2787a401233531970516c98e7ce418a4/7feb01b661bf70ad-3e/s250x400/a6ec8998645e1648e09f3709f5cf6c4a3ddee7c4.gifv" style='width: 150px;'>
+           <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/219.gif" style='width: 150px'>
+            <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/268.gif" style='width: 150px'>
+             <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/98.gif" style='width: 150px'>
+              <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/60.gif" style='width: 150px'>
+               <img src="https://64.media.tumblr.com/ec239bfdba8483743860ded0958a95d4/1bc6c9c085ca3235-6f/s500x750/91b642252439ead633fe1cf569d1d680e0c6ce26.gifv" style='width: 150px'>
+                <img src="https://64.media.tumblr.com/03ece53af9203135a01d21e3dadc61d4/9aae553337836373-5b/s400x600/284abd628a4b344363bf31e9c25e51b36d3bb88a.gifv" style='width: 150px'>
+                 <img src="https://64.media.tumblr.com/778e584335c7c2960aff5972ecd8eb25/7580f73cd487f1af-46/s250x400/ee6569ef5a4202a99633ff0def89d59934a21615.gifv" style='width: 150px'>
+                  <img src="https://64.media.tumblr.com/c11fa24c2c81f7915e56b789d227946b/8423dfef5750b37c-38/s250x400/f62716e9d3f94dd4b5abaa457b413f9c6f32a7f0.gifv" style='width: 150px'>
+                  <img src="https://64.media.tumblr.com/4b2666e450849b34b07d01b92d445a44/04465b59944430cc-34/s250x400/31b05aecce70375821b9c6978318ee5c8d1ae0d2.gifv" style='width: 150px'>
+                  <img src="https://64.media.tumblr.com/1b1ba5abf38d6bad9e7ac5c19342d93f/e6c3d6e24bb9e481-93/s250x400/6341d9433a3a966e1c0699d6f40b81a2ead901d6.webp" style='width: 150px'>
+                  <img src="https://64.media.tumblr.com/eea894782cccfaf179fa42abed0681fd/fdacae08bbc1fe78-54/s500x750/2edbc59ba04a706f4387b611a209707c26506ed3.gifv" style='width: 150px'>
+                  <img src="https://i.postimg.cc/mryXrNtG/tumblr-1fe97bea8d974a9cc8c6243461878801-78dc097b-250.gif" style='width: 150px'>
+                   <img src="https://i.postimg.cc/x88tPTFf/image77.gif" style='width: 150px'>
+                    <img src="https://i.postimg.cc/LsVDKZcP/image41.gif" style='width: 150px'>
+                     <img src="https://i.postimg.cc/0QBpPGcj/k16.gif" style='width: 150px'>
+                      <img src="https://64.media.tumblr.com/f1cacf50ec70c40a52dcc718412f5840/218441fc76cc2256-b0/s250x400/ec9687d8430daf80698214b834f35b2812cdaa8a.gifv" style='width: 150px'>
+                      <img src="https://64.media.tumblr.com/6f62ce811add76f7d88e3dd62b55722e/bc07cb02d83b375c-b3/s250x400/a66b359da0da833e86b61bebfa694fd10375b320.gifv" style='width: 150px'>
+                    <img src="https://64.media.tumblr.com/1a1b97a7eab0527cf7978871759e8ef1/cfd99d6caad44518-8b/s250x400/a7ee9e074229b99ceb0c7e9a0d90ad35729b78d4.gifv" style='width: 150px'>
+                     <img src="https://64.media.tumblr.com/e8de9f0d1d932610a05db44b1c0af5cb/39077b4df13a4d17-c2/s250x400/6da7a590556bd0949a5b2c981fe068f44de40b24.gifv" style='width: 150px'>
+                      <img src="https://64.media.tumblr.com/7fb7089800576456a404bae932c5df9b/4f08ca3d5d6dc8fc-5f/s250x400/4873d2283e78b52e6b57414ca95b551e888d1672.gifv" style='width: 150px'>
+					</div>
+          <div class="box" id="stamps" style="height:327px;overflow:auto;">
+<h2>OZZY'S MICROBLOG!!</h2>
+
+<h3>6/14/2026 @ 2:25 PM</h3>
+<p>mango milk tea + wasabi shrimp chips + propitious mango ice cream + mango flavored marshmallows = best combination for shitting yourself</p>
+
+<h3>5/11/2026 @ 9:54 PM</h3>
+<p>i need to read objectified again last time we read it was like around the beginning of last year i think. i dont even fucking remember where we left off but that shit was so good i need to pick it up again. i love horror media in the osc X]</p>
+
+<h3>5/11/2026 @ 9:37 PM</h3>
+<p>everyone tap into EZFG's music RIGHT FUCKING NOW. After The Darkness slaps so fucking hard. Also listen to Cyber Thunder Cider and Hurting For A Very Hurtful Pain. absolute classics!!</p>
+
+<h3>5/11/2026 @ 9:17 PM</h3>
+<p>i fucking LOOOOVE trance music so bad dude oh my god. vocaloid trance m,usic. save me.</p>
+
+<h3>5/11/2026 @ 7:53 PM</h3>
+
+           <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_a783d2842759d0fc9738176931a3e6bf_12e14930_250.gif"><br> feeling very her coded rn</p>
+           
+           <p></p>
+    </div>
+          <div class="box" id="comments" style="height:890px;overflow:hidden;">
+          <h2>OZZY'S COMMENT BOX!!</h2>
+          <div id="c_widget"></div> 
+          <script src="https://chimerathing.neocities.org/commentbox.js"></script>
+          </div>
+				</div>	
+			</div>
+		</div>
+		<!-- Footer, I usually put my site button or whatever here -->
+		<div class="footer center">
+			<!-- You don't have to leave the credit in, as long as you leave it in the CSS or something so other people can find it that's cool with me. -->
+			<a href="https://copyheart.org/">♡</a> by Ozzy. Killing and maiming people since 2023. Copying is an act of love. Love is not subject to law.
+		</div>
+    
+  </body>
+</html>

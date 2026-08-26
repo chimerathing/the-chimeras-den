@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEESECRAFT! </title>
+   <script type="text/javascript">
+      title = "CHEESECRAFT! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  
+ 
+        <style>
+            body {
+                background-color: black; 
+                margin: 8px;
+                color: #eeeeee;
+                font-family: quicklove; 
+                font-size: 1.2em; 
+                background-image: url("https://file.garden/afC_jkDycVrE2-8P/Cheesy_Ran_over_by_4S_S1_R.png");
+                background-color: white;
+  background-size: repeat;
+ background-size: 10em;
+   text-shadow: 2px 2px 6px #003f38;
+            }
+
+            @font-face {
+    font-family: quicklove;
+    src: url('https://file.garden/afC_jkDycVrE2-8P/MinecraftRegular-Bmg3.otf')
+  }
+
+ @font-face {
+    font-family: rocketpop;
+    src: url('https://file.garden/afC_jkDycVrE2-8P/MinecraftTen-VGORe.ttf')
+  }
+
+            .small {font-size: 9pt;}
+
+            h3 {color:#52c3cb; }
+h4 {color:#52c3cb;}
+            h2 {
+                font-size: 13.5pt; 
+                font-weight: bold; 
+                color: #52c3cb;
+                margin-top: 20px;
+                text-align: center;
+                
+            }
+            
+            
+            p{ 
+              
+              text-shadow: 1px 1px 3px black;
+            }
+
+            h1 {
+                font-family: rocketpop;
+                font-size: 2em; 
+                font-weight: bold; 
+                color: gray;
+                text-align: center;
+                margin-top:0;
+                text-shadow: 2px 5px 1px black;
+                -webkit-background-clip: text;
+    -webkit-text-stroke: 1px black;
+                padding-top:5px;
+                
+);
+              
+            }
+
+            em {
+                color: #d9d9ff;
+            }
+
+            a {color: #52c3cb;}
+            a:hover {color: #cccccc; cursor: crosshair;}
+
+            ul {list-style-type: circle;}
+
+            blockquote {
+                margin-left: 2px;
+                padding-left: 15px;
+                border-left: 3px solid #52c3cb;
+            }
+
+            .container {
+                width: 800px;
+                margin: 30px auto 30px auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                border: 5px ridge #5e442c;
+                height: fit-content;
+                padding: 0;
+                 border-radius: 5px;
+                    background: url('https://file.garden/afC_jkDycVrE2-8P/minecraft-dirt-block-png-4-3449941053.png');
+     box-shadow: 1px 1px 16px #191c16;
+     background-size:repeat;
+     background-size:5em;
+            }
+
+            /* Header */
+            .head {
+                width: 100%;
+                height: 400px;
+                color: #9999FF;
+                background-image: url('https://file.garden/afC_jkDycVrE2-8P/CheesyCommercial.png');
+                background-size:cover;
+                 border-bottom: 5px ridge #5e442c;
+                text-align: left;
+                font-family: "UnifrakturCook", cursive;
+                font-weight: 700;
+                font-style: normal;
+            }
+            .headarea {
+                display: flex;
+                height: 100%;
+            }
+            .headarea a {
+                text-decoration: none;
+                font-size: 20px;
+                line-height: 40px;
+                letter-spacing: 3px;
+            }
+            .headarea a:hover {text-shadow: 0 0 3px #eee}
+
+            /* Navigation */
+            .navi {
+                width: 100%;
+                height: 30px;
+                border-bottom: solid 0.5px #9999FF;
+            }
+            .navi ul {
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navi li {
+                padding: 5px;
+                display: block;
+                align-content: center;
+                width: 100px;
+                overflow-x:hidden;
+            }
+
+            .navi li.dropdown {
+                display: inline-block;
+                background: transparent;
+            }
+
+            .navi li:hover, .navigation li.dropdown:hover {
+                background-color: #2b2b2b;
+                color: var(--bright);
+                text-shadow: 0 0 3px #eee;
+            }
+
+            .navi a {
+                display: inline-block;
+                text-decoration: none;
+                background: transparent;
+                text-align: center;
+                margin-bottom: 4px;
+                padding-bottom: 2px;
+                padding-top: 2px;
+                line-height: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #9999FF;
+                width: inherit;
+            }
+
+            .navi a:hover {color: white; text-decoration: underline}
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                width: 90px;
+                padding: 4px;
+                border: 1px solid #9999FF;
+                background-color: black;
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                padding: 4px;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                width: auto;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #9999FF;
+                width: auto;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            /* Body */
+            .body {
+                padding: 0px;
+               
+            }
+
+            .body img {
+                max-width: 100%;
+            }
+
+            /* Footer */
+            .foot {
+                width: 100%;
+                text-align: center;
+                border-top: solid 0.5px #9999FF;
+                font-size: 9pt;
+            }
+
+            /* Fonts */
+            .unifrakturcook-bold {
+              font-family: "UnifrakturCook", cursive;
+              font-weight: 700;
+              font-style: normal;
+            }
+
+            #textbox1 {
+  border-radius:10px;
+  padding:10px 20px;
+  padding: 10px;
+   
+  width: 99%;
+  height: fit-content;
+  
+}
+
+
+
+             @media only screen and (max-width: 800px) {
+           
+           
+           .container{
+             width:100%;
+           }
+           
+           .pagedoll{
+             display:none;
+           }
+         }
+        </style>
+        <!-- THEME STYLE / CSS END -->
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       
+    </head>
+    
+    <!-- HTML BODY -->
+    <body>
+        <div class="container">
+            
+            <!-- Header -->
+            <div class="head">
+                <div class="headarea"><img src="" height="100%" style="padding: 5px"></div>
+            </div>
+            
+        
+           
+            
+            <!-- Main Content -->
+            <div class="body">
+                <h1>CHEESECRAFT 2026 REVIVAL</h1>
+                
+               <p>In July of 2025 when the first two episodes of Season 4 of Inanimate Insanity came out, it was announced by people that work on the show that Cheesecraft, the old official II Minecraft server from over a decade ago, would be getting revived, and thus a server with a bustling community was born. From constant griefing, to capitalism, to my girlfriend beating the ender dragon all by herself on day one and spawning the wither underneath our base, to fictional cults made as a joke, many memories were made there, and decent portion of the OSC was brought together by it. The server lasted for exactly a month before unfortunately shutting down because the II crew member who was paying for the server made the mistake of choosing a horrifically overpriced hosting service and thus couldn't be assed to continue paying for the server. The community that stemmed from the server consequently dwindled, but those who remained decided to take it upon themselves to bring the server back once more, using a much more reasonably priced hosting service. This is the server we play on currently! It uses the exact same seed as the world from 2025, but the original world file from that time is completely lost media, and sadly will be forever.</p> 
+               
+               <p>I'm incredibly thankful I got to play on this server back in 2025 because otherwise I wouldn't have gotten closer with my current girlfriend Hazel, nor would I have met my good friend Ember. The real Cheesecraft was the friends we made along the way</p>
+        
+		<h1>SCREENSHOTS</h1> 
+		
+		<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/6546464.png"><br>
+	no context</p>
+		
+	<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-06_22.14.54.png"><br>
+	sky view of me and my girlfriend's penis shaped house</p>
+		
+<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-07_17.04.43.png"><br>
+	front of the house after i decorated with shit from lush caves + we replaced the oak wood and stone bricks with mangrove wood and deepslate bricks</p>
+	
+	<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-07_19.54.53.png"><br>
+	the rest of the front of the house</p>
+		
+	<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-07_19.49.44.png"><br>
+sky view of the spawn area</p>
+		
+	<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-07_19.50.05.png"><br>
+big ass BFDI mouth</p>
+		
+	<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-07_19.50.31.png"><br>
+yoyelite reactor</p>
+		
+	<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-07_19.50.51.png"><br>
+wcdonalds</p>
+
+<p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/minecraft/2026-02-07_19.51.47.png"><br>
+nether hub</p>
+
+
+  </body>
+</html>

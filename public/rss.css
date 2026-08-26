@@ -1,0 +1,28 @@
+img {border:1px;}
+.feed-container{
+border: 1px solid #490d0d;
+font-size:14px; 
+font-family: rosela;
+src: url('https://file.garden/ZRgh3nzfnhFDJvPp/Rosela.ttf');
+}
+.feed-container .header{display:none;}
+.feed-container .footer{display:none}
+.feed-container .content{margin:0px;padding:0 3px;background-color: #000000;background-size: cover;}
+.feed-container .content .item{margin:0 0 7px 0;padding:0 0 7px 0;}
+.feed-container .content .item .title{margin:1px 0 1px 3px;padding:2px 2px 1px 3px;color:#bdafab;background-color:#490d0d;font-weight:bold}
+.feed-container .content .item .title a:link{color:#bdafab;text-decoration:none;}
+.feed-container .content .item .title a:visited{color:#bdafab;text-decoration:none;}
+.feed-container .content .item .title a:hover{color:#bdafab;text-decoration:underline;}
+.feed-container .content .item .title a:active{color:#bdafab;text-decoration:none;}
+.feed-container .content .item .description{margin:0 0 0 3px;padding:0 2px 0 3px;color:#fceaff;}
+.feed-container .content .item .description a{text-decoration:none;color:#fceaff;}
+.feed-container .content .item .description a:hover{text-decoration:underline;color:#fceaff;}
+::-webkit-scrollbar {
+  width: 15px;
+ height: 15px;
+}
+
+html {
+    scrollbar-color: #000000 #490d0d;
+    scrollbar-width: auto;
+        }

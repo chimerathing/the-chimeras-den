@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOCALSYNTHS! </title>
+   <script type="text/javascript">
+      title = "VOCALSYNTHS! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  
+ 
+        <style>
+            body {
+                background-color: black; 
+                margin: 8px;
+                color: #eeeeee;
+                font-family: quicklove; 
+                font-size: 12pt; 
+                background-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/vocaloid_198.jpg");
+  background-size: 120em;
+  background-repeat: repeat-x;
+  background-position:bottom;
+  background-attachment:fixed;
+   text-shadow: 2px 2px 6px #003f38;
+            }
+
+            @font-face {
+    font-family: quicklove;
+    src: url('https://file.garden/Z5ztm_B6wj_8HQnK/scifi2k2.ttf')
+  }
+
+
+            .small {font-size: 9pt;}
+
+            h3 {color:#52c3cb; }
+h4 {color:#52c3cb;}
+            h2 {
+                font-size: 13.5pt; 
+                font-weight: bold; 
+                color: #52c3cb;
+                margin-top: 20px;
+                text-align: center;
+                
+            }
+
+            h1 {
+                font-family: quicklove;
+                font-size: 19pt; 
+                font-weight: bold; 
+                color: black;
+                text-align: center;
+                margin-top:0;
+                text-shadow: 2px 2px 6px #003f38;
+                
+                  background-image: linear-gradient(to bottom, 
+    #baeaf0 0%, 
+    #59c6ce 55%,
+   #00aea0 55%, 
+    #07c4c4 100%
+);
+              
+            }
+
+            em {
+                color: #d9d9ff;
+            }
+
+            a {color: #52c3cb;}
+            a:hover {color: #cccccc; cursor: crosshair;}
+
+            ul {list-style-type: circle;}
+
+            blockquote {
+                margin-left: 2px;
+                padding-left: 15px;
+                border-left: 3px solid #52c3cb;
+            }
+
+            .container {
+                width: 750px;
+                margin: 30px auto 30px auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                border: 3px solid #52c3cb;
+                height: fit-content;
+                padding: 0;
+                 border-radius: 5px;
+                    background: linear-gradient( rgba(0, 63, 70, 0.66),rgba(0, 25, 28, 0.66));
+     box-shadow: 1px 1px 16px #003f38;
+     backdrop-filter: blur(10px);
+background-image-size:cover;
+            }
+
+            /* Header */
+            .head {
+                width: 100%;
+                height: 260px;
+                color: #9999FF;
+                background-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/graphics/tewyurg2yu3.png);
+                background-size:cover;
+                border-bottom: solid 3px #52c3cb;
+                text-align: left;
+                font-family: "UnifrakturCook", cursive;
+                font-weight: 700;
+                font-style: normal;
+            }
+            .headarea {
+                display: flex;
+                height: 100%;
+            }
+            .headarea a {
+                text-decoration: none;
+                font-size: 20px;
+                line-height: 40px;
+                letter-spacing: 3px;
+            }
+            .headarea a:hover {text-shadow: 0 0 3px #eee}
+
+            /* Navigation */
+            .navi {
+                width: 100%;
+                height: 30px;
+                border-bottom: solid 0.5px #9999FF;
+            }
+            .navi ul {
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navi li {
+                padding: 5px;
+                display: block;
+                align-content: center;
+                width: 100px;
+                overflow-x:hidden;
+            }
+
+            .navi li.dropdown {
+                display: inline-block;
+                background: transparent;
+            }
+
+            .navi li:hover, .navigation li.dropdown:hover {
+                background-color: #2b2b2b;
+                color: var(--bright);
+                text-shadow: 0 0 3px #eee;
+            }
+
+            .navi a {
+                display: inline-block;
+                text-decoration: none;
+                background: transparent;
+                text-align: center;
+                margin-bottom: 4px;
+                padding-bottom: 2px;
+                padding-top: 2px;
+                line-height: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #9999FF;
+                width: inherit;
+            }
+
+            .navi a:hover {color: white; text-decoration: underline}
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                width: 90px;
+                padding: 4px;
+                border: 1px solid #9999FF;
+                background-color: black;
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                padding: 4px;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                width: auto;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #9999FF;
+                width: auto;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            /* Body */
+            .body {
+                padding: 0px;
+               
+            }
+
+            .body img {
+                max-width: 100%;
+            }
+
+            /* Footer */
+            .foot {
+                width: 100%;
+                text-align: center;
+                border-top: solid 0.5px #9999FF;
+                font-size: 9pt;
+            }
+
+            /* Fonts */
+            .unifrakturcook-bold {
+              font-family: "UnifrakturCook", cursive;
+              font-weight: 700;
+              font-style: normal;
+            }
+
+            #textbox1 {
+  border-radius:10px;
+  padding:10px 20px;
+  padding: 10px;
+   
+  width: 99%;
+  height: fit-content;
+  
+}
+
+
+
+             @media only screen and (max-width: 800px) {
+           
+           
+           .container{
+             width:100%;
+           }
+           
+           .pagedoll{
+             display:none;
+           }
+         }
+        </style>
+        <!-- THEME STYLE / CSS END -->
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       
+    </head>
+    
+    <!-- HTML BODY -->
+    <body>
+        <div class="container">
+            
+            <!-- Header -->
+            <div class="head">
+                <div class="headarea"><img src="" height="100%" style="padding: 5px"></div>
+            </div>
+            
+        
+           
+            
+            <!-- Main Content -->
+            <div class="body">
+                <h1>VOCALSYNTHS!!!!</h1>
+                
+               
+               <p>  I've been a fan of vocaloid/vocalsynth since I was in the 3rd grade (so like 2017-ish?? dude i dont rmemeber). It was huge obsession of mine back then until I slowly drifted away from it for after a few years because I wanted to further expand my music taste. Now recently as of 2024 it has once again become my #1 obession and cemented itself in my brain as a permanent special interest. It's basically all I fucking listen to as of lately LMFAO. You can never escape the singing robots. Not only is it my favorite shit to listen to but I've become interested in not just the music people make using vocalsynths, but also the software itself and everything related to how this stuff works! If you need help making a vocaloid/utau/synthV cover hit me up I'll run you through all the steps I promise. Learning how to make my own covers has also helped me tremendously in understanding how Japanese functions as a language and it's actually a very simple language phonetically in comparison to English. Still can't actually speak the language for shit though lol. Someday I'll learn. I've also experimented with making my own UTAU voicebanks but I wasn't very satisfied with the end result so I trashed them LMFAO.</p>
+               <p>I don't really care to write a whole novel on what the fuck a vocalsynth/vocaloid is and the history behind them. If you want a bit of insight on that you can check out <a href="https://lhfm.neocities.org/voca-shrine">LiterallyHifumi</a>'s vocaloid shrine as they wrote a pretty good overview on it. Otherwise DO YOUR OWN RESEARCH!!!!!!!!!!!!!!!!!!!</p>
+               
+<br>
+<h1>EVENTS I'VE BEEN TO!!!!</h1>
+<ul>
+<li>May 7th, 2026 - Miku Expo 2026 in Prudential Center Newark, NJ</li>
+</ul>
+<br>
+
+               <h1>MY HISTORY WITH VOCALSYNTHS!!!!</h1>
+               <p>My first introduction to vocalsynths was through randomly coming across videos made using MMD (MikuMikuDance), which is a free 3D animation software that released back in 2008, the year after Hatsune Miku's official release to the public and also the year I was born. Wow! It was made with the intention of it being used to make videos of Hatsune Miku and other Crypton vocaloids dancing (hence the name). These videos I found contained an array of different vocaloid and other vocalsynth characters, of course, dancing to music, which also of course was usually vocaloid music, although I also watched many that had nothing to do with dancing or music at all since the software has been used time and time again to create possibly the most bizarre story-telling videos on the entire internet. I also watched a lot that were completely unrelated to vocaloid but that's besides the point. 7-8 year old me was incredibly fascinated with these videos and for a good while I non-stop watched a shit ton of them without really knowing anything about who or what the characters featured in them really were until YouTube began recommending me non-MMD vocaloid videos and have since then fallen into a rabbit hole that I will never get myself out of. The earliest vocaloid song I can remember listening to due to these kinds of videos is <a href="https://www.youtube.com/watch?v=o1iz4L-5zkQ&pp=ygUOa2ltYWd1cmUgbWVyY3k%3D">Kimagure Mercy by Hachioji-P ft. Hatsune Miku</a>, and it remains one of my favorites to this very day!</p>
+
+               <p>A few other songs that I was addicted to like cocaine as a kid include:</p>
+               <ul>
+               <li><a href="https://www.youtube.com/watch?v=q46Osg9C4pA">The Daughter of Evil by mothy ft. Kagamine Rin</a></li>
+               <li><a href="https://www.youtube.com/watch?v=EAgk-t2zzqw">A Tale of Six Trillion Years & a Night by kemu ft. IA</a></li>
+               <li><a href="https://www.youtube.com/watch?v=ARt2fVT33Lw">SLoWMoTIoN by Pinocchio-P ft. Hatsune Miku</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xGNQOqtGU_E">Pomp and Circumstance by Umetora ft. Megurine Luka, Hatsune Miku, GUMI, IA, & Kagamine Rin</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=xOKplMgHxxA">Happy Synthesizer by EasyPop ft. Megurine Luka & GUMI</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=4sq2lPNxi7M">Drop Pop Candy by Giga ft. Kagamine Rin & Megurine Luka</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=dSw8CucthGc">Meltdown by iroha(sasaki) ft. Kagamine Rin</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=eI4F8vuxoQE">Even a Female Ninja Needs Love by Mikito-P ft. Hatsune Miku & Kagamine Rin</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=WiUjG9fF3zw">Viva Happy by Mitche M ft. Hatsune Miku</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=cQKGUgOfD8U">ECHO by Crusher-P ft. GUMI</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=yr3k-Ok9GE4">Mischievous Function by LamazeP ft. Kasane Teto</a></li>
+                </ul>
+
+                <p>Some might consider my taste to be bland or surface level, which! um. fair enough? although it's definitely expanded quite a bit over the years. there's plenty of songs now that I would consider to be my favorites over these ones in particular, as well as specific artists and voicebanks that I have a lot of love in my heart for now that I've dug much deeper into the art form than I ever did at all back when I was younger. It's incredibly difficult for me to pick a definitive favorite for any of these since there's just SO FUCKING MANY that I love. </p>
+                
+                <p>During that same time period I also discovered the Project Diva games through videos of Edit PVs (fanmade vocaloid music videos made using Project Diva F and F 2nd's "edit mode", which were also accompanied by custom playable charts for the songs). I have no idea if this was my first exposure to rhythm games or not I remember just thinking it was really cool that Hatsune Miku video games were a thing that existed and that people were using it to make their own animations for different songs. For some reason I actually didn't realize that Project Diva was a rhythm game at first (I was like 8-9 years old leave me alone) so I remember being really confused that I had to click buttons on my PS4 controller to the beat of a song after I accidentally bought Project Diva X thinking it was free to play (yes my parents were pissed at me for that). I was also incredibly dissapointed to find that X in particular didn't have edit mode. Anyways my love for Project Diva sent me futher down the vocalsynth rabbit hole and also resulted in an obsession with rhythm games as a whole. My PS3 died and went to hell a long time ago so I never got to experience the joy of playing F or F2nd as a kid but I play them totally legally on my emulator now so it's okay. I also have Megamix on the Switch and Megamix+ with 2948294723784 mods installed on my PC :D and I got to play the arcade game for the first time ever at Anime NYC 2025!!</p>
+                
+                <p>I can't really say much specifically about what the vocaloid/vocalsynth in general scene was like around the time I had first gotten into it, I just remember it being a time where a lot of producers that shaped the "golden era" of the scene (2007-early to mid 2010s) were no longer active or had very little activity within the scene (or just in general), and people considered vocalsynths at that point to be a dying art and community. Many producers disappeared, never to be heard from again, while others expanded upon their musical skills beyond the realm of vocalsynths, or just outright abandoned vocalsynths entirely. A few OG producers, who were responsible for classic songs still loved by the community to this very day, unfortunately passed away. This includes wowaka (made Rolling Girl, Unknown Mother Goose, World's Dancehall, and Two-Faced Lovers), samfree (made Luka Luka★Night Fever, Promise, and the rest of the night series), and siinamota/powapowa-p (made Young Girl A and Strobe Last). People shit a lot on Project Sekai, Kasane Teto SynthV, Mesmerizer by 32ki, English producers, and the current landscape of the vocalsynth scene in general due to it being defined by these things, but I'm thankful that they helped the artform that shaped my childhood reach stardom once more, and it's now able to be loved once again by all kinds of people rather than just people within the already existing community. Now we have more people than ever making their own vocalsynth music and so much of it bangs so hard please stop complaining and just enjoy the shit that you like</p>
+                
+                <br>
+                
+                <h1>ARE VOCALSYNTHS AI (ARTIFICIAL INTELLIGENCE)?</h1>
+                <p>Short answer: yes and no! it depends on the software and (in my opinion) there's a lot more nuance when it comes to the ethics of it.</p>
+                
+                <p>Long answer: vocalsynths started out as something completely devoid of anything remotely related to the usage of AI. Softwares that have been around since the beginning such as VOCALOID (specifically versions 2-5) and UTAU utilize somehting known as "Concatenative Synthesis". The way it works is that a voice provider records a large amount voice samples in which they read out a string of syllables/phonemes at a certain pitch. These samples are later on manually configured into a voicebank, and the raw recordings are directly sampled and distorted based on user input. This method results in a voicebank that can only sing in one language as well as a usually very limited vocabulary depending on the amount of samples that were recorded. If you want your voicebank to sing in more than one language or even be able to switch to a different style of singing, you'd have to record seperate samples for those and repeat the process all over again, and thus would have to make it an entirely seperate voicebank. These kinds of voicebanks also generally sound more choppy and robotic, which is what vocalsynths tend to be known for. All the files for the voicebanks are stored directly on your computer.</p> 
+                
+                <p>As time went on, the technology advanced and eventually AI was introduced into the mix. Softwares such as SynthV, Cevio/Voisona, Diffsinger, and VOCALOID6 (the latest version of VOCALOID) can technically be classified as generative AI softwares, but not in the traditional sense. They don't make use of concatenative synthesis but instead, voicebanks are sampled from recordings of a voice provider singing normally. These recordings are then fed into an algorithm as data to create an AI voice model. Rather than sampling directly from the raw recordings, the AI calculates data and creates a sound based on user input. This method results in a voicebank that can sing in virtually any language with an infinite vocabulary, as well as a voice that sounds EXTREMELY similar to an actual human-being singing. These voicebanks typically also come with multiple singing styles (aka appends/vocal modes) bundled with them by default and they can easily be blended in with eachother, unlike with concatenative voicebanks where if you want a particular character to sing in a different tone than usual, that would have to be made into an entirely seperate voicebank. Almost all of these softwares run locally on your computer rather than from a server or data center, heavily minimizing any possible negative effects on the environment.</p>
+                
+                                <p>Pretty much all of these softwares still majorily require input from the user and you have the option of either manually tuning the voicebank yourself or using the "autotune" feature in which pitch bends are randomly calculated and generated based on a dataset for that specific bank. It's still technically "generating" a result for you based on all of your inputs and settings in your project file. But again, it is NOT a traditional form of generative AI as it is not generating an entire song for you, nor is it generating a random voice based off of stolen work from non-consenting real singers or voice actors. It's meant to be used as an instrument just like vsynths that use concatenative synthesis, and all voice providers are consenting and are paid for their work. For me personally, it's the only form of generative AI that I will ever support, since it's still meant to be used as a creative tool rather than something to entirely replace real human art and creativity. The vocalsynth community rightfully looks down on those who use AI to generate entire songs, because it's a community that embraces genuine creativity, not souless and effortless slop. If you're an genAI lover looking to capitalize of off the vocalsynth community with your garbage that is only able to exist due to the stolen work of real artists, then I personally think you should die. If you want a more in depth explanation about this, I suggest watching <a href="https://www.youtube.com/watch?v=nkLbbAwPZgg&t=25s">JOEZcafe's video</a> on this topic! They explain it way better than I do LMFAO.</p> 
+                
+                <p>I think more people need to acknowledge the reality that some vsynths are unfortunately, in a sense, apart of the generative AI bubble that we all so desperately are waiting on to pop, but they're so far removed from what we typically think of when we see the words "generative AI" that I don't think we should criticize them on the sole basis of them utilizing AI, but rather based on the practices and ethics of the particular companies behind them. Vsynths as a whole are still something that can be considered a genuine form of art and it's not an entirely black and white situation. I think we should focus on the ways more traditional forms generative AI (the kind that just shits out an end result for you with no real effort required) is being used to replace humanity. It steals from artists, makes people stupid and incapable of forming their own thoughts, and is actively poisoning our planet 10 times faster than ever before due to dozens of servers dedicated to a chatbot that's being used to make deepfakes of minorities to incite bigotry against them and to sexualize non-consenting individuals, and on top of that, has lead to the suicide of many that became dependant on a fucking robot controlled by fascists for social interaction. Vocal synths that utilize AI are a special and more nuanced case and I personally don't think that they <i>should</i> be grouped in with generative AI as a whole, but that's just my take. If you think differently than me on this matter, then that's perfectly fine!</p>
+<br>
+<h1>MY FAVORITE SONGS!!!!</h1>
+<p>We'd be here forever if I listed off all of my favorites since it's an ever-growing list, so I'll just list some of my favorites from over the past few years! All of these are sorted by the year that each song released. Whether or not i actually listened to them during that specific year is for me to know only lol</p>
+
+<h3>2026</h3>
+               <ul>
+                <li><a href="https://www.youtube.com/watch?v=zOsVL0oYpQA">Lucid Dreamscape by KAT ft. Megurine Luka</a> - genuinely song of the year everybody shut the fuck up. and the fact that it's a tribute to wowaka's World End Dancehall FOAMS AT THRHE MOUTHS</li>
+                <li><a href="https://www.youtube.com/watch?v=OSYmTw6_bjc">Ego Renegade Boy by FLAVOR FOLEY ft. Kagamine Len</a> - LITERALLY MY ENTIRE EXPERIENCE AS A TRANS MAN ENCAPSULATED IN A SONG IM GOING TO EXPLODE</li>
+               <li><a href="https://www.youtube.com/watch?v=CsYDv5Cf0yo">ANOTHER CUP by bunnycat ft. Kasane Teto</a> - i had this shit on loop for over 2 weeks please listen it's so fucking good. mikuteto toxic office yuri</li>
+               <li><a href="https://www.youtube.com/watch?v=PqpCRSOUuIE">Signaling by AnythingBecomeMoe ft. Hatsune Miku & Kasane Teto</a> - mikuteto doomed scientist yuri. idk what else to say this one's pretty catchy</li>
+               <li><a href="https://www.youtube.com/watch?v=RRIqAKYeeFo">SCENE GAL by bluchew ft. Hatsune Miku</a> - our 2 wannabe scene kid alters loved this one</li>
+               <li><a href="https://www.youtube.com/watch?v=dB1mlwkZnXk">Hymn of the Magical Vigilante Girl by NeRe-P ft. Nekomaru Iroha</a> - a heart wrenching banger. iroha's incredibly powerful and expressive here give it a listen</li>
+               <li><a href="https://www.youtube.com/watch?v=UkKK248m2MM">Invite Me To Your Party by Qu-P ft. Yokune Ruko♂</a> - i'm ecstatic to see a ruko original in this economy</li>
+             
+              <li><a href="https://www.youtube.com/watch?v=jZI9tm0ERKA">Scratch (Leave You Starstruck) by Vane Lily & NEOKIN ft. Yi Xi</a> - i wanna kiss the character in this mv really bad</li>
+               <li><a href="https://www.youtube.com/watch?v=ofPBu1stIxc">RUSSIAN ROULETTE by Staircatte ft. Hatsune Miku</a> - mikuneru toxic yuri.....oughhhh...</li>
+               <li><a href="https://www.youtube.com/watch?v=xNGKUt9fNuQ">Machine Love Remix Medley by Various Artists ft. Various Synths (mainly Teto)</a> - HAPPY BIRTHDAY JAMIE PAIGE this song means so much to me and all the remixes are fire</li>
+               <li><a href="https://www.youtube.com/watch?v=tjL4KK2RWgQ">CRASH THE PARTY by KIRA ft. Hatsune Miku, Kasane Teto & GUMI</a> - i think teto sv2 was used here? sounds like it. one of the few times i've heard her sv2 actually sound good. her sv1 is still better tho</li>
+             <li><a href="https://youtu.be/G3AmvjKvEbQ">Silence by Heavenwraith ft. Kasane Teto</a> - another great use of her sv2 as well. i am in dire need of more heavy metal songs using teto so thank you for this peak</li>
+              <li><a href="https://youtu.be/lv1M-a8baCQ">gONE by Utsu-P ft. Kasane Teto</a> - same thoughts as the one above lol. utsu-p always delivers!!</li>
+               <li><a href="https://youtu.be/adE8jVLoLPo">Rejected Diva by Pinocchio ft. Hatsune Miku</a> - i will cherish life because miku told me to ok. also the teto slander IM CRRYIIINGG</li>
+              <li><a href="https://www.youtube.com/watch?v=JDdFUD8mYgY">eat your heart by tommy. ft. Hatsune Miku</a> - im obsessed with the mv for this holy shit. uncanny in an amazing way</li>
+              <li><a href="https://www.youtube.com/watch?v=dTPHj9aSB24">2077 by Weevildoing ft. Nekomura Iroha & Kasane Teto</a> - very important song considering the current state of the world</li>
+                <li><a href="https://www.youtube.com/watch?v=pPfc0Q7J2ls">Protégé ("Kain Will Die" Edit) by Jamie Paige ft. Kasane Teto</a> - nothing to say i just really love this one</li>
+                </ul>
+                <br>
+                <h3>2025</h3>
+               <ul>
+              
+                <li><a href="https://www.youtube.com/watch?v=4DN3tSdADc8"> Self-Made Man by GrimBot ft. Hatsune Miku</a> - this song resonates with me so much as a trans man even thought i'm not femme-presenting lmfao</li>
+                   <li><a href="https://www.youtube.com/watch?v=U6FCWv0mJQo"> FUROR_MACHINAE by HYPNOPOSSUM ft. Adachi Rei</a> - i love robots with autism</li>
+                    <li><a href="https://youtu.be/LvYL8u4p-aM">Spoken For by FLAVOR FOLEY ft. Kasane Teto</a> - "I COULD BE A WOMAN I COULD BE A MAN" me too teto. me too</li>
+                     <li><a href="https://www.youtube.com/watch?v=sV2H712ldOI"> Confessions of a Rotten Girl ft. Hatsune Miku</a> - WE GETTING OUT OF THE QUEERPHOBIC CONSERVATIVE CHRISTIAN HOUSEHOULD WITH THIS ONE 🔥🔥🔥🔥🔥🔥🔥</li>
+                      <li><a href="https://www.youtube.com/watch?v=UTcZHzDY3LU"> Affection Addiction by KAT & Aku P ft. Popy</a> - have you ever been obsessed with someone to a genuinely life ruining degree while not realizing that they actually Do Not Give A Fuck about you in the slightest until it was too late. imagine that</li>
+                       <li><a href="https://www.youtube.com/watch?v=j9RGt9Z_UeE"> D/N/A by Azari ft. Kasane Teto & Vflower</a> - nothing to say about this one just another banger</li>
+                        <li><a href="https://www.youtube.com/watch?v=J8vjHOyVxUA"> MINIMUM RAGE by MonochroMenace ft. Kasane Teto</a> - may i never get stuck being a wage slave at any wretched fast food place amen</li>
+                         <li><a href="https://www.youtube.com/watch?v=EIyqbc10O_A"> Billionaire Buffet by Flanger Moose ft. Kasane Teto</a> - great song for those angry at the current state of the world (me)</li>
+                          <li><a href="https://www.youtube.com/watch?v=FMlOnbD8FR8"> KILLSWITCH by mekaloton ft. Kasane Teto</a> - i wanna play this in the background while i do very intimate things with my wife</li>
+                           <li><a href="https://www.youtube.com/watch?v=1bsd8fFmTAo"> FLOP ERA by ePiaeon ft. <s>Hatsune Miku</s> "Akita Neru"</a> - this one pokes fun at producers who hopped on the vocalsynth bandwagon for the sake of fame and nothing more</li>
+                            <li><a href="https://www.youtube.com/watch?v=AWznAiPTwkA">GET U HOT by Lainxoxo ft. ANRI Arcane & SF-A2 Miki</a> - nothing to say here either. pure fire</li>
+                            <li><a href="https://www.youtube.com/watch?v=AQF6wxAhiW0">KNOCK IT OFF!! by R.I.P ft. POPY</a> - who up getting verbally abused by they sibling</li>
+                            <li><a href="https://www.youtube.com/watch?v=0ZVFAkdRMRY">SQUARE UP by Jamie Paige & Peak Divide ft. GUMI & Rachel Lake</a> - i love boxing yuri</li>
+                             <li><a href="https://www.youtube.com/watch?v=icBDYkfxpMs">Looping the Rooms by rusino ft. Hatsune Miku</a> - love seeing the animation memes of this one it's peak</li>
+                             <li><a href="https://www.youtube.com/watch?v=icBDYkfxpMs">DIVA by Aiobahn & TAK ft. Hatsune Miku</a> - reminds me a lot of kz livetune and old mitchie m.... so good</li>
+                </ul>
+                <br>
+                <h3>2024</h3>
+               <ul>
+               <li><a href="https://www.youtube.com/watch?v=sqK-jh4TDXo">Machine Love by Jamie Paige ft. Kasane Teto</a> - the song that was responsible for pulling me back into my vocalsynth addiction. thank you jamie paige</li>
+               <li><a href="https://www.youtube.com/watch?v=F38EuG2dAyM"> Medicine by Sasuke Haraguchi ft. Kasane Teto</a> - banger 1 </li>
+                <li><a href="https://www.youtube.com/watch?v=OU42psOG-kA"> Metamachine by mekaloton ft. Kasane Teto</a> - banger 2</li>
+               <li><a href="https://www.youtube.com/watch?v=dbfFDAHmP_c">Who Knows by Lime ft. Kasane Teto</a> - get yourself a buddy that loves you despite how much of a fucking mess of a person you are</li>
+               <li><a href="https://www.youtube.com/watch?v=kbNdx0yqbZE">Monitoring by DECO*27 ft. Hatsune Miku</a> - miku my wife</li>
+               <li><a href="hhttps://www.youtube.com/watch?v=M7VSEZOQIlg">weathergirl by FLAVOR FOLEY ft. Eleanor Forte</a> - I LOVE STORIES OF UNREQUITED LOVE AND YEARNING </li>
+               <li><a href="https://www.youtube.com/watch?v=LaEgpNBt-bQ">M@GICAL☆CURE! LOVE ♥ SHOT! by SAWTOWNE ft. Hatsune Miku</a> - you do not understand how badly i want to go to miku expo just to hear this song</li>
+               <li><a href="https://www.youtube.com/watch?v=b67JzQ8CBwA">GIMMICK GIRL by MonochroMenace ft. Adachi Rei</a> - this song is really Bot Inanimate Insanity coded</li>
+               <li><a href="https://www.youtube.com/watch?v=c5_0NPftdlY">●utlaws by Masarada ft. Kasane Teto</a>  - banger 3</li>
+               <li><a href="https://www.youtube.com/watch?v=fGizrX4JjPg">BINOMI by MARETU ft. Hatsune Miku</a> - cannibalism is so cool guys</li>
+               <li><a href="https://www.youtube.com/watch?v=yZkPe7TEuyk"> FIRE!!! by Vane Lily & Jamie Paige ft. Kasane Teto</a> - somethign something yuri</li>
+              <li><a href="https://www.youtube.com/watch?v=wFLn_d51bNc"> Vermillion by CircusP ft. Kasane Teto</a> - girl i'm bored lets heal from severe depression and stop self-harming </li>
+              <li><a href="https://www.youtube.com/watch?v=_SRp1kc0088"> To My Biggest Fan by beat_shobon ft. Kasane Teto</a> - ALL HAIL TETO SELFCEST YURI</li>
+                <li><a href="https://youtu.be/UujHShlnJTc"> The Plum Blossom Deity by SLAVE.V-V-R ft. Kasane Teto</a> - i don't know what to say this song is genuinely incredible. no other words</li>
+                </ul>
+               <br>
+                <h3>2023</h3>
+                <ul>
+                 <li><a href="https://www.youtube.com/watch?v=v1TaIfKctPo">WILDCARD by KIRA ft. Kasane Teto</a> </li>
+                  <li><a href="https://www.youtube.com/watch?v=nrsr_-QXCv4">Better Off Worse by CircusP ft. Vflower</a></li>
+                   <li><a href="https://www.youtube.com/watch?v=yiqEEL7ac6M">Anonymous M by PinocchioP ft. Hatsune Miku & ARuFa</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=R_g0M5Zmqhg">Even Though I Had Loved You by MARETU ft. Hatsune Miku</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=lMEt3RdqB9Y">(Not) A Devil by DECO*27 & PinocchioP ft. Hatsune Miku</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=UHbmkxv-874"> Liar Dancer by Masarada ft. Kasane Teto</a></li>
+                      <li><a href="https://youtu.be/Gm2Tc0-2Q34"> Yoshiwara Lament -Re-recording- by asa ft. Kasane Teto</a></li>
+                       <li><a href="https://youtu.be/IL0Wp97NG_I"> Alive (2024 ver.) by Death Ohagi ft. Kasane Teto</a> - this was released as a demo for SynthV Teto in 2023 and then re-released as part of an album in 2024 so don't come at me for putting it here ok? ok</li>
+                      
+            </ul>
+ 
+ <br>
+ <h1>MY FAVORITE PRODUCERS!!!!</h1>
+ 
+ 
+ <h3>Jamie Paige</h3>
+ <p>My all time favorite vocalsynth producer! Most well known for Machine Love, BIRDBRAIN, and being a member of the music circle FLAVOR FOLEY. Also responsible for GUMI's vocals in Moe Shop's "Love Taste" from back in 2018, and has collaberated with them again as of November 2025 in "NEWLY HUMAN FEELING"! She mainly uses Kasane Teto, GUMI, and ANRI Arcane, and frequently makes songs with herself as a vocalist as well. She's been active since 2017 and is still very much active to this day! </p>
+ 
+ <p>She makes a lot of upbeat electropop and breakbeat music with lots of queer themeing mixed in. She's singlehandely carrying the english side of the vocalsynth scene and I commend her for that greatly. I relate so much to basically all of her songs they're so good I swear to god. Her music helped me get by when I was like balls deep in my depression from like all of 2024 to early/mid 2025. She's also one of the main producers that inspired me to get into using vocalsynths myself! Most vocalsynth fans already know her but if you're a first time listener I cannot recommend enough that you check her stuff out :]</p>
+ <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/Jamie%20Paige%20JamieP%20-%20Cadmium%20Colors%20(feat.%20Kasane%20Teto)%20%5B1U6qefKcOrg%20-%201280x720%20-%202m09s%5D.png" width="300px"></p>
+ <h4>Favorite Songs!</h4>
+ <ul>
+               <li><a href="https://www.youtube.com/watch?v=1U6qefKcOrg">Cadmium Colors ft. Kasane Teto</a></li>
+                <li><a href="https://www.youtube.com/watch?v=u33469XYVWc">Dance Delightful ft. Adachi Rei</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=FftLImzl1-k">I Wish That I Could Fall ft. GUMI</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=CQBbYjMWorc">Strawberry ft. Kasane Teto</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=WXeeY5JVBGU">Shiny Chariot ft. GUMI & Kasane Teto</a></li>
+                </ul>
+<br>
+<h3>Vane Lily</h3>
+ <p>My second favorite producer ever. They're known for Paparazzi Murder Party, being the director of the "To Hell and Back" series, and also another member of FLAVOR FOLEY! They've been active since 2019 and are still active today.</p>
+ 
+ <p>They make much more intense electronic music with lots of relgious motifs. And I mean A LOT of religious motifs. Like a fuck ton of them. I dig it so hard. I also relate to quite a few of their songs. Please go listen to all of the To Hell and Back songs they're all absolute peak. One of the best vocalsynth storytelling projects in my opinion!</p>
+ <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/Vane%20Lily%20-%20Love%20Me%20ft.%20An%20Xiao%2C%20Tsurumaki%20Maki%20%5BR6GKsKqsEOU%20-%201280x720%20-%201m32s%5D.png" width="300px"></p>
+ <h4>Favorite Songs!</h4>
+ <ul>
+               <li><a href="https://www.youtube.com/watch?v=R6GKsKqsEOU"> Love Me ft. An Xiao & Tsurumaki Maki </a></li>
+                <li><a href="https://www.youtube.com/watch?v=XKqUsbYyLk4">Harlequin Contraption ft. Kasane Teto</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=36h1nhV_klE">Lose Your Head ft. Kasane Teto</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=u6qnqjrvgUU">Perfectly Sweet ft. MAIKA</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=qoxn3Lz7vh8">Golden Idol ft. NYL</a></li>
+                </ul>
+<br>
+
+<h3>R.I.P / RIProducer</h3>
+ <p></p>
+ 
+ <p></p>
+ <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/R.I.P%20RIProducer%20-%20R.I.P%20-%20MISS%20MISERYGUTS%20ft.%20Tsuina-chan%20AI%20(SynthV%20Original%20Song)%20%5BgVRGueEGIPU%20-%201280x720%20-%200m23s%5D.png" width="300px"></p>
+ <h4>Favorite Songs!</h4>
+ <ul>
+               <li><a href="https://www.youtube.com/watch?v=gVRGueEGIPU">MISS MISERYGUTS ft. Tsuina-chan</a></li>
+                <li><a href="https://www.youtube.com/watch?v=1xEfMnXyGkA">Language of the Lost ft. Kasane Teto</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=C11FEkBaGg8">Above and Beyond ft. NYL</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=rDhqYGbJtN8">Fruiting Bodies ft. GUMI</a></li>
+                </ul>
+                <br>
+<h3>Weevildoing</h3>
+ <p></p>
+ 
+ <p></p>
+ <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/WeevilDoing%20-%20Taxidermy%20Girl%20-%20weevildoing%20ft.%20MAIKA%20%5Bmxo-a4rF2Sw%20-%201426x802%20-%201m37s%5D.png" width="300px"></p>
+ <h4>Favorite Songs!</h4>
+ <ul>
+               <li><a href="https://www.youtube.com/watch?v=mxo-a4rF2Sw">Taxidermy Girl ft. MAIKA</a></li>
+                <li><a href="https://www.youtube.com/watch?v=VMbQZmstj3M">Splitter Girl ft. SeeU</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=l56icYwdrmI">Disposable Girl ft. Eleanor Forte</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=yQtXFrpEWbw">X-Faded Girl ft. Kasane Teto</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=IqRD8LVkkOs">Irreverent Girl (Album ver.) ft. ANRI Arcane</a></li>
+                </ul>
+                <br>
+                
+<h3>Carbon Monoxide</h3>
+ <p></p>
+ 
+ <p></p>
+ <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/Carbon%20Monoxide%20-%20All%20or%20Nothing%20Nyl%20%26%20Saros%20%5B0Jf_s-Qp6-A%20-%201280x720%20-%201m58s%5D.png" width="300px"></p>
+ <h4>Favorite Songs!</h4>
+ <ul>
+               <li><a href="https://www.youtube.com/watch?v=0Jf_s-Qp6-A">All or Nothing ft. NYL & SAROS</a></li>
+                <li><a href="https://www.youtube.com/watch?v=bHEIR5TiyeQ">I Can't Hate You ft. GUMI</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=uRlzsTlM3gc">Personhood ft. ROSE</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=eS2PkTPWAhY">Untitled_4 (Fruits of Zaqqum) ft. SOLARIA</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=wWnEVOy4yIc">Trypanophobia ft. POPY</a></li>
+                </ul>
+                <br>
+ <h3>鬱P (Utsu-P)</h3>
+ <p></p>
+ 
+ <p></p>
+ <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/%E9%AC%B1P%20Utsu-P%20-%20Utsu-P%20-%20MiKUSABBATH%20%5B2020mix%5D%20%5By8nKlSIuAOY%20-%201280x720%20-%201m54s%5D.png" width="300px"></p>
+ <h4>Favorite Songs!</h4>
+ <ul>
+               <li><a href="https://www.youtube.com/watch?v=y8nKlSIuAOY">MiKUSABBATH ft. Hatsune Miku</a></li>
+                <li><a href="https://www.youtube.com/watch?v=yT-N525Xzgo">Fools Are Attracted To Anomaly ft. Kagamine Rin</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=g3NuI_dkkv0">Vermin (GREATEST SHITS ver.) ft. Hatsune Miku & Kagamine Rin</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=GGQD9_op-_o">Corpse Attack!! (GREATEST SHITS ver.) ft. Hatsune Miku</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=CfsA-It3_Yg">KUCHISAKE ft. Kasane Teto</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=7N1VigNvycM">MOKSHA ft. Kagamine Rin</a></li>
+                </ul>
+                <br>               
+ <h3>ピノキオピー (PinocchioP)</h3>
+ <p></p>
+ 
+ <p></p>
+ <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/%E3%83%94%E3%83%8E%E3%82%AD%E3%82%AA%E3%83%94%E3%83%BC%20PINOCCHIOP%20OFFICIAL%20CHANNEL%20-%20PinocchioP%20-%20God-ish%20feat.%20Hatsune%20Miku%20%5BEHBFKhLUVig%20-%201280x720%20-%202m40s%5D.png" width="300px"></p>
+ <h4>Favorite Songs!</h4>
+ <ul>
+               <li><a href="https://www.youtube.com/watch?v=EHBFKhLUVig">God-ish ft. Hatsune Miku</a></li>
+                <li><a href="https://www.youtube.com/watch?v=sHnvEsNU1X0">Rotten Heresy and Chocolate ft. Hatsune Miku</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=f4hb4Fyyylc">KICK-ASS*LITERALLY ft. Hatsune Miku</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=ygY2qObZv24">Because You're Here ft. Hatsune Miku</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=--41OGPMurU">Loveit ft. Hatsune Miku</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=MnJq5kSn-GY">Ultimate Senpai ft. Hatsune Miku</a></li>
+                </ul>
+                <br>
+                <h4>Other producers I really like</h4>
+                <ul>
+                <li>FLAVOR FOLEY</li>
+                <li>八王子P / Hachioji-P</li>
+                <li>きくお / Kikuo</li>
+                <li>KAT / VocaloKAT</li>
+                 <li>MARETU</li>
+                  <li>SAWTOWNE</li>
+                   <li>MASA WORKS DESIGN</li>
+                    <li>Flanger Moose</li>
+                     <li>wowaka</li>
+                      <li>Du Du Danyon</li>
+                       <li>divineruins</li>
+                         <li>bluqueue</li>
+                           <li>TONE</li>
+                            <li>SLAVE.V-V-R</li>
+                             <li>CircusP / VocaCircus</li>
+                              <li>Death Ohagi</li>
+                               <li>0TS</li>
+                                <li>MonochroMenace</li>
+                                 <li>ひとしずくP / HitoshizukuP</li>
+                                 <li>Mitchie M</li>
+                                 <li>LIQ</li>
+                                 <li>mekaloton</li>
+                                 <li>shu-t</li>
+                                 <li>EZFG</li>
+                                 
+                </ul>
+           
+ <br>
+                <h1>MY FAVORITE VOICEBANKS!!!!</h1>
+                <p>There's so many that I love but I really enjoy these guys in particular:</p>
+
+                                     <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Kasane_Teto_AI_My_Dreamtonics_Icon.webp" style=" float:left;margin:8px; width:120px;" >
+   <h4>Kasane Teto AI (Synthesizer V Studio)</h4>
+    <p>My love for Teto and also vocalsynths as a whole was restored in 2024 thanks to her and she was the first voicebank that I ever personally used since getting into making my own vsynth covers that same year. Don't ask me why I never bothered using UTAU, a literal free software before this point. I don't know either. Instead I threw away nearly 100 dollars for my dear Teto. and it was worth it. Incredibly unique and charming voice that makes me wish she was real so I could kiss her on the lips I do not like her SynthV2 version though they botched her English XLS</p>
+    <p><a href="https://www.youtube.com/watch?v=1U6qefKcOrg&pp=ygUOY2FkbWl1bSBjb2xvcnM%3D">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=TgD0RJ2J4yU&pp=ygUQc3dlZXQgZGV2aWwgdGV0bw%3D%3D">Favorite Cover</a></p>
+    </div>
+            
+           
+            <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Kasane_Teto_AI_My_Dreamtonics_Icon.png" style=" float:left;margin:8px; width:120px;" >
+   <h4>Kasane Teto (UTAU)</h4>
+    <p>Aside from The Cryptonloids being my primary obession as a kid she also defined my entire childhood I fear. I honestly don't enjoy her UTAU as much as I enjoy her SynthV  nowadays but her UTAU still holds a special place in my heart. I think depending on what kinda songs she's used in I am capable of enjoying her more than her SynthV version but unfortunately I am a bit biased. She's still my goat tho don't get me wrong. she's so creature coded ough</p>
+    <p><a href="https://www.youtube.com/watch?v=htAxy8DJfn4&pp=ygUKcy5hLnMgdGV0bw%3D%3D">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=raR_dn6x3uc">Favorite Cover</a></p>
+    </div>
+    
+            <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Nekomura_Iroha_AI_2_MyDreamtonics_Icon.webp" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Nekomura Iroha AI 2 (Synthesizer V Studio 2)</h4></p>
+    <p>I never gave a shit about him when he was just a vocaloid but now that he has a SynthV voicebank I'm actually highkey in love with him guys HIS VOICE IS SO FUCKING GOOD. I wish I had money so I could buy him he would be my main aside from Teto. I view him as a femme trans man due to his voice provider also being a trans man do you see the vision. I hope you do. I have a thing for powerful voicebanks and this guy scratches the itch in my brain just right. ALSO THE FACT THAT HIS VOICEBANK USES SAMPLES OF HIS VP'S VOICE FROM BOTH BEFORE AND AFTER HIS TRANSITION??? There's something so beautifully queer about that it makes me wanna cry /pos</p>
+    <p><a href="https://www.youtube.com/watch?v=dB1mlwkZnXk">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=we4BsmaSCac&pp=ygUjbmVrb211cmEgaXJvaGEgc3ludGh2IHNlbGYgbWFkZSBtYW4%3D">Favorite Cover</a></p>
+    </div>
+            <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Kasane_Teto_AI_My_Dreamtonics_Icon(1).png" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Yokune Ruko ♂ (UTAU)</h4></p>
+    <p>My bigender intersex kingqueen I love him so much. If you're a freak who calls him the h-slur I hate you go away. ANYWAYS her masc voicebank is my favorite of the two but I do wish people would use her femme voicebank more often cuz it's also super peak. I love how powerful his voice is and his gimmick of having both a masculine and feminine voice. yet another beautifully queer voicebank. GO GAS HER UP AND MAKE HIM MORE POPULAR NOW!!!!!!!!</p>
+    <p><a href="https://www.youtube.com/watch?v=UkKK248m2MM">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=TnFPijbx8qc&pp=ygUUeW9rdW5lIHJ1a28gb3JpZ2luYWw%3D">Favorite Cover</a></p>
+    </div>
+    
+    <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Kasane_Teto_AI_My_Dreamtonics_Icon(2).png" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Adachi Rei (UTAU)</h4></p>
+    <p>I think we are dire need of more vsynths with completely artificial voices. I love Rei so much I think her voice is really unique and while it does sound  a bit grating she can genuinely sound incredible if tuned right. Her voice was sampled from Audacity sine waves which is why she sounds the way she does. I don't understand the need for her to be ported to VOCALOID6 it literally just sounds the exact same as her UTAU voicebank. The only difference is that UTAU is free while VOCALOID6 is paid. Which one is more worth using guys what do you think</p>
+    <p><a href="https://www.youtube.com/watch?v=U6FCWv0mJQo">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=Dc2wePi45lo">Favorite Cover</a></p>
+    </div>
+    
+     <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Kasane_Teto_AI_My_Dreamtonics_Icon(3).png" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Shiine Ama (UTAU)</h4></p>
+    <p>I don't really know what to say about her LOL I randomly discovered her through divineruins' song "B.P.D (But Please, Don't" featuring her and I've been madly in love with her ever since. She scratches an itch in my brain in a way that I can't really explain. I love how she sounds in english in comparison to a lot of other JP UTAU voicebanks forced to sing in english her accent is very charming</p>
+    <p><a href="https://www.youtube.com/watch?v=B73skAi_wIA&pp=ygUKc2hpaW5lIGFtYQ%3D%3D">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=RYH-GDdPln4&pp=ygUKc2hpaW5lIGFtYQ%3D%3D">Favorite Cover</a></p>
+    </div>
+            
+     <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Kasane_Teto_AI_My_Dreamtonics_Icon(4).png" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Darling (UTAU)</h4></p>
+    <p>Extremely expressive and dynamic voice with a million different appends to achieve literally any particular sound u want it's beatiful. She really really awesome it's a shame she got she discontinued though. At least someone uploaded her onto the Internet Archive so you can still get her there. 67 years old and still a party-goer you go girl. I love you. I listened to the cover using her linked below like years ago when I was young without even knowing it was her. Or even any UTAU voicebank to begin with. Am I stupid? Not anymore</p>
+    <p><a href="https://www.youtube.com/watch?v=JEU52wz4Myk" >Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=nsnkUZ8B_VU&pp=ygUMZGFybGluZyB1dGF1">Favorite Cover</a></p>
+    </div>
+     
+     <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/vocaicons/Kasane_Teto_AI_My_Dreamtonics_Icon(5).png" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Yi Xi (Synthesizer V Studio)</h4></p>
+    <p>I first discovered her because of Butcher Vanity and im not gonna lie on my first listen I genuinely fucking thought it was a real living breathing person singing. SynthV works wonders. Out of all the different voicebanks SynthV has to choose from I think she's one of, if not THE most unique-sounding one. A lot of SynthV banks tend to sound similar to eachother but to me she really stands out. Really expressive voice that fits perfectly with electronic and more harsh and intense music. My beautiful unhinged cannibal wife I love you please let me hit</p>
+    <p><a href="https://www.youtube.com/watch?v=vjBFftpQxxM&pp=ygUFeWkgeGk%3D">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=7egPf8jTTnQ&pp=ygUZeWkgeGkgY292ZXIgc3BsaXR0ZXIgZ2lybA%3D%3D">Favorite Cover</a></p>
+    </div>
+    
+    
+     <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Kasane_Teto_AI_My_Dreamtonics_Icon(6).png" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Hakaine Maiko (UTAU)</h4></p>
+    <p>The fact that it's even possible to get a voicebank SPECIFICALLY meant for screamo/death metal to sound as realistic as hers in UTAU of all programs is genuinely insane to me. I've always found her incredibly difficult to use but it's incredible what other people have been able to do with her. I wish more metal producers in the voca scene utilized her voicebank, it's the closest you'll get to an actual death scream in all of vocalsynth, at least for free. Go take a listen! </p>
+    <p><a href="https://www.youtube.com/watch?v=74otMglSkwE">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=GSZdkUSuSck&pp=ygUNaGFrYWluZSBtYWlrbw%3D%3D">Favorite Cover</a></p>
+    </div>
+    
+  
+    
+     <div id="textbox1">
+                    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Kasane_Teto_AI_My_Dreamtonics_Icon(8).png" style=" float:left;margin:8px; width:120px;" >
+   <p><h4>Acme Iku (UTAU)</h4></p>
+    <p>The funny thing about her? She wasn't even intended to be a singing voicebank. She was made for the software "MAIDLOID", which is a software that produced synthesized moaning sounds for, y'know. Hentai and all that. She ended up receiving an UTAU port later on that sounds like pure ass to be honest, but people have somehow been able to make her sound actually pretty good? At least in my opinion, I don't know. She also has a fanmade voicebank that sounds 10 times better than her official ports. It's nice that she was able to become something more than what she was originally intended for.</p>
+    <p><a href="https://www.youtube.com/watch?v=pTmeXxa3MXU&pp=ygUIYWNtZSBpa3U%3D">Favorite Original Song</a> | <a href="https://www.youtube.com/watch?v=biSVUFYVOiM">Favorite Cover</a></p>
+    </div>
+        
+        </div>
+       <br>
+       <br>
+      
+ </div>
+        
+   
+
+
+  </body>
+</html>

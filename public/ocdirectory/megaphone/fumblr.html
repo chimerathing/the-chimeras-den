@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>bluestarrider.fumblr.com</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+<style>
+  
+
+
+/* this applies to all the content */
+* {
+    box-sizing: border-box;
+/* change the font here, it's set up to all use the same one */
+    font-family: arial;
+}
+
+
+body {
+    background-color: #557dd3;
+  
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: black;
+}
+
+p {line-height: 1.5em; color:black;}
+
+h1 {
+    font-size: 2em;
+    color: #b8dbfe;
+    text-align:center;
+    padding-top:23px;
+}
+h4,
+h5,
+h6 {color: black}
+
+
+
+header {
+   top: 0;
+    left: 0; /* ensure it starts at the very left */
+    width: 100%;
+    margin: 0; /* remove default margin */
+    background-color: white;
+    padding: 1px 10px;
+    color: black;
+    text-align: center;
+    z-index: 1000;
+    box-sizing: border-box;
+    background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/abstract-blue-swirlsand-floral-design-f3ww1oovxyolxfi4-311272503(1).png');
+    height:300px;
+
+
+}
+
+.search {
+     top: 0;
+    left: 0; /* ensure it starts at the very left */
+    margin: 0;
+     padding: 5px;
+               float: left;
+   
+}
+
+/* this is your site title displayed at the top of the page */
+header > h1 {
+    
+    color: #b8dbfe;
+    margin: 0 ;
+    font-size: 2em;
+/*uncomment this line if you want the header text to not take up the full length of the div*/
+    /*width: fit-content;*/
+    max-width: 100px;
+    padding: 0px 0px;
+    
+   
+    
+  
+    
+  border-radius: 0px;
+  border-image-slice: 35%;
+        border-image-repeat: round;
+/*normal headers have a filter, so we gotta turn it off for this special heading*/
+    filter: none;
+/* you can change the text-align to center or right if you want it placed differently */
+    text-align: center;
+     
+}
+}
+
+/*this is for lists*/
+li {
+/*you can change the normal dot to anything you want :)*/
+    /*list-style-type: "ðŸ’™ ";*/
+/*i used a flower since i already drew it for another page haha*/
+    list-style-image: url("images/flower.png");
+}
+
+nav {margin: 1em;}
+
+nav > ul {
+    max-width: 960px;
+    margin: auto;
+    line-height: 3rem;
+/* this line takes away the dot in front of the list items */
+    list-style-type: none;
+/* list items have default padding but we don't need it for these */
+    padding-left: 0;
+/* and this spaces out the buttons so they're not touching */
+    justify-content: space-evenly;
+}
+nav li {
+    text-align: center;
+    list-style-image: none;
+}
+nav li > a {
+    font-weight: bolder;
+    background-color: #fff;
+    border: 4px double #272727;
+    padding: .5em 3em;
+/* this takes away the link underline */
+    text-decoration: none;
+}
+nav li > a:hover {
+    color: #f20e06;
+    background-color: #fff;
+}
+    
+a {
+    color: #b8dbfe;
+    
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b8dbfe;
+   text-decoration: underline;
+    
+}
+
+#sidebar {
+   font-family: 'basiic';
+    background-image: url('https://i.postimg.cc/sfJ0MSTq/paper.png');
+    border: 4px double #272727 !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 0px 10px #3c3c3c !important;
+    height: fit-content;
+    width: 900px;
+    margin-top: 1em;
+    margin-right: 2em;
+    border-radius: .5em;
+}
+.small-box {
+    max-width: 240px;
+    margin: auto;
+    border: 2px solid var(--bg-color);
+/*i gave this one small text cuz i think it looks cute, but you can remove this line to make it normal*/
+    font-size: 11px;
+/*making sure the list items are spaced correctly cuz it's hard to read when they're squished together*/
+    line-height: 1.5rem;
+}
+
+
+#bio {
+    
+   
+}
+
+
+#content {
+    display: flex;
+    justify-content:center;
+    width: 760px;
+    margin: auto;
+}
+
+main {
+    padding: 1em;
+}
+
+/*this is the top post on the blog. you can treat it like a pinned post if you want!*/
+#top {
+    background-color: var(--bg-color);
+}
+/*this bit gives it a white background*/
+#top section {
+    background-color: var(--bg-color2);
+    border-radius: .5em;
+    margin-bottom: 10px;
+    padding: .2em 1em;
+    width: fit-content;
+}
+
+/*these are the regular blog post styles!*/
+article {
+    
+    padding: 1em;
+    border: 5px white solid!important;
+    width:600px;
+    background:white;
+    margin-bottom: 2.5em;
+   
+
+  border-radius: 6px;
+  
+}
+article img {
+/*make sure large images get resized to fit in the post*/
+    max-width: 100%;
+    
+}
+
+/*you should always use this line if you have details/summary blocks cuz it makes it more obviously clickable*/
+details > summary {cursor:pointer;}
+
+.readmore summary {
+    font-weight: bolder;
+    color: var(--border-color);
+    list-style: none;
+}
+.readmore summary::-webkit-details-marker {
+  display: none;
+}
+.readmore[open] > summary {
+    border-bottom: 2px dashed var(--bg-color);
+    padding-bottom: .6em;
+    margin-bottom: .6em;
+}
+
+/*this is the top line for each post, with the name on the left and date/time on the right*/
+/*you can put a post title instead of a name/handle, i just set it up that way as an example haha*/
+.post-header {
+    color: gray;
+    font-weight: bolder;
+    padding: .5rem 0;
+   
+}
+
+.post-footer {
+    color: gray;
+    font-weight: bolder;
+    padding: .5rem 0;
+  
+}
+
+.timestamp {
+    font-weight: normal;
+    font-size: smaller;
+    margin: .2em;
+/*this keeps it to the right edge*/
+    float: right;
+}
+
+/*these set up tumblr-style photoset grids*/
+.photosetx2,
+.photosetx3 {
+    display: grid;
+    gap: 4px;
+    align-items: center;
+}
+.photosetx2 {grid-template-columns: 1fr 1fr;}
+.photosetx3 {grid-template-columns: 1fr 1fr 1fr;}
+/*adjust this to your liking! it crops images that are too tall*/
+.cropped {
+    width: 156px;
+    height: 156px;
+    overflow: hidden;
+    object-position: 25% 25%;
+}
+/*this makes sure the image doesn't get distorted when cropped*/
+.photosetx2 img,
+.photosetx3 img {object-fit: cover;}
+
+/* a class for centering text and images */
+.center { text-align: center; }
+.img-right { float: right; }
+
+/*this stops the float image from overflowing out of its container*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*you can use the <small> tag in html, or make a class like this. up to you!*/
+.small-text {
+    font-size: 11px;
+/*i gave it a shadow cuz i think it looks nice... yayyy*/
+    text-shadow: var(--bg-color) 1px 1px;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    margin: auto;
+    padding: .5em;
+    background: var(--bg-color2);
+}
+
+
+
+#amaina{
+position:fixed;
+height: 200px;
+bottom: 100px;
+right: 10px;
+opacity: 0.9;
+animation-name: floating !important;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+}
+ @keyframes floating {
+            0% {
+                transform: translate(0, 0px);
+            }
+            50% {
+                transform: translate(0, 5px);
+            }
+            100% {
+                transform: translate(0, -0px);
+            }
+        }
+        
+        
+        #sidebar {
+ font-family: 'basiic';
+    background-image: url('https://i.postimg.cc/sfJ0MSTq/paper.png');
+    border: 4px double #272727 !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 0px 10px #3c3c3c !important;
+  margin-left: -300px;
+  padding: 2em 1em;
+
+  width: 240px;
+  
+ 
+  
+  /*the sidebar doesn't scroll with the rest of the page*/
+  position: fixed;
+  /*this stacks it on top of everything else*/
+  z-index: 100;
+  /*make sure it takes up the whole screen vertically*/
+  height: 100%;
+  /*and add a scrollbar if someone's window is too short to see all the content*/
+  overflow-y: auto;
+}
+
+#sidebar h1 {
+  margin-block: .5em;
+}
+/*link text in the sidebar should be the same color*/
+#sidebar a {
+  color: red;
+}
+/*font size for your name in the sidebar*/
+#sidebar h1 a {
+  font-size: 1.2em;
+}
+/*no underline for your name, or hovered links in sidebar*/
+#sidebar h1 a,
+#sidebar a:hover {text-decoration: none;}
+
+/*center the icon in the sidebar*/
+#icon {margin:auto;}
+#icon img {
+  /*this makes it a circle, lower the number for a rounded square*/
+ box-shadow: 0px 0px 10px #3c3c3c !important;
+  width:100%;
+}
+/*these styles are for when your icon image is being used as a link, it just makes it react on mouseover*/
+#icon a img {
+  outline: 2px solid var(--sidebar-bg);
+  /*adds animation to the outline*/
+  transition: .2s;
+}
+#icon a img:hover {
+  outline: 2px solid var(--sidebar-text);
+  outline-offset: 4px;
+}
+
+/*profile text doesnt need as much spacing as the posts do*/
+#profile p {
+  margin-block: .3em;
+  line-height: 1.5em;
+}
+
+
+/*for the rounded link buttons!*/
+#sidebar nav ul {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+#sidebar nav li a {
+  /*set a width so they're the same size*/
+  min-width: 120px;
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  border-radius: 1rem;
+  transition: .2s;
+  text-decoration: none;
+  font-weight: bolder;
+    background-color: #fff;
+    border: 4px double #272727;
+    padding: .5em 3em;
+}
+#sidebar nav li a:visited {color: var(--sidebar-text);}
+#sidebar nav li a:hover {
+ color: #f20e06;
+    background-color: #fff;
+     border: 4px double red;
+  outline: 2px solid var(--sidebar-text);
+  outline-offset: 3px;
+}
+/*and add some spacing around them too*/
+#sidebar nav {
+  margin-block:1.5em;
+}
+
+
+.pfpmini {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 35px 1fr 1fr;
+ column-gap: -5px;
+
+}
+
+.anonpfp {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 100fr 1fr 1fr;
+ column-gap: 3px;
+ float:right;
+ margin-top:-96px;
+
+
+
+}
+
+.askbox {
+ display: grid;
+  
+
+ 
+ background-color:#e9e9e9;
+ width:490px;
+ color: gray;
+    font-weight: normal;
+ padding:25px;
+ 
+ 
+
+}
+.anonask {
+  
+    padding: .5rem 0;
+   
+}
+
+@media only screen and (max-width: 800px) {
+    #content {
+        flex-wrap: wrap;
+    }
+    
+    article {
+      width: 60%;
+    }
+    
+
+    header {min-height: 160px;width:100%}
+   
+    
+    #bio {      width: 100%; text-align:center;
+}
+    
+
+    .askbox {
+
+        width:85%;
+    }
+
+
+    #sidebar ul {
+        line-height: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    #sidebar li {
+        margin: .3em 1em;
+    }
+    
+    #amaina {
+      display:none;
+    }
+    
+    
+}
+</style>
+
+</head>
+
+<body>
+ 
+
+ <header>
+
+    
+    
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" id="pfp" style="width:120px;margin-top:210px;border:5px solid #557dd3;border-radius:3px;">
+    </header>
+   
+    <h1 style="font-family:serif;">god's favorite girlboy</h1>
+<center>
+    <div id="bio">
+    <p style="text-align:center;color: #b8dbfe;">men and women alike can't keep their eyes off me <br>facists can eat shit and die</p>
+
+    <p style="text-align:center;color: #b8dbfe;padding-top:15px;font-weight:bold;"><a href="/ocdirectory/megaphone/fumblr">POSTS</a>　　<a href="">ARCHIVE</a></p>
+    </div>
+</center>
+        <br>
+    
+ 
+      
+
+ 
+
+
+    <div id="content">
+        
+   
+        
+    <main>
+    
+    <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+
+          
+
+               <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <center>
+            <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_819b95ab727b4a5f1663bda27241c8c1_0bd8e56f_250.gif" style="margin-top:-15px;"></p>
+            </center>
+            <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_c4e80a0931dea1e82e2eb5f8fd80b019_bbb4c55c_2048.png">
+            <p>welcome to my blog where i do bloggy things. there's no specific topic i stick to but i mainly post shit about my interests and sometimes my life and political opinions but i try to keep things positive lololol. no promises tho <3 mature audiences only</p> 
+            
+            <p>asks are closed cuz of constant harassment from stalkers and parasocial losers. if you gotta problem w/ me then block and fuckin scroll babe i'm not gonna censor myself for u. i don't owe u shit</p>
+
+            <p>if my gender and sexuality confuse you then my mission is complete</p>
+           
+           <h2 style="font-weight:normal;">some stuff about me</h2>
+
+           <p>★ you call me bluestar or blue or star idgaf </p>
+           
+           <p>☆ my pronouns are he/she (alternate between them please thanks) </p>
+           
+          <p>★ transfemmasc bigender gaybian </p>
+           
+           <p>☆ intersex and proud</p>
+           
+            
+            <p>★ i like uma musume and other dumb weeb shit (ily daitaku helios)</p>
+           
+
+           <p>☆ i'm an adult but my exact age ain't nun of ur buisness</p>
+
+           <p>★ i make music and do drag</p>
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_c4e80a0931dea1e82e2eb5f8fd80b019_bbb4c55c_2048.png">
+<br><br>
+<center>
+           <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_1f00e8704a020d41585c8dc8e634888a_e9777760_250.png"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_e489da0ca1e667e75c3a3f7f7d678606_dbf2153d_100.gif"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_06c327350388e1a202c15be3c6e7a507_6eded9ba_100.png"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_c2efe144eadfc54182c4c8fe924bb30d_5bc648d4_250.gif">
+           <br>
+           <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_ad123364b32c208534fbf3aaa935688d_15004fe5_250.gif"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_d157f94bdb52ca80553331dc99a1ef2b_f01a39cd_250.gif"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_8cd4b737bc362b364a6f9d165cbe2e97_8cce2a9a_250.gif">
+           <br>
+           <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_87527b1ac57e4d6b890b3e2dbea59cce_cbd42ee8_250.gif"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_a3f7b7b3b7de032c4932c613915ebae8_145377b7_250.gif"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/tumblr_e6cb5d89a660709642945828a4f9f307_e869a270_250.webp">
+</center>
+             
+<p style="color:gray;"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2011-35-21%20HTML%20CSS%20and%20JavaScript%20playground%20-%20Liveweave.png" > <br>#bluestar rambles　#uma musume　#daitaku helios　#i needa find other  uma fans hmu</p>
+                        <div class="post-footer">
+                257 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+        
+           <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">new single soon <3</p>
+
+<p style="color:gray;">#bluestar rambles</p>
+                        <div class="post-footer">
+                5,367 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+            <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">it's ridiculous how overpriced all tech shit is getting just for it to be shit from an ass levels of quality what's even going on anymore bruh</p>
+
+<p style="color:gray;">#bluestar rambles</p>
+                        <div class="post-footer">
+                42 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+
+          <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">sometimes when dysphoria is hitting hard i remember that ppl are gonna think i look hot no matter what and then i feel better</p>
+
+<p style="color:gray;">#bluestar rambles</p>
+                        <div class="post-footer">
+                938 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+
+
+  <div class="anonask" style="margin-top:-5px;">
+               <div class="askbox">
+     
+      <p style="margin-top:-5px;"> <font style="font-weight:bold;color:gray;">Anonymous</font> <font style="font-weight:nomral;color:gray;">asked:</font></p>
+
+      <p style="margin-top:-5px;margin-bottom:-5px;">I'm saying this out of genuine concern, I think it would benefit you greatly if you stopped posting on social media and got help from a mental health professional. I don't know much about you or your personal life but you seem to be very unstable and the constant attention from people online isn't doing you any good. If anything, it's actively putting you in danger.</p>
+      </div> 
+      <div class="anonpfp">
+      <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/anonymous_avatar_96.gif" style="width:40px;border-radius:4px;">
+      </div>
+  
+            </div>
+
+<br><br>
+
+
+            <div class="post-header" style="margin-top:-40px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">ur right u don't know shit about me so don't come into my inbox acting like you care when all u mfers are the exact same</p>
+
+<p style="color:gray;">#bluestar rambles　#maybe say it off anon next time if ur so concerned　#don't be a little bitch</p>
+                        <div class="post-footer">
+                673 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+
+ <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+
+
+  <div class="anonask" style="margin-top:-5px;">
+               <div class="askbox">
+     
+      <p style="margin-top:-5px;"> <font style="font-weight:bold;color:gray;">Anonymous</font> <font style="font-weight:nomral;color:gray;">asked:</font></p>
+
+      <p style="margin-top:-5px;margin-bottom:-5px;">can i fuck you in the ass next</p>
+      </div> 
+      <div class="anonpfp">
+      <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/anonymous_avatar_96.gif" style="width:40px;border-radius:4px;">
+      </div>
+  
+            </div>
+
+<br><br>
+
+
+            <div class="post-header" style="margin-top:-40px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">these kinda asks were funny at first but it's getting old guys</p>
+
+<p style="color:gray;">#bluestar rambles　#everyday i wake up and my askbox is full of gooners　#like it gets to a point</p>
+                        <div class="post-footer">
+                136 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+
+    
+           <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">went to a rave last night w/ my besties and had a blast <3 it feels amazing to finally have some downtime after forever dude work has been fuckin me in the ass</p>
+
+<p style="color:gray;">#bluestar rambles　#missed u guys sm ily　#i went in my helios t-shirt also　#gotta show my love for her while im out n about yknow</p>
+                        <div class="post-footer">
+                78 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+
+
+ <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+
+
+  <div class="anonask" style="margin-top:-5px;">
+               <div class="askbox">
+     
+      <p style="margin-top:-5px;"> <font style="font-weight:bold;color:gray;">Anonymous</font> <font style="font-weight:nomral;color:gray;">asked:</font></p>
+
+      <p style="margin-top:-5px;margin-bottom:-5px;">how do you expect people to not know who you are when you actively post pictures of yourself here LMFAOOO you're genuinely fucking stupid</p>
+      </div> 
+      <div class="anonpfp">
+      <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/anonymous_avatar_96.gif" style="width:40px;border-radius:4px;">
+      </div>
+  
+            </div>
+
+<br><br>
+
+
+            <div class="post-header" style="margin-top:-40px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">idk it's not my fault the internet doesn't know how to stfu about anything. fuck outta my inbox</p>
+
+<p style="color:gray;">#bluestar rambles　#i can't even be comfortable on my own PERSONAL  blog dude　#like im boutta just delete this fuckass app atp　#i wasnt tryna be fumblr famous too</p>
+                        <div class="post-footer">
+                826 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+
+
+  <div class="anonask" style="margin-top:-5px;">
+               <div class="askbox">
+     
+      <p style="margin-top:-5px;"> <font style="font-weight:bold;color:gray;">Anonymous</font> <font style="font-weight:nomral;color:gray;">asked:</font></p>
+
+      <p style="margin-top:-5px;margin-bottom:-5px;">surely you know a thing or two about being a celebrity, megaphone?</p>
+      </div> 
+      <div class="anonpfp">
+      <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/anonymous_avatar_96.gif" style="width:40px;border-radius:4px;">
+      </div>
+  
+            </div>
+
+<br><br>
+
+
+            <div class="post-header" style="margin-top:-40px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">ya'll need to leave me alone and i'm serious</p>
+
+<p style="color:gray;">#bluestar rambles</p>
+                        <div class="post-footer">
+                493 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+
+          <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">who gives a shit if the inanimate insanity folks don't wanna broadcast their new season on TV dude. genuinely what is it with the media feeling so entitled to knowing every detail about celebrities lives?? just leave them be </p>
+
+<p style="color:gray;">#bluestar rambles　#you people are so goddamn nosy</p>
+                        <div class="post-footer">
+                1,752 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/uma-musume-umamusume.gif"></p>
+            <p style="margin-top:-2px;">she's so me it's unbelievable</p>
+
+<p style="color:gray;">#bluestar rambles　#uma musume　#daitaku helios</p>
+                        <div class="post-footer">
+                59 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+       
+
+  <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header" style="margin-top:-15px;">
+               <div class="pfpmini">
+      <div class="image">
+       <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2018-49-43%20Support%20Card%2030155%20-%20Daitaku%20Helios%20Image%20Gallery.png" style="width:29px;border-radius:4px;">
+      </div>
+      <div class="username">
+        <p><font style="padding:11px;color:grey;">bluestarrider</font></p>
+      </div>
+    </div>
+            </div>
+            <p style="margin-top:-2px;">i wish i could just disappear forever  i hate going to work i hate living this stupid ass life i live</p>
+
+<p style="color:gray;">#bluestar rambles　#too much has been going on lately　#my manager's a fuckin weirdo and asshole and my piece of shit ex is trying to track me down again lolll　#someonme jhelp me　#i feel like my every move is being watched</p>
+                        <div class="post-footer">
+                545 notes <span class="timestamp"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Screenshot%202025-12-25%20at%2010-52-51%20Draw%20a%20fractal!.png"> </span>
+            </div>
+                    
+        </article>
+
+       
+    </main>
+    
+
+    
+    
+        
+    </div>
+        
+<div id="bio">
+    <center>
+    <p style="text-align:center;color: #b8dbfe;padding-bottom:25px;">Failed to load older posts.</p>
+    </center>
+    </div>
+</body>
+
+</head>

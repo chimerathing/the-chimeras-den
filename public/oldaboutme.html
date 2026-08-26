@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT ME!</title>
+   <script type="text/javascript">
+      title = "ABOUT ME! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script> 
+
+  <style>
+
+@font-face {
+                font-family: rosela;
+                src: url('https://dl.dropbox.com/scl/fi/pwd7ysnhki4vftc9f9rbz/MS-Gothic.ttf?rlkey=12bg8zkwmonggdxqfdh90c8bk&st=o96zgisg&');
+            }
+
+ @font-face {
+                font-family: marioluigi;
+                src: url('https://file.garden/Z5ztm_B6wj_8HQnK/MarioLuigi2.ttf');
+                font-weight: bold;
+            }
+
+
+body {
+    
+     background-color: black;
+      background-size:cover;
+    margin: 0;
+    color: black;
+    font-family: rosela;
+
+}
+
+h1, h2, h3, h4, h5, bold {
+  font-family: marioluigi;
+  
+  color: white;
+text-shadow: 1px 1px 5px #ffff, 1px 7px 10px #746fd2;
+}
+
+.div
+{
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.underline {
+    color: white;
+}
+
+
+
+strong {
+   color: #830811;
+                text-shadow: 1px 1px 5px #830811;
+}
+
+u {text-decoration: underline wavy #830811}
+
+a {
+text-shadow: 3px 3px 3px #030000;
+                background: linear-gradient(#8d2a31 , #680811);
+     color: ffdec6;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+color: #ffdec6;
+font-weight: bold;
+text-decoration: underline wavy #727ccf; 
+transition: letter-spacing 1s;}
+            
+
+ a:hover {
+      color:white;
+      letter-spacing: 1px;
+      text-decoration:none;
+      }
+
+
+
+
+
+.quoteheader p {
+    font: small-caps bold 1.2rem marioluigi;
+    text-align: center;
+}
+
+.quoteheader {
+    border: 3px double #fff;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 0px 0px #c3c3c3;
+    
+    background-repeat : repeat-x;
+    background-repeat : repeat-y;
+    width: 20%;
+    height: 225px;
+    float: right;
+    clear: right;
+}
+
+.quoteheader img {
+    width: 100%;
+}
+
+.buttonbox p {
+    font: small-caps bold 1.2rem marioluigi;
+    text-align: center;
+}
+
+.buttonbox {
+    border: 3px double #fff;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 0px 0px #c3c3c3;
+    
+    background-repeat : repeat-x;
+    background-repeat : repeat-y;
+    width: 20%;
+    height: 90px;
+    float: right;
+    margin-bottom: 30px;
+    clear: right;
+
+}
+
+
+ html {
+    scrollbar-color: #000102 #680811;
+    scrollbar-width: auto;
+        }
+
+.logoheader {
+    display: flex;
+    flex-direction: column;
+    
+    background-repeat : repeat-x;
+    background-repeat : repeat-y;
+}
+
+.navbar {
+    
+    position: relative;
+}
+
+.navbarload {
+    border: 3px double #fff;
+    display: block;
+    flex-direction: column;
+    
+    background-repeat : repeat-x;
+    background-repeat : repeat-y;
+    width: 250%;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    z-index: 2;
+}
+
+.indexcontent {
+    display: flex;
+    flex-direction: column;
+    background-repeat : repeat-x;
+    background-repeat : repeat-y;
+    position: relative;
+}
+
+.navbarloa {
+   border: 3px double #fff;
+   display: block;
+   width: 182px;
+   flex-direction: column; 
+   border-collapse: collapse;
+   border-spacing: 2px;
+   z-index: 2;   
+}
+
+.navbarbuttonspecial {
+   text-decoration: none;
+   color: white;
+   display: block;
+   border-style: solid;
+   border-top: none;
+}
+
+.navbarbuttonspecial:hover {
+   color: yellow;
+}  
+  
+.playlistloa {
+   border: 3px double #fff;
+   display: block;
+   width: 176px;
+   color: white;   
+   padding: 3px;   
+   flex-direction: column; 
+   border-collapse: collapse;
+   border-spacing: 2px;
+   z-index: 2;
+   background: black;
+   background-repeat : repeat-x;
+   background-repeat : repeat-y;   
+}
+
+.playlistloa {
+   border: 3px double #fff;
+   display: block;
+   width: 176px;
+   color: white;   
+   padding: 3px;   
+   flex-direction: column; 
+   border-collapse: collapse;
+   border-spacing: 2px;
+   z-index: 2;
+   background: black;
+   background-repeat : repeat-x;
+   background-repeat : repeat-y;   
+}
+
+.statusloa {
+   border: 3px double #fff;
+   display: block;
+   width: 176px;
+   height: 200px;
+   color: white;   
+   padding: 3px;   
+   flex-direction: column; 
+   border-collapse: collapse;
+   border-spacing: 2px;
+   z-index: 2;
+}
+
+.updateloa {
+   border: 3px double #fff;
+   margin-top:-1px;
+   width: 500px;
+   min-height:80px;
+   color: white;   
+   overflow-y:auto;
+   padding: 3px;   
+   flex-direction: column; 
+   border-collapse: collapse;
+   border-spacing: 2px;
+   z-index: 2;
+   background: black;
+   background-repeat : repeat-x;
+   background-repeat : repeat-y;   
+}
+
+.navbarloa2 {
+   border-left: 1px gray;
+   border-top: 1px #fff;
+   border-bottom: 1px #fff;
+   border-right: 1px #fff;
+   border-style: solid;
+   display: block;
+   width: 182px;
+   flex-direction: column; 
+   border-collapse: collapse;
+   z-index: 2;   
+}
+
+.navbarloa3 {
+   border-left: 1px #fff;
+   border-top: 1px #fff;
+   border-bottom: 1px #fff;
+   border-right: 1px #fff;
+   border-style: solid;
+   display: block;
+   width: 182px;
+   flex-direction: column; 
+   border-collapse: collapse;
+   z-index: 2;   
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+marquee {
+width: 100%;
+
+}
+ 
+  
+  </style>
+
+    
+  </head>
+
+
+  
+  
+      
+
+<center><style>
+
+
+
+table
+{
+width:100%;
+}
+th
+{
+height:50px;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+  
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  
+}
+/*
+
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+        
+.sticky-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    pointer-events: none; /* Ensure the image doesn't interfere with other elements */
+  }
+  
+.sticky-image2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none; /* Ensure the image doesn't interfere with other elements */
+  }
+
+.sticky-random {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none; /* Ensure the image doesn't interfere with other elements */
+  }
+
+  
+
+</style>
+
+
+<table>
+<tbody><tr>
+<style type="text/css">
+
+
+table.maintable2 {
+  width: 670px;
+  border-width: 2px;
+	border-spacing: 2px;
+	border: 16px solid #680811;
+  box-shadow: 1px 1px 30px #680811;
+  border-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/graphics/pussy%20isbetter(5).png") 25 fill round !important;
+       border-image-slice: 35% !important;
+        border-image-repeat: round !important;
+  margin: auto
+	overflow: hidden;
+	background: linear-gradient(#8d2a31 , #680811);
+}
+table.maintable2 td {
+	padding: 0px;
+	background: linear-gradient(#8d2a31 , #680811);
+	-moz-border-radius: ;
+	vertical-align: top;
+}
+
+.painty{
+  width:80px;
+  height:80px;
+  float:left;
+  padding:1px;
+  margin:5px;
+}
+
+/* Base styles for the element that has a tooltip */
+[data-tooltip],
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition:    
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition:         
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before,
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after,
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 200px;
+   height: fit-content;
+  background-color: #000;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Directions */
+
+/* Top (default) */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after,
+.tooltip-top:before,
+.tooltip-top:after {
+  bottom: 100%;
+  left: -10px;
+}
+
+.tooltip-top {
+ 
+  
+}
+
+[data-tooltip]:before,
+.tooltip:before,
+.tooltip-top:before {
+  margin-left: 25%;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: hsla(0, 0%, 20%, 0.9);
+}
+
+#buttonstyle {
+    text-align: center;
+    font-size: 1em;
+    font-family:'Rosela';
+    line-height: 1.25;
+    min-width: 50%;
+    max-width: 100%;
+    padding-top: 1em;
+    background-color: #680811;
+    border: none;
+    color: #040000;
+    padding: 15px 32px;
+    cursor: pointer;
+      }
+
+
+</style>
+
+<style>
+.music-player {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: rgba(196, 219, 255, 0.67);
+  background: url('https://file.garden/Z5ztm_B6wj_8HQnK/OIP-4192034026.png') no-repeat center;
+  background-size: cover;
+  background-blend-mode: ;
+background-color: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  padding: 6px;
+  max-width: 100%;
+  font-family: sans-serif;
+   border: 4px solid #000102;
+  
+   margin: 5px;
+ 
+}
+
+.current-track {
+  background-color: #8d2a31;
+  border: 1px solid #000102;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #000102;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+ 
+}
+
+.track-marquee {
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  animation: marquee 15s linear infinite;
+  padding-left: 100%;
+  top: 0;
+  height: 100%;
+  line-height: 30px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+  padding: 10px 0;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.player-controls button {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+  border: 1px solid #000102;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 28px;
+  height: 28px;
+  color: #000102;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-controls button:hover {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+}
+
+.progress-container {
+  flex: 1;
+  height: 10px;
+  background: #8d2a31;
+  border: 1px solid #000102;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.player-progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #8d2a31 , #680811);
+  width: 0%;
+  transition: width 0.1s ease;
+  border-radius: 7px;
+}
+
+.time-display {
+  font-size: 1.1em;
+  color: white;
+  min-width: 45px;
+  text-align: center;
+}
+
+.playlist-dropdown {
+  position: relative;
+}
+
+.playlist-toggle {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+  border: 1px solid #000102;
+  border-radius: 3px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #000102;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-toggle:hover {
+  background: linear-gradient(to bottom, #8d2a31 , #680811);
+}
+
+.playlist-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #f8fbff;
+  border: 1px solid #000102;
+  border-radius: 3px;
+  max-height: 120px;
+  overflow-y: auto;
+  z-index: 10;
+  display: none;
+}
+
+.playlist-menu.show {
+  display: block;
+}
+
+.playlist-item {
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 0.85em;
+  border-bottom: 1px solid #000102;
+}
+
+.playlist-item:last-child {
+  border-bottom: none;
+}
+
+.playlist-item:hover {
+  background-color: #e6f3ff;
+}
+
+.playlist-item.active {
+  background-color: #cce6ff;
+  color: #000102;
+  font-weight: bold;
+}
+</style>
+
+</tr></tbody></table>
+<br><br><br>
+<table class="maintable2" style="border-radius:4px; height:541px;">
+<tbody>
+<tr>
+  <div class="navbarloa" style="height:200px; width:695px;  overflow: auto;  margin-top:-50px; margin-left:3px; border:none; background:url('https://file.garden/Z5ztm_B6wj_8HQnK/Screenshot%202025-08-19%20at%2014-49-34%20IN%20THE%20SIDE%20OF%20MY%20NECK%20HER%20CANINE%20TEETH(1).png');background-size:46em;">
+ <p style="float:right;margin-top:110px;"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/graphics/tumblr_3e7d774625867ded6c2f0c4cd56aac54_28b05175_100.gif">  <img src="https://file.garden/Z5ztm_B6wj_8HQnK/graphics/tumblr_5ab4646fbf258586ee94932cd8407ef3_19f3b604_100.gif"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/graphics/tumblr_3ab5517017ad939e74848273c312c89b_57062281_100.gif">  <img src="https://file.garden/Z5ztm_B6wj_8HQnK/graphics/ezgif.com-animated-gif-maker(21).gif"></p>
+  </div>
+<td class="navbar" style="background:none;">
+  
+  
+
+  
+    <div class="statusloa" style="overflow: hidden; height: 723px; background: linear-gradient(#000102 ,  #060109); margin-top:3px; border-radius:15px 0px 0px 0px; margin-left:3px; padding:0px; width:395px;  border:1px #680811 solid; ">
+ 
+    <center>
+    <div id="mainDiv" class="navbarloa" style="height:460px; scrollbar-width:thin; width:380px; overflow: hidden; border:1px #fff solid; margin-top:8px; overflow-y:auto; overflow-x:hidden; border-radius:10px 10px 10px 10px;  background:linear-gradient(#000102 ,  #060109);">
+    <div class="navbarloa" style="width:330px; overflow: hidden; border:none; border-bottom:2px dotted white; margin-top:20px;overflow-x:hidden;  text-align:right;">
+    <h1>ABOUT ME!</h1>
+    </div> 
+    <div class="navbarloa" style="width:330px; overflow: hidden; border:none; overflow-x:hidden;  margin-top:17px; text-align:left;">
+    <font color="#fceaff" size="3"> <p> <img src="https://i.postimg.cc/FRCMCQLn/ii-paintbrush-inanimate-insanity-646334512-1.gif" class=painty> Hey there! My name is <u>Gabriel</u>. You can also call me the other names listed in the sidebar if you'd like. My age and pronouns are listed over there too. I'm a weird genderfucked dykeguy creature thing with a passion for all things art. I've been an artist since I came out the womb basically and want to make a career of some kind out of it but I gotta get off my ass and actually commit to a project for once in my life (commissions are open btw) I also enjoy coding and making song covers with SynthV and UTAU on the side. Vocal synths as a whole have been my special interest for almost 10 years now PLEASE talk to me about them I will not shut the fuck up. Some of my other hobbies are gaming, piracy, watching video essays, researching the most random fucking topics, and projecting onto my favorite characters. I'm also a furry and have recently gotten into cosplaying! I'm also Puerto Rican and Guatemalan with some indigenous roots, and I'm questioning possibly being intersex. For those that care about politics, I'm a HARD leftist and consider myself to be anarcho-punk. If you take issue with that then you most definitely will not like me or my site lmfao.</p>
+        <br>
+
+<p>I'm not exactly sure how I'd describe myself personality wise cuz I'm an extremely mixed bag LOL on some days I'm a goofball and on others I am needlessly stoic. I'm a very socially awkward person and I don't talk to many people outside of my close friend circle. I'm always open to meeting new people, I just lack a lot of social skills since the majority of my life has been spent in front of a computer screen and thus the anxiety I get from interacting with people in real life also trickles into online interactions. I'm also not good at expressing my emotions without being percieved as "aggressive" or "confrontational" so I kind of just exist and do my own thing most of the time to avoid having issues with people LMFAO. I don't intend to be a prick I just have a lot of strong opinions and usually won't hesitate to express those opinions if I feel comfortable doing so. I'm very passionate about the things I stand for!! Whenever I consider someome to be a close friend of mine (which is determined in my brain at random) I tend to be a bit clingy and will sometimes overshare so um PLEASE tell me if I need to back off (#attachmentissues). I struggle with identifying people's boundaries in general and need to be told if I do something wrong or make someone uncomfortable so PLEASE SAY SOMETHING IF THAT'S THE CASE cuz I'm not a fucking mind reader and I don't wanna play guessing games with you</p>
+<br>
+       <p>My gender and sexuality situation is kinda fucking weird LOL. I'm a trans man who is also infinite genders, the main ones aside from male being xenogender and butch. Not butch in a woman way, literally just the concept of butchness. I'm a man that is also a nonbinary butch I guess. I like women in a lesbian way, and I also consider my attraction in general to be gay/queer no matter what specific gender the object of my attraction is, but I mainly like women and fem-aligned enbies. I resonate very heavily with being a lesboy, and while I'm aware of the controversy surrounding that label I do not give a fuck because it's the best way for me to describe my experience as a nonbinary/multigender lesbian. I find queer discourse to be incredibly fucking stupid and it does absolutely nothing to help the queer community. It only gives our oppressors what they want, which is seeing our community be divided and torn apart. I know I'm somewhere on the asexual and aromantic spectrums, but I honestly can't be assed to figure that part of my sexuality out at this point. I crave love and intimacy but the way I feel those things towards anyone in particular is a forever a mystery. I have zero interest in debating people about whether or not my identity is valid, so if that's what you're here for, feel free to see yourself out! No matter weird or "contradictory" your identity is, I think you're perfectly valid, as long you don't think hurting things/people that can't/don't consent is okay for some reason. Sex and gender are social constructs that were created to force everyone into boxes, and all the rules surrounding them were made up to drive everyone fucking insane, so I think we as a society need to break out of those boxes and simply exist in a way that makes each of us feel the happiest.</p>
+<br>
+       <p>I have several mental disorders that affect the way I function, act and interact with others. Those consist of autism, ADHD, MDD, as well as possible psychosis, OCD and BPD. I also have a dissociative disorder (I'm torn between it being P-DID or OSDD-1B I genuinely don't fucking know at this point) and am the host of a system. I'm a multisourced fictive (or splitroject) within said system, as well as alterhuman and fictionkin! I have way too many sources and kins to list here, so those will be listed on another page. I'm the head of this fucked up operation and definitely extremely mentally stable and well-adjusted (biggest fucking lie of all time). We're not diagnosed yet nor do we have the inner-workings of our brain or way of functioning fully figured out, but I can say without too extreme of a doubt that we exist. Other alters might mess around on the site on occassion but it's mostly just me here a majority of the time. We don't have a solid collective identity but if you're referring to us as a collective, it's okay to just call us Gabriel.</p>
+<br>
+        
+
+       <p>Overall I'm kind of a mess of a person and I'd personally describe myself as the cartoon that was forcefully cancelled by the network airing it before it was able to reach a satisfying conclusion, but I'm open to other interpretations!! I hope you like my stupid little website and if you ever wanna talk to me then don't hesitate to reach out, social interaction might scare me sometimes but I actually love talking to people :D </p>
+       <br>
+        <p><strong>Be my friend!!!</strong><br>
+        Discord: earedrobot<br>
+       Nintendo Switch: SW-4279-1785-5591</p>
+<br>
+ <p><strong>Events i've been to!!!</strong></p>
+ <ul style="padding:15px">
+ <li>Clovercon 2025 - May 18th, 2025</li>
+ <li>Anime NYC 2025 - August 23rd, 2025</li>
+       <li> Inanimate Insanity 15th Anniversary Theather Screening in Regal Secaucus, NJ - April 1st, 2026</li>
+        <li>Miku Expo 2026 in Prudential Center Newark, NJ - May 7th, 2026</li>
+        </ul>
+       
+<br>
+    </font>
+   
+    </div> 
+    </div>
+    <br>
+     <br>
+        <p><div id="factDisplay"></p>
+        </div>
+        <br>
+        <center><p><button id="buttonstyle" onclick="newFact()" onfocus="newFact()" style="opacity:1;">click here for a random fact about me!</button></center>
+         <script src="/facts.js"></script>
+    </center>
+ 
+ 
+
+ 
+    </div> 
+  <div class="navbarloa" style="height:32px; width:395px;  overflow: hidden;  margin-top:3px; margin-left:3px; border:1px #680811 solid; background:linear-gradient(#000102 ,  #060109);">
+<marquee
+            behavior="scroll"
+            scrollamount="5"
+            direction="left">
+          
+             <img src="https://64.media.tumblr.com/c5bbecc73fee81fcf15e22826457f176/28fe47e7baf2148d-dd/s500x750/183a52bf9957c6c7767c6f237df2ce41974027eb.gifv" style='width: 150px'>
+                 <img src="https://64.media.tumblr.com/d2b2eaeaea7e498c69ef966622aa57f2/28fe47e7baf2148d-3c/s500x750/7ef8edcfcaa9a1dc53e6d18fb7638d9fa015152d.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/e4ef396fb91da22da2b7ec14ba6f1806/fdfc59e5ee333298-68/s500x750/b4bc06a67f58b4659a3dc50e8e993b9837211f7d.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/1dc20284008e84a356636b79145ebc4b/fdfc59e5ee333298-b4/s500x750/123349548254fd0f017651c4b68ecd67dd78b21d.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/cbe0936c506287f8e6d001d550c18021/76d73ccfd68cb246-1c/s500x750/c5d6fad34155a88b3ec6d104bf5e889b7660be73.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/7a3ced8eaae226f1d296c121c02ff4d2/76d73ccfd68cb246-80/s500x750/8a4a5cfcb0553ef1527f7813b1bea748b8cf81f7.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/014595f7dfc0a856918cae186b02fd96/76d73ccfd68cb246-25/s500x750/cf6f90bea6ffa7a5987f0453ae8df4dea9af3ca1.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/85d6c8b375680db7d08c749c800346bc/76d73ccfd68cb246-4c/s500x750/12b0174bcaf371326c0b2ace8a0130a73ae521cc.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/fcd70d2dbcb0266c96f48838d4cb9571/76d73ccfd68cb246-d0/s500x750/4c2d6430bcda72937d0e53c30f8e0521b85affd7.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/03ece53af9203135a01d21e3dadc61d4/9aae553337836373-5b/s400x600/284abd628a4b344363bf31e9c25e51b36d3bb88a.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/e205dfa690392ef10f362e478f37dcc9/9aae553337836373-45/s400x600/f18d1ad9ad7cf943f56b33a5fbe02093b4d10e38.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/f602a74c1f0fba9e9416619655123144/9aae553337836373-26/s400x600/ffb030f2e05d352e06d2412c35d0b6b0121b7082.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/97389552f52503bcaf84421e0a9b9efa/9aae553337836373-59/s400x600/6c0fb57de853e0945071a34c15f429a09b63b89f.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/dd1127abc1edc969be756d6e1b671922/c134af1a25cd2d08-0c/s500x750/b5f1d80b9b94697142b7f5101d5c00902585708c.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/bf16f6edc2f47ec6785b952b0afff2cc/c134af1a25cd2d08-81/s500x750/edc46903cdc39bb45e322ab84d76dee7b86febd9.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/b648b88b733c092d0b7f922003313fe7/c134af1a25cd2d08-7d/s500x750/ce7ac9e4ea434ad43d2ead6eb2c14a21615b86e0.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/acc461cb9d36ad547c3d9072681aefc9/df6b4662a0752fdc-20/s500x750/5a37b4303241eed8621e7c3fac6a520042ea3d86.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/3657319d24c83099da425249425d2d89/df6b4662a0752fdc-a9/s500x750/3dff78cfc835b2d706a341258bf2cf835dfc6f4c.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/90dfd3b011dd0e8b67a82200eb0b9ef6/df6b4662a0752fdc-86/s500x750/79902883669b6fbde345348452a19be6408ced32.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/7c2a3c72cfa14af5446eae4a710e26ba/058c2ab0bf1510a3-09/s500x750/9ca16904e59e90907971d158bddef6f7c9dfaa73.gifv" style='width: 150px'>
+        <img src="https://64.media.tumblr.com/c738ff13cb2d68500810ad26e8036341/058c2ab0bf1510a3-6d/s500x750/9fde8445d6ed485639db54050d0329de98c88f99.gifv" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/1.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/4.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/5.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/8.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/33.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/17.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/24.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/25.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/28.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/27.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/31.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/37.gif" style='width: 150px'>
+         <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/41.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/42.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/45.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/50.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/47.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/55.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/58.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/57.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/60.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/63.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/70.gif" style='width: 150px'>
+         <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/74.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/73.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/66.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/72.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/81.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/79.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/86.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/91.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/112.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/98.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/119.gif" style='width: 150px'>
+         <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/115.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/129.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/125.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/118.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/136.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/145.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/150.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/152.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/151.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/166.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/191.gif" style='width: 150px'>
+         <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/200.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/201.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/219.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/244.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/237.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/246.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/252.gif" style='width: 150px'>
+        <img src="https://file.garden/ZkEY3dxjtja0xEri/gfx/blnk/268.gif" style='width: 150px'>
+                 </marquee>
+    </div>
+    
+    <div class="music-player">
+  <div class="current-track" id="currentTrackDisplay">
+    <div class="track-marquee">Select a song from the playlist</div>
+  </div>
+
+
+  <div class="player-controls">
+    <div class="control-buttons">
+      <button id="prevBtn">⏮</button>
+      <button id="playBtn">▶</button>
+      <button id="nextBtn">⏭</button>
+    </div>
+
+    <div class="progress-container">
+      <div class="player-progress-bar" style="width: 0%"></div>
+    </div>
+
+    <div class="time-display" id="timeDisplay">0:00</div>
+  </div>
+
+  <div class="playlist-dropdown">
+    <button class="playlist-toggle" id="playlistToggle">
+      <span>Playlist</span>
+      <span>▼</span>
+    </button>
+    <div class="playlist-menu" id="playlistMenu">
+      <!-- Replace these with your own tracks -->
+      <div class="playlist-item" data-src="https://files.catbox.moe/1adqfz.wav" data-artist="Jamie Paige ft. Kasane Teto" data-title="Cadmium Colors">
+        Jamie Paige ft. Kasane Teto - Cadmium Colors
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/fl1b51.wav" data-artist="FLAVOR FOLEY ft. GUMI" data-title="Water the Roses">
+        FLAVOR FOLEY ft. GUMI - Water the Roses
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/xwxvcc.wav" data-artist="LuLuYam" data-title="Divine CEO">
+       LuLuYam - Divine CEO
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/y89kz0.wav" data-artist="Mili" data-title="Ga1ahad and Scientific Witchery">
+        Mili - Ga1ahad and Scientific Witchery
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/nez3zo.wav" data-artist="KAT x Aku P ft. POPY" data-title="Affection Addiction">
+        KAT x Aku P ft. POPY - Affection Addiction
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/h2pgb1.wav" data-artist="Vane Lily ft. Kasane Teto" data-title="Lose Your Head">
+        Vane Lily ft. Kasane Teto - Lose Your Head
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/sbzxdo.wav" data-artist="SAWTOWNE ft. Hatsune Miku" data-title="Confessions of a Rotten Girl">
+        SAWTOWNE ft. Hatsune Miku - Confessions of a Rotten Girl
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/ct9ytt.wav" data-artist="Carbon Monoxide ft. NYL & SAROS" data-title="All or Nothing">
+        Carbon Monoxide ft. NYL & SAROS - All or Nothing
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/t8c38b.wav" data-artist="RIProducer ft. Tsuina-chan" data-title="MISS MISERYGUTS">
+        RIProducer ft. Tsuina-chan - MISS MISERYGUTS
+      </div>
+      <div class="playlist-item" data-src="https://files.catbox.moe/nj3eis.wav" data-artist="Flanger Moose ft. Kasane Teto" data-title="Billionaire Buffet">
+        Flanger Moose ft. Kasane Teto - Billionaire Buffet
+      </div>
+     <div class="playlist-item" data-src="https://files.catbox.moe/p5697u.wav" data-artist="Weevildoing ft. Tsuina-chan" data-title="Fainéant Girl">
+        Weevildoing ft. Tsuina-chan - Fainéant Girl
+      </div>
+       <div class="playlist-item" data-src="https://files.catbox.moe/u477o2.wav" data-artist="Mili" data-title="Through Patches of Violet">
+       Mili - Through Patches of Violet
+      </div>
+       <div class="playlist-item" data-src="https://files.catbox.moe/3bc2ws.wav" data-artist="Jamie Paige ft. Kasane Teto" data-title="Machine Love">
+       Jamie Paige ft. Kasane Teto - Machine Love
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="navbarloa" style="height:200px; width:395px;  overflow: auto;  margin-top:3px; margin-left:3px; border:5px #000102 solid; overflow:hidden; border-radius:0px 0px 0px 15px; background-image:url('https://file.garden/Z5ztm_B6wj_8HQnK/Screenshot%202025-08-19%20at%2019-56-42%20rainbowbg.jpg%20(JPEG%20Image%205333%20%C3%97%204000%20pixels)%20%E2%80%94%20Scaled%20(23_).png'); background-size:25em;">
+<div class="center" style="color:black;text-shadow: 1px 1px 1px black;">
+<div style="margin-top:20px;">
+<center>
+<p>taken by the sweetest girl in the world <3 <br>
+1.30.2026</p>
+
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/trtetetet4t3.png" style="width:115px;">
+
+</center>
+</div>
+</div>
+<br>
+
+
+      </div>
+    
+</td>
+
+<td class="navbar" style="float:right; background:none;">
+
+    <div class="navbarloa" style="height:190px; width:314px;  overflow: hidden; margin-top:3px; margin-right:3px; border-radius:0px 15px 0px 0px;  border:1px #680811 solid; background:linear-gradient(#000102 ,  #060109);">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/graphics/Untitled1475_20260314162743(1)(1).png" style=" float:left;margin:8px; width:110px;" >
+    <p style="margin-top:15px; "><font color="white" size="2"><bold>GABRIEL / PAINTY / TEDDIE</bold></font></p>
+    <p style="margin-top:7px; "><font color="#fceaff" size="2"><strong>AGE:</strong> 17 YEARS OLD </font> <font color="#fceaff" size="1">(9/22/2008)</font></p>
+    
+  <p style="margin-top:7px; "><font color="#fceaff" size="2"><strong>GENDER:</strong>TRANSMASC PANGENDER </font></p>
+  <p style="margin-top:7px; "><font color="#fceaff" size="2"><strong>ORIENTATION:</strong> ABRO LESBIAN</font></p>
+  <p style="margin:7px;"><font color="#fceaff" size="2" ><strong>PRONOUNS:</strong> <a href="https://pronouns.cc/@robobrush">HE/IT/HYM/THING </a></font></p>
+    <p style="margin:15px; "><font color="#fceaff" size="2"><bold>" WISHFUL THINKING NEVER GOT ME FAR ! "</bold></font></p>
+   
+    </div> 
+   <div class="navbarloa" style="height:32px; width:314px;  overflow: hidden;  margin-top:3px; margin-right:3px; border:1px #680811 solid; background:linear-gradient(#000102 ,  #060109);">
+<marquee
+            behavior="scroll"
+            scrollamount="5"
+            direction="left">
+             <img src="https://i.postimg.cc/qM7THqDR/tumblr-59c1ea9c05f3783199bdf372fa5646ce-0531884e-250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/XNTBvmBb/tumblr-d91ba07e0203ebf69ef65091bc631fce-c5113f95-250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/Z0tmhrqG/tumblr-ef710e12c61f8b55d1f8f34366eba7c2-d6409f80-250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/8k4qPGx0/tumblr-fb35ada41fbe63c67843389f5768a4ee-8d380a59-250.gif" style='width: 150px;'>
+        <img src="https://i.postimg.cc/kX2pybhx/blinkies-Cafe-CB.gif">
+        <img src="https://i.postimg.cc/vTXRJwwC/tumblr-9acd41ec958f0767bc5af69495cdee72-360a1fa0-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/xjPSJMNg/tumblr-c716543bd6b9357de2683753dad99c0b-d94f35eb-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/ncwtFxN1/tumblr-eb9a4323117c611066922e992e7dd5e1-109e94eb-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/0QCLL1pD/blinkies-Cafe-EL.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/fRjp3hrF/tumblr-c7963da9cc0c63d3ba24a2e9d1156151-c9923286-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/mkXKg3pr/blinkies-Cafe-v2.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/NGp3DYGw/tumblr-c246b9b6bb98a72365e44ada907d840a-f0ac1a2f-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/T38CqHb6/0001-saucer1.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/1zvdHrPr/tumblr-16be3a55c8bdef106161474a5a3d1e31-7f275dad-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/HnVB3q3p/tumblr-573fe9b9711c05facf684c59592e1b4a-852f24ca-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/x1KgsyGb/blinkies-Cafe-p-Z1.gif" style='width: 150px;'>
+               <img src="https://i.postimg.cc/4NHWcTmP/0036-fire1.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/9Fkv3pq8/tumblr-70d6ec762f417a3144a6be9115d3c652-86e06b00-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/mryXrNtG/tumblr-1fe97bea8d974a9cc8c6243461878801-78dc097b-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/8zJgs3Sg/blinkies-Cafe-1p.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/hjC2LDLy/tumblr-c3f0fe431090e1acc302183a4b3f062c-1c477426-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/pdCCvW6W/tumblr-pfwmo3p-PT41xdn86no1-2501.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/nLF5BP8L/tumblr-588c485a783611e27fc1874f90f43715-fb4959e6-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/0N7g0wjt/ezgif-com-webp-to-gif-converter.gif" style='width: 150px;'>
+               <img src="https://i.postimg.cc/25D9mXjw/tumblr-a238582ac1fa3d84becae1782bad659c-4ff87064-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/T24khPYh/0124-stars11.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/GhtZSN9T/tumblr-b7ef0e709659381b7e2112bfbc0f9a8f-9b8b3b5f-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/dt0ghXYt/tumblr-b422ffabeebbbd52851d33a92c244276-ea860c5e-250.gif" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/5910a588ceef84b80b8dbc4af61b231c/7e973ac8ab80ef5e-ce/s250x400/ba0ad93777b9f86305792521466af04558d128a2.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/86f3bb4090ff9afbc3dc186a1508dd66/fe3ee1354e967b3a-98/s250x400/271da2526c65d731b8f05ac6f76f63b203e117ab.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/6b0c048b73eae3082569ee60f0aaca20/82053fc6e23285f4-56/s250x400/457c51a4143143f647e3f2c2fcbce7dad8bc46dc.gifv" style='width: 150px;'>
+               <img src="https://i.postimg.cc/5yhqg663/tumblr-ed8e0cbdff3ed5bbbb71122dc96cd616-69705bf7-250.gif" style='width: 150px;'>
+                <img src="https://i.postimg.cc/TYBHN3ZB/blinkies-Cafe-r-X.gif" style='width: 150px;'>
+               <img src="https://64.media.tumblr.com/a4db6cef79a996fffb6d3598d903ffbd/27db2151cd26f27b-89/s250x400/aa7ebbdade9804b83b74adc4c37c38000dfeccaa.webp" style='width: 150px;'>
+               <img src="https://64.media.tumblr.com/4ec0e9c93620850f82697664b92676da/6a7fe591760af7e6-1b/s250x400/fe4ad150da6deeb8fec338c90c335b38c3ffcdb4.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/df3e1aef759f17176fd41ff5e7b66515/636dd34447adbda4-17/s250x400/e2b8beaebab49d38c1e82aebc624d45f11299f4a.gifv" style='width: 150px;'>
+                <img src="https://i.postimg.cc/VL6vhx7n/blinkies-Cafe-2e.gif" style='width: 150px;'>
+               <img src="https://64.media.tumblr.com/9ebcdd8f7e4a2436821a71ac5facf5d5/82053fc6e23285f4-09/s250x400/7ace5a37d5ed2b9af3fae60966278fd183a3eea9.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/28802aab398459ffd3d14e6bea1a5c55/c0ec147b9fc887e8-92/s250x400/9f7a4416c994be0a3ea022c6322183e5078fa6ee.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/b4b7bad705596da723f778b44c9c800e/c0ec147b9fc887e8-d0/s250x400/b3266b37d29dd8b9f20781dd77aeb57149271b19.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/6b506622bb49e7e53810a01059bcaad1/5b5df98686b1620b-95/s250x400/1c481ce2dd3b13ec5d62cdd037eb8e9688a843bb.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/c11fa24c2c81f7915e56b789d227946b/8423dfef5750b37c-38/s250x400/f62716e9d3f94dd4b5abaa457b413f9c6f32a7f0.gifv" style='width: 150px;'>
+               <img src="https://64.media.tumblr.com/1f5944454f38718739c8e2c180456fb5/8423dfef5750b37c-92/s250x400/473f71cbc738107eaa45ecaeb036c3f275398aea.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/2eab614c19fef6dec7411d398afd2009/7580f73cd487f1af-59/s250x400/e8c4fe4ca5bbbeb6ecfc6a3c54b4f7c4bf216f61.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/2b793fafe8f3976fffec0fad5c2c3f82/7580f73cd487f1af-4b/s250x400/4e9ce414d290a491af597fa2ee7b4e4ccd441fa0.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/778e584335c7c2960aff5972ecd8eb25/7580f73cd487f1af-46/s250x400/ee6569ef5a4202a99633ff0def89d59934a21615.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/bfb588ef598397255534a841aa21ef83/5630a978145689b1-43/s250x400/296f9a4393b7bdb7c04922b13930bb71088c692c.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/80861b4cc55bdf697dbebdb0f912a02d/bba64dbfb2334422-47/s250x400/8dc11fb76321e4fbfd62dbbb0a4cb77e22bae591.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/4b2666e450849b34b07d01b92d445a44/04465b59944430cc-34/s250x400/31b05aecce70375821b9c6978318ee5c8d1ae0d2.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/bd02dbb3363e2448fd47960caeeeadcc/d68cedc3f4d9b0bd-87/s250x400/0f7e993e464182099ea3107076165a91303fc3f4.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/4714f9eca51e50828980cca236815b1e/6f8b8c725d1f2bac-5a/s250x400/0321ae33e715025e130106ef53e9f8ace1685e04.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/4b92ec2bf3f4f5546e4e2c48206b9983/6f8b8c725d1f2bac-9c/s250x400/943bf07bb1f44d66d508c372243259ecb63ab6f4.gifv" style='width: 150px;'>
+                <img src="https://i.postimg.cc/pV0jPmDk/blinkies-Cafe-j0.gif" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/5fe63f7aa73b0032559fd0964bffe751/5152cc04659ea4e0-5c/s250x400/31502bcef6e76fa5f1ee9204da8e503102e53664.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/a79b6c026da15b766a6742d2db576f03/a8db5d8f78f084b8-89/s250x400/fc2929a3ef1855dd550626a752b0277c3534897c.webp" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/60295e612892cde229ec541b1c7d723a/16ac2cd30c256466-04/s250x400/4a3c40066adc27d6e2f4876b133489e13eb7f480.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/dd6dc0249089de96a73a054d3cb82c61/aafc9de618d36345-86/s250x400/8f5bb07ac0b62fca6f7fed6afef3631de7bbac32.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/91a774b6ba43efb7ebb61957b96d20af/ace909eab8f4c5c9-1c/s250x400/966dfcbb1575f72d1547719a4f1ff6151c2a8387.gifv" style='width: 150px;'>
+                <img src="https://64.media.tumblr.com/562c653286f220884bdab2df4122c591/aa6ad8b984475c27-1a/s250x400/590a1adff339e2150dba849859c599153d36025c.gifv" style='width: 150px;'>
+                
+                 </marquee>
+    </div>
+    
+    <div class="navbarloa" style="height:90px; width:314px;  overflow: hidden; margin-top:5px; margin-right:3px; border:1px #680811 solid;  background:linear-gradient(#000102 ,  #060109);">
+    <center style="margin-top:1px;">
+    <font color="white">
+    <div onMouseOver="this.style.color='yellow'" onMouseOut="this.style.color='white'" onclick="changeMainDiv('altDiv1')" style="height:22px; cursor:pointer; float:left; margin-left:7px; width:146px; margin-top:5px; 
+background: linear-gradient(#8d2a31 , #680811); border:1px #680811 solid;">
+    <b><p style="display:inline-block; text-shadow: 3px 3px 3px #030000; margin-left:3px; font-size:14px;">About</p></b>
+    </div>
+    
+    <div onMouseOver="this.style.color='yellow'" onMouseOut="this.style.color='white'" onclick="changeMainDiv('altDiv2')" style="height:22px; cursor:pointer; float:right; margin-right:7px; width:146px; margin-top:5px; 
+background: linear-gradient(#8d2a31 , #680811); border:1px #680811 solid;">
+    <b><p style="display:inline-block; text-shadow: 3px 3px 3px #030000; margin-left:3px; font-size:14px;">Labels</p></b>
+    </div>
+    
+    <div onMouseOver="this.style.color='yellow'" onMouseOut="this.style.color='white'" onclick="changeMainDiv('altDiv3')" style="height:22px; cursor:pointer; float:left; margin-left:7px; width:146px; margin-top:5px; 
+background: linear-gradient(#8d2a31 , #680811); border:1px #680811 solid;">
+    <b><p style="display:inline-block; text-shadow: 3px 3px 3px #030000; margin-left:3px; font-size:14px;">Interests</p></b>
+    </div>
+    
+    <div onMouseOver="this.style.color='yellow'" onMouseOut="this.style.color='white'" onclick="changeMainDiv('altDiv4')" style="height:22px; cursor:pointer; float:right; margin-right:7px; width:146px; margin-top:5px; 
+background: linear-gradient(#8d2a31 , #680811); border:1px #680811 solid;">
+    <b><p style="display:inline-block; text-shadow: 3px 3px 3px #030000; margin-left:3px; font-size:14px;">Alterhumanity</p></b>
+    </div>
+    
+    <div onMouseOver="this.style.color='yellow'" onMouseOut="this.style.color='white'" onclick="changeMainDiv('altDiv5')" style="height:22px; cursor:pointer; float:left; margin-left:7px; width:146px; margin-top:5px; 
+background: linear-gradient(#8d2a31 , #680811); border:1px #680811 solid;">
+    <b><p style="display:inline-block; text-shadow: 3px 3px 3px #030000; margin-left:3px; font-size:14px;">Quiz Rezults</p></b>
+    </div>
+    
+    <div style="height:22px; cursor:pointer; float:right; margin-right:7px; width:146px; margin-top:5px; 
+background: linear-gradient(#8d2a31 , #680811); border:1px #680811 solid;">
+    <b><p style="color:white; display:inline-block; text-shadow: 3px 3px 3px #030000; margin-left:3px; font-size:14px;"><a href="/home">Go back?</a></p></b>
+    </div>
+    
+    
+    </font>
+    </center>
+    </div> 
+    
+    <div class="navbarloa" style="text-shadow: 2px 2px #0000ff; height:321px; width:314px;  overflow: hidden; margin-top:5px; margin-right:3px;  border:1px #680811 solid; background:linear-gradient(#000102 ,  #060109);">
+    <center>
+    <div id=gifypet>
+  <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Teto&dob=1748232040&gender=b&element=Fire&pet=https%3A%2F%2Fi.postimg.cc%2FW4ChGq6j%2F2615076-6693d-1603387833.gif&map=https%3A%2F%2Fi.postimg.cc%2FfyhyF4rr%2FScreenshot-2025-05-25-at-23-58-26-myroom-night-881464708-jpg-JPEG-Image-400-214-pixels.png&background=https%3A%2F%2Fi.postimg.cc%2F0jdj1Wg2%2FScreenshot-2025-05-25-at-23-59-33-kasane-territory-at-Duck-Duck-Go.png&tablecolor=black&textcolor=black" frameborder="0"></iframe>
+  </div>
+    
+    </div> 
+    </center>
+   
+    <div class="navbarloa" style="text-shadow: 2px 2px #0000ff; height:72px; width:314px;  overflow: hidden; margin-top:5px; margin-right:3px;  border:1px #680811 solid; background:linear-gradient(#000102 ,  #060109);">
+    <center>
+    
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Screenshot%202025-08-21%20at%2020-05-34%20E!%20ABOUT%20M(1).png" style="width:100%;">
+    
+    </div> 
+    </center>
+<div class="navbarloa" style="height:fit-content; width:314px;  overflow: hidden; margin-top:5px; margin-right:3px;  border-radius:0px 0px 15px 0px; border:1px #680811 solid; background:linear-gradient(#000102 ,  #060109);">
+
+<table width="500" height="100"  align="center" cellpadding="2" cellspacing="5" bgcolor="#000102" style="border-radius:0px 0px 15px 0px;">
+  <tr>
+    <td height="1" align="center" style="color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold">
+      <span style="font-size: xx-large">Hello</span><br>
+      <span style="font-size: medium">My name is</span>
+    </td>
+  </tr>
+  <tr>
+    <td height="1" valign="middle" align="center" bgcolor="#FFFFFF" style="color: #000000; font-family: Marker Felt, Verdana, Arial, Helvetica, sans-serif">
+      Gabriel
+    </td>
+  </tr>
+  <tr>
+    <td height="1" align="center" style="color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold">
+      <span style="font-size: medium">My gender is</span>
+    </td>
+  </tr>
+  <tr>
+    <td valign="middle" align="center" bgcolor="#FFFFFF" style="color: black; font-family: Arial">
+      alien, androgynous, angel, babe, bear, bigender, bitch, boydyke, butch, butchdyke, creature, cunt, Dr., demon, dude, dyke, FTM, faggot, faggotdude, femme-fucking, femme-liking, femme-loving, freak, genderfuck, guydyke, LGBTQ, lesbian, lesbigay, Mr., Mx., male, man with a vagina, man with boobs, master, mister, mosaic, multifacetted, myself, otherkin, outed, pangender, prettyboy, queer dyke, sacred whore, sir, slut, suicidal, transmasculine, whatever, who cares, whore, witch, wizard
+    </td>
+  </tr>
+  <tr>
+    <td height="1" align="center" style="color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: x-small; border-radius:0px 0px 15px 0px;" >
+      <a href="http://www.yaygender.net/pages/gender.pl" style="color: #FFFFFF">What's yours?</a>
+    </td>
+  </tr>
+</table>
+
+</div>
+    </div> 
+   </td>
+
+</tr>
+</tbody>
+</table>
+<br>
+
+
+
+
+<script>
+    function changeMainDiv(divId) {
+      // Get the content of the selected alternative div
+      var content = document.getElementById(divId).innerHTML;
+
+      // Update the content and style of the main div
+      document.getElementById('mainDiv').innerHTML = content;
+      document.getElementById('mainDiv').style.backgroundColor = document.getElementById(divId).style.backgroundColor;
+    }
+
+    // Function to keep mainDiv the same
+    function keepMainDiv() {
+      // Reset the content and style of the main div to its initial state
+      document.getElementById('mainDiv').innerHTML = "<p>This is the main div with a paragraph.</p>";
+      document.getElementById('mainDiv').style.backgroundColor = '';
+    }
+</script>
+<br>
+
+
+<div style="margin-top:-90000px;">
+
+<div id="altDiv1" class="navbarloa" style="height:389px; width:343px; overflow: hidden; border:1px white solid; margin-top:8px; overflow-y:auto; overflow-x:hidden; border-radius:10px 10px 10px 10px;  ">
+    <div class="navbarloa" style="width:330px; overflow: hidden; border:none; border-bottom:2px dotted white; margin-top:20px;overflow-x:hidden;  text-align:right;">
+    <h1>ABOUT ME!</h1>
+    </div> 
+    <div class="navbarloa" style="width:330px; overflow: hidden; border:none; overflow-x:hidden;  margin-top:17px; text-align:left;">
+    <font color="#fceaff" size="3"> <p> <img src="https://i.postimg.cc/FRCMCQLn/ii-paintbrush-inanimate-insanity-646334512-1.gif" class=painty> Hey there! My name is <u>Gabriel</u>. You can also call me the other names listed in the sidebar if you'd like. My age and pronouns are listed over there too. I'm a weird genderfucked dykeguy creature thing with a passion for all things art. I've been an artist since I came out the womb basically and want to make a career of some kind out of it but I gotta get off my ass and actually commit to a project for once in my life (commissions are open btw) I also enjoy coding and making song covers with SynthV and UTAU on the side. Vocal synths as a whole have been my special interest for almost 10 years now PLEASE talk to me about them I will not shut the fuck up. Some of my other hobbies are gaming, piracy, watching video essays, researching the most random fucking topics, and projecting onto my favorite characters. I'm also a furry and have recently gotten into cosplaying! I'm also Puerto Rican and Guatemalan with some indigenous roots, and I'm questioning possibly being intersex.  For those that care about politics, I'm a HARD leftist and consider myself to be anarcho-punk. If you take issue with that then you most definitely will not like me or my site lmfao.</p>
+        <br>
+
+<p>I'm not exactly sure how I'd describe myself personality wise cuz I'm an extremely mixed bag LOL on some days I'm a goofball and on others I am needlessly stoic. I'm a very socially awkward person and I don't talk to many people outside of my close friend circle. I'm always open to meeting new people, I just lack a lot of social skills since the majority of my life has been spent in front of a computer screen and thus the anxiety I get from interacting with people in real life also trickles into online interactions. I'm also not good at expressing my emotions without being percieved as "aggressive" or "confrontational" so I kind of just exist and do my own thing most of the time to avoid having issues with people LMFAO. I don't intend to be a prick I just have a lot of strong opinions and usually won't hesitate to express those opinions if I feel comfortable doing so. I'm very passionate about the things I stand for!! Whenever I consider someome to be a close friend of mine (which is determined in my brain at random) I tend to be a bit clingy and will sometimes overshare so um PLEASE tell me if I need to back off (#attachmentissues). I struggle with identifying people's boundaries in general and need to be told if I do something wrong or make someone uncomfortable so PLEASE SAY SOMETHING IF THAT'S THE CASE cuz I'm not a fucking mind reader and I don't wanna play guessing games with you</p>
+<br>
+       <p>My gender and sexuality situation is kinda fucking weird LOL. I'm a trans man who is also infinite genders, the main ones aside from male being xenogender and butch. Not butch in a woman way, literally just the concept of butchness. I'm a man that is also a nonbinary butch I guess. I like women in a lesbian way, and I also consider my attraction in general to be gay/queer no matter what specific gender the object of my attraction is, but I mainly like women and fem-aligned enbies. I resonate very heavily with being a lesboy, and while I'm aware of the controversy surrounding that label I do not give a fuck because it's the best way for me to describe my experience as a nonbinary/multigender lesbian. I find queer discourse to be incredibly fucking stupid and it does absolutely nothing to help the queer community. It only gives our oppressors what they want, which is seeing our community be divided and torn apart. I know I'm somewhere on the asexual and aromantic spectrums, but I honestly can't be assed to figure that part of my sexuality out at this point. I crave love and intimacy but the way I feel those things towards anyone in particular is a forever a mystery. I have zero interest in debating people about whether or not my identity is valid, so if that's what you're here for, feel free to see yourself out! No matter weird or "contradictory" your identity is, I think you're perfectly valid, as long you don't think hurting things/people that can't/don't consent is okay for some reason. Sex and gender are social constructs that were created to force everyone into boxes, and all the rules surrounding them were made up to drive everyone fucking insane, so I think we as a society need to break out of those boxes and simply exist in a way that makes each of us feel the happiest.</p>
+<br>
+       <p>I have several mental disorders that affect the way I function, act and interact with others. Those consist of autism, ADHD, MDD, as well as possible psychosis, OCD and BPD. I also have a dissociative disorder (I'm torn between it being P-DID or OSDD-1B I genuinely don't fucking know at this point) and am the host of a system. I'm a multisourced fictive (or splitroject) within said system, as well as alterhuman and fictionkin! I have way too many sources and kins to list here, so those will be listed on another page. I'm the head of this fucked up operation and definitely extremely mentally stable and well-adjusted (biggest fucking lie of all time). We're not diagnosed yet nor do we have the inner-workings of our brain or way of functioning fully figured out, but I can say without too extreme of a doubt that we exist. Other alters might mess around on the site on occassion but it's mostly just me here a majority of the time. We don't have a solid collective identity but if you're referring to us as a collective, it's okay to just call us Gabriel.</p>
+<br>
+       <p>Overall I'm kind of a mess of a person and I'd personally describe myself as the cartoon that was forcefully cancelled by the network airing it before it was able to reach a satisfying conclusion, but I'm open to other interpretations!! I hope you like my stupid little website and if you ever wanna talk to me then don't hesitate to reach out, social interaction might scare me sometimes but I actually love talking to people :D </p>
+       <br>
+        <p><strong>Be my friend!!!</strong><br>
+        Discord: earedrobot<br>
+       Nintendo Switch: SW-4279-1785-5591</p>
+<br>
+ <p><strong>Events i've been to!!!</strong></p>
+ <ul style="padding:15px">
+ <li>Clovercon 2025 - May 18th, 2025</li>
+ <li>Anime NYC 2025 - August 23rd, 2025</li>
+       <li> Inanimate Insanity 15th Anniversary Theather Screening in Regal Secaucus, NJ - April 1st, 2026</li>
+       <li>Miku Expo 2026 in Prudential Center Newark, NJ - May 7th, 2026</li>
+        </ul>
+       
+<br>
+    </font>
+    </div> 
+    </div>
+    
+    
+<div id="altDiv2" class="navbarloa" style="height:389px; width:343px; overflow: hidden; border:1px white solid; margin-top:8px; overflow-y:auto; overflow-x:hidden; border-radius:10px 10px 10px 10px;  ">
+    <div class="navbarloa" style="width:330px; overflow: a; border:none; border-bottom:2px dotted white; margin-top:20px;overflow-x:hidden;  text-align:right;">
+    <h1>MY LABELS!</h1>
+    </div> 
+    <div class="navbarloa" style="width:330px; overflow: auto; border:none; overflow-x:hidden;  margin-top:17px; text-align:left;">
+    <font color="#fceaff" size="3">
+    <p>not-so-friendly reminder that bigoted and/or identity-policing losers are not and never will be welcome on my site <3</p>
+    <br>
+    <p>I'm a HUMONGOUS label hoarder, these are just the main ones I use that define the majority of my queer identity</p>
+    <br>
+    <br>
+   
+    <h3>TRANSMASC</h3>
+    <p>a transgender individual who identifies primarily with masculinity/a masculine gender and is thus transitioning/has transitioned to represent that.</p>
+     <br>
+     <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/Coffeebeantransmasc.jpg" width="100px" alt="coffee bean transmasc flag (by satyrradio)"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_07790fadcf2e4e5aba490273084f43d0_1617ae30_2048.jpg" width="100px" alt="transsexual man flag (by rabidbatboy)"></p>
+    <br> <br>
+    <h3>DEMIBINARY</h3>
+    <p>when one's gender is partially non-binary and partially binary.</p>
+     <br>
+    <p><img src="https://64.media.tumblr.com/441535d67d726e84223c190d36d46ba6/7f9c435b21cb187a-c4/s2048x3072/1f75f9a4b68b3394769f20bedb3352081d644b93.pnj" width="100px" alt="demibinary flag (by me)"></p>
+    <br> <br>
+    <h3>PANGENDER</h3>
+    <p>someone who is countless, infinite, or all genders that are within their culture and life experiences (im primarily male but also butchgender as well as countless neogenders and xenogenders).</p>
+     <br>
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_965f2170bd5508788b11f84d6bef4998_f5592928_2048.jpg" width="100px" alt="alternative pangender flag (by givemecoins)"></p>
+    <br> <br>
+    <h3>XENOGENDER</h3>
+    <p>a nonbinary identity and umbrella term in which ones gender goes beyond the human understandings of gender, and can best be described by other methods of gender categorization. these genders are related to things or concepts that are not traditionally associated with gender and are often used by the neurodivergent community, but the term is not exclusive.</p>
+     <br>
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/1200px-Xenogender-2282411736.png" width="100px" alt="xenogender flag"> </p>
+    <br> <br>
+    <h3>BUTCHBOY</h3>
+    <p>someone who is both a butch and a boy for any reason. a butch is any queer person who is an embodiment of queer masculinity or is masculine in a way thats deliberately subversive and blatantly rejects patriarchal binary gender norms.</p>
+    <br> 
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_19956cf2ffe0e6159a817c3cdb1a7507_80498f19_1280.jpg" width="100px" alt="butchboy flag (by mogai-flaggot)"> </p>
+    <br> <br>
+     <h3>BUTCHGENDER</h3>
+    <p>a gender that feels intrinsically tied to one's butch identity / literally is the concept of butchness itself.</p>
+    <br> 
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/GEPZ-MUXMAA0Y_Q%20(1).png" width="100px" alt="butchgender flag (by gendergasm)"> </p>
+    <br> <br>
+    <h3>LESBOY</h3>
+    <p>a lesbian that's a boy or likes being seen as one for any reason. for me this is due to being multigender and primarily resonating with manhood and masculinity.</p>
+    <br>
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/def5589-ae072b9a-6ef2-4b1c-ab7a-285583c793cf-2591791475.png" width="100px" alt="lesboy flag"> <img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_9927ef1fa22a811489a78b65bf42cc2c_820d6be9_2048.jpg" width="100px" alt="butch lesboy flag (by androgynousboyfriend)"></p>
+    <br> <br>
+    <h3>ABRO LESBIAN</h3>
+    <p>primarily being lesbian/queerly attracted to exclusively women but occassionally feeling attracted to other genders (you will never catch me being attracted to any cisgendernormative man).</p>
+     <br>
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_70f7edf360290355591dafacc53b1f8f_cd2cec37_2048.jpg" width="100px" alt="abro lesbian flag (by caeliangel)"></p>
+     <br> <br>
+    
+    <h3>FICTOJECTUM</h3>
+    <p>being both fictosexual/romantic (attracted to fictional characters) and objectum (attracted to objects) and both of those attractions being influenced by one another.</p>
+    <br>
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_e35ed8c683a8462f4889b0f5139ec7c8_988c4a39_2048.jpg" width="100px" alt="fictojectum flag (by funnies-genderhoard)"></p>
+    <br><br>
+    
+    <h3>PLUSQUEER</h3>
+     <details>
+   <summary> a queer inclusionst label representing the following ideologies:</summary><br><br>
+    1. inclusivity of abinary identities, ranging from more common ids (like non-binary) to lesser common ids (like xenogenders). this may also include the support of intersexuality and intersex-specific identities.<br><br>
+
+2. supportive of neopronouns and gender non-conforming language.<br><br>
+
+3. inclusivity of all good-faith/contradictory identities, like lesboys/turigirls, gaybians, and bi-lesbians/pan-gays.<br><br>
+
+4. inclusivity of cultural lgbtq identities like two-spirit.<br><br>
+
+5. being anti-harassment, anti-harm, and pro-activism; being willing to fight for both ourselves and others in the community.<br><br>
+
+6. being anti-harmful language, including being against of the use of agab terminology due to it being stolen from intersex folk and used to subtly misgender trans folk.<br><br>
+
+7. being supportive of all queer expressions, regardless of if they conform to gender stereotypes or not. this includes those who consider nonhumanity a part of their queer identity.<br><br>
+
+8. being open to learning about and being understanding of any and all labels as long as they're not genuinely harmful.<br><br>
+
+9. progressivism and looking forward to positive change in the community.
+</details>
+    <br>
+    <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_a3bc13919780beddb8f208f81019e0f0_ae08781a_2048.jpg" width="100px" alt="plusqueer flag (by muldyke)"></p>
+    <br><br>
+    
+    <br>
+    <br>
+     
+    </font>
+    </div> 
+    </div>
+
+<div id="altDiv3" class="navbarloa" style="height:389px; width:343px; overflow: hidden; border:1px white solid; margin-top:8px; overflow-y:auto; overflow-x:hidden; border-radius:10px 10px 10px 10px;  ">
+    <div class="navbarloa" style="width:330px; overflow: auto; border:none; border-bottom:2px dotted white; margin-top:20px;overflow-x:hidden;  text-align:right;">
+    <h1>INTERESTS!</h1>
+    </div> 
+    <div class="navbarloa" style="width:330px; overflow: auto; border:none; overflow-x:hidden;  margin-top:17px; margin-bottom:17px; text-align:left;">
+    <p>
+      <a href="https://www.exophase.com/user/chimerathing/"><img src="https://card.exophase.com/2/0/303686.png?1755819427" style="width:330px;"></a>
+      <br>
+      <br>
+      <font color="#fceaff" size="3">
+    <strong>VIDEO GAMES:</strong> <u>splatoon</u> . cookie run . world flipper . <u>muse dash</u> . helltaker . touhou . <u>guilty gear</u> . needy streamer overload . omega strikers . idolmaster . <u>limbus company</u> . <u>ultrakill</u> . faith: the unholy trinity . class of 09 . <u>regretevator</u> . dead estate . <u>yume nikki</u> . <u>signalis</u> . lethal company . zenless zone zero . minecraft story mode . ender lilies . rain world . hollow knight . sprunki . <u>mouthwashing</u> . <u>petscop</u> . webfishing . <u>little goody two shoes</u> . pocket mirror . vrchat . in stars and time . <u>project diva</u> . project sekai . undertale . deltarune . will you snail . <u>ena dream bbq</u> . psychopomp . bandori . <u>forsaken</u> . <u>uma musume: pretty derby</u> . <u>portal</u> . <u>lacey's flash games</u> . <u>littlebigplanet</u> . doki doki literature club . date everything . higurashi . umineko . die of death . meleeniacs . break in and steal thingz . iron lung<br><br>
+
+    <strong>SHOWS, MOVIES, BOOKS, ETC:</strong> pokemon . <u>aggretsuko</u> . beastars . <u>panty &amp; stocking w/ garterbelt</u> . cyberpunk edgerunners . zombie land saga . <u>ave mujica</u> . tokyo mew mew . precure . scott pilgrim takes off . <u>dungeon meshi</u> . <u>k-on</u> . <u>soul eater</u> . serial experiments lain . <u>frieren</u> .  <u>revolutionary girl utena</u> . cowboy bebop . madoka magica . love live . bocchi the rock . kill la kill . <u>azumanga daioh</u> . <u>little witch academia</u> . steven universe . <u>lego monkie kid</u> . murder drones . <u>love of the s*n</u> . lackadaisy . internecion cube . cliffside . <u>hfjone</u> . <u>the amazing digital circus</u> . <u>the gaslight district</u> . ramshackle . <u>ena (web series)</u> . animatic battle . bunny maloney . arcane . <u>inanimate insanity</u> . knights of guinevere . korean fried chicken . battle for dream island . <u>the nightly manor</u> . pretty pretty please i don't wanna be a magical girl . invader zim . <u>paper puppets take 2</u> . <u>excellent entities</u> . my little pony . twin peaks . dick figures . half life vr but the ai is self-aware . dandadan . moral orel . <u>battle for niche internet fame</u> . transformers . electric dreams 1984 . hannibal . the wild robot . <u> studio ghibili</u> . <u> spiderverse</u> . kpop demon hunters . <u>objectified</u> . the four moons initiative . love bullet . ride the cyclone . adventure time . fiona & cake . orbit . <u>tripwire</u> . the summer hikaru died . <u>search for smos</u> . <u>starters movieunleashers</u> . jam . akiba maid war . bocchi the rock! . <u>cosmic princess kaguya</u><br><br>
+
+   <strong>MISCELLANEOUS:</strong><u> queer culture, vexillology & history</u> .
+    <u>alternative fashion & subcultures</u> .
+    animals (mainly cats) .
+    video essays .
+    fandom culture & history .
+    <u>alterhumanity</u> .
+    <u>activism & social justice</u> .
+    <u>lost media & media archival</u> .
+    <u>internet subcultures & history</u> .
+    <u>old web revival</u> .
+    astronomy .
+    psychology .
+                      <u>vocal synthesizers (vocaloid, utau, synthv, etc)</u> .
+    horror media .
+    <u>heaven & hell as concepts & religious motifs</u> .
+    mythology .
+    rave culture .
+    <u>piracy</u> . plushie & figurine collecting . <u>anarchism & the punk movement</u><br><br>
+    
+    <strong>MUSIC:</strong><u> weevildoing</u> .
+    <u> flavor foley</u> .
+    <u> jamie paige</u> .
+    <u> vane lily</u> .
+    <u> pinocchioP</u> .
+    chappell roan .
+    <u> will wood</u> .
+    sawtowne .
+    <u> mili</u> .
+    <u> luluyam</u> .
+    millionaires .
+    <u> utsu-p</u> .
+    <u> babymetal</u> .
+    <u> steam powered giraffe</u> .
+    the smiths .
+    halestorm .
+    my chemical romance .
+    tv girl .
+    stomach book .
+    <u>femtanyl</u> .
+    <u> riproducer</u> .
+    <u> ludo</u> .
+    <u> tyler, the creator</u> .
+    mitski .
+    paramore .
+    snake river conspiracy .
+    <u> against me!</u>.
+    heaven pierce her .
+    jhariah .
+    masa works design .
+    tom cardy .
+    <u> aurelio voltaire</u> .
+    slipknot .
+   <u> the crane wives</u> .
+   <u> destroy boys</u> .
+    mother mother .
+    <u> ken ashcorp</u> .
+    <u> system of a down</u> .
+    linkin park .
+    odyssey eurobeat .
+    baby bugs .
+    <u> lesbian bed death</u>
+    <br><br>
+
+    <strong>DISLIKES:</strong> generative AI .
+                   corporations .
+                    capitalism and consumerism .
+                   "being an asshole/bigot is funnny" humor .
+                    pop psychology .
+                    hustle culture .
+                    cringe culture .
+                
+                   proship/antiship discourse .
+                    general fandom discourse .
+                   queer in-fighting and discourse .
+                    people who dickride problematic creators or cant be critical of their interests .
+                    purity culture .
+                    censorship of queerfolk and other marginalized groups .
+                    grown ass adults that harass or make fun of children 
+                    
+    </font>
+     
+
+      
+      </p>
+    </div> 
+    </div>
+
+<div id="altDiv4" class="navbarloa" style="height:389px; width:343px; overflow: hidden; border:1px white solid; margin-top:8px; overflow-y:auto; overflow-x:hidden; border-radius:10px 10px 10px 10px;  ">
+    <div class="navbarloa" style="width:330px; overflow: auto; border:none; border-bottom:2px dotted white; margin-top:20px;overflow-x:hidden;  text-align:right;">
+    <h1>ALTERHUMANITY!</h1>
+    </div> 
+    <div class="navbarloa" style="width:330px; overflow: auto; border:none; overflow-x:hidden;  margin-top:17px; text-align:left;">
+   <font color="#fceaff" size="3">
+   
+     <p>My experience with alterhumanity has always been entirely psychological, and being fictionkin has also heavily affected my status as an introject within my system. Pretty much all of my sources were gained from me kinning those characters and becoming extremely attached to them as part of my identity. Some have also formed as seperate alters in the system. My kinning personally is not just "relating" to characters, I see it as something that is deeply intertwined with my sense of self. My attachment to each of my sources and kins as a whole tends to flucuate and I also do not give the slightest shit about "doubles". I think seeing other people who feel connected with the same characters as me in whatever sort of way is cool and fun, unless you're an asshole about it.</p>
+          <br>
+          <p>For a good portion of my life I've felt pretty disconnected from humanity, although it wasn't something I really took completely serious probably until I was 13. I had always felt connected to things that aren't human and would joke about being some kind of otherworldly creature with friends, part of me even saw it kind of just as roleplay. But overtime I accepted the fact that it was a genuine part of my identity, and that I actually am in fact, not human. I just happen to be shaped like a human.</p>
+          <br><br>
+          <h3>FICTIVE/INTROJECT SOURCES</h3>
+          <ul style="padding:15px">
+          <li> Adachi Rei (UTAU)</li>
+          <li> Bive (Regretevator)</li> 
+          <li> Dr. Sylveon (Starters)</li>
+<li> Falin Touden (Dungeon Meshi)</li>
+<li> Gabriel (Ultrakill)</li>
+<li> Jax (The Amazing Digital Circus)</li>
+<li> Kasane Teto (UTAU/Synthesizer V)</li>
+<li> Liam Plecak (hfjONE)</li>
+<li>  MePad (Inanimate Insanity)</li> 
+<li> Paintbrush (Inanimate Insanity)</li>
+<li> Paisely Burns/Paintcrush (Paint Cans)</li>
+<li> Pavitr Prabhakar (Across the Spiderverse)</li>
+<li> Redson (Lego Monkie Kid)</li>
+<li> Roxie Richter (Scott Pilgrim)</li>
+<li> Sam (Murder Drones)</li>
+<li> Serial Designation N (Murder Drones)</li>
+
+</ul>
+<br><br>
+<h3>FICTIONKINS</h3>
+<ul style="padding:15px">
+<li>  Agnes Tachyon (Uma Musume)</li>
+  <li>  Ai Mizuno (Zombie Land Saga)</li>
+<li>  Ame/Kangel (Needy Streamer Overload)</li>
+<li>  Billy Kid (Zenless Zone Zero)</li>
+<li>  Box (Inanimate Insanity)</li>
+<li>  Bumblebee (Transformers)</li>
+<li>  Cana Somlit Sayavong (To Hell and Back)</li>
+<li>  Cooper Copwell (TRIPWIRE)</li>
+<li>  Crona Gorgon (Soul Eater)</li>
+<li>  Daisuke (Mouthwashing)</li>
+<li>  Dynamite (Objectified)</li>
+<li>  Edgar (Electric Dreams 1984)</li>
+<li> Elise Liedl (Little Goody Two Shoes) <b>(Fictionflicker)</b> </li>
+<li>  Elster/LSTR-512 (Signalis)</li>
+<li>  Freyja Maria Mendoza/Fainéant Girl (The Post Traumatic-Manifesto)</li>
+<li>  Gnarpy (Regretevator)</li>
+<li>  GPS (The Nightly Manor)</li>
+<li>  Gregor (Limbus Company)</li>
+<li>  Happy Chaos (Guilty Gear)</li>
+<li>  Hat Zero/Zro (XFOHV/BFDI)</li>
+<li> "Hikaru" (The Summer Hikaru Died)</li>
+<li>  Ishmael (Limbus Company)</li>
+<li>  Journal (Paper Puppets Take 2)</li>
+<li>  Mayra Tikuna/Taxidermy Girl (The Post Traumatic-Manifesto)</li>
+<li>  Phanuel (Lucifer Lucifer)</li>
+<li>  Pipebomb (Love of the S*n)</li>
+<li>  Renoir (World Flipper)</li>
+<li>  Riamu Yumemi (Idolmaster)</li>
+<li>  Rocky Rickaby (Lackadaisy)</li>
+<li>  Ryo Yamada (Bocchi The Rock!)</li>
+<li>  Sakuya Izayoi (Touhou)</li>
+<li>  Salesperson & Meanie ENA (ENA: Dream BBQ)</li>
+<li>  Serial Designation J (Murder Drones) <b>(Fictionflicker)</b></li>
+<li>  Testament (Guilty Gear)</li>
+<li>  Utena Tenjou (Revolutionary Girl Utena)</li>
+</ul>
+<br><br>
+<h3>THERIOTYPES</h3>
+<ul style="padding:15px">
+<li>Cats/Felines</li>
+<li>Fennec Foxes</li>
+<li>Rabbits/Bunnies</li>
+<li> Seals</li>
+  </ul>
+<br><br>
+  <h3>OTHERTYPES</h3>
+<ul style="padding:15px">
+<li>Aliens</li>
+<li>(Fallen) Angels</li>
+<li>Chimeras</li>
+<li>Demons</li>
+<li>Dragons</li>
+<li>Dogs/Canines <b>(Otherhearted)</b></li>
+<li>Eldritch Beings</li>
+<li>Outer Space</li>
+<li>Robots/Androids</li>
+<li>Sentient AI</li>
+<li>Zombies/The Undead</li>
+<li>Vampires</li>
+<li> Living Objects</li>
+  </ul>
+    </font>
+    </div> 
+    </div>
+    
+<div id="altDiv5" class="navbarloa" style="height:389px; width:343px; overflow: hidden; border:1px white solid; margin-top:8px; overflow-y:auto; overflow-x:hidden; border-radius:10px 10px 10px 10px;  ">
+    <div class="navbarloa" style="width:330px; overflow: auto; border:none; border-bottom:2px dotted white; margin-top:20px;overflow-x:hidden;  text-align:right;">
+    <h1>QUIZ RESULTS!</h1>
+    </div> 
+    <div class="navbarloa" style="width:330px; overflow: auto; border:none; overflow-x:hidden;  margin-top:17px; text-align:left;">
+   <font color="#fceaff" size="3">
+  
+        <p><A href="https://www.theotaku.com/quizzes/view/3913/which_hatsune_miku_nendoroid_model_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3913_Hachune_Miku.jpg" style="width:330px;" alt="Which Hatsune Miku Nendoroid Model Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3913/which_hatsune_miku_nendoroid_model_are_you%3F">Which Hatsune Miku Nendoroid Model Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><A href="https://theotaku.com/quizzes/view/3760/what_type_of_dere_are_you%3F_"><img border="0" src="http://www.theotaku.com/guru_results/3760_Dandere.jpg" style="width:330px;" alt="What Type Of Dere Are You? " /><br /></a><A href="https://theotaku.com/quizzes/view/3760/what_type_of_dere_are_you%3F_">What Type Of Dere Are You? </A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><a href="https://andou.gay/quiz/donutquiz"><img src="https://andou.gay/quiz/applefritter.png" style="width:330px;"></a></p>
+        
+        <p><a href="http://mirage-island.neocities.org/quiz.html"><img src="http://mirage-island.neocities.org/results/ralts.gif" alt="Ralts" style=width:100px;>"You're a sensitive, methodical person who is slow to warm up to others. You like to spend a lot of time alone and prefer having a select few friends."</a></p>
+        
+        <p><a href="http://thousandroads.net/misc/pmdquiz/"><img src="http://thousandroads.net/misc/pmdquiz/static/results/Fennekin.png" alt="I am Fennekin!" /></a></p>
+        
+        <p><a href='https://clownfred.zone/clownquiz'><img src='https://clownfred.zone/!Media/CQ/PierrotCard1.png' alt='I am a Pierrot Mime! Click here to take the clown quiz!'></a></p>
+        
+        <p><A href="https://www.theotaku.com/quizzes/view/4052/what_neopet_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4052_Gelert.jpg" alt="What Neopet Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/4052/what_neopet_are_you%3F">What Neopet Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><a href='https://dog-house.neocities.org/quiz/ac/villager_quiz'><img src='https://i.postimg.cc/fbZfkWBG/Untitled.png'></a></p>
+        
+        <p><A href="https://www.theotaku.com/quizzes/view/4069/what_type_of_otaku_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4069_Casual_Otaku.jpg" style="width:330px;" alt="What type of otaku are you?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/4069/what_type_of_otaku_are_you%3F">What type of otaku are you?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><A href="https://theotaku.com/quizzes/view/2702/what_ace_attorney_character_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/2702_LarryButz.jpg" alt="What Ace Attorney Character Are You?" /><br /></a><A href="https://theotaku.com/quizzes/view/2702/what_ace_attorney_character_are_you%3F">What Ace Attorney Character Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><A href="https://www.theotaku.com/quizzes/view/3743/what_anime_hair_color_best_suits_your_personality%3F"><img border="0" src="http://www.theotaku.com/guru_results/3743_White_Hair.jpg" style="width:330px;" alt="What Anime Hair Color Best Suits Your Personality?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3743/what_anime_hair_color_best_suits_your_personality%3F">What Anime Hair Color Best Suits Your Personality?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><a href="http://dokodemo.neocities.org/gamelounge/splatidol.html"><img src="http://dokodemo.neocities.org/gamelounge/splatoon/marie.png" alt="Marie" title="You're most like Marie from the Squid Sisters!"></a></p>
+        
+        <p><a href="http://www.dragonflycave.com/quizzes/what-pokemon-are-you"><img src="http://www.dragonflycave.com/wpay/togetic.gif" alt="I am a Togetic!" title="Find out what Pokémon you are at The Cave of Dragonflies"></a></p>
+        
+        <p> <a href="http://cupped-expressions.net/cheese/quiz/" TARGET=NEW><img src="https://cupped-expressions.net/cheese/quiz/mozzarella03.gif" border=0 width=100% height=100% alt="I am mozzarella!"></a></p>
+        
+        <p><A href="https://www.theotaku.com/quizzes/view/4031/which_undertale_soul_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4031_Justice.jpg" style="width:330px;" alt="Which Undertale Soul Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/4031/which_undertale_soul_are_you%3F">Which Undertale Soul Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><A href="https://www.theotaku.com/quizzes/view/3096/which_madoka_magica_girl_are_you%3F"><img border="0" style="width:330px;" src="http://www.theotaku.com/guru_results/3096_Homura_Akemi.jpg" alt="Which Madoka Magica Girl Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3096/which_madoka_magica_girl_are_you%3F">Which Madoka Magica Girl Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><A href="https://theotaku.com/quizzes/view/4084/which_huniepop_girl_is_perfect_for_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4084_Kyu_Sugardust.jpg" style="width:330px;" alt="Which HuniePop Girl is Perfect For You?" /><br /></a><A href="https://theotaku.com/quizzes/view/4084/which_huniepop_girl_is_perfect_for_you%3F">Which HuniePop Girl is Perfect For You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p></p>
+        
+        <p><a href="https://web.archive.org/web/20250504160015/https://adilene.net/"><img src="https://i.postimg.cc/BvJJZhMr/results.png"></a></p>
+        
+        <p><A href="https://www.theotaku.com/quizzes/view/3855/which_vocaloid_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3855_Oliver.jpg" style="width:330px;" alt="Which Vocaloid Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3855/which_vocaloid_are_you%3F">Which Vocaloid Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><A href="https://www.theotaku.com/quizzes/view/3240/what_genre_of_manga_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3240_shoujo.jpg" style="width:330px;" alt="What Genre Of Manga Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3240/what_genre_of_manga_are_you%3F">What Genre Of Manga Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+        
+        <p><div style="width:300px; background:black; color:#AAAAAA; padding: 10px;text-align:center; border: 1px solid #333333;">Your rainbow is strongly shaded<b> gray.</b><br><br><div style="background: #bb3c3c">&nbsp;</div><div style="background: #bb913c">&nbsp;</div><div style="background: #bbbb3c">&nbsp;</div><div style="background: #3caa3c">&nbsp;</div><div style="background: #3c88bb">&nbsp;</div><div style="background: #3c3cbb">&nbsp;</div><div style="background: #913cbb">&nbsp;</div><br>What is says about you: You are an elegant person. You appreciate tradition and wisdom that comes with age. You depend on modern technology and may feel uncomfortable without it.<br><br><a href="http://spacefem.com/quizzes/rainbow">Find the colors of your rainbow at spacefem.com.</a></div></p>
+
+         <p><a href="emocowboy.neocities.org "><img src="https://i.imgur.com/uNGya3E.png">Take the quiz at emocowboy.neocities.org</a></p>
+         
+         <p><A href="https://www.theotaku.com/quizzes/view/3133/what_is_your_level_of_randomness%3F"><img border="0" src="http://www.theotaku.com/guru_results/3133_Medium.jpg" style="width:330px;" alt="What Is Your Level Of Randomness?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3133/what_is_your_level_of_randomness%3F">What Is Your Level Of Randomness?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+         
+         <p><A href="https://www.theotaku.com/quizzes/view/2665/how_mature_do_you_think%3F"><img border="0" src="http://www.theotaku.com/guru_results/2665_Teenager.jpg" style="width:330px;" alt="How Mature Do You Think?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/2665/how_mature_do_you_think%3F">How Mature Do You Think?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+         
+         <p><a href="http://www.nerdtests.com/ft_loser.php?im">
+<img src="http://www.nerdtests.com/images/ft/lsr.php?val=4752" alt="I am 95% loser. What about you? Click here to find out!">
+</a></p>
+
+<p><A href="https://www.theotaku.com/quizzes/view/3575/which_of_the_mane_six_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3575_Rainbow_Dash.jpg" style="width:330px;" alt="Which Of The Mane Six Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3575/which_of_the_mane_six_are_you%3F">Which Of The Mane Six Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+
+<p><A href="https://www.theotaku.com/quizzes/view/2424/what_umineko_no_naku_koro_ni_character_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/2424_Ange_Ushiromiya.jpg" style="width:330px;" alt="What Umineko No Naku Koro Ni Character Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/2424/what_umineko_no_naku_koro_ni_character_are_you%3F">What Umineko No Naku Koro Ni Character Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><A href="https://www.theotaku.com/quizzes/view/4139/which_higurashi_when_they_cry_character_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4139_Rika_Furude.jpg" style="width:330px;" alt="Which Higurashi When They Cry Character Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/4139/which_higurashi_when_they_cry_character_are_you%3F">Which Higurashi When They Cry Character Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><a href="https://troy-sucks.neocities.org/shrines/animalcrossing"><img src="https://troy-sucks.neocities.org/shrines/ac/quiz/r3.png" style="width:330px;" alt="Normal" title="Ummmmmmm Hi. You're kind of just the default settings for a human. May I reccommend picking up a hobby?"></a></p>
+
+<p><A href="https://theotaku.com/quizzes/view/2675/what_k-on%21_band_character_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/2675_Yui_Hirasawa.jpg" alt="What K-ON! Band Character Are You?" style="width:330px;" /><br /></a><A href="https://theotaku.com/quizzes/view/2675/what_k-on%21_band_character_are_you%3F">What K-ON! Band Character Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><A href="https://www.theotaku.com/quizzes/view/3568/what_animal_jam_animal_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3568_Wolf.jpg" style="width:330px;" alt="What Animal Jam Animal Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3568/what_animal_jam_animal_are_you%3F">What Animal Jam Animal Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><A href="https://www.theotaku.com/quizzes/view/3160/which_mysims_character_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3160_Travis.jpg" style="width:330px;" alt="Which MySims Character Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3160/which_mysims_character_are_you%3F">Which MySims Character Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><A href="https://theotaku.com/quizzes/view/4103/which_jewelpet_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4103_Ruby.jpg" style="width:330px;" alt="Which Jewelpet Are You?" /><br /></a><A href="https://theotaku.com/quizzes/view/4103/which_jewelpet_are_you%3F">Which Jewelpet Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><a href="https://pennylovespandas.neocities.org/quiz/creature"><img src="https://pennylovespandas.neocities.org/quizresults/blueberry.png" alt="Blueberry" title="You are a bewitching blueberry!"></a></p>
+
+<p><a href="https://pennylovespandas.neocities.org/quiz/creature"><img src="https://pennylovespandas.neocities.org/quizresults/kelpie.png" alt="Kelpie" title="You are a mysterious kelpie!"></a></p>
+
+<p><a href="https://web.archive.org/web/20040104104831/http://www.peachie.nu/" target="_blank"> <img src="https://web.archive.org/web/20040104104831im_/http://www.peachie.nu/peachflavored.gif" width="100%"></a></p>
+
+<p><a href="https://web.archive.org/web/20040109225800/http://www.peachie.nu/" target="_blank">
+<img src="https://web.archive.org/web/20040109225800im_/http://www.peachie.nu/rose.gif"></a></p>
+
+
+<p><a href="https://web.archive.org/web/20031122084954/http://www.peachie.nu/" target="_blank"><img src="https://web.archive.org/web/20031122084954im_/http://www.peachie.nu/wannabedevil.gif" border="0"></a></P>
+
+<P><a href="https://web.archive.org/web/20031122085524/http://www.peachie.nu/" target="_blank"> <img src="https://web.archive.org/web/20031122085524im_/http://www.peachie.nu/colortestyellow.jpg"></a></p>
+
+<p><a href="https://web.archive.org/web/20040210011946/http://www.peachie.nu/" target="_blank"><img src="https://web.archive.org/web/20040210011946im_/http://www.peachie.nu/blb.gif" border="0">
+</a></p>
+
+<p><A href="https://theotaku.com/quizzes/view/3278/what_style_fits_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3278_New_generation.jpg" width="100%" alt="What Style Fits You?" /><br /></a><A href="https://theotaku.com/quizzes/view/3278/what_style_fits_you%3F">What Style Fits You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><a href='https://rarimena.neocities.org/quizzes.html'><img style='width: 250px; height: 161px' src='https://rarimena.neocities.org/imgs/4.png'></a></p>
+
+
+<P><A href="https://www.theotaku.com/quizzes/view/611/what_mew_mew_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/611_Ichigo_Momomiya.jpg" alt="What Mew Mew Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/611/what_mew_mew_are_you%3F">What Mew Mew Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+
+<p><A href="https://www.theotaku.com/quizzes/view/4010/which_soul_eater_character_are_you_most_like%3F"><img border="0" src="http://www.theotaku.com/guru_results/4010_Crona.jpg" width="100%" alt="Which Soul Eater Character Are You Most Like?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/4010/which_soul_eater_character_are_you_most_like%3F">Which Soul Eater Character Are You Most Like?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+
+<P><A href="https://www.theotaku.com/quizzes/view/4043/what_anime_flower_symbol_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4043_Sunflower.jpg" width="100%" alt="What Anime Flower Symbol Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/4043/what_anime_flower_symbol_are_you%3F">What Anime Flower Symbol Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+
+<p><A href="https://www.theotaku.com/quizzes/view/2570/what_neon_genesis_evangelion_character_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/2570_Shinji.jpg" alt="What Neon Genesis Evangelion Character Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/2570/what_neon_genesis_evangelion_character_are_you%3F">What Neon Genesis Evangelion Character Are You?</A><br />Hosted By theOtaku.com: <a href="http://www.theotaku.com" title="Anime">Anime</a></p>
+    </font>
+    </div> 
+    </div>
+</div>
+
+</center>
+
+    
+    
+  
+   
+
+   <script src="tenshimusicplayer.js"></script>
+   
+   <canvas id="particleCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></canvas>
+    <script src="particleCanvas.js"></script>
+  </body>
+</html>

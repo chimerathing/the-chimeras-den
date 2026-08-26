@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTERHUMANITY! </title>
+   <script type="text/javascript">
+      title = "ALTERHUMANITY! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script> 
+
+  <style>
+      
+  html {
+    box-sizing: border-box;
+    background-color:black;
+    background-image:url('https://64.media.tumblr.com/eb804e3684f949e2e0f03134e228a49c/4db45e9881e6f6e6-7f/s100x200/5015521039b0bed1aa6bf6b663a3a06d87907933.pnj');
+    background-size:repeat;
+   font-family:quicklove;
+  }
+
+
+  @font-face {
+    font-family: quicklove;
+    src: url('https://file.garden/Z5ztm_B6wj_8HQnK/Rosela.ttf')
+  }
+
+  ::selection {
+    background: pink;
+    color: white;
+  }
+
+  mark {
+    color: pink;
+    background: transparent;
+    text-decoration: underline;
+    text-decoration-style: 1px solid pink;
+  }
+
+  #s-m-t-tooltip {
+    /* basic */
+    max-width: 300px;
+    z-index: 10;
+    margin: 24px 14px 7px 12px;
+    padding: 8px;
+    font-size: 15px;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: verdana;
+  }
+
+  #maincontainer {
+    background-color: black !important;
+    
+   border: 15px solid transparent;
+  
+border-image: url('https://64.media.tumblr.com/614143361eb9b319b1ce55ac932e9271/3ebff00d0e11f23b-3b/s500x750/4e1b04ea6e4e6ac9e5107bca101ac1cd1f7619b0.gifv') 30 fill round;
+
+ box-shadow: 1px 1px 10px black;
+  color: white;
+  border-radius: 15px;
+    width: 1000px;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size:13px;
+    
+  }
+
+  #focontainer img {
+    width: 200px;
+    height: auto;
+  }
+  li{
+    font-size:1.5em;font-family:quicklove;
+  }
+
+  h1 {
+   
+    font-family: quicklove;
+    color:black; 
+  background: linear-gradient(#ed1346, #882c5d);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 7px transparent;
+  text-shadow: 1px 1px 5px #b4194c;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  h3 {
+    
+    font-family: quicklove;
+     color:black; 
+  background: linear-gradient(#ed1346, #882c5d);
+  text-shadow: 1px 1px 5px #b4194c;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 7px transparent;
+    font-size: 2.2em;
+    font-weight: bold;
+  }
+
+  p {
+    font-family: quicklove;
+    font-size: 1.5em;
+  }
+
+  details {
+    font-size: 1.5em;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .column img {
+    margin-top: 12px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .foimage {
+    transition: all 0.5s;
+    transition: 1s ease;
+    -webkit-mask-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/pngfind.com-kawaii-transparent-png-621355.png);
+    -webkit-mask-size: 220%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  .foimage:hover {
+    transition: all 0.5s;
+    -webkit-mask-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/pngfind.com-kawaii-transparent-png-621355.png);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+.pagedoll {
+position:fixed;
+bottom: 0px;
+right: 0;
+opacity: 0.9;
+animation-name: floating !important;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+}
+ @keyframes floating {
+            0% {
+                transform: translate(0, 0px);
+            }
+            50% {
+                transform: translate(0, 5px);
+            }
+            100% {
+                transform: translate(0, -0px);
+            }
+        }
+        
+         @media only screen and (max-width: 800px) {
+           
+           
+           #maincontainer{
+             width:100%;
+           }
+           
+           .pagedoll{
+             display:none;
+           }
+         }
+</style>
+
+<body>
+
+
+
+  <div id="maincontainer">
+    
+        <h1>MY ALTERHUMANITY!</h1>
+      
+      <p>My experience with alterhumanity has always been entirely psychological, and being fictionkin has also heavily affected my status as an introject within my system. Pretty much all of my sources were gained from me kinning those characters and becoming extremely attached to them as part of my identity. Some have also formed as seperate alters in the system. My kinning personally is not just "relating" to characters, I see it as something that is deeply intertwined with my sense of self.</p>
+      
+      <p>My attachment to each of my sources and kins as a whole tends to flucuate and I also do not give the slightest shit about "doubles". I think seeing other people who feel connected with the same characters as me in whatever sort of way is cool and fun, unless you're an asshole about it. There's a couple of sources that I do not feel connected to at all anymore but I just keep them listed here because I wanna be able to keep track of everything. Also just because I'm sourced from or kin a character from a certain piece of media doesn't mean that I support the creator of that media if they happen to be a bad person lol </p>
+      
+          <p>For a good portion of my life I've felt pretty disconnected from humanity, although it wasn't something I really took completely serious probably until I was 13. I had always felt connected to things that aren't human and would joke about being some kind of otherworldly creature with friends, part of me even saw it kind of just as roleplay. But overtime I accepted the fact that it was a genuine part of my identity, and that I actually am in fact, not human. I just happen to be shaped like a human.</p>
+        
+          <h3>FICTIVE/INTROJECT SOURCES</h3>
+
+          
+
+          <ul style="padding:5px">
+          <li> Adachi Rei (UTAU)</li>
+          <li> Bive (Regretevator)</li> 
+         
+<li> Falin Touden (Dungeon Meshi)</li>
+<li> Gabriel (Ultrakill)</li>
+<li> Jax (The Amazing Digital Circus) <b>(Completely deattached)</b></li>
+<li> Kasane Teto (UTAU/Synthesizer V)</li>
+<li> Liam Plecak (hfjONE)</li>
+<li>  MePad (Inanimate Insanity)</li> 
+<li> Paintbrush (Inanimate Insanity)</li>
+
+<li> Pavitr Prabhakar (Across the Spiderverse)</li>
+<li> Redson (Lego Monkie Kid)</li>
+<li> Roxie Richter (Scott Pilgrim)</li>
+<li>Sebastian Solace (Pressure) <b>(Completely deattached)</b></li>
+<li> Serial Designation N (Murder Drones) <b>(Completely deattached)</b></li>
+<li> Two Time (Forsaken) <b>(Completely deattached)</b></li>
+
+</ul>
+
+<h3>FICTIONKINS</h3>
+<ul style="padding:5px">
+<li>  Agnes Tachyon (Uma Musume)</li>
+  <li>  Ai Mizuno (Zombie Land Saga)</li>
+<li>  Ame/Kangel (Needy Streamer Overload)</li>
+<li>  Billy Kid (Zenless Zone Zero)</li>
+<li>  Box (Inanimate Insanity)</li>
+<li>  Bumblebee (Transformers)</li>
+<li>  Cana Somlit Sayavong (To Hell and Back)</li>
+<li>  Cooper Copwell (TRIPWIRE)</li>
+<li>  Crona Gorgon (Soul Eater)</li>
+ <li> Dr. Sylveon (Starters)</li>
+<li>  Dynamite (Objectified)</li>
+<li>  Edgar (Electric Dreams 1984)</li>
+<li> Elise Liedl (Little Goody Two Shoes)</li>
+<li>  Elster/LSTR-512 (Signalis)</li>
+<li>  Homura Akemi (Madoka Magica)</li>
+<li>  Freyja Maria Mendoza/Fainéant Girl (The Post Traumatic-Manifesto)</li>
+<li>  GPS (The Nightly Manor)</li>
+<li>  Gregor (Limbus Company)</li>
+<li>  Happy Chaos (Guilty Gear)</li>
+<li>  Hat Zero/Zro (XFOHV/BFDI)</li>
+<li> "Hikaru" (The Summer Hikaru Died)</li>
+<li>  Ishmael (Limbus Company)</li>
+<li>  Journal (Paper Puppets Take 2)</li>
+<li>  Kris (Deltarune)</li>
+<li>  Mayra Tikuna/Taxidermy Girl (The Post Traumatic-Manifesto)</li>
+<li> Mizi (Alien/Zombie Stage)</li>
+<li>  Phanuel (Lucifer Lucifer)</li>
+<li>  Pipebomb (Love of the S*n)</li>
+<li> Poppy (Inanimate Insanity)</li>
+<li>  Qifrey (Witch Hat Atelier)</li>
+<li>  Renoir (World Flipper)</li>
+<li>  Riamu Yumemi (Idolmaster)</li>
+<li>  Ryo Yamada (Bocchi The Rock!)</li>
+<li>  Salesperson & Meanie ENA (ENA: Dream BBQ)</li>
+<li>  Siffrin (In Stars and Time)</li>
+<li>  Testament (Guilty Gear)</li>
+<li>  Utena Tenjou (Revolutionary Girl Utena)</li>
+</ul>
+
+<h3>THERIOTYPES</h3>
+<ul style="padding:5px">
+<li>Cats/Felines</li>
+<li>Fennec Foxes</li>
+<li>Rabbits/Bunnies</li>
+<li> Seals</li>
+  </ul>
+
+  <h3>OTHERTYPES</h3>
+<ul style="padding:5px">
+<li>Aliens</li>
+<li>(Fallen) Angels</li>
+<li>Chimeras</li>
+<li>Demons</li>
+<li>Dragons</li>
+<li>Dogs/Canines <b>(Otherhearted)</b></li>
+<li>Eldritch Beings</li>
+<li>Outer Space</li>
+<li>Robots/Androids</li>
+<li>Sentient AI</li>
+<li>Zombies/The Undead</li>
+<li>Vampires</li>
+<li> Living Objects</li>
+  </ul>
+        
+       
+       
+    </div>
+<div class="pagedoll">
+<img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1146_20240602204311.png" style="width:250px;">
+</div>
+
+
+
+ 
+
+    
+
+  </body>
+</html>

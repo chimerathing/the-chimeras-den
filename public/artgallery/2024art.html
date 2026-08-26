@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 ART!</title>
+    <script type="text/javascript">
+      title = "2024 ART! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ 
+
+ 
+ <style>
+div.gallery {
+  margin: 3px;
+  float: left;
+  width: 195px;
+  padding: 10px;
+}
+
+div.gallery img:hover {
+  
+}
+
+div.gallery img {
+  
+  vertical-align: middle;
+  height: calc(100% - 1px);
+				width: calc(100% - 1px);
+				 border: 10px solid black !important;
+				 box-shadow: 1px 1px 5px black;
+    border-radius: 4px !important;
+    border-image: url("https://64.media.tumblr.com/2f2e9cd4ffe0ebf10bf4ededc4f54f1e/1dd0d242a395e1ed-01/s75x75_c1/fbea4638965e2a533ed88090524c9af25c65b1bb.pnj") 25 fill round !important; 
+    border-image-slice: 35% !important;
+        border-image-repeat: round !important;
+        background: linear-gradient(black , #680811);
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-family: rosela;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.blur-image {
+                                  filter: blur(30px);
+                                  transition: filter 0.5s ease;
+                                }
+                                
+                                .blur-image:hover {
+                                  filter: blur(0);
+                                }
+
+@media only screen and (max-width: 800px) {
+  div.gallery img {
+    width: 320px;
+  }
+  
+  div.desc {
+     width: 320px;
+     font-size: 1.3em;
+  }
+}
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+var sparkles=50;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+*(c)2005-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y+1)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    starx[i]+=(i%5-2)/5;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    tinyx[i]+=(i%5-2)/5;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  return (div);
+}
+
+function newColour() {
+  var c=new Array();
+  c[0]=255;
+  c[1]=Math.floor(Math.random()*256);
+  c[2]=Math.floor(Math.random()*(256-c[1]/2));
+  c.sort(function(){return (0.5 - Math.random());});
+  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+}
+// ]]>
+</script>
+  </head>
+  <body>
+  
+<style type="text/css">* {cursor: url(https://i.postimg.cc/9fC1g1Dv/ani879-ezgif-com-crop.gif), auto !important;}</style>  
+  
+<h1><strong>2024</strong></h1>
+  
+   <center>
+  
+   <p><div class="bbbutton"><a href="https://chimerathing.neocities.org/artgallery" style="">Go Back</a></div></p></center>
+   
+   </br>
+   
+   <p>Click on the images to see them at their full size!</p>
+   
+   <p>All art is ordered from oldest to newest.</p>
+  
+  </br>
+  
+  <div class="row">
+  
+  <div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/SKHbJqgc/Untitled1018-20240107170921.png">
+    <img src="https://i.postimg.cc/SKHbJqgc/Untitled1018-20240107170921.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc"><a href="https://64.media.tumblr.com/cab131465ff29608e82ae54d53777cf4/225a7abcc4d4a7f8-1a/s1280x1920/c280db300e49637249acec495acb0b5c04dc6819.jpg">"Draw this with your ship" prompt</a> featuring Envy (N x V) from Murder Drones</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/mrPGLhyb/Untitled1019-20240113235833.png">
+    <img src="https://i.postimg.cc/mrPGLhyb/Untitled1019-20240113235833.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc"><a href="https://64.media.tumblr.com/3330fcc80d6037b4dc5a9d64e9e05e39/3281d6d5ca6d78e1-01/s1280x1920/51571a579b8a143025e99831965eec34bfd7fb4f.jpg">"Draw this with your ship" prompt</a> featuring Juzi/Brandedgun (J x Uzi) from Murder Drones</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/mgbLsbnD/IMG-9443.jpg">
+    <img src="https://i.postimg.cc/mgbLsbnD/IMG-9443.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of my version of human V</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/G2YwDNfV/Untitled1024-20240117222541.png">
+    <img src="https://i.postimg.cc/G2YwDNfV/Untitled1024-20240117222541.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Outdated reference sheet of my N sona</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/L5pd3DKX/Untitled1032-20240131001048.png">
+    <img src="https://i.postimg.cc/L5pd3DKX/Untitled1032-20240131001048.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of Vuzi/Rottenplums (V x Uzi) from Murder Drones</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/rF9TgBpL/Untitled944-20240201132135.png">
+    <img src="https://i.postimg.cc/rF9TgBpL/Untitled944-20240201132135.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Colored sketch of Envy</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1038_20240210205136.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1038_20240210205136.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">shitty spive doodle</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1035_20240209221012.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1035_20240209221012.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">shitty bive doodle</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1036_20240209223200.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1036_20240209223200.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">shitty spive doodle #2</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1037_20240209224902.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1037_20240209224902.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">shitty bive doodle #2</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1040_20240306205118.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1040_20240306205118.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">shitty spive doodle #3</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/0jdTWSPC/Untitled1034-20240209200523.png">
+    <img src="https://i.postimg.cc/0jdTWSPC/Untitled1034-20240209200523.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Colored doodle of Bive from Regretevator with top surgery scars (she's a transmasc bigender lesbian to me idc. im totally not projecting guys)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/NG6vf3mr/Untitled1039-20240211222130.png">
+    <img src="https://i.postimg.cc/NG6vf3mr/Untitled1039-20240211222130.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Split from Regretevator :3</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/TYQ8nnkd/Untitled1052-20240227202958.png">
+    <img src="https://i.postimg.cc/TYQ8nnkd/Untitled1052-20240227202958.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Spive!! (Split x Bive)</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_0438.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_0438.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">more spive</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_0460.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_0460.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">split</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_0464.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_0464.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">bive</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/y8YHGLJ3/Untitled1017-20240301211938.png">
+    <img src="https://i.postimg.cc/y8YHGLJ3/Untitled1017-20240301211938.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Colored sketch of Gnarpy from Regretevator (based on someone elses design for him I think. I don't remember who it was)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/kX73VTvY/Untitled1054-20240306162648.png">
+    <img src="https://i.postimg.cc/kX73VTvY/Untitled1054-20240306162648.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">More spive :D</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/3x7Rxjk3/78882687-5-Vy-Axmw41i74-Cx-F.png">
+    <img src="https://i.postimg.cc/3x7Rxjk3/78882687-5-Vy-Axmw41i74-Cx-F.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Redesign of my fursona, Nebula Caelestis!</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/6pQkcTSd/Untitled1066-20240311141335.png">
+    <img src="https://i.postimg.cc/6pQkcTSd/Untitled1066-20240311141335.png" alt="" width="600" height="400" class="blur-image">
+  </a>
+  <div class="desc"><strong>WARNINGS: SUGGESTIVE</strong><br>Redraw of a scene from that infamous Rabbit Hole animation by Castation, featuring Nebula</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/zGP9c8Z4/Untitled1070-20240323153603.png">
+    <img src="https://i.postimg.cc/zGP9c8Z4/Untitled1070-20240323153603.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">More split (I miss her)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/fT7zp3Bp/tumblr-47f1a003edbf1eb6fbeb4f3605145db8-ca9dec0a-2048.jpg">
+    <img src="https://i.postimg.cc/fT7zp3Bp/tumblr-47f1a003edbf1eb6fbeb4f3605145db8-ca9dec0a-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Vuzi, drawn by our co-host I believe! If you know what song the lyrics are from ily</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/QtWsbVF6/tumblr-d9fd0c9d51f2302bb2550d1d43e7ebf9-be6361c5-2048.jpg">
+    <img src="https://i.postimg.cc/QtWsbVF6/tumblr-d9fd0c9d51f2302bb2550d1d43e7ebf9-be6361c5-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Same thing but with different colors</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/9MGFG1g8/GXv-JTBBWs-AAi-VUj.jpg">
+    <img src="https://i.postimg.cc/9MGFG1g8/GXv-JTBBWs-AAi-VUj.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Our co-host's Uzi sona (they're an Uzi fictive if you couldn't already guess)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/HLcfGRTn/Untitled1079-20240411172720.png">
+    <img src="https://i.postimg.cc/HLcfGRTn/Untitled1079-20240411172720.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">The latest reference sheet of my N sona</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_2631.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_2631.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">bive vent doodles</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_2632.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_2632.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">another bive vent doodle</div>
+</div>
+  
+  <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1108_20240501015256.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1108_20240501015256.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">my N sona and oomf's uzi sona</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/nhRJfq7R/Untitled1021-20240429221946.png">
+    <img src="https://i.postimg.cc/nhRJfq7R/Untitled1021-20240429221946.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Nhad/Biscuitjocks (N x Thad)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/c1pCVGZg/IMG-3130.jpg">
+    <img src="https://i.postimg.cc/c1pCVGZg/IMG-3130.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of Marcille Donato from Dungeon Meshi (aka my WIF EI LVOE MY WIFE)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/0Q3dwk3d/tumblr-ff5d37afeeb8b8f009885dac6f83baca-f94428d6-2048.jpg">
+    <img src="https://i.postimg.cc/0Q3dwk3d/tumblr-ff5d37afeeb8b8f009885dac6f83baca-f94428d6-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of Thistle from Dungeon Meshi</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/wv3QMyWj/tumblr-b74246cc2699b088c25f63995ecdaaec-4fe46baf-2048.jpg">
+    <img src="https://i.postimg.cc/wv3QMyWj/tumblr-b74246cc2699b088c25f63995ecdaaec-4fe46baf-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Another Thistle sketch</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/L51kBdFd/tumblr-153c8b5b8f82b71cf9dc3d4008b989de-bcc6a90a-2048.jpg">
+    <img src="https://i.postimg.cc/L51kBdFd/tumblr-153c8b5b8f82b71cf9dc3d4008b989de-bcc6a90a-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Same thing but colored(?)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/ZYGxYq6J/tumblr-c20702494a813a374ddaecc81bf2fed4-bdf5cb38-2048.jpg">
+    <img src="https://i.postimg.cc/ZYGxYq6J/tumblr-c20702494a813a374ddaecc81bf2fed4-bdf5cb38-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of my design for Falin Touden, from Dungeon Meshi of course (featuring farcille because me and my wife are awesome)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/k5HqKWg6/tumblr-a3d049e60f10cfb3149c61cab3ba1b11-76744ced-2048.jpg">
+    <img src="https://i.postimg.cc/k5HqKWg6/tumblr-a3d049e60f10cfb3149c61cab3ba1b11-76744ced-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Reference of my designs for both Falin and Marcille (aka me and my wife)</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/XvMQn0BZ/Untitled1192-20240707001036.png">
+    <img src="https://i.postimg.cc/XvMQn0BZ/Untitled1192-20240707001036.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Artfight attack of seagiri's Dungeon Meshi oc Apphia Vicario</div>
+</div>
+  
+  <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/85842941_FpDgCSllDaF4Xap.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/85842941_FpDgCSllDaF4Xap.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">my friend's v sona that i designed for her birthday</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/nLSc260L/IMG-6216.jpg">
+    <img src="https://i.postimg.cc/nLSc260L/IMG-6216.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of Poolparty (Sebastian Solace x Party Noob), from Pressure and Regretevator respectively. Cross-shipping is cool I like it</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/mrggQb3q/IMG-6215.jpg">
+    <img src="https://i.postimg.cc/mrggQb3q/IMG-6215.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">More poolparty</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/J0V8dmJR/tumblr-d33ca783b1f3e43d1dd6ff4fa7750f96-fa1840d9-2048.jpg">
+    <img src="https://i.postimg.cc/J0V8dmJR/tumblr-d33ca783b1f3e43d1dd6ff4fa7750f96-fa1840d9-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of Chimera Falin</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/xCkj4t43/IMG-6272.jpg">
+    <img src="https://i.postimg.cc/xCkj4t43/IMG-6272.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Some Marcille sketches :3</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/wvSx8DK8/IMG-6273.jpg">
+    <img src="https://i.postimg.cc/wvSx8DK8/IMG-6273.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Namari and Izutsumi sketches (from Dungeon Meshi)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/T1V6zSqg/tumblr-e7923c57775e8c44c4d6b3f6a03154a5-04118494-2048.jpg">
+    <img src="https://i.postimg.cc/T1V6zSqg/tumblr-e7923c57775e8c44c4d6b3f6a03154a5-04118494-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Kasane Teto sketch (I didn't feel like drawing her other arm)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/BnMqZrWC/tumblr-119e4915fb26b1cce3ccf03ea7974bd0-be367f37-1280.jpg">
+    <img src="https://i.postimg.cc/BnMqZrWC/tumblr-119e4915fb26b1cce3ccf03ea7974bd0-be367f37-1280.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Thumbnail for my cover of "This Fucked Up Wonderful World is for Me" by n.k, featuring Kasane Teto</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/3JQrtjC2/tumblr-1d337f34da72231c856d3a524ffaf1f5-172ee806-1280.png">
+    <img src="https://i.postimg.cc/3JQrtjC2/tumblr-1d337f34da72231c856d3a524ffaf1f5-172ee806-1280.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Thumbnail for my cover of "Reincarnation Apple" by PinocchioP, featuring Kasane Teto</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/5yL4xj1H/IMG-6868.jpg">
+    <img src="https://i.postimg.cc/5yL4xj1H/IMG-6868.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Hatsune Miku sketch</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/WbVjGNTn/tumblr-f4372b25483b381b3ac05cf0f90ba534-4a4c84a0-2048.jpg">
+    <img src="https://i.postimg.cc/WbVjGNTn/tumblr-f4372b25483b381b3ac05cf0f90ba534-4a4c84a0-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Farcille sketch</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/8kMNfJQc/tumblr-efce8d1eb92f334e0cfaca08ff72b7ce-55d26f61-2048.jpg">
+    <img src="https://i.postimg.cc/8kMNfJQc/tumblr-efce8d1eb92f334e0cfaca08ff72b7ce-55d26f61-2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketches of Emily and Nicole from Class of 09 (the latest game sucks so much fucking ass)</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/g0jGxgmb/tumblr-851a6a85affccd15210a5631ab889bd4-e7fce528-540.jpg">
+    <img src="https://i.postimg.cc/g0jGxgmb/tumblr-851a6a85affccd15210a5631ab889bd4-e7fce528-540.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Another Farcille sketch</div>
+</div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/MZQK03RW/IMG-7638.jpg">
+    <img src="https://i.postimg.cc/MZQK03RW/IMG-7638.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of Marcille in her Dungeon Lord outfit</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/85Bkf1Z2/dryggu7yyu.jpg">
+    <img src="https://i.postimg.cc/85Bkf1Z2/dryggu7yyu.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of our design for Dr. Retro from Regretevator</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/Wz52S5LS/dryggu7yyu1.jpg">
+    <img src="https://i.postimg.cc/Wz52S5LS/dryggu7yyu1.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of our co-host's Uzi sona but slightly different from the original design</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/HWzspkc5/dryggu7yyu2.jpg">
+    <img src="https://i.postimg.cc/HWzspkc5/dryggu7yyu2.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Sketch of Maka Albarn from Soul Eater</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/qqJJ89Yz/human-uzi-redraw.png">
+    <img src="https://i.postimg.cc/qqJJ89Yz/human-uzi-redraw.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">A redraw of our old humanized Uzi design (new design inspired by the Uzi sona also)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/W1JW8chq/Untitled1236-20241030214251.png">
+    <img src="https://i.postimg.cc/W1JW8chq/Untitled1236-20241030214251.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">A scuffed reference for my falin sona</div>
+  </div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/nVvcR9Vv/Untitled1253-20241031235453.png">
+    <img src="https://i.postimg.cc/nVvcR9Vv/Untitled1253-20241031235453.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Rushed vampire farcille for halloween</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/5tqnq4zV/9d6849b231eda411fb54d59a933bdf6e.png">
+    <img src="https://i.postimg.cc/5tqnq4zV/9d6849b231eda411fb54d59a933bdf6e.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">sketch of Elise Liedl from Little Goody Two Shoes</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/rw4hsCFz/6096035316dec8e07d60733b91e0a260.png">
+    <img src="https://i.postimg.cc/rw4hsCFz/6096035316dec8e07d60733b91e0a260.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">sketches of Rozenmarine, Lebkuchen and Freya from Little Goody Two Shoes</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/nLt3DjC2/570eb0216e1d5d0f49cdf7158a474b74.png">
+    <img src="https://i.postimg.cc/nLt3DjC2/570eb0216e1d5d0f49cdf7158a474b74.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">anatomy practice featuring falin</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/HsRZTPmf/81bfb28379e77869af0541ca26710eea.png">
+    <img src="https://i.postimg.cc/HsRZTPmf/81bfb28379e77869af0541ca26710eea.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">sona of Cyn murder drones for the fictive of them in our system</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/nrwdj3D9/7a7470dff7a88cc74d7590c241a05df4.png">
+    <img src="https://i.postimg.cc/nrwdj3D9/7a7470dff7a88cc74d7590c241a05df4.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">thumbnail for my cover of "Butcher Vanity" by Flavor Foley, featuring Kasane Teto</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/Pf6VR5Rf/22858d520c7a958899ce733567dac330.png">
+    <img src="https://i.postimg.cc/Pf6VR5Rf/22858d520c7a958899ce733567dac330.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">thumbnail for my cover of "Rawdog" by Flavor Foley, featuring Mai SynthV</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/SNJ1FbB6/94737a22a4bafda4dd77318ad2548a99.png">
+    <img src="https://i.postimg.cc/SNJ1FbB6/94737a22a4bafda4dd77318ad2548a99.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">redraw of <a href="https://64.media.tumblr.com/3e59b1ae33994d8125be32ad5b81dfe5/2a0f0107dbf51526-c0/s1280x1920/6d2213c1bbb5a7bbbbcd93ac82707f8f562ba408.jpg">this</a> featuring Nuzi (N x Uzi)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/nrLRhyCt/f071ad65bee0280c0350f3a494db6a19.png">
+    <img src="https://i.postimg.cc/nrLRhyCt/f071ad65bee0280c0350f3a494db6a19.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Anya from mouthwashing</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/roblox%20avatar%20doodle.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/roblox%20avatar%20doodle.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">shitty sketch of one of my roblox avatars</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/nebula%20pfp%20sketch.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/nebula%20pfp%20sketch.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">shitty nebula sketch</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/mai%20booty%20shorts%20thumbnail%202.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/mai%20booty%20shorts%20thumbnail%202.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">thumbnail for my cover of "booty shorts" by lappy, featuring Mai SynthV</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/yNqfHGQ6/Untitled1284-20241226013141.png">
+    <img src="https://i.postimg.cc/yNqfHGQ6/Untitled1284-20241226013141.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">My friend's horsesona Jericho (commissioned by them!)</div> 
+</div>
+
+</div>
+   
+   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('chimerathing', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#00b9fe',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+   
+<style>
+    body {
+    background-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/gdfghfdjukihgiduofg.png);
+    background-size: 10em;
+}
+
+.text {
+				width: 35%;
+			}
+
+h1 {text-align: center; font-family: marioluigi;}
+p {text-align: center;}
+div {text-align: center;}
+
+
+     @font-face {
+                font-family: rosela;
+                src: url('https://dl.dropbox.com/scl/fi/pwd7ysnhki4vftc9f9rbz/MS-Gothic.ttf?rlkey=12bg8zkwmonggdxqfdh90c8bk&st=o96zgisg&');
+            }
+            
+             @font-face {
+                font-family: marioluigi;
+                src: url('https://file.garden/Z5ztm_B6wj_8HQnK/MarioLuigi2.ttf');
+                font-weight: bold;
+            }
+
+p, r {
+font-family: rosela;
+font-size: 17px;
+font-style: normal;
+color: white;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+}
+strong {color:white !important;
+    padding: 1px !important;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    font-family:'marioluigi' !important;
+    }
+code {color:white;
+    padding: 1px;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    background: none !important; 
+    font-family:'rosela';
+    font-size:15px;
+    }
+
+a {
+font-weight: bold;
+color: white;
+text-shadow: 1px 1px 5px black;
+display: inline-block; 
+transition: .2s ease; 
+      
+   text-decoration: none;
+   font-family: rosela;
+}
+
+a:hover{
+  text-decoration: underline wavy;
+  text-shadow: 1px 1px 5px black;
+}
+
+.bbbutton{
+  
+
+color: white;
+text-shadow: 1px 1px 5px black;
+display: inline-block; 
+transition: .2s ease; 
+background: linear-gradient(black , #680811);
+      box-shadow: -1px -1.4px 1px inset #0f050c, 2px 3px 1.5px inset #8d2a31,
+    0px 0px 2px #0f050c;
+    0px 0px 2px #0f050c;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+ 
+}
+
+.bbbutton:hover{
+  text-decoration: underline wavy;
+  box-shadow: 1px 1px 10px #8d2a31;
+}
+</style>
+  </body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+    <head>
+    <html lang="en">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY SYSTEM!</title>
+   <script type="text/javascript">
+      title = "MY SYSTEM! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style type="text/css">
+    
+    
+    
+    
+    body{        
+      background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_39579d558c9b3173f4216b2c9e41a699_7c931914_2048.jpg');
+    background-size: cover;
+  background-repeat: repeat-x;
+  background-position: 0 0, 0 0, 29px 51px, 29px 51px, 0 0, 29px 51px;
+  background-attachment:fixed;
+        font-family:DOS, basiic;
+        font-size:18px;
+    }    
+    
+
+    @font-face {
+  font-family: "DOS"; 
+  src: url('https://files.catbox.moe/piggu8.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'basiic';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-400-normal.ttf) format('truetype');
+}
+   
+    
+    a{
+        color:#7d019d;
+        text-shadow: 1px 1px 7px #7d019d;
+    }
+    
+    
+.alterbox{
+    width: 210px;
+    height: 100px;
+    
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    font-size:12px;
+}
+
+hr {
+  border: 2px dotted #7d019d;
+}
+
+.alterbox img{
+    max-height: 100%;
+    float: left;
+    clear: left;
+}
+
+h1 {
+  
+  font-size: 19pt; 
+                font-weight: bold; 
+                color: white;
+                text-align: center;
+                margin-top:0;
+                text-shadow: 2px 2px 6px white;
+                
+                  background-image: linear-gradient(to bottom, 
+    #fbc78a 0%, 
+    #ef9b9f 55%,
+   #eb7182 55%, 
+    #f391a5 100%
+);
+}
+    
+   
+    
+    #container{
+        width:700px;
+        margin:0px;
+        
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px;
+    }   
+
+    
+   
+    
+    #header{
+        height:175px;
+        border:1px solid blue;
+        margin:0 0 10px 0;
+        
+    }
+    
+ 
+    
+    #header_img{
+       
+        width:100%;
+        height:100%;
+      
+        object-fit: fill;
+        background-position: 50% 30%; 
+        background-image:url('https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_39579d558c9b3173f4216b2c9e41a699_7c931914_2048.jpg');
+        background-image-size: 50px !important;
+    }    
+    
+    
+    
+    
+    #links{
+        color:white;
+        text-shadow: 1px 1px 7px white;
+        border: 5px ridge #eb7182;
+        background:white;
+        padding:10px;
+        margin:0 0 10px 0;
+         border-radius: 5px;
+                    background: linear-gradient( rgba(245, 155, 125, 0.62),rgba(250, 157, 228, 0.62));
+     box-shadow: 1px 1px 16px #a24f86;
+     backdrop-filter: blur(10px);
+background-image-size:cover;
+text-align:center;
+    }
+
+
+   
+    
+    #content{
+        color:white;
+        padding: 0px;
+        margin: 0px;
+        text-shadow: 1px 1px 7px white;
+        border: 5px ridge #eb7182;
+        background:white;
+        
+         border-radius: 5px;
+                    background: linear-gradient( rgba(245, 155, 125, 0.62),rgba(250, 157, 228, 0.62));
+     box-shadow: 1px 1px 16px #a24f86;
+     backdrop-filter: blur(10px);
+background-image-size:cover;
+      
+    }
+    
+
+   
+    
+    #footer{
+        color:white;
+        text-shadow: 1px 1px 7px white;
+        border: 5px ridge #eb7182;
+        background:white;
+        padding:10px;
+        margin:0 0 10px 0;
+         border-radius: 5px;
+                    background: linear-gradient( rgba(245, 155, 125, 0.62),rgba(250, 157, 228, 0.62));
+     box-shadow: 1px 1px 16px #a24f86;
+     backdrop-filter: blur(10px);
+background-image-size:cover;
+        text-align:center;
+        
+    }
+    
+  @media only screen and (max-width: 800px) {
+    #container {
+      width:100%;
+    }
+    
+    #content {
+       width:100%;
+    }
+    
+    #links {
+      
+    width:100%;
+    }
+    
+    #footer {
+       width:100%;
+    }
+    
+    #webdeck {
+      display:none;
+    }
+    
+    .webdeck {
+      display:none;
+    }
+  }
+    
+    {CustomCss}
+    </style>
+    
+    
+    <style>
+.pkfronters--member-list--pronouns,.pkfronters--member-card--pronouns{word-break:break-word}.pkfronters--member-card--pronouns{text-align:center;}.pkfronters--member-card--pronouns .pkfronters--member-list--pronouns::before,.pkfronters--member-card--pronouns::before{content:" ("}.pkfronters--member-list--pronouns::after,.pkfronters--member-card--pronouns::after{content:") "}.pkfronters--member-card-container{display:flex;flex-flow:row wrap;gap:1rem}.pkfronters--member-card{display:flex;flex-flow:column wrap;align-items:center;width:100%;padding:1rem;border-radius:4px;}.pkfronters--member-card--avatar{min-width:6rem;width:6rem;min-height:6rem;height:6rem;border-radius:4px;border:none;}.pkfronters--member-card--name{text-align:center}/*# sourceMappingURL=pkfronters.css.map */
+</style>
+    </head>
+    <body>
+        <div id="container">
+            
+            
+           
+            <div id="links">
+                <a href="/home">Homepage</a> | <a href="/system/diary">System Diary</a> | <a href="">Pluralspace Profile</a> | <a href="/system/headspace">Headspace</a>
+            </div> 
+          
+            <div id="content">
+               
+                            <h1>THE APOSTATES OF HATE</h1>
+                               <p> <img src="https://64.media.tumblr.com/c43fffdb0b025ec1a39754231bf512db/ad6d6b2fdc3e8197-48/s1280x1920/59d33d80550e5bb7a7027c9661137ace7c7422d6.gifv" style="width:150px;float:left;">
+                           
+                                We're the Apostates of Hate system! (referencing Gabriel from ULTRAKILL because he's one of the host's sources, hence that also being his name). I don't know if we have P-DID or OSDD-1b I honestly can't be fucking assed to figure it out anymore but we have a dissociative disorder of some kind. We have a lot of alters (like way too fucking many where did all of you come from) but the ones who front the most frequently or at least play a significant role in us being able to function are listed here. Not everyone is gonna be listed for privacy reasons of course, just whoever feels comfortable with making themselves known.</p>
+                                
+                                <p> We're collectively transmasc and nonbinary/multigendered, and if you're referring to us as a collective, or no particular alter is shown to be fronting, please call us Gabriel and use he/him pronouns! Otherwise, please refer to us by the current main fronter's name. This site is primarily run by the host Gabriel, but we thought it'd be fun to let our headmates have their own personal pages to mess around with HTML/CSS on. We're very introject heavy (mainly fictives), and we prefer being treated as parts of a whole rather than as entirely seperate beings from eachother. We are multiple people, but we function mostly as a unit.</p>
+                                
+                                <p>We do not believe that endogenics or non-traumagenic/non-disordered systems in general are real thing and would prefer if people who believe themselves to be one of those did not engage with us, as we find the concept to be extremely ableist and generally just don't feel comfortable or safe around people in that community. We don't wanna get involved in discourse, just be respectful of our boundaries. Thank you!</p>
+                                
+                                <p>If you have any questions regarding our disorder, don't be afraid to ask! While we may not know everything and definitely cannot speak for ALL systems, we know a good amount of stuff about CDDs and are always open to educating others and talking about our personal experiences.</p>
+
+                                
+
+                                	
+                        
+              
+            </div>
+            <br>
+<div id="content">
+<h1>SOME OF THE GUYS IN THE BRAIN</h1>
+<center>
+                              <div class="alterbox">
+                <img src="https://file.garden/Z5ztm_B6wj_8HQnK/c976da12cddeae34c76c9504370b40005d911ce6532488777f2df29b0eeed66f_webp(2)(3)(2)(1)(5)(2)(12).png">
+                    <a href="/aboutme">Gabriel</a><br>
+                    he/it/hym/thing
+                    <hr>
+                    host, 17<br>
+                    anger holder<br>
+                    multifictive
+                </div>
+                 <div class="alterbox">
+                <img src="https://file.garden/Z5ztm_B6wj_8HQnK/c976da12cddeae34c76c9504370b40005d911ce6532488777f2df29b0eeed66f_webp(2)(3)(2)(1)(5)(2)(13).png">
+                    <a href="/system/ozzy">Ozzy</a><br>
+                   they/xe/it/he
+                    <hr>
+                    co-host, 19<br>
+                    depression holder<br>
+                    multifictive
+                   
+                </div>
+                  <div class="alterbox">
+                <img src="https://file.garden/Z5ztm_B6wj_8HQnK/c976da12cddeae34c76c9504370b40005d911ce6532488777f2df29b0eeed66f_webp(2)(3)(2)(1)(5)(2)(14).png">
+                    <a href="/system/luka">Luka</a><br>
+                   he/xe/it
+                    <hr>
+                    co-host, 20<br>
+                    sexual alter<br>
+                    multifictive
+                   
+                </div>
+                <div class="alterbox">
+                <img src="https://file.garden/Z5ztm_B6wj_8HQnK/c976da12cddeae34c76c9504370b40005d911ce6532488777f2df29b0eeed66f_webp(2)(3)(2)(1)(5)(2)(1)(1).png">
+                    <a href="/system/nettie">Nettie</a><br>
+                    it/pup/glow
+                    <hr>
+                    mood booster<br>
+                    ageless<br>
+                    fictive
+                </div>
+                 <div class="alterbox">
+                <img src="https://file.garden/Z5ztm_B6wj_8HQnK/c976da12cddeae34c76c9504370b40005d911ce6532488777f2df29b0eeed66f_webp(2)(3)(2)(1)(5)(2)(15).png">
+                    <a href="/system/sullivan">Sullivan</a><br>
+                   he/him
+                    <hr>
+                    protector<br>
+                    ageless adult<br>
+                    fuzztive
+                   
+                </div>
+                  <div class="alterbox">
+                <img src="https://file.garden/Z5ztm_B6wj_8HQnK/c976da12cddeae34c76c9504370b40005d911ce6532488777f2df29b0eeed66f_webp(2)(3)(2)(1)(5)(2)(16).png">
+                    <a href="/system/thistle">Thistle</a><br>
+                   he/hym/magic
+                    <hr>
+                    gatekeeper<br>
+                    ageless<br>
+                    fictive
+                   
+                </div>
+                </center>
+</div>
+                   <br>
+                   <center>
+<div id="content" style="width:400px;">
+<h1>CURRENTLY FRONTING</h1>
+<center style="margin-bottom:15px;">
+<div data-pkfronters-system="wcrym" data-pkfronters-type="card"></div>
+<script src="https://irys.cc/fronters/pkfronters.js" async></script>
+</center>
+</div>
+           </center>     
+                <br>
+            <div id="footer">
+               <a href="https://copyheart.org/">♡</a> 2024 - 2026 by Gabriel. Copying is an act of love. Love is not subject to law.
+            </div>            
+        </div>
+    </body>
+    </html>  

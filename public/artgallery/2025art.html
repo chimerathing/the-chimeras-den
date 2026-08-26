@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 ART!</title>
+    <script type="text/javascript">
+      title = "2025 ART! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ 
+ 
+ 
+ <style>
+div.gallery {
+  margin: 3px;
+  float: left;
+  width: 195px;
+  padding: 10px;
+}
+
+div.gallery img:hover {
+  
+}
+
+div.gallery img {
+  
+  vertical-align: middle;
+  height: calc(100% - 1px);
+				width: calc(100% - 1px);
+				 border: 10px solid black !important;
+				 box-shadow: 1px 1px 5px black;
+    border-radius: 4px !important;
+    border-image: url("https://64.media.tumblr.com/2f2e9cd4ffe0ebf10bf4ededc4f54f1e/1dd0d242a395e1ed-01/s75x75_c1/fbea4638965e2a533ed88090524c9af25c65b1bb.pnj") 25 fill round !important; 
+    border-image-slice: 35% !important;
+        border-image-repeat: round !important;
+        background: linear-gradient(black , #680811);
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-family: rosela;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+@media only screen and (max-width: 800px) {
+  div.gallery img {
+    width: 320px;
+  }
+  
+  div.desc {
+     width: 320px;
+     font-size: 1.3em;
+  }
+}
+
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+var sparkles=50;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+*(c)2005-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y+1)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    starx[i]+=(i%5-2)/5;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    tinyx[i]+=(i%5-2)/5;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  return (div);
+}
+
+function newColour() {
+  var c=new Array();
+  c[0]=255;
+  c[1]=Math.floor(Math.random()*256);
+  c[2]=Math.floor(Math.random()*(256-c[1]/2));
+  c.sort(function(){return (0.5 - Math.random());});
+  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+}
+// ]]>
+</script>
+  </head>
+  <body>
+  
+<style type="text/css">* {cursor: url(https://i.postimg.cc/9fC1g1Dv/ani879-ezgif-com-crop.gif), auto !important;}</style>  
+  
+<h1><strong>2025</strong></h1>
+  
+  <center>
+  
+   <p><div class="bbbutton"><a href="https://chimerathing.neocities.org/artgallery" style="">Go Back</a></div></p></center>
+   
+   </br>
+   
+   <p>Click on the images to see them at their full size!</p>
+   
+   <p>All art is ordered from oldest to newest.</p>
+  
+  </br>
+  
+  <div class="row">
+  
+  <div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/5yvydXbH/IMG-9581-jpg.png">
+    <img src="https://i.postimg.cc/5yvydXbH/IMG-9581-jpg.png" alt="" width="600" height="400" >
+  </a>
+  <div class="desc">doodle of Lightbrush (Lightbulb x Paintbrush) from Inanimate Insanity</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://i.postimg.cc/nzNrP4bb/IMG-9701-jpg.png">
+    <img src="https://i.postimg.cc/nzNrP4bb/IMG-9701-jpg.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Taco from Inanimate Insanity + a humanized design of her</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_9772_jpg.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_9772_jpg.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Microphone from Inanimate Insanity + a humanized design of her</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1313_20250130214107.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1313_20250130214107.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">proper reference for humanized Taco</div>
+</div>
+
+  <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/95069624_yY9qmKyAWuszFNv.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/95069624_yY9qmKyAWuszFNv.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">my object oc Power Drill</div>
+</div>
+   
+   <div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1227_20250202005432.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1227_20250202005432.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">thumbnail for my cover of "Queen of Venus" by Flavor Foley, featuring Kasane Teto</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_c0eb07d78a2d22ba81c3cdf1825db43d_8ee8e57c_1280.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_c0eb07d78a2d22ba81c3cdf1825db43d_8ee8e57c_1280.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">s1 taco doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1322_20250211125436_png.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1322_20250211125436_png.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">proper reference for humanized Microphone</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1323_20250214235504_png.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1323_20250214235504_png.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">human tacomic as utenanthy (watch revolutionary girl utena it's really good)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1328_20250224212048.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1328_20250224212048.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">lightbrush but kity and ouppy</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0802.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0802.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">human lightbulb doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0812.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0812.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">another human lightbulb doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0813.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0813.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">human paintbrush doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0815.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_0815.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">human lightbrush kiss!!!!!</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1337_20250320131752.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1337_20250320131752.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">tacomic as the Pinky & Pepper Forever cover</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1339_20250321170436.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1339_20250321170436.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">frutiger metro mic</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_2728.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/IMG_2728.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">knifecase (knife x suitcase) doodles</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1355-20250508123059.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1355-20250508123059.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">character art for my cover of "Splitter Girl" by Weevildoing, featuring Sukone Tei</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1364-20250527205710.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1364-20250527205710.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">who's the brightest star you see? (it's miku!)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1227-20250603014310.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1227-20250603014310.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">thumbnail for my cover of "magnet" by minato, featuring Kasane Teto. and Kasane Teto (tetocest yuri)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1351_20250617170000.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1351_20250617170000.png" alt="" width="600" height="400" >
+  </a>
+  <div class="desc">proper reference for humanized Lightbulb</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1367_20250624211820_png.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1367_20250624211820_png.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">proper reference for humanized Paintbrush</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1368_20250626032752_png.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1368_20250626032752_png.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">artfight attack #1 (dragov's oc Flory)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1369_20250701173804.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1369_20250701173804.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">artfight attack #2 (clownirc's oc Red Velvet Milkshake)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1371_20250701235514.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1371_20250701235514.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">artfight attack #3 (rifleowners's oc Bloodpop)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_3806.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_3806.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">bow doodles</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_3828.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_3828.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">lightbrush doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_3879.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_3879.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">suitcase doodles</div> 
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1374-20250712230059.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1374-20250712230059.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">character art for my cover of "Taxidermy Girl" by Weevildoing, featuring Yokune Ruko</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/bafkreihmlzbxrthpuik74sargvbipt4cq2yqbdoaaewyzvdoonimymswzm.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/bafkreihmlzbxrthpuik74sargvbipt4cq2yqbdoaaewyzvdoonimymswzm.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">teddy bear doodles</div> 
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1376_20250717020832_png.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1376_20250717020832_png.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc"><a href="https://64.media.tumblr.com/4c7b476b9d1361db31555f420a35242e/3d4f3f7eefe4fa03-bf/s1280x1920/744d7bdc49d36ab8752e910a93852bf31023ad8f.jpg">"draw this as your ship"</a> prompt featuring lightbrush</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1376_20250717020847_png.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1376_20250717020847_png.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">same thing different colors</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4105.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4105.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">doodle of a friend's sona</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4129.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4129.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">doodle of a potential fursona redesign</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_cf2bb25658cc05f61d0e5e4f43d59cb0_4feb2fea_2048.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_cf2bb25658cc05f61d0e5e4f43d59cb0_4feb2fea_2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">salt gijinka</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/bafkreiennvhbxvkodzo3g4apwnxxn5vt3usb6lheefe4exvexn2y5chneq.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/bafkreiennvhbxvkodzo3g4apwnxxn5vt3usb6lheefe4exvexn2y5chneq.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">bot gijinka</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_fec69f36b3a96cc535c0723bb2ec9889_b999dc61_2048.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_fec69f36b3a96cc535c0723bb2ec9889_b999dc61_2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">poppy gijinka</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_aefd91389eff8212f99f734f2de3ea55_3c0db95d_2048.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_aefd91389eff8212f99f734f2de3ea55_3c0db95d_2048.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">random teddy doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/bafkreibnpaycr6gbqiz6e5it35nnubwm423pm6nbor7nfiricouvy2g2ee.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/bafkreibnpaycr6gbqiz6e5it35nnubwm423pm6nbor7nfiricouvy2g2ee.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">ugly ass paintbrush doodles</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1382_20250815004143.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1382_20250815004143.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">ily anger issues monarch</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1385_20250826230118.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1385_20250826230118.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">sketch of my friend and their partner's V and Uzi sonas (commissioned by them)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1387_20250829233725.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1387_20250829233725.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">art for my cover of "Haunting, Haunted, Haunts" by Against Me!, featuring Kasane Teto (THIS IS BASED OFF OF THE SONG'S ALBUM ART DON'T FLAME ME)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1386-20250901131950.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1386-20250901131950.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">power drill x lightbulb. powerbulb. lightdrill. IM FUICKING ISNJNAE</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1390_20250902152051.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1390_20250902152051.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">objectsona for my frienbd</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1392_20250917145501.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1392_20250917145501.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">lightbulb doodles</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4917.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4917.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">s4 bot doodles ft. poppy</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4916.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4916.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">bow gijinka</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4963.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_4963.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">paintbrush the birthday they cuz it's my birthday</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1393_20250925152622.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1393_20250925152622.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">micbow wowowow i love rarepairs</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1394_20250926150118.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1394_20250926150118.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">loveshot from die of death</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5126.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5126.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">cammy doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5127.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5127.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">cammy swooning over mephone4 (what is wrong with him)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5138.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5138.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">mic in a scuffed attempt at copying tim burton's style (for an art class project)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1395_20251001125617.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1395_20251001125617.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">test tube gijinka</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1396_20251001125643.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1396_20251001125643.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">testmic</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1388-20251004174320.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1388-20251004174320.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">nebula (my fursona) icon ft. his potential redesign</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5210.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5210.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">adachi rei and nurse robot type T</div> 
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1401_20251016134624.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1401_20251016134624.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">art class project that was literally supposed to just be leaves but i turned it into lightbrush</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1406_20251020143619.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1406_20251020143619.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">suitcase ooiggughgjh..</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1407_20251020150053.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1407_20251020150053.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">suitcase but POST-T WOOAUUGOOAUGUGH trans man suitcase is real ok? ok</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1408_20251021150001.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1408_20251021150001.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">stupid ligihtbrushes </div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1409_20251022132016.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1409_20251022132016.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">megaphone!!! possible mascot/announcer character for a osc kart racer oomf is making </div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1411_20251022143248.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1411_20251022143248.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">megaphone gijinka </div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1415-20251024185014.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1415-20251024185014.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">The Amazing Object Race logo </div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Screenshot%202025-10-24%20at%2017-17-22%20THE%20AMAZING%20OBJECT%20RACE!(1).png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Screenshot%202025-10-24%20at%2017-17-22%20THE%20AMAZING%20OBJECT%20RACE!(1).png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">The Amazing Object Race banner ft. megaphone </div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1414-20251024182236.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/Untitled1414-20251024182236.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">same thing but transparent w/ just megaphone </div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171354.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171354.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">megaphone icon (for TAOR)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171311.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171311.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">marshmallow icon (for TAOR)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171232.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251025171232.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">firey icon (for TAOR)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5451.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5451.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">megaphone doodle</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5452.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5452.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">pin BFDI gijinka</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_7469cd236af4d8905f9acacdb6507008_62c0ec25_2048_jpg.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/tumblr_7469cd236af4d8905f9acacdb6507008_62c0ec25_2048_jpg.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">lightrbrush FLYING BUDDIES!!!! HAPPY WEEN</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5605.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5605.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">Love Of The S*n doodles</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5606.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5606.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">cat mic ft. testmic and (sorta) tacomic</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1429_20251106150048.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1429_20251106150048.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">megaphone uhhhhhhhhh dear god she's hot</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251117205851.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251117205851.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">paintbrush icon (for TAOR)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_28504fa3f0edb71717962c5bc06f50cd_938b9356_2048_jpg.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/tumblr_28504fa3f0edb71717962c5bc06f50cd_938b9356_2048_jpg.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">objectsona for another oomf</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5824.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5824.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">power drill gijinka</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5854.jpg">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/IMG_5854.jpg" alt="" width="600" height="400">
+  </a>
+  <div class="desc">power drill gijinka #2</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1370_20251129144320.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1370_20251129144320.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">proper test tube gijinka ref</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251129182351.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1417_20251129182351.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">lightbulb icon (for TAOR)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1436-20251129190330_webp.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/TAOR/Untitled1436-20251129190330_webp.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">a dizzy megaphone for the TAOR website's 404 page</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1365_20251130002555.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1365_20251130002555.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">paintbrush as the album art for "Cadmium Colors" by Jamie Paige (THIS SONG IS SO THEM CODED PLEASE LISTEN)</div> 
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1437-20251203144942.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1437-20251203144942.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc"> megaphone</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Untitled1415-20251217115943.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/blinkies/Untitled1415-20251217115943.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc"> The Amazing Object Quiz logo (special event thingy for TAOR)</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1426_20251224003052.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1426_20251224003052.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc"> POWER DRILL GIJINKA!!!! FINALLY</div> 
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1445-20251227215756.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1445-20251227215756.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc"> power drill chibi for the landing page</div> 
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1445-20251227223551.png">
+    <img src="https://file.garden/Z5ztm_B6wj_8HQnK/art/Untitled1445-20251227223551.png" alt="" width="600" height="400">
+  </a>
+  <div class="desc">teto synthv chibi for the landing page</div> 
+</div>
+
+
+</div>
+
+   
+   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('chimerathing', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#00b9fe',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+   
+<style>
+    body {
+    background-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/gdfghfdjukihgiduofg.png);
+    background-size: 10em;
+}
+
+.text {
+				width: 35%;
+			}
+
+h1 {text-align: center; font-family: marioluigi;}
+p {text-align: center;}
+div {text-align: center;}
+
+
+     @font-face {
+                font-family: rosela;
+                src: url('https://dl.dropbox.com/scl/fi/pwd7ysnhki4vftc9f9rbz/MS-Gothic.ttf?rlkey=12bg8zkwmonggdxqfdh90c8bk&st=o96zgisg&');
+            }
+            
+             @font-face {
+                font-family: marioluigi;
+                src: url('https://file.garden/Z5ztm_B6wj_8HQnK/MarioLuigi2.ttf');
+                font-weight: bold;
+            }
+
+p, r {
+font-family: rosela;
+font-size: 17px;
+font-style: normal;
+color: white;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+}
+strong {color:white !important;
+    padding: 1px !important;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    font-family:'marioluigi' !important;
+    }
+code {color:white;
+    padding: 1px;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    background: none !important; 
+    font-family:'rosela';
+    font-size:15px;
+    }
+
+a {
+font-weight: bold;
+color: white;
+text-shadow: 1px 1px 5px black;
+display: inline-block; 
+transition: .2s ease; 
+      
+   text-decoration: none;
+   font-family: rosela;
+}
+
+a:hover{
+  text-decoration: underline wavy;
+  text-shadow: 1px 1px 5px black;
+}
+
+.bbbutton{
+  
+
+color: white;
+text-shadow: 1px 1px 5px black;
+display: inline-block; 
+transition: .2s ease; 
+background: linear-gradient(black , #680811);
+      box-shadow: -1px -1.4px 1px inset #0f050c, 2px 3px 1.5px inset #8d2a31,
+    0px 0px 2px #0f050c;
+    0px 0px 2px #0f050c;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+ 
+}
+
+.bbbutton:hover{
+  text-decoration: underline wavy;
+  box-shadow: 1px 1px 10px #8d2a31;
+}
+</style>
+  </body>
+</html>
