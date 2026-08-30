@@ -29,14 +29,10 @@
 
   <style>
       
-    body {
+      body {
   margin: 0;
   font-family: 'Rosela';
-  background: url("https://64.media.tumblr.com/552e6a74ad7555d4078f3d257f169132/cbd9b230f49bd54d-09/s75x75_c1/5ee83ec53b7a7f89dca67cb644a574c83f1848ec.pnj");
-  background-color: black;
-  background-size: 5em;
-  background-repeat: repeat;
-  color: #333;
+ 
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -44,11 +40,32 @@
   padding-top: 20px;
   box-sizing: border-box;
   overflow-x: hidden;
-}
+              color:white;
+               background-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/9318236-1975629417(1).png");
+  background-size: cover;
+  background-attachment:fixed;
+  background-blend-mode: multiply;
+background-color:  #b10000;
+ cursor:url('https://file.garden/Z5ztm_B6wj_8HQnK/cursor/Normal%20Select.cur'), auto;
+            }
+    
+    a {
+    cursor:url('https://file.garden/Z5ztm_B6wj_8HQnK/cursor/Link%20Select.cur'), auto;
+   }
 
 
-
- h1 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
+ h1 {margin:-20px;margin-bottom:15px;
+                font-weight: bold; 
+                color: white;
+                text-align: center;
+                margin-top:0;
+                text-shadow: 2px 2px 6px white;
+                font-family:marioluigi;
+                  background-image: linear-gradient(to bottom, 
+    #f3b189 0%, 
+    #d43500 55%,
+   #b10000 55%, 
+    #ca3000 100%);}
 
    h2 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
    h3 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
@@ -71,16 +88,17 @@
 
 
     .main-container {
-      width: 500px;
+      width: 900px;
      
-      border: 5px double #680811;
-        background-image: linear-gradient(#000102 ,  #060109);
-     box-shadow: 1px 1px 10px #680811;
-      border-radius: 10px;
+      border: 5px ridge #b10000;
+        background-color: black;
+     box-shadow: 1px 1px 10px #b10000;
+      border-radius: 5px;
       
       display: flex;
       flex-direction: column;
       padding: 20px;
+      padding-top:0px;
     }
 
     .header {
@@ -103,14 +121,13 @@
       display: block;
       text-align: center;
       font-size: 1.0em;
-      ext-shadow: 3px 3px 3px #030000;
-                background: linear-gradient(#8d2a31 , #680811);
-     color: ffdec6;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 5px transparent;
-color: #ffdec6;
-font-weight: bold;
-text-decoration: underline wavy #727ccf; 
+      text-shadow: 3px 3px 3px #030000;
+                background-image: linear-gradient(0deg, #b10000 55%, #ca3000 21%);
+     -webkit-background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+	color: black;
+	font-weight: bolder;
+    text-decoration: underline wavy #830811;
 transition: letter-spacing 1s;
       margin-bottom: 20px;
     }
@@ -118,7 +135,7 @@ transition: letter-spacing 1s;
     .home-link:hover {
       color:white;
       letter-spacing: 1px;
-      text-decoration:none;
+      ext-decoration: underline wavy #830811;
     }
 
     .content-container {
@@ -135,9 +152,9 @@ transition: letter-spacing 1s;
 
  .shrine-item {
   position: relative;
-  height: 190px;
-  border: 5px double #680811;
-  box-shadow: 1px 1px 10px #680811;
+  height: 300px;
+  border: 5px double #b10000;
+  box-shadow: 1px 1px 10px #b10000;
   border-radius: 5px;
   overflow: hidden;
   background-size: 100% 100%;
@@ -246,6 +263,7 @@ transition: letter-spacing 1s;
     width: 306px;
     height: 646px;
 }
+
 
 
 </style>
