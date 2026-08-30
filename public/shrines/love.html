@@ -35,7 +35,7 @@
 
 
 
-<div class="window" id="win3" style="width:580px; height:400px;overflow:hidden;">
+<div class="window" id="win3">
   <div class="title-bar">
     <div class="title-bar-text">INVALID / HAZEL ♡ | 1.30.2026</div>
     <div class="title-bar-controls">
@@ -53,7 +53,7 @@
   </div>
 </div>
 
-<div class="window" id="win33" style="width:580px; height:400px;overflow:hidden;">
+<div class="window" id="win33">
   <div class="title-bar">
     <div class="title-bar-text">ALLIE ♡ | 6.17.2026</div>
     <div class="title-bar-controls">
@@ -72,7 +72,7 @@
 </div>
 
 
-<div class="window" id="win4" style="width: 335px; height:403px;overflow:auto;">
+<div class="window" id="win4">
   <div class="title-bar">
     <div class="title-bar-text">PICTURES OF US!!!</div>
     <div class="title-bar-controls">
@@ -110,7 +110,7 @@
 
 
 
-<div style="width:40px; height:40px; position:absolute; bottom:0px; left:0px;">
+<div id="winamp" style="width:40px; height:40px; position:absolute; bottom:0px; left:0px;">
 	<div id="winamp-container"></div>
     <script>
 const Winamp = window.Webamp;
@@ -147,7 +147,7 @@ const webamp = new Webamp({
         },
       ],
     initialSkin: {
-        url: ""
+        url: "https://chimerathing.neocities.org/Winamp_XP_Blue.wsz"
     },
 });
 webamp.renderWhenReady(document.getElementById('winamp-container'));
@@ -219,7 +219,7 @@ webamp.renderWhenReady(document.getElementById('winamp-container'));
     left:50%;top:50%;
     transform: translateX(-50%) translateY(-50%);
     margin-top:400px;
-   
+   width: 335px; height:403px;overflow:auto;
     margin-left:400px;
     text-align: center;
     justify-content: center;
@@ -234,7 +234,7 @@ webamp.renderWhenReady(document.getElementById('winamp-container'));
     margin-top:400px;
     text-align: left;
     justify-content: center;
-    
+    width:580px; height:400px;overflow:hidden;
    margin-left:-100px;
 }
 
@@ -247,6 +247,7 @@ webamp.renderWhenReady(document.getElementById('winamp-container'));
     justify-content: center;
      margin-bottom:300px;
    margin-left:-100px;
+   width:580px; height:400px;overflow:hidden;
 }
 
 
@@ -331,8 +332,42 @@ html {
     margin-left: 1500px;
 }
 
+@media only screen and (max-width: 800px) {
+
+ 
+#win3 {
+  width:100%;
+  height:fit-content;
+  margin-left:0px;
+  margin-right:0px;
+  
+}
+
+#win33 {
+  width:100%;
+  height:fit-content;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:900px;
+}
+
+#win4{
+  display:none;
+}
+
+#winamp-container {
+  display:none;
+}
+
+#winamp {
+  display:none;
+}
+
+}
+
 </style>
 
 </body>
 </html>
+
 
