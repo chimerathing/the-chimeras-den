@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<html>
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HER CANINE TEETH IN THE SIDE OF MY NECK!</title>
+    <title>PROJECTS! </title>
    <script type="text/javascript">
-      title = "HER CANINE TEETH IN THE SIDE OF MY NECK " ;
+      title = "PROJECTS! " ;
       position = 0;
       function scrolltitle() {
         document.title =
@@ -25,35 +25,50 @@
     />
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   
+  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script> 
+
   <style>
-
-   h1 {font-family:'Rosela'; margin:.3em; text-shadow: 1px 1px 5px #ffff;}
-
-   h2 {font-family:'Rosela'; text-shadow: 1px 1px 5px #ffff;}
-   h3 {font-family:'Rosela'; text-shadow: 1px 1px 5px #ffff;}
       
-      #contain {
-        width:50vw;
-        margin-top:5vh;
-        margin-inline:auto;
-        margin-bottom:5vh;
-      }
-      
-      header {border-bottom:1px dotted;}
-      
-      main {padding:.3em;}
-      
-      @media (max-width:500px) {
-        #contain {width:95vw;}
-      }
-
-:root{--sun:#957fcf; --pale:#c8cbde; --dark:black}
-body {
-  background: #040000;
-  color: #fceaff;
+    body {
+  margin: 0;
   font-family: 'Rosela';
-  font-size:1em;
-}
+ 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+              color:white;
+               background-image: url("https://file.garden/Z5ztm_B6wj_8HQnK/9318236-1975629417(1).png");
+  background-size: cover;
+  background-attachment:fixed;
+  background-blend-mode: multiply;
+background-color:  #b10000;
+ cursor:url('https://file.garden/Z5ztm_B6wj_8HQnK/cursor/Normal%20Select.cur'), auto;
+            }
+    
+    a {
+    cursor:url('https://file.garden/Z5ztm_B6wj_8HQnK/cursor/Link%20Select.cur'), auto;
+   }
+
+
+ h1 {margin:-20px;margin-bottom:15px;
+                font-weight: bold; 
+                color: white;
+                text-align: center;
+                margin-top:0;
+                text-shadow: 2px 2px 6px white;
+                font-family:marioluigi;
+                  background-image: linear-gradient(to bottom, 
+    #f3b189 0%, 
+    #d43500 55%,
+   #b10000 55%, 
+    #ca3000 100%);}
+
+   h2 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
+   h3 {font-family:'Marioluigi'; margin:.3em; text-align: center; color: white; text-shadow: 1px 1px 5px #ffff;}
 
 @font-face {
   font-family: 'Rosela';
@@ -71,143 +86,212 @@ body {
   src: url(https://file.garden/Z5ztm_B6wj_8HQnK/MarioLuigi2.ttf) format('truetype');
 }
 
-::selection {background:var(--pale); color:var(--dark);}
 
-h5 {
-  font-size:1rem;
-  font-weight:normal;
-  margin:0;
-} 
+    .main-container {
+      width: 900px;
+     
+      border: 5px ridge #b10000;
+        background-color: black;
+     box-shadow: 1px 1px 10px #b10000;
+      border-radius: 5px;
+      
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      padding-top:0px;
+    }
 
-h1 {text-align: center;}
-h1, h2, h3, h4 {
-  font-size: 25px;
-                text-shadow: 1px 1px 5px #ffff, 1px 7px 10px #746fd2;
-                
-                font-family: marioluigi;
-                color: white;
+    .header {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #f06489;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 1.1em;
+      color: white;
+      margin-bottom: 20px;
+      font-family: 'Rosela';
+    }
+
+    .home-link {
+      display: block;
+      text-align: center;
+      font-size: 1.0em;
+      text-shadow: 3px 3px 3px #030000;
+                background-image: linear-gradient(0deg, #b10000 55%, #ca3000 21%);
+     -webkit-background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+	color: black;
+	font-weight: bolder;
+    text-decoration: underline wavy #830811;
+transition: letter-spacing 1s;
+      margin-bottom: 20px;
+    }
+
+    .home-link:hover {
+      color:white;
+      letter-spacing: 1px;
+      ext-decoration: underline wavy #830811;
+    }
+
+    .content-container {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .shrine-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+ .shrine-item {
+  position: relative;
+  height: 300px;
+  border: 5px double #b10000;
+  box-shadow: 1px 1px 10px #b10000;
+  border-radius: 5px;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s, background-color 0.3s;
+  margin: 10px;
 }
 
-.box {
-  padding:.5em;
-  margin-inline:auto;
-  position:absolute;
-  left:50%;top:50%;transform: translateX(-50%) translateY(-50%);
+    .shrine-item:hover {
+      transform: scale(1.02);
+      background-color: rgba(97, 155, 255, 0.4);
+    }
+    
+.shrine-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3em;
+  font-weight: bold;
+ color:white !important;
+    padding: 0px !important;
+    background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+    font-family:'marioluigi' !important;
+  text-align: center;
+  width:100%
 }
 
-.inside {
-  border:1px dashed; 
-  padding:.3em;
+    .shrine-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.8) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2;
+  transition: left 0.8s ease;
+}
+
+.shrine-item:hover::before {
+  left: 100%;
+}
+
+.shrine-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(194, 209, 207, 0.3);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shrine-item:hover::after {
+  opacity: 1;
 }
     
-p {/*text-indent:1em;*/ margin:3px;} 
+::-webkit-scrollbar {
+    width: 8px;
+  }
 
-a {text-shadow: 3px 3px 3px #030000;
-                background: linear-gradient(#8d2a31 , #680811);
-     color: ffdec6;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 5px transparent;
-color: #ffdec6;
-font-weight: bold;
-text-decoration: underline wavy #727ccf; 
-transition: letter-spacing 1s;}
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
 
-a:hover {color:white;
-      letter-spacing: 1px;
-      text-decoration:none;}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e4e4e4;
+    border: 1px solid #aaa;
+  }
+    
+    .image {
+        position: relative;
+        z-index: 1000;
+      }
 
-img, iframe {max-width:100%;}
-
-ul {}
-
-hr {
-  border: none;
-  border-top: 1px dashed #fceaff;
-  overflow: visible;
-  text-align: center;
-  margin:none;
+      .decorative-image {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    inset: auto;
 }
 
-button {
-  background:inherit;
-  font-family:'Rosela';
-  padding:5px;
+.lol {
+    bottom: -1122px;
+    left: 700px;
+    background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/ezgif.com-animated-gif-maker(15).gif');
+    width: 306px;
+    height: 646px;
 }
 
-textarea {
-  background:inherit;
-  font-family:'Rosela';
-  color:inherit;
-}
-
-.border {
-  color:white;
-  filter: drop-shadow(.5px .5px 0 black) drop-shadow(-.5px 1px 0 black) drop-shadow(0 -.5px 0 black) drop-shadow(1px 0 black);
-}
-
-.flex {display:flex;}
-
-#s-m-t-tooltip {
-  background:var(--dark);
-  border: 1px solid;
-  max-width: 300px;
-  text-align: center;
-  z-index: 9999;
-  margin:1em;
-  padding:.3em;
-}
-
-.banner img {
-  border-radius: 5px !important;
- 
-    background: transparent;
-     
-}
-.banner img:hover {
-   
-    background-color: transparent;
-   
-      opacity: 0.8;
-      
-}
-
-.banner {
- 
- 
-}
-
-.banner:hover {
-   
-  
-     
-      
-}
 </style>
 
-</head>
 <body>
-   <div id="contain">
-        <header>
-          <nav>
-            <a href="https://chimerathing.neocities.org/home">← return</a>
-          </nav>
-          
-          <h1>PROJECTS</h1>
-        </header>
 
-        <main>
-      
-       
-      
-<h4> MY PROJECTS </h4>
- <p>none yet :(</p>
- 
- <br>
-<h4> OTHERS' PROJECTS I'VE WORKED ON</h4>
- <p><a href="https://amazingobjectrace.neocities.org/" class="banner"><img src="https://file.garden/Z5ztm_B6wj_8HQnK/Screenshot%202025-10-24%20at%2017-17-22%20THE%20AMAZING%20OBJECT%20RACE!(1).png"  alt="THE AMAZING OBJECT RACE"></a></p>
+
+
   
-        </main>
+  
+  <div class="main-container">
+    <h1>PROJECTS</h1>
+    <div class="description">
+     <p>Projects that I've either personally created, worked on, or just minimally contributed to in some way, sorted from top to bottom in that order!</p>
+    </div>
+    
+    <a href="https://chimerathing.neocities.org/home" class="home-link" >← return</a>
+    
+    <div class="content-container">
+      <div class="shrine-grid">
+      
+         <a class="shrine-item" href="https://chimerathing.neocities.org/shrines/love" target="_blank" style="background-image: url('https://file.garden/Z5ztm_B6wj_8HQnK/Screenshot%202025-10-24%20at%2017-17-22%20THE%20AMAZING%20OBJECT%20RACE!(1).png');">
+  <div class="shrine-title">THE AMAZING OBJECT RACE <br> (an object show kart racer fangame) </div>
+      </a>
+        
       </div>
-</body>
+    </div>
+  </div>
+
+
+  </body>
 </html>
-        			
+	
