@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>DIARY!</title>
+   <script type="text/javascript">
+      title = "DIARY! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+
+
+
+
+<style>
+  
+/* these are the main colors and bg images
+   replace them with anything you want! */
+
+/* you can get hex codes from sites like this:
+   https://palettes.shecodes.io/
+   i just looked up "css color templates" to find that link! */
+
+/* this applies to all the content */
+* {
+    box-sizing: border-box;
+/* change the font here, it's set up to all use the same one */
+    font-family: dos, basiic;
+}
+/* this is for when you select text on the page */
+::selection {
+    background: var(--select-color);
+    color: var(--border-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: url('https://i.postimg.cc/PrG9TLYG/ss-5aad0977c46eae86b8383b2023e8fbd2e0b8a13c-1920x1080-2489898176.jpg');
+  background-size: cover;
+  
+  background-position:bottom;
+  background-attachment:fixed;
+    margin: 0;
+/*this is the default font size! headings and stuff are adjusted based on this number.*/
+    font-size: 15px;
+    font-weight: 500;
+/*and the default text color! it's dark grey here.*/
+    color: #1a0f0c;
+}
+/* i think having better line spacing helps text to be more readable, but you can remove it if you want */
+p {line-height: 1.5em;}
+
+h1 {
+    font-size: 1.5em;
+    color: #8e2408;
+}
+h4,
+h5,
+h6 {color: var(--border-color);}
+
+@font-face {
+  font-family: "DOS"; 
+  src: url('https://files.catbox.moe/piggu8.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'basiic';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-400-normal.ttf) format('truetype');
+}
+
+
+header {
+    background-color: var(--accent-color);
+/* you can add the image url in :root (at the top) if you want */
+    background: var(--header-bg);
+/* change the minimum height if you want it to take up more/less space */
+/* can also limit the size of the header if you don't want to fill up the top. i recommend at least 800px tho! */
+    /*max-width: 980px;*/
+/*this centers it*/
+    margin: 0 auto;
+/*i gave it some borders, you can change the colors or remove them, but having the borders there keeps it glued to the top of the page all nice, so i recommend keeping them!*/
+    border-top: 12px solid var(--bg-color2);
+    border-bottom: 12px solid var(--bg-color2);
+/*to align the header block to the bottom, uncomment the line below*/
+    /*align-content: flex-end;*/
+}
+
+/* this is your site title displayed at the top of the page */
+header > h1 {
+    
+    color: #8e2408;
+    margin: 1em auto;
+    font-size: 2em;
+/*uncomment this line if you want the header text to not take up the full length of the div*/
+    /*width: fit-content;*/
+    max-width: 600px;
+    padding: 6px 12px;
+      border: 9px  solid!important;
+    border-image: url('https://i.postimg.cc/kGWSxYTx/pussy-isbetter-5-1.png') 7 fill round !important;
+    
+  
+    
+  border-radius: 0px;
+  border-image-slice: 35%;
+        border-image-repeat: round;
+/*normal headers have a filter, so we gotta turn it off for this special heading*/
+    filter: none;
+/* you can change the text-align to center or right if you want it placed differently */
+    text-align: center;
+     
+}
+}
+
+/*this is for lists*/
+li {
+/*you can change the normal dot to anything you want :)*/
+    /*list-style-type: "ðŸ’™ ";*/
+/*i used a flower since i already drew it for another page haha*/
+    list-style-image: url("images/flower.png");
+}
+
+nav {margin: 1em;}
+
+nav > ul {
+    max-width: 960px;
+    margin: auto;
+    line-height: 3rem;
+/* this line takes away the dot in front of the list items */
+    list-style-type: none;
+/* list items have default padding but we don't need it for these */
+    padding-left: 0;
+/* and this spaces out the buttons so they're not touching */
+    justify-content: space-evenly;
+}
+nav li {
+    text-align: center;
+    list-style-image: none;
+}
+nav li > a {
+    font-weight: bolder;
+    background-color: #fff;
+    border: 4px double #272727;
+    padding: .5em 3em;
+/* this takes away the link underline */
+    text-decoration: none;
+}
+nav li > a:hover {
+    color: #f20e06;
+    background-color: #fff;
+}
+    
+a {
+    color: #649446;
+    border-radius: .3em;
+    transition: .2s ease-out;
+}
+
+a:hover {
+    color: #8e2408;
+  
+    transition: .2s ease;
+}
+
+#sidebar {
+   font-family: 'basiic';
+    background-image: url('https://i.postimg.cc/sfJ0MSTq/paper.png');
+    border: 4px double #272727 !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 0px 10px #3c3c3c !important;
+    height: fit-content;
+    width: 900px;
+    margin-top: 1em;
+    margin-right: 2em;
+    border-radius: .5em;
+}
+.small-box {
+    max-width: 240px;
+    margin: auto;
+    border: 2px solid var(--bg-color);
+/*i gave this one small text cuz i think it looks cute, but you can remove this line to make it normal*/
+    font-size: 11px;
+/*making sure the list items are spaced correctly cuz it's hard to read when they're squished together*/
+    line-height: 1.5rem;
+}
+
+#avatar {
+    margin: .5em;
+/*this line will limit the image size if you decide not to use the flower shape below*/
+    max-width: 520px;
+}
+/*flower shape generated from here: https://css-generators.com/flower-shapes/ */
+.flower {
+    width: 320px; /* adjust to control the size */
+    aspect-ratio: 1;
+    --g:/37.02% 37.02% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+    mask: 90.078% 79.895% var(--g),33.953% 97.355% var(--g),0.004% 49.372% var(--g),35.148% 2.257% var(--g),90.817% 21.121% var(--g),radial-gradient(100% 100%,#000 25.476%,#0000 calc(25.476% + 1px));
+}
+
+#bio {
+    margin: 20px;
+    padding: .2em;
+    background: #fff;
+    box-shadow: 0px 0px 10px #fff !important;
+    border-radius: 2em;
+/*made the text slightly smaller again here since periwinkle's bio was a little lengthy*/
+    font-size: small;
+}
+#bio p { margin: 1em; }
+
+#content {
+    display: flex;
+    width: 760px;
+    margin: auto;
+}
+
+main {
+    padding: 1em;
+}
+
+/*this is the top post on the blog. you can treat it like a pinned post if you want!*/
+#top {
+    background-color: var(--bg-color);
+}
+/*this bit gives it a white background*/
+#top section {
+    background-color: var(--bg-color2);
+    border-radius: .5em;
+    margin-bottom: 10px;
+    padding: .2em 1em;
+    width: fit-content;
+}
+
+/*these are the regular blog post styles!*/
+article {
+    
+    padding: 1em;
+    border: 9px  solid!important;
+    border-image: url('https://i.postimg.cc/kGWSxYTx/pussy-isbetter-5-1.png') 7 fill round !important;
+    
+    margin-bottom: 1em;
+    
+  border-radius: 0px;
+  border-image-slice: 35%;
+        border-image-repeat: round;
+}
+article img {
+/*make sure large images get resized to fit in the post*/
+    max-width: 100%;
+}
+
+/*you should always use this line if you have details/summary blocks cuz it makes it more obviously clickable*/
+details > summary {cursor:pointer;}
+
+.readmore summary {
+    font-weight: bolder;
+    color: var(--border-color);
+    list-style: none;
+}
+.readmore summary::-webkit-details-marker {
+  display: none;
+}
+.readmore[open] > summary {
+    border-bottom: 2px dashed var(--bg-color);
+    padding-bottom: .6em;
+    margin-bottom: .6em;
+}
+
+/*this is the top line for each post, with the name on the left and date/time on the right*/
+/*you can put a post title instead of a name/handle, i just set it up that way as an example haha*/
+.post-header {
+    color: var(--border-color);
+    font-weight: bolder;
+    padding: .5rem 0;
+    border-bottom: 4px double var(--outline-color);
+}
+.timestamp {
+    font-weight: normal;
+    font-size: smaller;
+    margin: .2em;
+/*this keeps it to the right edge*/
+    float: right;
+}
+
+/*these set up tumblr-style photoset grids*/
+.photosetx2,
+.photosetx3 {
+    display: grid;
+    gap: 4px;
+    align-items: center;
+}
+.photosetx2 {grid-template-columns: 1fr 1fr;}
+.photosetx3 {grid-template-columns: 1fr 1fr 1fr;}
+/*adjust this to your liking! it crops images that are too tall*/
+.cropped {
+    width: 156px;
+    height: 156px;
+    overflow: hidden;
+    object-position: 25% 25%;
+}
+/*this makes sure the image doesn't get distorted when cropped*/
+.photosetx2 img,
+.photosetx3 img {object-fit: cover;}
+
+/* a class for centering text and images */
+.center { text-align: center; }
+.img-right { float: right; }
+
+/*this stops the float image from overflowing out of its container*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*you can use the <small> tag in html, or make a class like this. up to you!*/
+.small-text {
+    font-size: 11px;
+/*i gave it a shadow cuz i think it looks nice... yayyy*/
+    text-shadow: var(--bg-color) 1px 1px;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    margin: auto;
+    padding: .5em;
+    background: var(--bg-color2);
+}
+
+
+
+#amaina{
+position:fixed;
+height: 200px;
+bottom: 100px;
+right: 10px;
+opacity: 0.9;
+animation-name: floating !important;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+}
+ @keyframes floating {
+            0% {
+                transform: translate(0, 0px);
+            }
+            50% {
+                transform: translate(0, 5px);
+            }
+            100% {
+                transform: translate(0, -0px);
+            }
+        }
+        
+        
+        #sidebar {
+ font-family: 'basiic';
+    background-image: url('https://i.postimg.cc/sfJ0MSTq/paper.png');
+    border: 4px double #272727 !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 0px 10px #3c3c3c !important;
+  margin-left: -300px;
+  padding: 2em 1em;
+
+  width: 240px;
+  
+ 
+  
+  /*the sidebar doesn't scroll with the rest of the page*/
+  position: fixed;
+  /*this stacks it on top of everything else*/
+  z-index: 100;
+  /*make sure it takes up the whole screen vertically*/
+  height: 100%;
+  /*and add a scrollbar if someone's window is too short to see all the content*/
+  overflow-y: auto;
+}
+
+#sidebar h1 {
+  margin-block: .5em;
+}
+/*link text in the sidebar should be the same color*/
+#sidebar a {
+  color: red;
+}
+/*font size for your name in the sidebar*/
+#sidebar h1 a {
+  font-size: 1.2em;
+}
+/*no underline for your name, or hovered links in sidebar*/
+#sidebar h1 a,
+#sidebar a:hover {text-decoration: none;}
+
+/*center the icon in the sidebar*/
+#icon {margin:auto;}
+#icon img {
+  /*this makes it a circle, lower the number for a rounded square*/
+ box-shadow: 0px 0px 10px #3c3c3c !important;
+  width:100%;
+}
+/*these styles are for when your icon image is being used as a link, it just makes it react on mouseover*/
+#icon a img {
+  outline: 2px solid var(--sidebar-bg);
+  /*adds animation to the outline*/
+  transition: .2s;
+}
+#icon a img:hover {
+  outline: 2px solid var(--sidebar-text);
+  outline-offset: 4px;
+}
+
+/*profile text doesnt need as much spacing as the posts do*/
+#profile p {
+  margin-block: .3em;
+  line-height: 1.5em;
+}
+/*styling the simple bio block*/
+#bio {
+  border-block: 2px dashed var(--sidebar-border-color);
+  padding-block: .5em;
+  margin-block: 1em;
+  font-size: small;
+}
+
+/*for the rounded link buttons!*/
+#sidebar nav ul {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+#sidebar nav li a {
+  /*set a width so they're the same size*/
+  min-width: 120px;
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  border-radius: 1rem;
+  transition: .2s;
+  text-decoration: none;
+  font-weight: bolder;
+    background-color: #fff;
+    border: 4px double #272727;
+    padding: .5em 3em;
+}
+#sidebar nav li a:visited {color: var(--sidebar-text);}
+#sidebar nav li a:hover {
+ color: #f20e06;
+    background-color: #fff;
+     border: 4px double red;
+  outline: 2px solid var(--sidebar-text);
+  outline-offset: 3px;
+}
+/*and add some spacing around them too*/
+#sidebar nav {
+  margin-block:1.5em;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    #content {
+        flex-wrap: wrap;
+    }
+    
+    article {
+      width: 50%;
+    }
+    
+    #sidebar {
+        margin: 0;
+        width: 100%;
+         
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 0;
+    }
+    header {min-height: 160px;}
+    header > h1 { 
+        width: fit-content;
+        padding: .3em 1em;
+    }
+    nav > ul {
+    /* this stuff makes it wrap around on mobile */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #bio {width: 50%;}
+    
+    #sidebar ul {
+        line-height: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    #sidebar li {
+        margin: .3em 1em;
+    }
+    
+    #amaina {
+      display:none;
+    }
+    
+  
+    
+    
+}
+}
+</style>
+
+</head>
+
+<body>
+ 
+
+ <header>
+        <!--you have to use special code to write <3 in html... so annoyinngggg!!-->
+        <h1>Gabriel's Diary</h1>
+    </header>
+        
+    <div id="content">
+        
+   
+        
+    <main>
+    
+    <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel | Pinned Post <span class="timestamp">October 19, 2025 | 12:22 PM </span>
+            </div>
+            
+            <h1>Welcome To My Diary</h1>
+            
+            <p><img src="https://i.postimg.cc/rmMsByj5/Christmas-2017.gif" style="width:200px;float:left;"> Aka the page where I display how fucked in the head I am publicly on the internet because I can and I have no shame. Writing about my thoughts and experiences helps me process shit a lot better so what better place to do that than on a page on my website? </p>
+            
+            <p>This page is going to contain a lot heavy and probably NSFW topics since it'll mostly be me rambling about things that have happened or are happening in my life. Either that or just anything that i'm currently thinking about in general. Trigger warnings will be added if anything extreme is mentioned but regardless, read at your own risk. This isn't a happy or relaxing page! It's the unfiltered talking space of a disturbed individual. I'm also very opinionated so beware!</p>
+
+<p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+           
+             <div style="text-align: center">
+                        <img src="https://64.media.tumblr.com/68e9a2654e2419794ca58d7c61ba350e/96cc94d94b926796-61/s100x200/31712a44f34323a9e07238b6ce7452292ac5a845.pnj" alt="stamp one" />
+                        <img src="https://i.postimg.cc/KzLm06t4/tumblr-0dce98bdd1c97393cf71a26793ec454d-f56aa5d2-100.gif" alt="stamp two" />
+                        <img
+                            src="https://64.media.tumblr.com/f677b1ccd8f78e529a16d082b75147dd/9c1027a7e2d8768e-30/s100x200/85ba57f2c23116073abe829462578f3cfc01a4cc.pnj"
+                            alt="stamp three"
+                        />
+                    </div>
+        </article>
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">May 13, 2026 | 9:26 AM</span>
+            </div>
+            
+            <h1>2077 - weevildoing</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            <p>i'm distressed about a lot of things right now mostly what's going on in the world and with our stupid ass government run by stupid ass facist pedophiles and like im pissed because i knew all of this shit was going to happen from the beginning. before trump even won the election (his ass didn't even win legitimately, he rigged the vote so that he could win no matter what and openly admitted to doing so and nobody cared) i knew damn well he was going to do all of the shit he's doing right now and nobody around me wanted to listen to me. i knew he was going to go after queer people, especially trans people, people of color, and other marginalized groups and try to ruin all of our lives. i knew he was going to fuck up everything even slightly useful or beneficial to society and make all the already existing issues in society worse and cause even more issues. i knew he was going to hurt people in any way he possibly could think of and nobody listened. they laughed in my face and told me that i was overreacting, brainwashed, and "too extreme of a leftist". they told me i was priviledged for being worried about my rights as a trans and queer person and for worrying about the safety of my trans and queer siblings, especially because i have several trans and queer friends who live in red states. they never took me seriously. they haven't taken me seriously for most of my life and even when i've been proven right multiple fucking times by now they still don't want to listen to me. they still don't care. they're never going to care. they're more concerned with themselves and their personal comfort than any of the shit happening right now that they really seem to think doesn't affect them personally, but it does. it does affect them. it affects me. their son. their brother. they think it doesn't because they'll never acknowledge or accept the fact that i'm trans, or just queer in general. they value the voices of queerphobic grifters more than the voice their own fucking queer son.</p>
+            
+            <p>conservatism is a fucking poison, a genuine disease of the mind, and it can't be cured because the people infected refuse to be cured. they refuse to listen to anyone actually in their right mind, they just belittle you, dehumanize you. they either treat you like you;re just so naive and misguided or like an angry monster who's just so cruel, close-minded, and intolerant for daring to challenge their narrow worldview. i do not need to be tolerant of the shitty belief systems of people who cannot even tolerate my mere fucking existence. i will not tolerate bigotry and fascism. i will not tolerate intolerance. love is more powerful than hate but hate only festers because someone chose to feel hate first, and the ones that chose to hate first are fascists, not the innocent people whose lives they actively choose to make a living hell, and fuck it, not even the people they actively succeed in brainwashing. hate will only be overtaken by love when the primary source of hate is eliminated. that's why everyone needs to wake the fuck up and take a stand, stop worrying about being "too woke", and stop upholding societal norms that are harming people. leftism isn't your enemy, it's your ticket to being able to fight the enemy, and that fight begins within yourself. kill the bigot and fascist in your head, and learn to stand up for the oppressed and marginalized.</p>
+            
+            <p></p>
+            
+        </article>
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">May 11, 2026 | 10:24 AM</span>
+            </div>
+            
+            <h1>ugughhhhhh</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            <p>dude it's cold as fuck outside and the gym teacher has us sitting out here doing jackshit cuz the theater kids are in the gym practicing. this sucks auughgh. have you ever been in a school so small that they didn't even have seperate rooms for the cafeteria, gym, and auditorium. me neither but these are the interesting things you get to experience when you make the switch from a public school district funded by rich white families to a small special education school that the fuckass district desperately wants to take you out of because apparently they would rather you kill yourself than have at least somewhat of a bearable highschool experience. crazy shit man! this is definitely the least miserable we've felt going to any school. this school definitely has a lot of its own issues but i would much rather be here than EVER go back to public school. that was genuinely fucking hell </p>
+            
+            <p></p>
+            
+        </article>
+        
+        <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">May 6, 2026 | 9:20 PM</span>
+            </div>
+            
+            <h1>this counselor guy pmo</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            <p>my counselor really pissed me off yesterday and i'm genuinely so tired of basically being forced to talk to him because i've been barred from being allowed to take breaks from class to have time to de-stress and enjoy some silence even though everyone else is allowed to take a break whenever the fuck they want and it's genuinely ridiculous how they don't get on anyone else's ass about "abusing that privilege" it's just me who's forced to either talk to this unhelpful dumbass who honestly shouldn't be working with neurodivergent kids at a special education school or suck it up and stay in class even though i genuinely am going insane and cannot bring myself to do work at that moment. why do you offer a way for children to take breaks from class if you're just gonna take that away from them if they don't make use of that break in a way you think is correct. oh you're feeling like shit and can't mentally handle being in class right now? yeah you can take a break but actually you need to still do all of the work WHILE you're taking that break otherwise no more breaks for you. how the fuck is that even a break then this school is genuinely so fucking stupid and makes no sense.  </p>
+            
+            <p></p>
+            
+        </article>
+        
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">May 5, 2026 | 9:08 AM</span>
+            </div>
+            
+            <h1>MY LIFE IS A CIRCUS AND IM THE BIGGEST FUCKING CLOWN</h1>
+            <h3>content warnings: abuse, grooming</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>Unfortunately, I think a lot about my abusive ex still, but I really don't feel like I "miss her" or anything similar to that like I still did a year or two ago. That gut-wrenching feeling I had of missing her, or at least missing the parts of herself she showed that seemed good in the moment before the rose-tinted glasses fell off, is completely gone. I've fought with myself a lot over the past 2 years on whether or not I still wanted her in my life in some way despite everything, and struggled a lot with trying to supress my impulsive urges to give up on all the progress I've made to go crawling back for her attention and validation, but I can say with confidence now that she's absolutely dead to me. All I truly feel towards her at this point, and have felt for a good while now, is pure anger for what she did to me and how she's gone about covering it up to paint herself as the victim in the situation. Do I hate her though? In some sense, yeah, absolutely, but I can't necessarily bring myself to really FEEL that hatred anymore. I feel as if I've drained myself of all the energy required to feel the hate I have for her. If anything, I feel like I hate the people in her life who have enabled her MORE than I actually hate my abuser herself, but I don't even necessarily care about those people. Maybe I'm just in denial of how much I hate her again because I've reached a point in my life where thinking about the situation at all genuinely feels like a self-harm ritual and I'm trying to force myself to move on again.  I don't know. I just don't like her. I want her to change for the better and fully admit her wrongdoings but that's probably never going to happen. She'll always try to make herself look like the victim somehow. I can't exactly fully prove anything that happened anyways, and even if I could her stupid ass partner and friends would never listen to me because they've already long decided that I'm an evil, aggressive, unforgiving, vindictive monster who just wanted to ruin her life for no good reason, and that <i>I</i> was somehow the fucking abuser even though there's multiple factors that point towards otherwise. Not even the involvement of an entire other person who was also a victim of hers, who literally witnessed what was happening to me in real fucking time and has also felt the long-lasting effects of the abuse can convince them. Not even the involvement of someone who LITERALLY AT SOME POINT DEFENDED HER AND BELIEVED HER LIES ABOUT ME turning out to ALSO be a fucking victim of the same shit from her can convince them that she is an abuser and groomer. Nothing. They're convinced this disgusting piece of shit who's taken advantage of multiple people and permanently traumatized them is the victim, because all she ever does lie, blame other people for her actions, and play the Woe Is Me card when her ass gets called out. I fucking lied about not hating her actually I fucking VISCERALLY despise her. I'm in the wrong for feeling this way though, for some fucking reason. How dare I hate the person who ruined my life and got away with it because everyone she's ever been fucking friends with treats her like she's a poor little baby who's incapable of doing wrong, and that every bad thing she's ever done was just the fault of someone else. How dare I not forgive her when she's done is downplay the pain she caused me, and make up bullshit about me left and right to paint ME as the abuser and "The Crazy Obsessed Ex". I'll always be the villain to you, and I've found nothing but more of a reason to be repulsed by you ever since cutting contact with you for good and you expect me to believe that you've "changed for the better" and that you give even the slightest shit about the weight of your actions. You're just mad that your actions had consequences. Fuck you.</p>
+            
+            <p>What makes me the angriest about the situation is how her partner tried to peformatively claim he felt pity for me while simultaneously laughing in my face and insisting that what she did to me wasn't grooming, and that I somehow manipulated her into treating me the way she did. I don't know about you but when someone you've only known for a few months and have barely talked to throughout those months is suddenly claiming they've been deeply in love with you for the entire time they've known you, showering you with praise and compliments both before and even moreso after their confession, being overly flirtatous and sexual with you immediately after you reciprocated their "romantic" feelings, asking you to send nudes of yourself on DAY ONE of you officially dating and saying that "since they feel comfortable doing so then you should too", frequently pesters you about sending pictures of a specific part of your body because they "wanna know what it looks like", interrupting you venting to them to ask how many fingers you can penetrate yourself with at once and frequently shifting innocent conversations to be sexual in general, objectifying you at every possible chance they get, always asking to see your nude body on camera and to listen to you masturbate, and frequently flashing their nude body on camera or sending nudes without any consent or warning, and they do all of this while basically using you as someone to traumadump on while also not exactly being the most emotionally available to you in particular, I'm pretty sure it's safe to say that they are, at the very fucking least, TAKING ADVANTAGE OF YOU SEXUALLY! And all of that combined with lying to you about bad things they've done to other people to make you take their side and conditioning you to hate the people that they've hurt, making you feel responsible for their life and emotions by constantly venting and threatening suicide when faced with the consequences of their actions, disrespecting your boundaries regarding not wanting to be polyamorous at the time and insisting that they be allowed to <s>use other people for their sexual desires alongside you</s> date other people, cheating on you with someone that they claimed to hate after they lied to them about you being okay with being polyamorous and being mad that you put your foot down with them, falsely blaming their own disgusting actions on you to escape consequences and let you be used as a scapegoat for a 30 year old, claiming that you confronting other people in their defense was you "treating their exes bad for no reason", and lastly, using your own mental health problems and insecurities about the relationship as well as the fact that you finally decided to call them out on their bullshit after months of dealing with it against you to paint you as an abusive emotional manipulator (they were the one abusing and manipulating you to be 100% submissive to them the whole time) who is holding them back from improving themself (they made you feel extremely small the entire relationship and turned you into a shell of a person who lacked any sense of self and agency outside of them) and has always been so aggressive and mean to them (you literally let them walk all over you the entire relationship and never stood up to them ever until the relationship reached its boiling point)? not to mention this person came into your life while you were already extremely vulnerable due to just having got out of another abusive relationship, and you clung to them out of a desperation to feel loved again? and they clearly took advantage of this fact and made sure that you felt solely dependent on them and also took advantage of the fact that you suffered from severe hypersexuality to use you for their desires and then blame it all on you in the end?? </p>
+            
+            <p>That's grooming. she did allat to me that was abusive that was manipulation that was grooming. She held power over me and she fucking knew that she did and she took advantage of that knowledge and got high off of it. I was high off the attention and validation and it was addicting and I was powerless to stop that addiction until I basically had to force myself to fuck off from her life forever and it was so much more fucking difficult to do that then you could ever imagine because I felt no one would love me in the way she did ever again except she didnt love me and I trapped myself in long-lasting psychosis of thinking that she did and also thinking that I would never be able to survive without her because my entire world revolved around her for 4 months and I felt the withdrawals at their most extreme for a good 3 months after. and within those 3 months of withdrawals she took advantage of me twice more. and ever since then all she has FUCKING DONE IS LIE LIE LIE LIE LIE LIE LIE LIEEEEEE AND PEOPLE BELIEVE HER WITHOUT ANY SECOND FUCKING THOUGHT AT ALL LMFAOOOOOOOO. AND THEY WILL NEVER BELIEVE ME BECAUSE IF YOU DON'T HAVE BORDERLINE CSAM TO PROVE THAT YOUR ABUSE THAT HAPPENED ALMOST EXCLUSIVELY OVER VOICE CALLS ACTUALLY HAPPENED THEN THAT MEANS IT DIDNT HAPPEN AT ALL AND YOURE JUST A FILTHY ATTENTION SEEKING LIAR! THAT'S JUST SOOOO FUCKING FUNNY!!!! i hate you</p>
+            
+           <p>i need to give special attention to the fact that she kept my nudes in a discord server for several months after we broke up and i have no way to confirm if she is still has that shit or not hhahahahHAHAHAHAHAHAHAHAHAHA</p>
+            
+            <p><img src="https://file.garden/Z5ztm_B6wj_8HQnK/FUCKYOUFUCKYOUFUCKYOU.PNG"></p>
+            
+            <p>whatever i hope she's suffering and i hope it's painful</p>
+            </article>
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">April 23, 2026 | 9:08 AM</span>
+            </div>
+            
+            <h1>the chimera does not concern himself with insufferable fandomites</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>it seems like march and april are cursed cuz they've been absolute the worst two months ever for literally every fandom in existence from what i've seen. so much discourse and horrible people getting exposed and nobody knowing how to act when it comes to the handling of heavy subject matter or having an ounce of compassion for people affected by the issues at hand and it's just so disappointing. idk what's going on anymore i'm tired and i wish more people would just have basic human decency. shit like this makes me glad i kinda just sit on the sidelines and do my own thing when it comes to engaging with media i like nowadays otherwise i definitely would've landed myself in the ward by now with how much people online genuinely make me feel like i'm going fucking insane sometimes. it sucks because i really wish i could make friends through fandoms more easily because there's a lot of cool people i've come across that i would love to be friends with but considering all the bullshit that happens everytime i dare to even slightly involve myself with anyone or anything i just don't feel like it's worth it anymore. it's whatever though i have people close to me that i can gush about my interests with anytime that i want and do fun things with and talk about the mundane things in life with such as how i tried buldak ramen for the first time earlier this week so i really don't need to concern myself with stupid people in fandoms. buldak ramen is good as hell btw although i felt like my tongue was gonna explode from how scalding hot it was. i put pepperjack cheese in it and it was extra yummy. next time i wanna add more stuff to it like egg or sausage or something i've seen people add a lot of different shit to it and it just looks so good..... ogugh,,,,,... </p>
+            
+          
+            
+           
+            
+            </article>
+        
+            <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">April 14, 2026 | 9:10 AM</span>
+            </div>
+            
+            <h1>tomodachi life is my anti-depressant</h1>
+            <h3>content warnings: suicidal ideation</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>i don't really know what to put here anymore lol i've moved talking about more positive/less deeply personal things onto the microblog page so i dont really have much ideas for what to talk about on this page. nothing has really been going on in my life recenly aside from the usual family and school being annoying and i don't really find either of those worth complaining about at the moment. there's some stuff that's been on my mind that i could talk about but it mostly pertains to things where there's nothing i could really say that hasn't already been said by dozens of other people online and i just don't really care enough to have that on my site lmfao</p>
+            
+           <p>something i do care to talk about right now though,, tomodachi life living the dream releases in like 2 days im really excited for it. this is the first time in a good few years that i've been genuinely excited about a new game releasing, it's a pretty nice feeling that i missed. i mean obviously there's been a good handful of games that have released over the past several years that i've been pretty happy to have a chance to play, but i'd say the last time i was like. fucking ESTATIC to play a game was when Splatoon 3 was announced which feels like forever ago at this point. 2022 and every year before that highkey feel like they were a whole ass alternate timeline. we all died during covid and the years 2023 and onwards have been merely a simulation (im coping with the fact i have severe dissociation and depression that have stolen my life away from me). i remember during the pandemic we asked our parents to buy us a 3DS specifically so we could play tomodachi life cuz we became really fixated on it after watching a ton of videos of other people playing it and that was like probably the most fun we had during that time. eventually we forgot about the game but then came back to it briefly in 2023 but reset our island since we didn't care for the old one anymore (due to now being trans and also having completely different interests and friends from when we first started the island) and then forgot about the game again. then December 2023 one of the people in our main friend group started an island on an emulated copy of the game where they made all of us (including my abuser who I had just started dating at the time) and we would watch them play while on VC all together it was really fucking funny but then we all kinda moved on from it after the new year hit (i think that same friend also lost access to that save file lol). then in like late 2024 i started an island on an emulated copy which started out with me just making dungeon meshi Miis but then we were infected with the Inanimate Insanity Disease (/positive) and rather than resetting our save we just started filling up the whole island with II characters and we played on and off for a good portion of 2025. The amount times that both Senshi and Chilchuck Fucking Tims said they wanted to confess their love to APPLE INANIMATE INSANITY was actually insane what are we doing here. Those were like the few times that miis on that island naturally fell in love and we ended up just pulling out the save editor to force most of our favorite pairings together because literally Nobody else was falling in love almost ever it was devastating. good thing in TLD you actually can have control over who gets with who and what happens in general without the need for 3rd party software that risks corrupting your save file. also the game is no longer homophobic we can make lightbrush and tacomic and popbot and toipad real without restrictions. we have evolved.</p>
+           
+           <p>on a serious note though 2020-2024 was genuinely the worst era of our entire life. i really dont remember much of what life was like before covid but the whole pandemic really fucked us up and the shit that happened in late 2023-early to mid 2024 was the final nail in the coffin that had us genuinely on the verge of killing ourself and it wasn't until early 2025 that we were actually able to start recovering at least a little bit. it's hard to tell if we've even made any real progress sometimes because we still have a lot of the same shit weighing us down but i guess at least couple of things are better than they were before. its funny how Tomodachi Life of all games as been there for us at like almost all of our lowest points and now the new and objectively better version is 2 days away. best shit ever. 2 days and people are already pirating it LMFAOOOOOO. i mean i'm tempted to do the same cuz im kinda impatient but like i could definitely just ask our parents to buy it. depends</p>
+           
+        
+            
+            </article>
+        
+          <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">March 24, 2026 | 9:17 AM</span>
+            </div>
+            
+            <h1>stupid dumbass school shit</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>i had the bright idea (i love my wife lightbulb) to bring my bluetooth headphones with me to school and connect them to my chromebook so i could listen to music in class and now i'm currently thriving. this fucking school blocks literally every website known to man on the wi-fi except spotify for some reason so i have to settle for using that even though i really don't like using it anymore, i don't really have much of a choice when i can't have my phone with me LOL. i used spotify a fuck ton back in 2023 which was like The Big Year of me trying to expand my music tastes outside of vocaloid and j-pop which it was definitely worth it cuz I've found so many artists that I really love but i gradually stopped using it to actually listen to music and now i almost exclusively use it as a way to download songs i like and put them into the MP3 i have on my PC now which is called WACUP! if i'm not using that though i really just listen to music on youtube now lmfao. spotify just feels really horrible to use and i hate the 3 million ads i get back to back when IM JUST TRYING TO ENJOY MY FUCKING MUSIC JESUS CCHRIST. i used to pay for spotify premium but i stopped after finding out that the company behind the app are israeli bootlickers and delete songs made to show support for palestinians off the platform while allowing songs that call for the death of palestinians to be uploaded to the platform?? genuinely fucking sickening bruh also they fucking have trump's inaguration on there for some reason. what the fuck is going on man. idk this shit sucks. ever since then i havent genuinely used it since. until now specifically for listening to shit in school but they arent getting an ounce of my money. the ads are still annoying as fuck though i gotta find a way to block them entirely cuz my school approved adblocker aint doing shit (fuck you google chrome for banning ublock origin).</p>
+            
+            <p>i remember when my old public school banned all adblockers for some reason it was really stupid like do you want the students to get viruses on their chromebooks. this "therapuetic school" im going to still sucks but it IS significantly better than public school. then again that isn't a very high bar to cross so it's still not ideal. im getting really sick of going mostly because of my counselor who's a fucking asshole to me and does nothing but just invalidate my feelings and tells me ridiculous shit to make me feel bad about myself or antagonize me. just like my family! the exact thing i want to get away from and receive real help to recover from the trauma i've had inflicted on me by. but no instead i'm just being treated the exact same way in both places i have to be in every single day. this has been really great for my mental health guys.</p>
+            
+           
+            
+            </article>
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">March 20, 2026 | 8:44 AM</span>
+            </div>
+            
+            <h1>system struggles</h1>
+            <h3>content warnings: ableism</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>dude it's been a hot minute since i wrote something here. the 2nd of february already feels like forever ago dawg time flies by way too fast and i hate it. i was stuck slipping in and out of conciousness for like over a month because of Jirachi taking over front for most of that time so everything feels fuzzy and weird LMFOA it feels really weird when other alters front for more than like a few days its rare that anyone else fronts for longer than that. last time another alter had full control for a super long period of time was our taco fictive (trixie) back around the time we first joined the osc. which was like very early 2025. goddamn that already feels like it was a long fucking time ago. this is honestly the longest i've managed to stay like somewhat active in a fandom since i was in the splatoon fandom before and during covid. despite all the bullshit i've seen go down and all the people i've wanted to personally strangle through my computer screen the osc is probably one of the better fandoms i've been in and i'll definitely continue to be apart of it for a while, at least for as long as my interest in object shows is still there, which it'll probably be a long while before it completely fizzles out since this is honestly one of my favorite things ive ever been interested in LOL. object shows are awesome i love them,,...,, </p>
+            
+            <p>on the topic of system stuff since simplyplural is being discontinued + potentially shutting down for good we had to look for a new app that we could use to track all the stuff related to our system. turns out there are literally no alternatives with the same functionality as simplyplural that are currently accessible to us and also arent run by horrible people lmfao. we considered using octocon but that app had like almost zero practical use and put WAAAAY too much emphasis specifically on alters. like there's other aspects of this disorder that are important and worth taking note of too, not just fucking alters, and yet you advertise your app as a good alternative for people making the switch from simplyplural while offering almost none of the functionality that made simplyplural useful for most systems. when you're making a disability aid you cant just focus on one symptom of the disability dude you need to take tons of other factors and possible needs into account. its not like it really matters anyway since octocon is shutting down too now LOOOOL and after ALL that time spent trying to convince people to use your app is fucking crazy. it makes me so fucking mad dude like genuinely. making an app that serves as a disability aid is a long term committment, so why the FUCK would you take on a project as big as that if you couldn't be sure that you could actually handle it long term? there's so many things both the devs of simplyplural and octocon could've done to make development less stressful and lighten some of the workload but they instead chose to do none of those things and strip away people's disability aid. something that so many people genuinely relied on to make managing their disorder a little less confusing and miserable. and people that arent even disordered have the fucking NERVE to call systems entitled for being upset about this and say that we as disabled folk have no right to be mad nor do we deserve an app to help us in our day to day life. people have no fucking compassion for the disabled, and people ESPECIALLY have no compassion or respect for systems and it seriously makes me fucking sick. </p>
+            
+            <p>also can i just talk about how tremendously fucking frustrating it is to me that literally every popular app or resource for systems has been run by pro-endo people. endos have genuinely done so much damage to the system community and i feel like i cannot go fucking anywhere online without running into people that are pro-endo. and like i dont want to be mean about it so i just dont engage with those people but its really upsetting because i just want to have a space online where i can connect with people i actually share a similar experience with as someone with a CDD without feeling scared that they support and believe in an ableist concept. I don't deny that endos could possibly have something going on, but it isn't the same as actually being a system/having a CDD. to me it just seems like mass encouragement of delusion similar to the "irls"/"delusional attachments" community. They shouldn't be calling themselves systems nor should they be using terms meant for systems, and they shouldn't be trying to insert themselves into system spaces. actual systems shouldn't be encouraging what they do either. i also DESPISE people who compare being trans to being a system, as if systemhood is an identity that anyone can have. transness is a normal identity/general state of being whilst systemhood is a dissociative disorder caused by deep childhood trauma. the two are not the same and should never be compared, and it's both incredibly transphobic AND ableist to compare them. the terms "sysmed/system medicalist" and "traumascum" are ableist. the entire concept of "demedicalizing" something that literally IS a serious, and often times delibitating medical condition, is ableist and priviledged. my systemhood is a disorder, my transness is just who I am. they're not the same. a system is not, and never will be something that you can just decide to be for fun or that anyone can just so happen to be just because. it's also disgusting to me that people took terms that refer to transphobes and changed them slightly so they could be used as a way to negatively refer to anyone who acknowledges the reality of DID/OSDD and being a system.</p>
+            
+            <p>so as for what we've decided on as an alternative to simplyplural, for the time being we've settled on this app called "anytype", which is essentially a notes app but it has an extsenive amount of features that make it extremely customizable and allows it to work pretty well as a system tracker. you can have a bunch of documents organized in one place for whatever information you feel is necessary to write down and there's also community made templates catered to specific daily life things and whatnot. it has stuff like a habit tracker that we use to log front times, a journal that we use to quickly write down thoughts, chat features for us to communicate with eachother or leave reminders for ourselves or our qpgf (who has access to all our stuff for safety and communication reasons lol), and a lot more that's useful in terms of keeping track of symptoms. obviously this app isnt exactly meant for systems at all LOL but i've found it to be pretty useful for us personally and it's great for someone like me who loves being able to organize and customize everything the way he wants, so i recommend checking it out if you're in a similar boat as me. it's also available on both pc and mobile so its INCREDIBLY accessible. and it's on iOS and android :D</p>
+            
+            <p></p>
+            
+            </article>
+        
+          <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">February 2, 2026 | 9:13 AM</span>
+            </div>
+            
+            <h1>insanity + NEW WIFE YAAAY</h1>
+            <h3>content warnings: abuse, transphobia/homophobia, racism</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>everything sucks right now my family keeps pissing me off and talking down to me as if i don't know anything whenever i try to give my opinion on anything i genuinely hate being around all of them. apparently forcing your kid to go to church with you all their life and actively trying to force your religion onto them and denying them any acknowledgement of their identity because it doesnt align with what you personally see as "correct" ISN'T controlling your kid guys! that's just normal parenting!! i'll understand when i'm older and when my brain is full developed! actively trying to force your kid to stay in line with your personal worldview isn't controlling that's just what parents are supposed to do! parents are supposed to deny their kid any right to be themselves and have their own beliefs and sense of self and autonomy!! that's normal!!! totally!!! oh so very extremely normal!! and making your kid feel like they're stupid, "underdeveloped" and "uneducated" for not putting up with it is definitely not abusive or manipulative in the slightest!! i fucking hate all of you die. i genuinely don't have an ounce of respect or care left for these people i'm tired of living with them please get me out im tired of the constant mental gymnastics im tired of being made to feel like im fucking insane for so much as fucking daring to think differently from any of these people or question any of their nonsense im tired im tired im tired IM FUCKING TIRED</p>
+            
+            <p>that whole argument turned into my sister just talking down to me and saying i "try to act like im so intelligent and woke when im not". this girl does not even know what the word "woke" means. it orignated from black communities trying to warn eachother about police brutality and in recent times its been used as just a general term for y'know, being aware of societal issues?? being willing to listen to marginalized communities and fight for them??? having basic fucking empathy and/or compassion for the oppressed??? she's not any of those things at all but she likes to stroke her own ego and say that she's "woker than me" because she has more life experience or something. yeah girl you may have blatantly disregarded me telling you that chick-fil-a donates to anti-queer organizations while we were on vacation because you wanted to eat that mediocre chicken so fucking bad, said that all homeless people are serial killers and should hide themselves away from public spaces or be hauled off by the police, referred to trans women as a "category of men" and said I should be careful around them because you view all of them as sexual predators, kept slinging around homophobic slurs like it was nothing and tried to use the excuse of "growing up when it was normal", and said that it's okay for you to say the N-word because your DNA test told you that you're 0.5% black (you wanna say slurs so fucking bad it's pathetic) but you're definitely extremely woke and intelligent. so much more than i am. sure. also it's really funny cuz she kept telling me that i was "making the conversation about something it wasn't" by simply giving my opinion on the bullshit she and my parents were saying prior but then she turns it into a conversation about my intelligence and wokeness level LMFAOOOOOOOOOOOOOOOO the projection and gaslighting is crazy</p>
+            
+            <p>anyways whatever i don't care um. life update i have a queerplatonic gf now augughghhhh i love her so much she's so sweet. i had a crush on her for a while but i couldn't be with her until now because i was locked in a relationship with my previous girlfriend who was basically absent from my life lol. ive realized im really not good at handling explicitly romantic relationships and i think im better off with just pursuing relationships that aren't really anything in particular and aren't bound by any rules aside from boundaries that we personally set. i like being able to love someone and be loved by them without the added pressure that comes with it being a conventional romantic relationship. i really hate people that view queerplatonic/alterous relationships as being somehow lesser than romantic relationships or as something to label your relationship with someone as when you just don't wanna be serious about it. a queerplatonic relationships is still a genuine committed relationship, it's just not something that can be easily shoved into categories of either romantic or platonic.</p>
+            
+            <p>my abuser used to use the label of "queerplatonic" just as a way to get away with doing sexual things with people who weren't her main romantic partner at the time and it made me genuinely sick. she wouldn't even tell me when she had gotten a qpp she just collected them like pokemon cards and i ended up finding out way later that she was basically cheating on me with them and using them to get out of a relationship with me lmfao. the day she broke up with me i was breaking down crying because she wouldn't talk to me meanwhile she was flirting with a "qpp" of hers on her private twitter. i still dont know why i put up with that but whatever!! 2024 was not a good year for me guys. sometimes i wonder if i should try again at writing something that details the full extent of the abuse (and highkey grooming) that i endured from that specific ex but i honestly don't wanna relive that shit again. it's not like anyone would really gaf about it anyways and there's probably someone out there that would find a way to use it against me since i'm not a completely pure and perfect victim. </p>
+            
+            <p>i got into starters rrecently. the pokemon parody series by movieunleasher.s, on youtube. i was expecting it to just be some dumb shit but it's actually genuinely really fucking good. i love realistic depictions of abuse and mental illness in teenagers. i also love FUCKED UP YAOI DR. SYLVEON x JIRACHI GET OUT OF MY HEAD HELPMEEE. these two don't even interact in the show but i can't stop thinking about them. they're both fucking dipshits they're perfect for each other. explode them now. also i might be dr. sylveon (kinning is so cool guys)</p>
+            
+            <p>i love my qpp so much cries and dies and epxlodoes we talk everyday and she makes me feel so happy and fuzzy andn aauughgh</p>
+            
+        </article>
+        
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">January 29, 2026 | 9:11 AM</span>
+            </div>
+            
+            <h1>decade of friendship for nothing i guess</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>what would you do if you got into a relationship with an online friend that you knew for nearly a decade, and then a majority of the relationship was them barely talking to you ever and you waiting around for a chance to see if you can actually establish a close bond with eachother because turns out you actually barely know anything about them and they kinda just said that they loved you out of nowhere. then at some point you get tired of sitting around having only gotten mere scraps, you let them know that you aren't happy in the relationship because you don't feel truly close with them, then they give you a response that blatantly shows that they don't give a shit and then they block you and call you chronically online and god knows what other insensitive shit behind your back. this is what happened to me recently guys!! sometimes even the people you're sure will be in your life forever regardless of how often you talk don't actually care about you and are waiting for any opportunity they can get to drop you. isn't that incredible???????? i hate ts bruh</p>
+            
+            <p>it sucks i really wanted the relationship to work out because i genuinely cared about her and had a real desire to get closer with her but she clearly just did not care to do any of that. she made no real effort to connect with me at all i was always the one initiating us hanging out together or even just talking to eachother in general. she barely talked to me unless i was the one to text first. i knew she was busy a lot and had a lot of tough shit going on in her life so i didn't wanna be pushy about spending time together but i just would've liked a little more than just fucking scraps dawg. apparently wanting your ONLINE partner to be online more often so that you can actually feel like the relationship is going somewhere is too much to fucking ask for. why the fuck would you pursue a relationship with someone you only know online if you don't like being online. like??? make it make sense mf i don't understand. i told myself that if i just kept waiting it out then eventually we'd be able to bond more but like in honesty i doubt that was ever gonna actually happen.</p>
+            
+            <p>her response pisses me off too because she basically didn't even GIVE me an actual response. i was holding in how i felt for a good fucking while and i spent like maybe a day and a half trying to brainstorm a message to send her in hopes that she'd be understanding and want to talk things over only for her to give me some bullshit joke as a response and then block me. i felt bad about breaking up with her because i seriously thought she actually genuinely loved me since she had made a lot of gifts for me over the course of our relationship, most of which she physically had mailed to my house (paintings, letters, bouquet made from paper, bracelets, hand-sewn stuff, snacks etc), but based off of this reaction any belief i had that she cared for the relationship at all is gone. it's whatever i guess!! i'll still cherish the gifts she made for me but unless she wants to come back and like actually have a genuine discussion and y'know. maybe,, apologize?? she's dead to me and i don't care anymore. i'm tired of putting so much effort into relationships and caring so much for people just for it to be disregarded. i give genuine love to people and all i get in return is superficial bullshit or mistreatment, then they laugh in my face when i have a problem.</p>
+            
+            <p>tbh i have no real confirmation that she called me chronically online but my online dad (who's also friends with her and still had contact with her after she blocked me) told me that she was changing her discord status like every few minutes and pretty much all of them were extremely backhanded comments that seemed to be directed at someone, which he assumed to be me. one of which was "ya'll are too online, touch grass, go outside" which makes me wanna fucking laugh honestly. you date the guy who has struggled to connect with people outside of the internet all his life for various reasons and you poke fun at that fact when he's upset that you made no effort to show that you were ever actually committed to the relationship. asshole behavior.</p>
+            
+        </article>
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">December 30, 2025 | 3:10 PM</span>
+            </div>
+            
+            <h1>Hope for the future</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            
+            
+            <p>new keyboard who this (keycaps on my old one kept flying off so my dad gave me a new one lol. the keys glow red on this one i love it)</p>
+            
+            <p>I just had my final meeting with my therapist an hour ago. I honestly have no clue how long I've meeting with her up until this point lmfao. I think started meeting with her in 2023? So pretty much 2-3 years. Throughout all that time I've been to hell and back and she's seen me live through it all and come out of the worst depression I've ever been through alive. It's thanks to her that I'm still standing today and I'm in a much better state now than I was only a year ago. Obviously I still have bad days and lots of things I still desperately need to work on, but I've learned to love life and myself a little bit more, and I think that by itself is a pretty good accomplishment. And on top of that, I finally had the courage to properly stand up to my abuser and speak out about what she did. I know she'll likely never read this, but I still want to direct this at her: You can blame me for your own actions and play victim all you want, twist the story to make yourself seem innocent all you want, but you know what you did, and it will not define me any longer. You won't weigh me down anymore. You won't make me feel like I'm broken and in need of "fixing" anymore. I'm my own man and I never needed someone as shitty as you to survive. You took advantage of the vulnerable state I was in so you could do whatever you wanted to me, then you threw me away like garbage, but I know my worth, and I'll never let anyone disrespect me in the way you did ever again.</p>
+            
+            <p>Also thank you to my therapist for buying me the new lightbulb plushie and the hooded blanket with all the II contestants on it my life is so awesome now</p>
+          
+            <p>Aside fron a few hiccups, I'm genuinely pretty happy with how this year went. I accomplished way more than I ever really thought I would: </p>
+            
+            <ul>
+            
+            <li>I got more comfortable socializing with new people and putting myself out there for others</li>
+            <li>I got more confident in freely expressing myself in all aspects and simply doing whatever I wanted</li>
+            <li>I got a new girlfriend that I love dearly</li>
+            <li>I met my bestest friend ever</li>
+            <li>I gained a genuinely life-saving hyperfixation and met a ton of cool people and inspirations because of it</li>
+            <li>I rediscovered my creativity and made major improvment in my art, and thus made pieces that I'm actually genuinely proud of </li>
+            <li>I created two ocs that I actually genuinely care about and am invested in developing stories for</li>
+            <li>I improved my coding skills and made my website way cooler</li>
+            <li>I got involved with an awesome fangame project and connected with new people because of it</li>
+            <li>I got better at making vocaloid covers and even tried making my own UTAU voicebank</li>
+            
+            </ul>
+            
+            <p>These probably seem pretty small to other people but they're pretty huge to me, as someone who only just recently begun to heal and recover from the absolute worst of his mental health issues. A year ago I couldn't even list a single thing I felt I had accomplished, but now I can. That alone is a big enough sign of how far I've come, and I'm proud of myself. Despite everything, I'm still here trying to make the most of my mediocre life. I don't really have much else to say, so here's to hopefully another good year, and one where I can accomplish even bigger things. Peace out 2025!</p>
+            
+        </article>
+        
+           
+    <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">October 28, 2025 | 8:28 AM</span>
+            </div>
+            
+            <h1>I Hate My Family</h1>
+            <h3>content warnings: transphobia & abuse(?)</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            <p>hi chat i'm Fucking Exhausted. This Friday my school is hosting like a halloween dance or something and I honestly really wanna go. This would be my first time ever getting to partake in anything halloween related outside of just watching Scary Movies At Home I think it would be a lot of fun even if I don't interact with many people. My parents have never let me celebrate Halloween because they're annoying ass christians and also like really convinced that Halloween is Evil and Sinful and somehow related to witchcraft. Literally everything is linked to something evil in their eyes it's actually so fucking annoying can you guys stop forcing your beliefs on me FOR ONCE PLEKASE. No one celebrates halloween because they wanna fucking cast spells on people it's literally just the Dress Up And Scare People For Fun holiday. for the love of fucking gofd. They're worried about witchcraft but they do not give a fuck about the very messed up origins of Thanksgiving. the slaughtering of natives and colonization of their land is excuseable to them for some reason. My mom deadass told me once that there's beauty in people being thrown out of their homeland and killed cuz then we wouldn't be here otherwise?????? like okay. I would much rather not be here in the present time if it meant natives were able to exist in peace I think. Whatever dude when I go to school on friday I might just wear my Falin Touden cosplay that I wore to Anime NYC back in August I don't really have anything else. happy Ween</p>
+            
+            <p>speaking of Anime NYC it was actually like the greatest experience I've had in a long time. it definitely would've been way better if I had like gone with friends instead of my dad and sister because I wanted to stay for most of the day to see the cosplay masquerade event or whatever its called but we only stayed for 2 hours because my dad and my sister kept nagging to leave. I've never been able to enjoy doing literally Any activity outside because I always have had to adhere to these people's schedules when does it fucking end. Every single one of my birthdays have always been so miserable because both of my sisters ruin it and make it about themselves because all they care about is what they want. They always have to argue about something or try to control what we do that day. TODAY ISNT ABOUT YOU BRO. Can you tell how much I hate my family. I hope I get to go to Anime NYC again next year I wanna wear my own handmade cosplay and actually get to enjoy more of the stuff happening. I wanna actually interact with more people there too cuz I saw so many cool dungeon meshi cosplayers when I went but I was too scared to talk to any of them LMFAOOOOO I'm a mess I don't think they would've fucked with me though because I was wearing my cheap Falin cosplay my mom bought off of amazon because she couldn't be assed to help me get materials to make a costume from scratch. Thanks Mom. I get really jealous seeing all those people looking cool as fuck in their awesome ass handmade cosplays like shit man I wanna do that too!! I'm glad I'm taking a fashion design class because that means I get to learn how to sew and make clothes!!! so that also means I can make a cosplay!!!! Yay!!!!! The main highlight of the con was that I got to play on a real Project Diva Arcade cabinet for the first time ever. Words cannot describe my joy those things can barely be found anywhere these days. I should make a Project Diva shrine page. I got to play Taiko No Tatsujin too so that was fun.</p>
+            
+            <p>Great Value chocolate chip mini muffins kinda taste like sharpies. My mom's choices for the snacks she buys me for school are pretty interesting</p>
+            
+            <p>over the years while talking about the way my family is to people online I have realized more and more that the way my family acts and treats me is really not normal like at all and is actually incredibly unhealthy and abusive lmfao but there's literally nothing I can do to get help because my mom sees any slight critique of her shitty way of parenting as an attack on her person or as "disrespectful of her authority as a mother" and my dad is a fucking sheep that follows everything she says and my sisters don't give a fuck and just excuse everything she does/says and just try to make me feel like i'm the problem when literally all i want is for people to leave me alone andn to ttake literally anythhing i say seriously but none of them wanna do that because they think im a dumbass that can't think for himself and they just wanna control every single aspect of my life and for me to be a fucking robot for them that never talks back or expresses any emotion. i get constantly harassed by them about doing the dumbest of tasks and even when i do what they want me to do it's still never enough for them and they find some other reason to scream at me and berate me because if it's not done their way or at the exact nanosecond they tell me to do it then it's wrong. they constantly disrespect my transness and queerness and if i say anything about it then they wanna gaslight me and say that i'm misinterpreting them and tell me that calling them out on their bigotry means i'm treating them horribly and forcing my beliefs onto them which is so fucking hypocritical because they forced me to go to church with them for all my fucking life because they think their belief system and way of living is the only correct one and living any other way means you're stupid and uneducated to them and any time i bring up my chosen name they "correct" me on it and call me my deadname and misgender me to my face whenever i bring up wanting to be seen as a man and they always pray to god that i'll one day randomly decide that i'm not trans anymore and i'll get married to a man and be his baby incubator and they act like me being queer is a burden on them and somehow ruining their life and they refuse to let me medically transition and they see anyone who actually respects my identity and accepts me as a trans/queer person as a threat to the control and ownership they seem to think they have over me. they never want me to be around other people like me or to express myself at all because "they don't participate in the queer community" I AM A SEPERATE FUCKING PERSON FROM YOU I AM NOT YOUR FUCKING MINI-ME FOR YOU TO PROJECT ONTO. THE QUEER COMMUNITY ISN'T AN "ACTIVITY" FOR PEOPLE TO JUST JOIN IN ON PEOPLE LITERALLY ARE JUST FUCKING QUEER. HOW DOES THAT HARM YOU IN ANY SORT OF FUCKING WAY. I HATE YOU AND YOUR STUPID FUCKING RELIGION. if i said any of this to them i'd be getting called every synonym of delusional right now hahahaha. "You think you know what you want but I know you" and it's a fantasy you made up in your head about me based off of how I used to act when I was 9 years  old. Fuck off</p>
+            
+            <p>just last night some bullshit happened where she was repeatedly harassing me to bring my laundry downstairs so that she could take care of it. I brought down one basket of dirty clothes and then just stayed in my room because I was fucking exhausted and also I was on call with my friend and wanted to keep talking to them. but no my mom wanted to wash ALL of my dirty clothes in that exact moment (there's literal heaps of it because i have so much fukcing clothes and i almost never do my laundry myself becausue i barely have the motivation to even brush my teeth most of the time) so she just kept screaming at me to nbring the rest of it down and she's threatening to fucking beat me up (cuz that's definitely how you get your child to do what you want!) so naturally me being pissed the fuck off i yell at her to stop fucking harassing me and just put what i already gave her to wash and then the next moment she's storming up the fucking stairs and starts slamming her body against my bedroom door to force it open and i have to push back againsnt the door while holding the lock in place so that she wouldnt get in. then suddenly she has a fucking power drill andn is trying to DRILL THE FUCKING LOCK OFF MY DOOR so i grabbed my chair thats by my desk where i keep My Trinkets and just started slamming it against the door to get her to fuck off. now the lock on my door is broken and i have a giant bruise on my arm by my elbow. how fun. According to my sister we're a perfectly healthy and normal family, we just argue sometimes! and then every arguement is a bloody-murder screaming fest that escalates to people trying to hit eachother and someone getting threatened to be thrown out of the house or the police threatened to be called or some shit. one time my sister actually called the police and CPS ended up paying us a little visit!!!!! but no my life is normal guys i'm not in any danger</p>
+            
+            <p>i'm genuinely so fucking desperately need to get out of here because i don't feel safe and haven't for a long time but i can't get a job because nowhere wants to hire an autistic tranny and my mom keeps shutting off my fucking phone data so i can't communicate with literally anyone when i'm outside of the house and no one wants to fucking commission me becauuse my art fucking sucks im literally so close to just running away and dying in a ditch or somehting i seriously cannot take it anymore </p>
+            
+            <p>i'm helping my friend out with making an object show fangame. it's a kart racer game i really hope we're actually able to get pretty far into development with it because i really love the concept and i made a whole ass mascot character for the game. his name is Megaphone he is my bigender son and daughter and i love her. this is the main thing keeping me from losing my mind currently. aside from vocal synths and inanimate insanity in general. i need to post the vsynth covers i've made recently i'm just too lazy to make art for them., someoen please commission me i need money. i'm the lead artist for the fangame as well as a voice actor for one of the characters we're putting in the game, that being Marshmallow from II. i do not think i can do a good impression of her AT ALL and anytime i try to do her voice it's actually physically painful but i'll be fine i think. no i will not i was not cut out for the voice acting buisness. i think i'd be a pretty good fit for pre-movie II Box! we need someone to help with actually coding the game this is my casting call</p>
+            
+            <p>someone that abused my online dad back in  2021 messaged me yesterday like really fucking early in the morning wanting to see how i was doing and like im just baffled at the fact they even had the AUDACITY to message me when they hurt someone close to me so severely to the point of him nearly taking his own life. not to mention bro has been shit-talking me for the past 4 years and i've seen like a good portion of exactly what they've said about me as well as how they brushed aside their horrific actions to paint me as the devil incarnate because i acted immaturely when i was 12 years old. like huh. in what universe do you think i'd ever wanna fucking speak to you again. motherfuckers really do think they can just roll up like nothing happened after ruining you or someone you love's life or after making it clear as day that you never actually mattered to them. it's actually diabolical.</p>
+            
+            <p>creep-p's old vocaloid music is peak Exorcism ft. Cyber Diva is an earworm</p>
+            
+        </article>
+        
+         <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">October 21, 2025 | 9:18 AM</span>
+            </div>
+            
+            <h1>Current School Situation & More</h1>
+            <h3>content warnings: transphobia, homophobia & fakeclaiming</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            <p>I find it kinda funny how this entry and the last were written on the same exact day of their respective month. That's not really important though. I should definitely use this page more often and allow myself to make shorter entries instead of obligating myself to basically write a whole novel every entry. I usually have a lot I wanna say but I hold myself to that same multi-paragraph expectation every time even when I don't.</p>
+            
+            <p>I've been going to this new school for a couple months now. It's a private therapuetic school that my district is paying for me to go to because the public school in my town SUCKS SO MUCH ASS and did nothing to properly help me or pay attention to my needs ever. I technically started this school year over the summer since I was required to attend an ESY (Extended School Year) program. It was kinda stupid though cuz even though we weren't doing any actual academic work the whole time (because it was the summer), just lame activities, students were still expected to stay off their phones at all times. They'd do field trips on Mondays and Thursdays and even during those we still weren't allowed to use our phones for some reason. Please explain to me: when I'm a brand new student at this school with no friends (so no one to talk to), we're at a fucking WATERPARK and I didn't even bring a swimsuit cuz I didn't wanna get wet (didn't even wanna go on the trip in the first place), so I'm sitting completely by myself in the hot ass sun, what am I "disrupting" or "distracting myself from" by being on my phone? I genuinely would love to know. The counselor said it was to "encourage socialization during trips", but that still doesn't make sense because You Can't force a kid with crippling social anxiety surrounded by people he's never met before in his whole life to socialize by barring him from something he uses as his main source of entertainment and comfort. Also do you seriously expect me to wanna socialize with anyone period when it's the goddamn summer and I'd much rather be at home than at Summer Camp: Dumb As Fuck Edition. Be so for real right now bro</p>
+            
+            <p>Enter the Official Start of The School Year in September though and it's officially state law that students have to keep their phones put away during school at all times because it. ruins their mental health? Well yeah the internet unfortunately is a contributing factor to mental health problems for a shit ton of people (especially teenagers) but that's going to happen no matter what because of the way the internet is and threatening kids with suspension if they dare to take out their phone during class doesn't do anything to solve that. Leave it to U.S. governors to come up with the weakest excuses to justify the most ridiculously authoritarian nonsense. I can just distract myself in class by browsing Neocities on my chromebook though so it's okay. Somehow the site isn't blocked on the school's wifi LMFAOOOOO thank god. Playing random old flash games during class is fun too. I'm also writing this entry in the middle of class and the teacher can probably see what I'm doing but I don't really care that much</p>
+            
+            <p>There's suprisingly actually a handful of people at this school that I find pretty cool and would like to be friends with, I just barely know how to interact with people unless they're the first one to initiate something because I never know when and if they'd actually wanna talk to me or whether or not they would just think I'm weird and want me to stand 100 feet away from them forever. There's this one girl who's in my homeroom currently that I asked to be friends with during a half-day visit I did back in June but I've only had a very miniscule amount of conversation with her and it SUUUUCKS cuz she's so cool but she's always with her other friends that I fear would definitely think I'm weird if they got to know me beyond surface-level. Siighhhh whatever man. I have her discord but she never texts me do I send her something. Swagever THere's a lot more queer people at this school than I antiticipated and that makes me really happy because for once in my life I finally don't feel extremely out of place and I feel like it's at least a little bit safe to actually express myself and be open about my transness (and queerness in general). That aforementioned girl is I Think Probably a trans woman (she has a sticker of a trans flag with her name written on it on her chromebook so I think it's safe to assume) and there's also these two trans girls in my art class that are best friends and I think a lot of people here are queer in general. Public school was NEVER this queer bro I swear everyone and their mother was cishet over there and a lot were homophobic and/or transphobic why is everyone either a stereotypical jock or mean girl with zero real personality outside of acting like idiots and thinking they're cool for it and why can't I simply exist in peace without people taking issue with me please white girls stop staring me down in the middle of history class. Thank god I was only back in public school for like a maximum of 5 months (I was put back in Feburary after being switched back and forth between online schools and it only lasted until late june).</p>
+            
+            <p>I would've been a senior this year but I got held back a grade and now am repeating junior year due to my horrific mental state fucking everything up and making me not want to do literally anything in relation to school at all for the past half of 2025 and basically all of 2024. I'm a little more motivated to get stuff down now that I'm in a better school that actually cares about my mental health and needs and also has stuff I'm actually interested in doing (such as art classes that aren't packed full of people that only join the classes for the sake of fufilling a requirement and have zero real interest in art thus preventing actual artists from being able to join those classes), but I'm just kinda lazy and my mind is all over the place. Plus I have a new best friend online and all I can think about is wanting to hangout with them please help me I love them too much</p>
+            
+            <p>I've been pretty open about being trans and using he/him pronouns and such while at this school for a little while now and most people have thankfully been respectful of it (although I've been they/themmed a few times even though I've explicitly said I use he/him and I even have a fucking pin with my pronouns on it that I wear to school everday how hard is it to understand that I don't use they/them). I haven't told anyone my chosen name though because there's like 50 other guys at this fucking school named Gabriel and I don't wanna confuse people why does this happen to me. I'm just gonna have to deal with being deadnamed until someone bothers to ask what name I Actually Fucking Go By</p>
+            
+            <p>I made a friend yesterday in a way that I personally never expected to happen. Someone in my homeroom handed me a piece of paper they said someone else wanted me to have but they didn't know why. It was a letter from someone wanting to be my friend but I was really confused cuz they fucking signed their signature as Zooble (tadc character dawg) and the only thing that would've helped me identify them was a brief description of how they look so I guess they wanted me to just take a wild guess as to who they were. They also kept rhyming in the letter and I thought that was kinda funny. They came up to me during lunch though and told me they wrote the letter and then we sat next to eachother while we ate lunch and had a pretty good conversation!! I think they're really cool I hope we get to hangout more also they asked for my phone number and I gave it to them but I have no clue if they actually plan on texting me or not but we'll see :3:3:3 I told my mom about them before I went to bed and she kept insisting that I tell her whether they're "biologically male or female" since I told her that they use they/them. LIKE GIRL THAT ISN'T ANY OF YOUR FUCKING BUISNESS. I shouldn't be surprised though because she is INSANELY transphobic and if you've read my old entries from 2024 you'd know what her whole deal is (TLDR: she pulled me out of public school my freshman year because she didn't like that people were affirming my gender identity and decided to spread the false narrative that I was being groomed into being trans, plus she also felt that she was entitled to know despite me not being ready to come out at all because I KNEW that she'd react EXACTLY LIKE THIS). She's gotten less aggressive about it overtime but she still says fucked up shit sometimes and treats my entire queer identity as if it's a seperate entity from me but if I get upset about it and call her out then I'm the problem and I'm treating her badly and walking all over her acccording to my dumbass sister who claims to be "politically unaligned" but is very blatantly conservative and is only open to viewpoints that fit her apathetic worldview! She got mad at me yesterday because I made fun of her for claiming to be unaligned but also literally admitting in the past that her beliefs are mostly conservative so like at that point just say that's the side you're on pookie. You piss me the fuck off. Whatever I got sidetracked ermm PEOPLE ARE WHAT THEY IDENTIFY AS BECAUSE GENDER AND SEX ARE SOCIAL CONSTRUCTS THAT WERE MADE UP TO FORCE PEOPLE INTO RIGID BOXES AND INTO SPECIFIC SOCIETAL ROLES SO STOP FUCKING ASKING PEOPLE WHAT'S IN THEIR PANTS AND JUST RESPECT WHO THEY TRULY ARE. Every transphobe should die forever thank you</p>
+            
+            <p>Anyways uhhh something not school or bio-family related I've been playing a lot of VRChat recently (on PC cuz I don't have a VR headset) and have been making some friends on there. I mostly just hang with my bestie and online dad on there currently but we have a lot of fun interactions with other people especially in the object show related worlds. Some crazy shit happened yesterday while we were chilling in a TPOT world there were some 13-14 year old neo-nazi fucks went up to us as well as many others in the lobby to harass us and yell slurs. They called my online dad a pedophile for literally just being 23 and playing the game and also for being gay. God knows what they would've said if they knew bro is also trans jesus christ man. It's ironic though because at some point those same kids started openly talking about having CP and apparently were trying to show it to people although I thankfully didn't see any of it because I blocked them the moment they first came up to us. What's even MORE diabolical is that they were streaming themselves doing this shit so all of that is definitely gonna come back to bite them in the ass in the future LMFFAAAOOOO my bestie suggested I play copyrighted music to fuck with their stream so I started blasting Coconut Mall into my mic and they got pissed off and blocked me and a ton of other people who were trying to also fuck with them. They were also fuming over another friend of mine telling them they like to goon to Mario. It's crazy how someone will enter a space with the intention to piss people off by being violently bigoted for fun and they leave being the ones pissed off themselves over a nothingburger LOL. They also kept going around accusing a lot of people (myself included) of faking DID/OSDD which I find incredibly hilarious because you have know clue what anyone's symptoms are like, you are just going up to random people and harassing them and assuming they're faking just cuz they say they have something you don't understand. Get a fucking life dude.</p>
+            
+            <p>I really wanna get a VR headset and also for my girlfriend to maybe get one so we can all play together cuz it would genuinely be the most fun experience ever I think. I've asked my dad to get me one but he keeps saying no because he "doesn't want me to immerse myself in that". I'd literally only ever use it as another way for me and my friends to fuck around and have fun it wouldn't become all-consuming of my entire life LOL I'm well aware of the dangers of that shit. Also I had to deal with my ex consistently ignoring me because being on VRChat was more important to her than trying to mend our relationship, not that it could've or even should've ever been salvaged but whatever lalalalalalal anyways I talk way too fucking much bye this was way longer than I expected it to be</p>
+            
+        </article>
+    
+     <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">September 21, 2025 | 7:53 PM</span>
+            </div>
+            
+            <h1>17th Birthday Blues</h1>
+            <h3>content warnings: suicidal ideation & grooming</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            <p>I haven't written one of these since like 2 months after I first started my website, which was back in November 2024. So it's been pretty much almost a year since I've taken the time to really sit down and turn the incoherent nonsense in my mind into proper, coherent words on a webpage. I really should've tried doing one at an earlier point this year since I've had a lot of thoughts about a lot of things that I needed to get out. I feel like I've just been neglecting doing any significant work on my website in general. Too many other things have been occupying my time. Ironic since I don't really have much going on in the first place.</p>
+            
+            <p>Tomorrow's my 17th birthday. I made this website a couple days after my birthday last year, which was probably the most miserable one I've had yet. At that time I had been mourning a past relationship where I was groomed and manipulated, so you can probably imagine my mental state back then being nothing short of absolute fuckin dogshit. I couldn't bring myself to feel happy at all the day I turned 16. All I could feel was pure, unfiltered self-hatred and grief for both a relationship I thought I was at fault for ruining, and my entire life up until that point which I felt as if it had completely passed me by and gone to waste. All my life has been spent seeking validation from people on the internet and all I've been left with is scars that will never fully disappear. I have people in my life that I'll cherish forever because of being online, and I hope to meet all of them in person one day, but that doesn't change the fact that there's so much shit I wish never happened. So many things I wish I had done differently. So many people I wish I had never allowed into my life at all. So many people I wish I had never allowed to trick me into believing that they gave even the slightest goddamn shit about me. I was genuinely so fucking close to killing myself.</p>
+            
+            <p>2024 really was a horrible year for me. I genuinely wish I could get that time in my life back and right a lot of my wrongs. Maybe if I never got into a relationship with a particular person, I would be in a better place today. I let myself be toyed with, used for my body and then thrown away like fucking garbage. Despite being filled with hatred towards that person for doing those things to me, I still couldn't stop being completely obsessed with them. I couldn't stop tryng to go back and salvage what didn't exist from the beginning. I couldn't stop brainwashing myself into believing the lie that was the love I thought we genuinely shared. I can't deny that I've definitely matured emotionally because of that experience, but it genuinely destroyed me as a person. It turned me miserable and I made the people around me that I love miserable as a result. One of my closest friends is permanently scarred because I let that traumatic experience take control of me and define who I was. I don't think I'll ever be able to forgive myself for that. I don't think she'll ever be able to truly forgive me either. But that's okay, because she still means the world to me no matter what.</p>
+            
+            <p>I have a girlfriend that I've been with since late March this year that I genuinely really love. She's first person I've been able to actually envision a future with in a long time. It's been a little tough though because I'm terminally online and she's the exact opposite of that. I cherish every time we get to spend time together extra hard since she's always busy. I wish I could just spend every day with her but I need to be able to be okay with being on my own sometimes. I need to learn to be okay with my own company and not rely so much on another person. A relationship should be a positive addition to my life after all, not something I use as a crutch to get by. I've made that mistake too many times already. I hope I can spend time with her on the day of my actual birthday, if not now then some other year from now. That'd make me really happy.</p>
+            
+            <p>I think a lot about how much I've changed since I was finally able to let go of my obsession with my ex that groomed me. I honestly find it hilarious how the thing that finally kicked off my self-healing era was getting hyperfixated on Inanimate Insanity. I'm not fucking joking when I say that. Getting into that show was probably the best thing I could've ever done. It's been my main source of comfort for pretty much this entire year and it's the reason a lot of my passion for certain things were restored and my mind was cleared of a lot of awful things that were weighing me down consistently. I've been able to actually enjoy doing art again and I've felt way more comfortable with drawing more self-indulgent things. I have a much easier time coming up with ideas because of how much this show has inspired me. So many of those ideas have yet to become reality still, but I feel a lot more motivated to at least try and make shit even if other people don't really give a fuck about it. In simple terms, a decent bit of my creativity has been restored thanks to this show about sentient objects competing on a reality show. It's also the first time in genuinely fucking FOREVER that I have actually enjoyed being apart of a fandom, even if I mostly just observe from the sidelines and occasionally share things of my own in relation to it. It's also thanks to Inanimate Fucking Insanity that I am no longer actively suicidal. I've learned to value my own life in spite of the fact that I've wasted so much of it. The past may have sucked, but the future is mine to claim. I just need to take charge of my own life, and starting today, I'll try. I know this all sounds corny as fuck but I don't care. Fuck you.</p>
+            
+            <p>I've also genuinely have never felt so fucking seen by any particular show until getting into Inanimate Insanity. The character Paintbrush is specific is LITERALLY ME in every possible way it's not even fucking funny. I wanna talk about how but I have so many thoughts about it that I could not even begin to put into words here. Everything about them is so me. I am them and they are me. Without them there is no me and without me there is no them. I'm literally a Paintbrush. I need fucking help dawg I should probably make a page on my site for making articles dedicated to talking about ultra-specific things that nobody else cares about. I could ramble about specific interests of mine and maybe I'll go in depth of why this character means so much to me and why I see so much of myself in them. I am an extreme fictionkin and also a fictive of them by the way I just felt the need to mention that. You could not rip The Sexy Paintbrush From Inanimate Insanity from my cold dead fucking hands even if you tried they are the reason I hate myself so much less now.</p>
+            
+            <p>I'm not that excited to turn 17. In a year from now I'll be a legal adult and I'll have to start trying to figure all of my shit out so I can get the fuck out of my parents' house and have a way of supporting myself and potentially my partner and found family. I need to finish highschool in order for that to happen. I need to get off my ass and actually be willing to take care of myself and do important things and be a responsible adult. That way I'll hopefully be able to actually live my life and be happy. Unfortunately I still feel I'm nothing more than a pathetic child that doesn't know anything sometimes. A majority of the time actually. I wanna be able to medically transition. I need to be the one in control for that to happen. My parents need to be out of the picture someday, since they don't support me in that way and they never will. They'll never see me as Gabriel, they'll only ever see me as an innocent little girl they need to help achieve salvation from Christ or whatever. But I'm not that little girl. I never have been, and I never will be. I'm gonna be a grown man soon. That little girl is dead.</p>
+          
+            
+          
+        </article>
+      
+    <!--this is the block you can copypaste to create a new "post"-->
+        <article>
+            <div class="post-header">
+                @gabriel <span class="timestamp">April 28, 2025 | 10:16 PM</span>
+            </div>
+            
+            <h1>Test</h1>
+            <h3>no applicable content warnings</h3>
+            <p><img src="https://i.postimg.cc/tJSW-2n3Q/tumblr-3f50765be503c324db4fbe1817cb83c4-68c787c6-1280.png"></p>
+            <p>i'll write an actual entry sooner or later i just wanted to make sure that this is working correctly</p>
+
+            <p><img src="https://i.postimg.cc/3JsL6BNy/Giu0x-Z-WIAAS9-E.png"></p>
+
+            <p>i love suitcase from inanimate insanity i wish she was real</p>
+            
+        </article>
+        
+        <p><a href="https://chimerathing.neocities.org/olddiary">Old 2024 Entries</a></p>
+        
+    </main>
+    
+
+    
+    <div id="amaina"><img src="https://i.postimg.cc/8zgSKKtn/tumblr-8d8948ed9d4a02790f518c1075442029-9e1e5cd8-250.gif" width="300px"></div>
+        
+    </div>
+        
+
+</body>
+
+</head>
