@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 ART!</title>
+    <script type="text/javascript">
+      title = "2026 ART! " ;
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          title.substring(position, title.length) +
+          title.substring(0, position);
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle, 170);
+      }
+      scrolltitle();
+    </script>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/0NPBm6w6/tumblr-3ed5d83768d61d51018404042da6679a-25c322e4-75-1.gif"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ 
+ 
+ 
+<style>
+
+[name=archive] {
+  display: none;
+}
+
+[name=gallery] {
+  max-width: 100%;
+  padding: 1em 1em 0 1em;
+  padding: 1em 0 0 0;
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+  display: block;
+}
+
+
+/*=========== GRID ===========*/
+
+.grid {
+  margin: 1em auto;
+  padding: 0 1em;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid .card {
+  position: relative;
+  text-align: center;
+  padding: 0 0em;
+  margin: 0 1em;
+}
+
+.grid .permalink {
+  margin: auto;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+.grid .permalink:after {
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+}
+
+
+
+.grid .permalink.title {
+  display: block;
+  margin: .5em 0 0 0;
+  color:  #337287;
+  font-weight: bold;
+  text-decoration: none;
+}
+.grid .permalink.title:focus,
+.grid .permalink.title:hover {
+  text-decoration: underline;
+}
+
+.grid .taglist {
+  text-align: center;
+}
+
+/* nomasonry */
+
+.grid.nomasonry {
+  justify-content: space-around;
+}
+
+.grid.nomasonry img,
+.grid.nomasonry video,
+.grid.nomasonry iframe {
+  max-width: 100%;
+}
+
+.nomasonry .card {
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+}
+
+.nomasonry .permalink.title {
+  display: inline-block;
+  min-height: 0;
+}
+
+
+
+/*=========== FORM ===========*/
+
+.search-form {
+  box-sizing: border-box;
+  line-height: 1.5;
+  width: fit-content;
+  max-width: 100%;
+  margin: auto 1em;
+}
+.search-form label{
+  display: inline-block;
+  margin: .125em;
+}
+
+.search-form input {
+  font: inherit;
+  border-radius: .25em;
+}
+
+.results {
+  margin: 1em;
+}
+
+
+
+
+/*=========== NAV ===========*/
+
+
+.navigation,
+.pagination {
+  text-align: center;
+  margin: 1em auto;
+  padding: 0 1em;
+}
+
+.pagination:not(:first-of-type) {
+  margin-top: 3em;
+}
+
+.all-tags {
+  text-align: left;
+}
+
+.pagination label,
+.navigation a,
+.pagination a {
+  color: #337287;
+  border: .125em solid transparent;
+  display: inline-block;
+  padding: .5em;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: .25em;
+  vertical-align: middle;
+  margin: .125em 0;
+  font-weight: bold;
+}
+.pagination a[aria-current] {
+  text-decoration: underline double;
+  font-weight: bold;
+}
+.navigation a:hover,
+.navigation a:focus,
+.pagination a:focus,
+.pagination a:hover {
+  border-color: black;
+}
+
+
+
+
+
+
+
+
+/*=========== VIEW ===========*/
+
+.view .card {
+  position: relative;
+  border-radius: .25em;
+  margin: 1em auto;
+  padding: 0 1em;
+}
+.download {
+  display: block;
+  width: fit-content;
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+.view img,
+.view video,
+.view iframe {
+  display: block;
+  margin: 1em auto;
+}
+
+.view iframe {
+  width: 100vh;
+  height: 75vh;
+}
+
+@media (min-height: calc(100vw - 2em)) {
+  .view iframe {
+    width: 100%;
+    height: 75vw;
+  }
+}
+
+
+
+
+
+
+/*=========== TAGS ===========*/
+
+.taglist {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  text-align: left;
+  font-size: smaller;
+  position: relative;
+}
+.taglist:before {
+  content: 'in ';
+}
+.tag {
+  display: inline-block;
+}
+
+.tag a {
+  color: #3B5A4A;
+  border-radius: .25em;
+  margin: 0 .125em;
+  padding: .125em;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color .25s,
+    color .25s;
+}
+.tag:not(:last-child) a:after {
+  content: ','
+}
+
+.tag a:focus, 
+.tag a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+
+
+<script defer src="https://chimerathing.neocities.org/artgallery/galleryscript.js"></script>
+
+<script>
+GALLERY = {
+  path: '',
+  
+  masonry: 0,
+  masonry_direction: 'vertical',
+  
+  images_per_page: 24,  
+  
+  max_width: '50vw',
+  max_height: '50vw',
+  
+  min_width: '180px',
+  max_width: '180px',
+  
+  grid_gap: 24,
+  
+  max_pagination_links: 9,
+
+  grid_card_layout:
+    ['image','title','tags'],
+  
+  view_card_layout:
+    ['image','title','tags','download','description']
+}
+</script>
+
+
+  </head>
+  <body>
+  
+
+  
+<pre name=archive hidden>
+
+https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/pierce%20no%20bg.png
+  # oc, sona, fursona, anthro, pierce
+  title: Pierce
+  caption: August 25th, 2026
+  i was feeling way too lazy to do full lineart for this LMFAO. i'm trying to refine Pierce's design a bit more, i'm thinking in his feral form his hair would be more like a mane while in his more humanoid form it's more just like regular hair.
+
+  https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/lightbulb%20gijinka%20redesign.png
+  # fanart, gijinka, objects, inanimate insanity, ii humanized, lightbulb
+  title: Lightbulb alternate outfit
+  caption: August 16th, 2026
+  this was drawn by Nettie (an alter) who just so happens to be a Lightbulb fictive,, i'm not sure if this is meant to be just an alternate outfit or a new design for our Lightbulb gijinka but i always love experimenting with different outfits for our gijinkas so it doesn't really matter lol
+
+  https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/new%20oc%20robot%20guy.PNG
+  # oc, robot, unnamed
+  title: funny robot guy
+  caption: August 13th, 2026
+  a new oc we randomly conjured up during a whiteboard sesh. i don't know what to name him but here's here now i guess. he has bisexualism in his eyes
+
+  https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/DINNER!%20MEGAPHONE.png
+  # eyestrain, gore, oc, gijinka, objects, the amazing object world, megaphone
+  title: DINNER!
+  caption: August 9th, 2026
+  Megaphone as the album art of "DINNER!" by femtanyl!! i think this song suits him pretty well, i also just really wanted to draw her in one of those diner waitress outfits and thought this would be the most fitting use for it. looks very cute on him! she's lookin pretty stressed out though i hope she's doing alright
+
+
+  https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/monitor%20ring%20doodle.png
+  # oc, sona, fursona, anthro, pierce
+  title: I've hired this Pierce to stare at you
+  caption: August 9th, 2026
+  i drew this for my widget in the Monitoring Webring. i like how i did the fire in his eye
+
+  https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/acme%20iku%20doodle.png
+  # fanart, vocal synths, maidloid, acme iku
+  title: Acme Iku
+  caption: August 7th, 2026
+  i have zero motivation and this is all i could force myself to draw at the moment
+
+  https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/paintbrush%20agere.png
+  # fanart, objects, inanimate insanity, paintbrush
+  title: sleepy eepy PB
+  caption: August 6th, 2026
+  i was age regressed when i drew this LMFAOOA i like to cuddle with my Lightbulb plushie almost every night so that was the inspiration
+
+ https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/pierce%20sleeping%20pixel%20art.png
+  # pixel art, oc, sona, fursona, anthro, pierce
+  title: Pierce taking a nap
+  caption: August 5th, 2026
+  also pagedoll for my "about me" page
+
+ https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/pierce%20blink%20pixel%20art.gif
+  # pixel art, oc, sona, fursona, anthro, pierce
+  title: Pierce blinking at you unamused
+  caption: August 4th, 2026
+  pagedoll for my "about me" page
+
+ https://file.garden/Z5ztm_B6wj_8HQnK/2026%20art/lightbrush%20color%20pencil%20sketch%20meowmeow.jpg
+  # tags
+  title: 
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+ img link
+  # tags
+  title:
+  caption: date
+  desc
+
+</pre>
+
+
+
+<div name=gallery>The gallery needs JavaScript to load! If you can see this, you may have blocked JavaScript.</div>
+
+   
+
+  </body>
+</html>
