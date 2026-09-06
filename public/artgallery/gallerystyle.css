@@ -56,6 +56,13 @@ iframe {
 .grid .card {
   position: relative;
   text-align: center;
+  font-family: rosela;
+font-style: normal;
+color: white;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
   padding: 0 0em;
   margin: 0 1em;
 }
@@ -80,8 +87,14 @@ iframe {
 .grid .permalink.title {
   display: block;
   margin: .5em 0 0 0;
-  color:  #337287;
-  font-weight: bold;
+  font-family: marioluigi;
+font-style: normal;
+color: white;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+ 
   text-decoration: none;
 }
 .grid .permalink.title:focus,
@@ -200,12 +213,20 @@ iframe {
   position: relative;
   border-radius: .25em;
   margin: 1em auto;
+  font-family: rosela;
+font-style: normal;
+color: white;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
   padding: 0 1em;
 }
 .download {
   display: block;
   width: fit-content;
   text-align: right;
+  
   margin-right: 0;
   margin-left: auto;
 }
