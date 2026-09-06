@@ -1,7 +1,7 @@
 
 body {
-    background-image: url(https://file.garden/Z5ztm_B6wj_8HQnK/gdfghfdjukihgiduofg.png);
-    background-size: 10em;
+    background: linear-gradient(black , #680811);
+    background-attachment:fixed;
 }
 
  @font-face {
