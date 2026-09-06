@@ -25,6 +25,16 @@ background: black;
   text-shadow: 1px 1px 5px black;
 }
 
+a {
+font-family: rosela;
+font-style: normal;
+color: #ff9036d7;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
+}
+
 [name=archive] {
   display: none;
 }
@@ -143,6 +153,13 @@ background: black;
 .search-form label{
   display: inline-block;
   margin: .125em;
+  font-family: rosela;
+font-style: normal;
+color: white;
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
 }
 
 .search-form input {
