@@ -178,7 +178,13 @@ background: black;
 .pagination label,
 .navigation a,
 .pagination a {
-  color: #337287;
+  font-family: rosela;
+font-style: normal;
+color: rgb(255, 0, 0);
+background: black;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  text-shadow: 1px 1px 5px black;
   border: .125em solid transparent;
   display: inline-block;
   padding: .5em;
@@ -278,7 +284,7 @@ background: black;
 }
 
 .tag a {
-  color: #3B5A4A;
+  color: #ff0000d7;
   border-radius: .25em;
   margin: 0 .125em;
   padding: .125em;
