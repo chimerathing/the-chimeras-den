@@ -194,6 +194,11 @@ iframe {
   height: 75vh;
 }
 
+
+.view img, {
+    max-height:700px;
+}
+
 @media (min-height: calc(100vw - 2em)) {
   .view iframe {
     width: 100%;
