@@ -36,7 +36,7 @@
     --main-bg: url('');
     --gradient-bg: linear-gradient(0deg, #0000 0%, #1c0007 33%, #5e000b 90%);
     --accent-color: #f97f91;
-    --link-color: #ef092c;
+    --link-color: #b50134;
     --bg-color: black;
     --text-color: #f97f91;
     --text-color2: white;
@@ -61,9 +61,19 @@
     color: var(--bg-color);
 }
 
-html {scroll-behavior: smooth;}
+html {scroll-behavior: smooth;font-family:rosela;}
 
-body {
+@font-face {
+                font-family: rosela;
+                src: url('https://file.garden/Z5ztm_B6wj_8HQnK/PERFECTMURDER-REGULAR.TTF');
+            }
+
+    @font-face {
+                font-family: rosela2;
+                src: url('https://file.garden/Z5ztm_B6wj_8HQnK/windows_command_prompt.ttf');
+            }        
+
+body {font-family: rosela2;
     margin: 0;
     background-color: var(--bg-color);
     background-image: var(--site-bg);
@@ -74,7 +84,7 @@ body {
 p {line-height: 1.5em;font-size:1em;}
 
 /* this is your site title displayed at the top of the page */
-header > h1 {
+header > h1 {font-family: rosela;
     margin: 1em auto;
     max-width: 960px;
     padding-left: 1em;
@@ -85,7 +95,7 @@ header > h1 {
 
 nav {
     padding: 0 1em 1em 1em;
-    font-weight: bold;
+    font-weight: bold;font-family: rosela2;
 }
 
 nav ul {
@@ -117,8 +127,8 @@ nav li a:hover {
 }
 
 a {
-    color: var(--link-color);
-    transition: color 400ms ease-out;
+    color: #b50134;
+    transition: color 400ms ease-out;font-family: rosela2;
 }
 a:visited {
     color: var(--favorite-color);
@@ -128,11 +138,12 @@ a:hover {
 }
 
 /* you can change this to lots of things. i picked a star! */
-ul { list-style-type: "✦ "; }
+ul { list-style-type: "✦ "; font-family: rosela2;}
 
 #sidebar {
     background-image: var(--main-bg);
-    border: 1px solid var(--favorite-color);
+    border: 4px ridge var(--favorite-color);
+    border-right: none;
     min-width: 220px;
 }
 
@@ -154,13 +165,13 @@ ul { list-style-type: "✦ "; }
     margin: 1em;
   padding:10px;
     background: var(--bg-color);
-    border: 1px solid var(--favorite-color);
+    border: 3px solid var(--favorite-color);
   border-radius:5px;
-    box-shadow: var(--accent-color) 0 0 4px;
+    box-shadow: #b50134 0 0 4px;font-family: rosela2;
 }
 #bio p {
     margin: 1em;
-    color: var(--text-color2);
+    color: var(--text-color2);font-family: rosela2;
 }
 
   .letter{
@@ -171,7 +182,7 @@ ul { list-style-type: "✦ "; }
 #content {
     display: flex;
     max-width: 960px;
-    margin: auto;
+    margin: auto;font-family: rosela2;
 }
 
 main {
@@ -180,11 +191,11 @@ main {
     image-rendering: pixelated;
     max-width: 800px;
     margin: auto;
-    border: 1px solid #b50134;
+    border: 4px ridge #b50134;
     color: var(--accent-color);
    height:fit-content;
     overflow:auto;
-  font-size:1em;
+  font-size:1em;font-family: rosela2;
 }
 
 .prose {
@@ -200,11 +211,15 @@ main {
 footer {
     text-align: center;
     font-size: small;
-    padding: 1em;
+    padding: 1em;font-family: rosela2;
 }
 
   h1, h2, h3, h4 {
-    text-shadow: 3px 3px 5px #ef092c;
+    text-shadow: 3px 3px 5px #ef092c;font-family: rosela2;
+  }
+
+  li{
+    font-family: rosela2;
   }
 
 /* these are the mobile styles! */
@@ -277,7 +292,7 @@ footer {
         
         <h2>INVALID / HAZEL !</h2>
 
-			  <p>We've been together for: <script language="JavaScript">
+			  <p style="font-family: rosela2;">We've been together for: <script language="JavaScript">
 TargetDate = "2026-01-30T05:00:00";
 BackColor = "transparent";
 ForeColor = "white";
